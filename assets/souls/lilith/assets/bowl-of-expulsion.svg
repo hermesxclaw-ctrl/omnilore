@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Bowl of expulsion explanatory diagram</title>
+  <desc id="desc">An abstract spiral diagram explaining how late antique incantation bowls enclosed protective legal language. It does not reproduce an ancient inscription.</desc>
+  <defs>
+    <radialGradient id="clay">
+      <stop offset="0" stop-color="#322018"/>
+      <stop offset=".72" stop-color="#1b1110"/>
+      <stop offset="1" stop-color="#080709"/>
+    </radialGradient>
+  </defs>
+  <circle cx="450" cy="450" r="420" fill="url(#clay)" stroke="#a86a3e" stroke-width="3"/>
+  <circle cx="450" cy="450" r="344" fill="none" stroke="#e4d7c4" stroke-opacity=".16" stroke-width="38"/>
+  <path d="M450 450c20-34 72-22 72 22 0 70-112 96-158 26-72-110 70-236 186-164 164 102 44 354-158 322-254-40-252-396 4-470 304-88 534 252 354 512" fill="none" stroke="#e4d7c4" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 24" opacity=".8"/>
+  <path d="M450 450c20-34 72-22 72 22 0 70-112 96-158 26-72-110 70-236 186-164 164 102 44 354-158 322-254-40-252-396 4-470" fill="none" stroke="#b86b79" stroke-width="3" opacity=".7"/>
+  <g font-family="monospace" fill="#e4d7c4" font-size="22" letter-spacing="2">
+    <text x="92" y="86">EXPLANATORY DIAGRAM · NOT A FACSIMILE</text>
+    <text x="92" y="790">BOUNDARY</text>
+    <text x="592" y="720">EXPULSION</text>
+    <text x="378" y="458">HOUSEHOLD</text>
+  </g>
+  <g fill="#a86a3e">
+    <circle cx="132" cy="752" r="10"/>
+    <circle cx="708" cy="684" r="10"/>
+    <circle cx="452" cy="480" r="10"/>
+  </g>
+</svg>

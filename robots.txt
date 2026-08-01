@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omnilore.example.com/sitemap.xml

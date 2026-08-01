@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rabbit Hole — Omnilore</title>
+<meta name="description" content="Five connected entities. One thread. No turning back. Descend into the Omnilore Archive.">
+<meta name="theme-color" content="#141210">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#141210;--s:#1f1d19;--s2:#25231f;--t:#e8e4dc;--t2:#a09c94;--t3:#6b6760;--p:#c9a84c;--pl:#e0c878;--pg:rgba(201,168,76,0.12);--b:#2d2a25;--b2:#3d3a35}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'EB Garamond',Georgia,serif;font-size:17px;line-height:1.7;color:var(--t);background:var(--bg);min-height:100vh}
+a{color:var(--p);text-decoration:none}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:18px;padding:0 24px;height:56px;background:rgba(20,18,16,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}
+.logo{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:2px;color:var(--t2);text-transform:uppercase;line-height:1.25}
+.logo strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--p);font-weight:700;text-transform:none}
+.wrap{max-width:760px;margin:0 auto;padding:60px 24px;text-align:center}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;margin:8px 0 10px}
+.sub{color:var(--t2);margin-bottom:30px;font-size:1.05rem}
+.label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--p)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;cursor:pointer;border:none;background:var(--p);color:var(--bg)}
+.btn:hover{background:var(--pl)}
+.trail{display:flex;align-items:center;justify-content:center;gap:0;margin:36px 0 26px;flex-wrap:wrap}
+.stop-dot{width:38px;height:38px;border-radius:50%;background:var(--s2);border:1px solid var(--b2);color:var(--t3);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.85rem;font-weight:700;transition:all 0.3s}
+.stop-dot.lit{background:var(--p);border-color:var(--p);color:var(--bg)}
+.trail .link-line{width:44px;height:1px;background:var(--b2)}
+.trail .link-line.lit{background:var(--p)}
+.journey{text-align:left;margin-top:10px}
+.stop{border:1px solid var(--b2);background:linear-gradient(160deg,var(--s),transparent);padding:22px 24px;margin-bottom:14px;opacity:0;transform:translateY(14px);transition:all 0.5s;display:block}
+.stop.show{opacity:1;transform:none}
+.stop:hover{border-color:var(--p)}
+.stop small{font-family:'JetBrains Mono',monospace;font-size:0.56rem;color:var(--p);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:6px}
+.stop b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--t);font-weight:600}
+.stop i{display:block;color:var(--t2);font-size:0.92rem;margin-top:5px}
+.stop .why{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--t3);letter-spacing:0.5px;margin-top:10px;border-top:1px dashed var(--b);padding-top:9px}
+.again{margin-top:20px}
+footer{border-top:1px solid var(--b);margin-top:70px;padding:36px 24px 60px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--t3);letter-spacing:1.5px}
+
+/* Content advisory: a clear choice before entering the archive. */
+#content-advisory[hidden]{display:none}#content-advisory{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:rgba(1,2,3,.82);backdrop-filter:blur(14px)}.advisory-panel{width:min(650px,100%);position:relative;overflow:hidden;padding:clamp(28px,5vw,58px);background:linear-gradient(135deg,rgba(18,23,26,.94),rgba(5,7,9,.98));border:1px solid rgba(139,191,193,.34);box-shadow:0 28px 100px rgba(0,0,0,.65),inset 0 0 0 1px rgba(198,169,90,.1)}.advisory-panel:before{content:'CONTENT ADVISORY';position:absolute;right:-15px;top:24px;color:rgba(139,191,193,.08);font:700 clamp(3rem,11vw,7rem)/.8 'Cormorant Garamond',serif;letter-spacing:-3px}.advisory-kicker{position:relative;margin:0 0 13px;color:#8bbfc1;font:500 .58rem 'JetBrains Mono',monospace;letter-spacing:3px;text-transform:uppercase}.advisory-panel h1{position:relative;margin:0 0 14px;color:#eee6d3;font:700 clamp(2.8rem,8vw,5rem)/.85 'Cormorant Garamond',serif;letter-spacing:-1.5px}.advisory-panel p{position:relative;max-width:54ch;margin:0 0 16px;color:rgba(238,230,211,.76);font:1.08rem/1.48 'EB Garamond',Georgia,serif}.advisory-panel ul{position:relative;margin:16px 0 25px;padding-left:20px;color:rgba(238,230,211,.65);font:500 .63rem/1.9 'JetBrains Mono',monospace;letter-spacing:.4px}.advisory-actions{position:relative;display:flex;gap:12px;align-items:center;flex-wrap:wrap}.advisory-enter,.advisory-leave{display:inline-flex;align-items:center;min-height:44px;padding:12px 18px;border:0;cursor:pointer;font:600 .61rem 'JetBrains Mono',monospace;letter-spacing:1.4px;text-transform:uppercase}.advisory-enter{background:#e0c878;color:#050607}.advisory-leave{color:#d9e5e1;background:transparent;border:1px solid rgba(238,230,211,.28)}.advisory-legal{position:relative;display:block;margin-top:20px;color:#8bbfc1;font:500 .54rem 'JetBrains Mono',monospace;letter-spacing:1px;text-decoration:none}@media(max-width:500px){.advisory-panel{padding:30px 24px}.advisory-panel p{font-size:1rem}}
+
+</style>
+</head>
+<body>
+<nav class="nav"><a href="javascript:history.back()" style="color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:0.64rem;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap">&larr; Back</a><a href="index.html" class="logo"><strong>The Archive</strong>OF ALL THINGS UNREAL</a></nav>
+<div class="wrap">
+<p class="label">🐍 The Rabbit Hole</p>
+<h1>Follow the thread</h1>
+<p class="sub">Five entities, each connected to the last — by blood, by culture, by the shape of the fear. One click. No turning back.</p>
+<button class="btn" id="go">Descend</button>
+<div class="trail" id="trail" style="display:none"></div>
+<div class="journey" id="journey"></div>
+<button class="btn again" id="again" style="display:none">🔀 Take Another Journey</button>
+</div>
+<footer>OMNILORE — never finished, always evolving<div class="legal-links"><a href="legal.html#content-advisory">Content advisory</a><a href="legal.html#terms">Terms of use</a><a href="legal.html#privacy">Privacy</a><a href="legal.html#copyright">Copyright</a><a href="legal.html#accessibility">Accessibility</a></div></footer>
+<script src="assets/search-index.js"></script>
+<script>
+(function(){
+var IDX=window.OMNILORE_INDEX||[],byS={};
+IDX.forEach(function(e){byS[e.s]=e;});
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function journey(){
+  var used={},steps=[],reasons=[];
+  var cur=pick(IDX.filter(function(e){return e.r&&e.r.length;}));
+  steps.push(cur);used[cur.s]=1;reasons.push('The Archive chose this door.');
+  while(steps.length<5){
+    var cand=[],why='';
+    if(cur.r){cand=cur.r.map(function(s){return byS[s];}).filter(function(e){return e&&!used[e.s];});why='Directly connected to '+cur.n+'.';}
+    if(!cand.length){cand=IDX.filter(function(e){return !used[e.s]&&e.c===cur.c&&e.c;});why='Same tradition: '+(cur.c||'unknown')+'.';}
+    if(!cand.length){cand=IDX.filter(function(e){return !used[e.s]&&e.k===cur.k;});why='Same nature — a '+cur.k.replace(/-/g,' ')+' of another people.';}
+    if(!cand.length){cand=IDX.filter(function(e){return !used[e.s];});why='A blind turn in the dark.';}
+    cur=pick(cand);steps.push(cur);used[cur.s]=1;reasons.push(why);
+  }
+  return {steps:steps,reasons:reasons};
+}
+function render(){
+  var j=journey(),trail=document.getElementById('trail'),jn=document.getElementById('journey');
+  trail.style.display='flex';trail.innerHTML='';jn.innerHTML='';
+  j.steps.forEach(function(e,i){
+    if(i)trail.insertAdjacentHTML('beforeend','<div class="link-line" id="l'+i+'"></div>');
+    trail.insertAdjacentHTML('beforeend','<div class="stop-dot" id="d'+i+'">'+(i+1)+'</div>');
+    jn.insertAdjacentHTML('beforeend','<a class="stop" id="s'+i+'" href="entity/'+e.s+'.html"><small>Stop '+(i+1)+' · '+(e.c||e.k)+'</small><b>'+e.n+'</b>'+(e.e?'<i>'+e.e+'</i>':'')+'<div class="why">'+j.reasons[i]+'</div></a>');
+    setTimeout(function(){
+      document.getElementById('d'+i).classList.add('lit');
+      if(i)document.getElementById('l'+i).classList.add('lit');
+      document.getElementById('s'+i).classList.add('show');
+    },350*i+150);
+  });
+  document.getElementById('go').style.display='none';
+  document.getElementById('again').style.display='inline-flex';
+}
+document.getElementById('go').onclick=render;
+document.getElementById('again').onclick=render;
+})();
+</script>
+<aside id="content-advisory" role="dialog" aria-modal="true" aria-labelledby="advisory-title" hidden><div class="advisory-panel"><p class="advisory-kicker">Before you enter Omnilore</p><h1 id="advisory-title">Content advisory</h1><p>Omnilore is an archive of mythology, folklore, horror, religion, art, and internet-born fiction. Some entries or source images may include artistic or historical nudity, fictional gore, demons, violence, death, disturbing themes, or material some visitors may find offensive.</p><ul><li>Content is presented for research, context, cataloguing, and cultural reference.</li><li>Viewer discretion is advised; this archive is not intended for children.</li><li>By entering, you choose to encounter the material made available in the archive.</li></ul><div class="advisory-actions"><button class="advisory-enter" type="button">Enter the archive</button><button class="advisory-leave" type="button">Leave</button></div><a class="advisory-legal" href="legal.html#content-advisory">Read the full content advisory and terms →</a></div></aside><script>(function(){var key='omnilore-content-advisory-v1',gate=document.getElementById('content-advisory');if(!gate)return;try{if(localStorage.getItem(key)==='accepted')return;}catch(e){}gate.hidden=false;var enter=gate.querySelector('.advisory-enter'),leave=gate.querySelector('.advisory-leave');enter.onclick=function(){try{localStorage.setItem(key,'accepted')}catch(e){}gate.hidden=true};leave.onclick=function(){location.href='about:blank'};})();</script></body>
+</html>

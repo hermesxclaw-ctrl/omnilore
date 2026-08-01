@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Names across time</title>
+  <desc id="desc">A chronological typographic field separating related ancient terms, the Hebrew word lîlît, medieval Lilith, and modern namesakes.</desc>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080709"/>
+      <stop offset=".55" stop-color="#251321"/>
+      <stop offset="1" stop-color="#080709"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1200" height="680" rx="54" fill="url(#fade)"/>
+  <path d="M70 126C300 60 436 172 640 104S982 44 1130 112" fill="none" stroke="#641722" stroke-width="44" opacity=".18" filter="url(#soft)"/>
+  <g fill="#9c9aa0" font-family="monospace" font-size="20" letter-spacing="4">
+    <text x="84" y="92">RELATED PRECEDENTS · NOT FLAT ALIASES</text>
+    <text x="84" y="606">TRANSMISSION IS NOT IDENTITY</text>
+  </g>
+  <g fill="#e4d7c4" font-family="serif">
+    <text x="84" y="190" font-size="66">lilû</text>
+    <text x="354" y="236" font-size="78">lilītu</text>
+    <text x="724" y="196" font-size="62">ardat-lilî</text>
+    <text x="244" y="352" font-size="104" direction="rtl" unicode-bidi="bidi-override">לִילִית</text>
+    <text x="610" y="422" font-size="148" font-style="italic">Lilith</text>
+  </g>
+  <g fill="#b86b79" font-family="monospace" font-size="18" letter-spacing="2">
+    <text x="86" y="224">AKKADIAN CLASS</text>
+    <text x="356" y="270">AKKADIAN FEMININE FORM</text>
+    <text x="726" y="230">RELATED SPIRIT CLASS</text>
+    <text x="246" y="386">ISAIAH 34:14 · ONE OCCURRENCE</text>
+    <text x="620" y="462">MEDIEVAL STORY → MODERN RECLAMATION</text>
+  </g>
+  <path d="M84 520H1114" stroke="#a86a3e" stroke-width="2" stroke-dasharray="4 18"/>
+  <circle cx="84" cy="520" r="8" fill="#a86a3e"/>
+  <circle cx="430" cy="520" r="8" fill="#a86a3e"/>
+  <circle cx="760" cy="520" r="8" fill="#a86a3e"/>
+  <circle cx="1114" cy="520" r="8" fill="#b86b79"/>
+</svg>
