@@ -284,9 +284,10 @@ if(withImg.length){var f=withImg[Math.floor(Math.random()*withImg.length)];
   show(0);
   setInterval(function(){cur=(cur+1)%picks.length;show(cur);},6000);
 })();
-// entity of the day (deterministic per date), prefer one with an image
+// entity of the night (deterministic per date), prefer finished with image
 var d=new Date(),key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
-var pool=withImg.length>200?withImg:IDX;
+var finishedPool=IDX.filter(function(e){return e.i&&e._finished;});
+var pool=finishedPool.length>50?finishedPool:withImg.length>200?withImg:IDX;
 var e=pool[hashStr(key)%pool.length];
 document.getElementById('e-meta').textContent=(e.d?e.d+' · ':'')+(e.c||'')+' · '+e.k.toUpperCase();
 document.getElementById('e-name').textContent=e.n;
