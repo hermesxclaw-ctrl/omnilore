@@ -69,9 +69,9 @@ h1 em{font-style:italic;color:var(--p)}
 .ticker span.s{color:var(--p)}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* stats */
-.stat-strip{display:flex;justify-content:center;gap:52px;flex-wrap:wrap;padding:38px 24px;text-align:center}
-.stat b{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--p);display:block;line-height:1.1}
-.stat span{font-family:'JetBrains Mono',monospace;font-size:0.54rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--t3)}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:0 auto;padding:76px 24px 64px;text-align:center}.stat{min-width:0;padding:0 18px;border-right:1px solid var(--hair)}.stat:last-child{border-right:0}.stat b{font-size:clamp(2rem,4.5vw,3.4rem);color:var(--brass-hi)}.stat span{font-size:clamp(.48rem,.9vw,.56rem);color:rgba(238,230,211,.44)}@media(max-width:860px){.stat-strip{grid-template-columns:1fr 1fr;gap:0;padding:55px 10px}.stat{min-width:0;padding:14px 12px}.stat:nth-child(odd){border-right:1px solid var(--hair)}.stat:nth-child(-n+2){border-bottom:1px solid var(--hair)}.stat{border-right:none}}@media(max-width:420px){.stat-strip{padding:44px 8px 34px}.stat{padding:12px 6px}.stat b{font-size:2.1rem}.stat span{font-size:.46rem;letter-spacing:1px}}@media(max-width:360px){.stat b{font-size:1.8rem}.stat span{font-size:.42rem}}
+
+
 .section{max-width:1200px;margin:0 auto;padding:56px 24px}
 .sec-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--p);margin-bottom:8px}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;margin-bottom:28px}
@@ -224,13 +224,14 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
 // Mobile hamburger menu toggle
 document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰';};
 </script>
-<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
+<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-stat"><span>Completed</span><b id="archive-completed">—</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 <div class="stat-strip">
-  <div class="stat"><b>25,506</b><span>Entities Enshrined</span></div>
+  <div class="stat"><b>25,512</b><span>Entities Enshrined</span></div>
+  <div class="stat"><b>1,076</b><span>Completed Dossiers</span></div>
   <div class="stat"><b>455</b><span>Cultures &amp; Traditions</span></div>
-  <div class="stat"><b>16</b><span>Wings of the Museum</span></div>
-  <div class="stat"><b>0</b><span>Pages Alike</span></div>
+  <div class="stat"><b>17</b><span>Wings of the Museum</span></div>
+  <div class="stat"><b>24,436</b><span>Unfinished</span></div>
 </div>
 <section class="section">
   <p class="sec-label">01 / Now on Display</p><h2 class="sec-title">Tonight&rsquo;s Entity</h2>
@@ -245,11 +246,11 @@ document.getElementById('menuToggle').onclick=function(){document.getElementById
 var IDX=window.OMNILORE_INDEX||[];
 (function(){
   var archiveIndex=window.OMNILORE_INDEX||[];
-  var archiveTotal=document.getElementById('archive-total'),archiveWings=document.getElementById('archive-wings'),archiveOpen=document.getElementById('archive-open'),archiveMessage=document.getElementById('archive-pulse-message');
+  var archiveTotal=document.getElementById('archive-total'),archiveWings=document.getElementById('archive-wings'),archiveOpen=document.getElementById('archive-open'),archiveMessage=document.getElementById('archive-pulse-message'),archiveCompleted=document.getElementById('archive-completed');
   function archiveHash(value){var hash=2166136261;for(var index=0;index<value.length;index++){hash^=value.charCodeAt(index);hash=Math.imul(hash,16777619);}return hash>>>0;}
   if(archiveTotal)archiveTotal.textContent=archiveIndex.length.toLocaleString();
   if(archiveWings)archiveWings.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
-  if(archiveOpen)archiveOpen.textContent=archiveIndex.length.toLocaleString();
+  if(archiveOpen)archiveOpen.textContent=archiveIndex.length.toLocaleString();if(archiveCompleted){var comp=archiveIndex.filter(function(e){return e._finished}).length;archiveCompleted.textContent=comp.toLocaleString();}
   if(archiveMessage&&archiveIndex.length){var archivePick=archiveIndex[archiveHash('archive-pulse-'+new Date().toDateString())%archiveIndex.length];archiveMessage.textContent='Today the Archive draws your eye to '+archivePick.n+' — '+(archivePick.e||archivePick.t||'an unopened thread')+'.';}
 })();
 var IDX=window.OMNILORE_INDEX||[];
