@@ -1,0 +1,22 @@
+{
+  "name": "Omnilore — The Archive of All Things Unreal",
+  "short_name": "Omnilore",
+  "description": "A digital museum of 25,000+ gods, demons, cryptids, yokai, and internet-born horrors — catalogued, connected, and given an altar.",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090a0d",
+  "theme_color": "#090a0d",
+  "lang": "en",
+  "categories": ["education", "books", "entertainment"],
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
