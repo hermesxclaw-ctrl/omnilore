@@ -292,7 +292,7 @@ document.getElementById('e-name').textContent=e.n;
 document.getElementById('e-ep').textContent=e.e||'';
 if(e.i){var entityImage=document.createElement('img');entityImage.src=e.i;entityImage.alt=e.n;entityImage.onerror=function(){this.replaceWith(Object.assign(document.createElement('span'),{className:'glyph',textContent:e.n.charAt(0)}));};document.getElementById('e-plate').replaceChildren(entityImage);}
 else{document.getElementById('e-glyph').textContent=e.n.charAt(0);}
-document.getElementById('e-sum').textContent='The Archive has prepared this file for tonight. Step inside — the '+(e.t||'entity').toLowerCase()+' is waiting.';
+document.getElementById('e-sum').textContent=(e.e||'The Archive has prepared this file for tonight.')+(e.d?' — '+e.d:'');
 document.getElementById('e-link').href='entity/'+e.s+'.html';
 function rand(){var x=IDX[Math.floor(Math.random()*IDX.length)];location.href='entity/'+x.s+'.html';return false;}
 document.getElementById('rand').onclick=rand;document.getElementById('rand2').onclick=rand;

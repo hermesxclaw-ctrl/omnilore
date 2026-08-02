@@ -18,7 +18,8 @@
 </head>
 <body class="tex-grain arch-demonic head-tight" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mind Flayer / Illithid</span></span><span class="rec-right">INFERNAL REGISTER</span></div>
+<nav class="nav"><a href="../index.html"><img src="../assets/logo.svg" alt="Omnilore seal"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE OF ALL THINGS UNREAL</a><button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button><div class="nav-links" id="navLinks"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" id="rand">Random</a><a href="../wings.html">Wings</a></div></nav>
+<div class="rec-bar"><span class="rec-left"><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mind Flayer / Illithid</span></span><span class="rec-right">INFERNAL REGISTER</span></div>
 <div class="hero sigil-center has-img glitch" style="min-height:70vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/en/e/e5/Mind_flayer.jpg" loading="lazy" alt="Mind Flayer / Illithid" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6a54" stop-opacity="0.7"/><stop offset="55%" stop-color="#c8322b" stop-opacity="0.28"/><stop offset="100%" stop-color="#c8322b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M90.6 157.8L48.7 139.8L45.9 75.1L79.4 43.9L128.8 49.2L155.7 91.0L142.4 138.6Z" fill="none" stroke="#c8322b" stroke-width="1.6" opacity="0.85"/><line x1="122.7" y1="110.8" x2="75.7" y2="120.2" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="109.2" y1="69.0" x2="100.4" y2="71.4" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="123.2" y1="99.1" x2="65.7" y2="86.4" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="113.2" y1="93.9" x2="109.9" y2="67.8" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="120.7" y1="87.3" x2="63.2" y2="82.3" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="7.636422598734498" fill="#c8322b" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff6a54" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -52,5 +53,6 @@
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · INFERNAL REGISTER · AAT-1595<br>The Locked Wing · never finished, always evolving</footer>
 <script src="../assets/widgets.js"></script>
+<script>document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰';};</script>
 </body>
 </html>

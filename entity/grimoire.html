@@ -18,7 +18,8 @@
 </head>
 <body class="tex-grain arch-magic-artifact head-upper" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Grimoire</span></span><span class="rec-right">BESTIARY</span></div>
+<nav class="nav"><a href="../index.html"><img src="../assets/logo.svg" alt="Omnilore seal"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE OF ALL THINGS UNREAL</a><button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button><div class="nav-links" id="navLinks"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" id="rand">Random</a><a href="../wings.html">Wings</a></div></nav>
+<div class="rec-bar"><span class="rec-left"><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Grimoire</span></span><span class="rec-right">BESTIARY</span></div>
 <div class="hero sigil-low" style="min-height:63vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#e8c470" stop-opacity="0.7"/><stop offset="55%" stop-color="#b8923d" stop-opacity="0.28"/><stop offset="100%" stop-color="#b8923d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#sg)"/><rect x="42" y="34" width="116" height="132" fill="none" stroke="#b8923d" stroke-width="2" opacity="0.8"/><rect x="50" y="42" width="100" height="116" fill="none" stroke="#6d8a4a" stroke-width="0.8" opacity="0.6"/><path d="M62.456455091014504 136.1227421881631 Q100 86.72830447554588 135.0147959543392 116.20132338721305" fill="none" stroke="#b8923d" stroke-width="2.632219832390547" stroke-linecap="round" opacity="0.75"/><text x="100" y="107" text-anchor="middle" fill="#e8c470" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">G</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -3966,5 +3967,6 @@
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · BESTIARY · <br>The Great Menagerie · never finished, always evolving</footer>
 <script src="../assets/widgets.js"></script>
+<script>document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰';};</script>
 </body>
 </html>
