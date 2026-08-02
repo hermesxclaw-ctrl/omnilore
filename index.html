@@ -132,7 +132,7 @@ body::after{opacity:.07;mix-blend-mode:screen}.nav{height:72px;padding:0 clamp(1
 .nav-links a{padding:14px 24px;font-size:0.62rem;border-bottom:1px solid rgba(238,230,211,.04);min-height:44px;display:flex;align-items:center}
 .nav-links a::after{display:none}
 .nav{height:60px}.logo{display:none}.hero{min-height:auto}
-.hero-content{padding:88px 22px 78px}.hero-left::before{display:none}
+.hero-content{padding:88px 22px calc(78px + env(safe-area-inset-bottom))}.hero-left::before{display:none}
 h1{font-size:clamp(3.8rem,18vw,5.2rem)}.status-row{font-size:.46rem}
 .showcase{display:block;max-height:370px}
 .archive-pulse-inner{grid-template-columns:1fr 1fr}
@@ -142,8 +142,11 @@ h1{font-size:clamp(3.8rem,18vw,5.2rem)}.status-row{font-size:.46rem}
 .section{padding:62px 16px}.arch-grid{grid-template-columns:1fr 1fr}
 .arch-card{padding:18px 14px;min-height:160px}.arch-card b{font-size:1.28rem}
 .rabbit-cta{padding:100px 18px}.rabbit-cta::after{font-size:.4rem}
-/* Better search on mobile */
-.nav-search{width:100%;max-width:calc(100vw - 100px)}#q{font-size:16px;padding-block:12px}@media(prefers-reduced-motion:reduce){.ticker{animation:none!important}.showcase:hover,.arch-card:hover,.btn:hover{transform:none!important}}
+.nav-search{width:100%;max-width:calc(100vw - 100px)}#q{font-size:16px;padding-block:12px}
+footer{padding-bottom:calc(28px + env(safe-area-inset-bottom))!important}
+}
+/* Ultra-small phones (<380px) */
+@media(max-width:380px){.btn-row{flex-direction:column}.btn-row .btn{width:100%;justify-content:center}.arch-grid{grid-template-columns:1fr}.stat b{font-size:2.2rem}.stat{min-width:100%;border-right:0;border-bottom:1px solid var(--hair);padding:14px 0}}@media(prefers-reduced-motion:reduce){.ticker{animation:none!important}.showcase:hover,.arch-card:hover,.btn:hover{transform:none!important}}
 
 
 /* Wings threshold — homepage entrance only */
