@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Nanabozho</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:62vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Nanabozho_pictograph.jpg" loading="lazy" alt="Nanabozho" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><path d="M100 100 L102.0 94.2 L106.5 95.8 L109.3 99.8 L109.7 105.8 L105.0 112.6 L96.4 114.7 L87.2 111.3 L81.0 102.8 L80.9 90.8 L89.0 79.5 L101.7 75.3 L116.4 79.2 L126.6 91.4 L128.7 108.0 L119.0 125.7 L101.8 133.6 L80.5 129.6 L65.3 114.5 L60.9 93.8 L70.8 70.4 L92.4 57.0 L117.2 58.3 L140.7 77.0 L148.4 103.5 L140.2 131.0 L118.0 149.7 L88.7 153.5 L60.0 139.8 L42.9 111.3 L45.1 76.1 L68.2 46.6 L101.5 35.9 L139.0 47.2 L162.9 76.7 L166.2 119.0 L147.2 152.6 L104.7 172.7 L64.6 166.0 L32.3 136.0 L21.8 91.0 L38.0 49.3 L73.4 22.6 L123.3 19.3 L165.8 44.9" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="79.84215328004211" cy="76.53087117895484" r="7.045931655913591" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="126.05128643289208" y="125.89293829724193" width="15.967080930247903" height="9.127147240564227" fill="#b8477a" opacity="0.7" transform="rotate(49 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">N</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="coyote.html"><span>Various Native American (particularly Plains, Southwest, Great Basin tribes)</span><b>Coyote</b><p>Coyote is one of the most widespread and iconic figures in Native American mythology, appearing in the oral tr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="maui.html"><span>Māori</span><b>Maui</b><p>Maui is the great trickster-hero of Polynesian mythology — a demigod whose exploits are told in varying forms …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="pombero.html"><span>Guarani</span><b>Pombero</b><p>The Pombero (from Guarani &#39;Pombéro&#39; — &#39;spirit of the night&#39;) is one of the most widely believed-in mythologica…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-1754<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-beast head-upper" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">The Crawler (Vita Carnis)</span></span><span class="rec-right">BESTIARY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:70vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/16/AberdeenBestiaryFolio008vLeopard.jpg" loading="lazy" alt="The Crawler (Vita Carnis)" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#e8c470" stop-opacity="0.7"/><stop offset="55%" stop-color="#b8923d" stop-opacity="0.28"/><stop offset="100%" stop-color="#b8923d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M125.2 100.0L122.0 115.9L107.7 123.6L92.4 123.5L77.8 116.1L72.2 100.0L80.4 85.8L93.0 78.4L107.8 76.1L123.4 83.0L126.2 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.5878202409716322"/><path d="M134.0 100.0L129.6 121.5L112.3 137.9L89.4 132.6L67.1 123.9L63.2 100.0L71.9 79.6L89.8 68.5L110.4 68.1L131.6 77.0L136.8 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.644487555779051"/><path d="M154.8 100.0L143.8 131.8L116.4 150.5L82.4 154.1L52.1 134.8L46.1 100.0L51.9 65.0L83.2 48.3L118.0 44.7L144.6 67.6L157.6 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.6155334786395542"/><ellipse cx="113.6" cy="89.1" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(208 113.6 89.1)"/><ellipse cx="123.2" cy="70.8" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(190 123.2 70.8)"/><ellipse cx="75.6" cy="101.3" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(288 75.6 101.3)"/><ellipse cx="60.5" cy="88.5" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(173 60.5 88.5)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#b8923d" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#b8923d" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#e8c470" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -44,6 +44,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="the-singularity-the-monolith-vita-carnis.html"><span>Vita Carnis</span><b>The Singularity / The Monolith (Vita Carnis)</b><p>The apex organism of the Vita Carnis family and the apparent &#39;queen&#39; of the entire species. A colossal station…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q17047247.html"><span>Unclassified — research pending</span><b>Tsmok</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q140088862.html"><span>Unclassified — research pending</span><b>Gegants dels Hostalets de Balenyà</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · BESTIARY · AAT-2268<br>The Great Menagerie · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

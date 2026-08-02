@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-undead " style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Aswang</span></span><span class="rec-right">MORTUARY ARCHIVE</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img glitch" style="min-height:72vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Aswang%2C_common_form.jpg" loading="lazy" alt="Aswang" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#c9a8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#9b7bb8" stop-opacity="0.28"/><stop offset="100%" stop-color="#9b7bb8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><path d="M99.8 150.0L59.2 126.2L40.3 74.5L72.6 42.3L133.7 45.9L160.6 93.0L138.3 137.9Z" fill="none" stroke="#9b7bb8" stroke-width="1.6" opacity="0.85"/><line x1="127.0" y1="96.6" x2="139.1" y2="84.9" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="129.5" y1="106.9" x2="117.3" y2="80.4" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="120.5" y1="90.0" x2="115.6" y2="135.7" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="5.650506594683975" fill="#9b7bb8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#c9a8e8" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="manananggal.html"><span>Filipino</span><b>Manananggal</b><p>The manananggal is a terrifying witch-like creature in Philippine folklore that can sever its upper body from …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="mayari.html"><span>Filipino</span><b>Mayari</b><p>Mayari is the moon goddess who fought her brother Apolaki (sun god) for shared rule of the earth after Bathala…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="dracula-castlevania.html"><span>Video Game — Castlevania series (Konami, 1986). Based on Bram Stoker&#39;s Dracula and the historical Vlad III Dracula (Vlad the Impaler), with original lore developed across the Castlevania franchise.</span><b>Dracula (Castlevania)</b><p>Dracula is the eternal antagonist of the Castlevania series — the Dark Lord whose castle, Castlevania, rises e…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MORTUARY ARCHIVE · AAT-3148<br>The Cold Crypt · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-cryptid " style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Cadejo</span></span><span class="rec-right">FIELD INVESTIGATION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:58vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Misty_Forest._-_geograph.org.uk_-_300197.jpg" loading="lazy" alt="Cadejo" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#aed47f" stop-opacity="0.7"/><stop offset="55%" stop-color="#7da44c" stop-opacity="0.28"/><stop offset="100%" stop-color="#7da44c" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="90" fill="url(#sg)"/><path d="M124.2 100.0L120.8 115.1L109.0 127.6L92.7 122.4L76.6 117.0L75.2 100.0L79.4 85.1L91.8 74.8L108.4 74.1L119.9 85.6L127.2 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.5231354379327967"/><path d="M137.8 100.0L132.0 123.2L111.4 135.1L87.9 137.2L65.3 125.2L62.9 100.0L65.5 74.9L86.6 58.8L112.6 61.3L133.8 75.4L137.7 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.3923322065151296"/><path d="M148.9 100.0L142.2 130.6L115.4 147.4L83.8 149.8L60.5 128.7L49.1 100.0L61.2 71.8L86.0 56.9L115.2 53.3L141.4 70.0L148.6 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.52250835938612"/><ellipse cx="67.1" cy="112.8" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(292 67.1 112.8)"/><ellipse cx="123.2" cy="115.9" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(239 123.2 115.9)"/><ellipse cx="114.7" cy="65.1" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(97 114.7 65.1)"/><ellipse cx="68.2" cy="114.6" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(161 68.2 114.6)"/><ellipse cx="90.0" cy="67.5" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(302 90.0 67.5)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#7da44c" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#7da44c" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#aed47f" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">C</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -43,6 +43,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="black-shuck.html"><span>English (East Anglian)</span><b>Black Shuck</b><p>Black Shuck is the great phantom dog of the English east: a hound the size of a calf, shaggy and black as a co…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="thunderbird.html"><span>Indigenous North American (multiple tribes) and modern cryptozoology</span><b>Thunderbird</b><p>The Thunderbird holds a dual identity as both a sacred supernatural being in numerous Indigenous North America…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="queensland-tiger.html"><span>Australian (Queensland, particularly the Cape York Peninsula and northeastern rainforests)</span><b>Queensland Tiger</b><p>The Queensland Tiger, also called the Yarri by Aboriginal Australians, is a cryptid marsupial carnivore report…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · FIELD INVESTIGATION · AAT-3045<br>The Evidence Room · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

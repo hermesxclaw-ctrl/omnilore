@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-smallcaps" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Aufhocker</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:65vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/NKS_1867_4to%2C_97v%2C_Odin_on_Sleipnir.jpg" loading="lazy" alt="Aufhocker" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M55.1 137.6 A58.55592497903854 58.55592497903854 0 0 1 119.6 44.8" fill="none" stroke="#6fa8b8" stroke-width="2.782912355614826" stroke-linecap="round" opacity="0.8"/><path d="M154.3 78.1 A58.55592497903854 58.55592497903854 0 0 1 66.0 147.6" fill="none" stroke="#6fa8b8" stroke-width="4.439577025477774" stroke-linecap="round" opacity="0.8"/><path d="M73.74571729870513 135.66250598803163 q23.528274432569745 -9.81850733421743 58.820686081424356 0" fill="none" stroke="#a3d8e8" stroke-width="2.038663935288787" stroke-linecap="round" opacity="0.45735342530533674"/><path d="M75.36857251729816 68.22980031557381 q13.248876789771021 -11.10927507886663 33.12219197442755 0" fill="none" stroke="#b89a6f" stroke-width="2.27055108435452" stroke-linecap="round" opacity="0.6191258432343603"/><path d="M84.13136088708416 129.5363348647952 q24.201951766386628 -15.841167866252363 60.50487941596657 0" fill="none" stroke="#a3d8e8" stroke-width="1.2744196709245443" stroke-linecap="round" opacity="0.6914573303423822"/><path d="M61.28615819104016 107.20069835335016 q12.561114694923162 -11.265053622424603 31.402786737307906 0" fill="none" stroke="#b89a6f" stroke-width="1.4430888500064611" stroke-linecap="round" opacity="0.6660321369767189"/><path d="M83.6207030476071 92.90896879136562 q22.896471032314004 -8.830962343141437 57.241177580785006 0" fill="none" stroke="#a3d8e8" stroke-width="2.012694761902094" stroke-linecap="round" opacity="0.7833131754770876"/><circle cx="86.05927506275475" cy="105.8488916317001" r="6.299729050137103" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="alp.html"><span>German folklore (folk horror tradition)</span><b>Alp</b><p>A vampiric nightmare spirit from German folklore similar to the mare. The alp is typically male and wears a ma…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="agta.html"><span>Filipino</span><b>Agta</b><p>Agta (not to be confused with the Aeta indigenous people) are dark-skinned, hairy forest spirits in Bicolano a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="hamingja.html"><span>Norse</span><b>Hamingja</b><p>The Hamingja (literally &#39;luck,&#39; &#39;fortune,&#39; or &#39;shape-changing spirit&#39;) is one of the most sophisticated concep…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3099<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mokoi</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:74vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ukiyo-e_woodblock_print_by_Katsushika_Hokusai%2C_digitally_enhanced_by_rawpixel-com_6.jpg/1280px-Ukiyo-e_woodblock_print_by_Katsushika_Hokusai%2C_digitally_enhanced_by_rawpixel-com_6.jpg" loading="lazy" alt="Mokoi" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M66.0 147.7 A58.59224337898195 58.59224337898195 0 0 1 104.0 41.5" fill="none" stroke="#6fa8b8" stroke-width="4.1147610725602135" stroke-linecap="round" opacity="0.8"/><path d="M125.7 47.3 A58.59224337898195 58.59224337898195 0 0 1 122.0 154.3" fill="none" stroke="#6fa8b8" stroke-width="3.6012426036177203" stroke-linecap="round" opacity="0.8"/><path d="M73.30468557495624 119.72025169990957 q18.84745751284063 -11.802308372221887 47.11864378210157 0" fill="none" stroke="#a3d8e8" stroke-width="1.4866613574326037" stroke-linecap="round" opacity="0.7412646620534361"/><path d="M87.11012281663716 116.78145953640342 q24.98277664612979 -10.713275663089007 62.45694161532447 0" fill="none" stroke="#b89a6f" stroke-width="2.210629350319505" stroke-linecap="round" opacity="0.43835350619629027"/><path d="M63.946219319012016 75.73308425024152 q10.223511654511094 -12.27464095596224 25.558779136277735 0" fill="none" stroke="#a3d8e8" stroke-width="1.660818213224411" stroke-linecap="round" opacity="0.5152229307219387"/><circle cx="107.2677783537656" cy="108.80160825885832" r="6.717507068999112" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="whiro.html"><span>Māori</span><b>Whiro</b><p>Whiro is the Māori god of darkness, death, evil, and chaos — the supreme antagonist in the Māori divine panthe…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="julunggul.html"><span>Yolngu</span><b>Julunggul</b><p>Julunggul is the Yolngu manifestation of the Rainbow Serpent — a great python-like being, specifically gendere…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="likho.html"><span>Slavic</span><b>Likho</b><p>Likho is bad luck as a being: a gaunt, black-clad, one-eyed woman (sometimes a skeletal one-eyed giant) who is…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2712<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-demonic head-smallcaps" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Zahhak</span></span><span class="rec-right">INFERNAL REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img glitch" style="min-height:76vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_65_%28Canto_XXXI_-_The_Titans%29.jpg/1280px-Gustave_Dor%C3%A9_-_Dante_Alighieri_-_Inferno_-_Plate_65_%28Canto_XXXI_-_The_Titans%29.jpg" loading="lazy" alt="Zahhak" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6a54" stop-opacity="0.7"/><stop offset="55%" stop-color="#c8322b" stop-opacity="0.28"/><stop offset="100%" stop-color="#c8322b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><path d="M93.8 147.3L63.9 128.4L39.0 91.5L61.1 49.6L102.1 43.6L146.9 54.7L154.2 101.2L132.7 140.3Z" fill="none" stroke="#c8322b" stroke-width="1.6" opacity="0.85"/><line x1="70.3" y1="124.9" x2="117.7" y2="126.1" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="114.3" y1="138.2" x2="108.0" y2="114.4" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="98.5" y1="126.9" x2="132.3" y2="113.4" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="8.13449279870838" fill="#c8322b" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff6a54" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">Z</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="angra-mainyu.html"><span>Persian (Zoroastrian)</span><b>Angra Mainyu</b><p>Angra Mainyu (meaning &#39;Destructive Spirit&#39; or &#39;Evil Mentality&#39;), also known by his Middle Persian name Ahriman…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="simurgh.html"><span>Persian (Zoroastrian)</span><b>Simurgh</b><p>The Simurgh (also Simorgh, Simurg) is a magnificent mythical bird in Persian mythology, a wise and benevolent …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="magu-magu-no-mi.html"><span>demonic</span><b>Magu Magu no Mi</b><p>The Magma-Magma Fruit, a Logia-type Devil Fruit that allows the user to create, control, and transform into ma…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · INFERNAL REGISTER · AAT-2945<br>The Locked Wing · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

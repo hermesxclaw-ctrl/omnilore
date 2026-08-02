@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-heroic-legend head-smallcaps" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Zarqa&#39; al-Yamama</span></span><span class="rec-right">HALL OF HEROES</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:61vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Andries_Cornelis_Lens_-_Hercules_Protects_Painting_from_Ignorance_and_Envy_-_WGA12673.jpg" loading="lazy" alt="Zarqa&#39; al-Yamama" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#f2c479" stop-opacity="0.7"/><stop offset="55%" stop-color="#c98f3d" stop-opacity="0.28"/><stop offset="100%" stop-color="#c98f3d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#c98f3d" stroke-width="1.5082703234395014" opacity="0.6866334883496166"/><circle cx="100" cy="100" r="43" fill="none" stroke="#8a4a3a" stroke-width="1.7090696772793308" opacity="0.601561987772584"/><line x1="159.83580102818226" y1="105.53639606349951" x2="185.91203948758" y2="107.94913862692718" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="131.65832641156052" y1="142.10645965299756" x2="149.21248310825519" y2="165.45397907278158" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="84.17873532542711" y1="160.1547129673808" x2="79.8034040720386" y2="176.7903486828867" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="45.76716906951199" y1="124.65090938176935" x2="32.6840351683815" y2="130.5976973825598" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="43.94576544779501" y1="71.80635919355409" x2="29.720190385402375" y2="64.65131093041701" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="90.49402068183049" y1="37.869856168933694" x2="86.18725003696085" y2="9.721227747060453" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="143.38575279058958" y1="53.36632116226339" x2="159.03300625575932" y2="36.54768956425046" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 72.1L107.3 89.9L126.5 91.4L111.9 103.9L116.4 122.6L100.0 112.5L83.6 122.6L88.1 103.9L73.5 91.4L92.7 89.9Z" fill="#c98f3d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#f2c479" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">Z</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="wikidata-q3155260.html"><span>Unclassified — research pending</span><b>Ishvala</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q105462023.html"><span>Unclassified — research pending</span><b>Ulti</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q97672243.html"><span>Unclassified — research pending</span><b>Judgement</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · HALL OF HEROES · AAT-2661<br>The Bronze Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine " style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Orion</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt" style="min-height:59vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="89" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.7452917501796037" opacity="0.686513158492744"/><circle cx="100" cy="100" r="49" fill="none" stroke="#c94f2e" stroke-width="1.683681739354506" opacity="0.5342933404259383"/><circle cx="100" cy="100" r="64" fill="none" stroke="#e8a33d" stroke-width="1.6685064212186262" opacity="0.4589300474151969"/><line x1="163.5621589950612" y1="101.0293641961658" x2="192.67336543375362" y2="101.50080874885178" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="135.73532531033206" y1="146.9786712935355" x2="150.74496545925396" y2="166.71076956511843" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="83.7280033253298" y1="153.42835427575147" x2="73.44235272136869" y2="187.20081597250686" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="51.79319301462967" y1="122.13964346494566" x2="32.968482342459836" y2="130.78515244335773" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="51.54936967653246" y1="73.28524659191008" x2="38.487012373743966" y2="66.08291192788951" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="86.40066897247434" y1="38.77097500464639" x2="81.94171446184268" y2="18.69517593541204" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="133.8657687177174" y1="57.98547471022427" x2="144.02026337771426" y2="45.387612950360264" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 75.8L106.5 91.1L123.0 92.5L110.5 103.4L114.2 119.6L100.0 111.1L85.8 119.6L89.5 103.4L77.0 92.5L93.5 91.1Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">O</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="darkseid.html"><span>DC Comics (Warner Bros. Discovery)</span><b>Darkseid</b><p>Darkseid is the god of evil — one of the most powerful and iconic villains in all of comic book history. Born …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="mantis.html"><span>DC Comics (Warner Bros. Discovery)</span><b>Mantis</b><p>Mantis is a New God warrior and one of Darkseid&#39;s most competent lieutenants — a disciplined, insectoid being …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q1872800.html"><span>Unclassified — research pending</span><b>Kajamanu</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-2983<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,8 +18,7 @@
 </head>
 <body class="tex-grain arch-demonic " style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Beholder</span></span><span class="rec-right">INFERNAL REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img glitch" style="min-height:71vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/en/9/9e/Beholder_%28D%26D%29.jpg" loading="lazy" alt="Beholder" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6a54" stop-opacity="0.7"/><stop offset="55%" stop-color="#c8322b" stop-opacity="0.28"/><stop offset="100%" stop-color="#c8322b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="89" fill="url(#sg)"/><path d="M97.4 165.1L51.8 121.8L49.6 60.6L105.4 45.0L142.5 79.9L139.0 130.8Z" fill="none" stroke="#c8322b" stroke-width="1.6" opacity="0.85"/><line x1="120.4" y1="111.1" x2="85.0" y2="76.9" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="68.9" y1="86.2" x2="116.6" y2="87.8" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="73.7" y1="111.5" x2="110.7" y2="84.3" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="95.4" y1="81.8" x2="111.9" y2="86.8" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="60.6" y1="105.5" x2="84.4" y2="95.9" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="111.3" y1="113.4" x2="108.0" y2="87.7" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="7.307624333770946" fill="#c8322b" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff6a54" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -50,7 +49,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="gomu-gomu-no-mi.html"><span>demonic</span><b>Gomu Gomu no Mi</b><p>The Gum-Gum Fruit, a legendary Devil Fruit that turned its user&#39;s body into rubber. Long believed to be a simp…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="beelzebub.html"><span>Abrahamic</span><b>Beelzebub</b><p>Beelzebub occupies a uniquely prominent position in demonic hierarchies as the &#39;Prince of Demons&#39; — second onl…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="nightwalker.html"><span>demonic</span><b>Nightwalker</b><p>A towering, 30-foot-tall humanoid figure of pure darkness, with eyes like dying stars. Nightwalkers are the mo…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · INFERNAL REGISTER · AAT-1594<br>The Locked Wing · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
-<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};</script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

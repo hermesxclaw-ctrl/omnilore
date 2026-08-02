@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mélusine</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:73vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Melusinediscovered.jpg" loading="lazy" alt="Mélusine" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M47.9 104.0 A52.207034710329026 52.207034710329026 0 0 1 143.4 71.0" fill="none" stroke="#7fb8a4" stroke-width="3.5792743047932163" stroke-linecap="round" opacity="0.8"/><path d="M151.5 108.4 A52.207034710329026 52.207034710329026 0 0 1 48.3 107.0" fill="none" stroke="#7fb8a4" stroke-width="4.889416140504181" stroke-linecap="round" opacity="0.8"/><path d="M82.97380817774683 123.59077274985611 q18.951371265202763 -7.9387997686862946 47.3784281630069 0" fill="none" stroke="#b2e6cf" stroke-width="1.3948922950774432" stroke-linecap="round" opacity="0.4571731864474714"/><path d="M77.30865951115265 89.49725711159408 q11.129206919483842 -14.852792212273926 27.8230172987096 0" fill="none" stroke="#c78bb0" stroke-width="1.208283893764019" stroke-linecap="round" opacity="0.5395736644975841"/><path d="M75.29395625647157 134.86165919527411 q16.75868990458548 -13.18019540887326 41.8967247614637 0" fill="none" stroke="#b2e6cf" stroke-width="2.265493014454842" stroke-linecap="round" opacity="0.6843826790340245"/><path d="M72.92344363592565 88.2468763962388 q19.250433035008612 -11.329104140400887 48.12608258752152 0" fill="none" stroke="#c78bb0" stroke-width="1.5707970157265665" stroke-linecap="round" opacity="0.462758541572839"/><path d="M72.19442414306104 70.45498195290565 q20.981892473809424 -10.23414048505947 52.45473118452355 0" fill="none" stroke="#b2e6cf" stroke-width="1.0539587788283824" stroke-linecap="round" opacity="0.704711117129773"/><circle cx="103.8203237624839" cy="106.83772943541408" r="3.732853007502854" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="kabouter.html"><span>Dutch</span><b>Kabouter</b><p>De Kabouter (plural Kabouters) is a gnome-like household and nature spirit from Dutch folklore, closely relate…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="drizzt-dourden.html"><span>Dungeons &amp; Dragons — Forgotten Realms (Wizards of the Coast / Hasbro)</span><b>Drizzt Do&#39;Urden</b><p>Drizzt Do&#39;Urden is the most famous original character in Dungeons &amp; Dragons history — a drow (dark elf) who re…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="kinnara.html"><span>Hindu</span><b>Kinnara</b><p>Kinnaras are the celestial musicians of the Himalayan paradise — beings half human, half bird, whose form draw…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-2578<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

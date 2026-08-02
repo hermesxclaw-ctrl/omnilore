@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-cryptid " style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mapinguari</span></span><span class="rec-right">FIELD INVESTIGATION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:61vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Mylodon_skeleton.jpg/640px-Mylodon_skeleton.jpg" loading="lazy" alt="Mapinguari" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#aed47f" stop-opacity="0.7"/><stop offset="55%" stop-color="#7da44c" stop-opacity="0.28"/><stop offset="100%" stop-color="#7da44c" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M129.2 100.0L120.7 115.0L109.1 128.1L92.5 123.1L78.1 115.9L73.3 100.0L80.2 85.6L92.2 76.0L108.2 74.7L120.9 84.8L124.3 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.4531442815670743"/><path d="M140.2 100.0L133.4 124.3L112.1 137.4L89.3 133.1L68.5 122.9L64.8 100.0L71.1 79.0L87.2 60.5L111.3 65.4L132.4 76.5L137.5 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.5323143455898389"/><path d="M154.3 100.0L142.3 130.7L116.5 150.8L83.1 152.2L58.2 130.4L44.8 100.0L56.4 68.3L83.6 49.4L116.2 50.2L141.4 70.0L150.9 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.3843293094425462"/><path d="M170.5 100.0L156.9 141.3L122.5 169.3L79.0 164.6L43.3 141.2L26.9 100.0L42.4 58.1L78.3 33.2L122.5 30.8L158.7 57.4L167.2 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.5783082807203754"/><ellipse cx="67.3" cy="70.7" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(109 67.3 70.7)"/><ellipse cx="114.3" cy="133.6" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(137 114.3 133.6)"/><ellipse cx="84.0" cy="124.3" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(236 84.0 124.3)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#7da44c" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#7da44c" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#aed47f" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="bigfoot.html"><span>North American</span><b>Bigfoot (Sasquatch)</b><p>You&#39;re hiking alone in the Pacific Northwest. The trail is empty. The forest is cathedral-quiet. Then you smel…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="hibagon.html"><span>Japanese</span><b>Hibagon</b><p>The Hibagon is Japan&#39;s most famous Bigfoot-like cryptid, reported from the forested slopes of Mount Hiba in Hi…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="beast-of-gevaudan-2.html"><span>Gévaudan, France</span><b>Beast of Gévaudan</b><p>A man-eating beast that terrorized the province of Gévaudan between 1764-1767, killing over 100 people. Descri…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · FIELD INVESTIGATION · AAT-1855<br>The Evidence Room · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

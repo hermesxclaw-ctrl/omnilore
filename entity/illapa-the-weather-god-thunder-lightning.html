@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine head-smallcaps" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Illapa (the Weather-God / Thunder / Lightning)</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:65vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Vultures_in_Aberdeen_Bestiary.jpg" loading="lazy" alt="Illapa (the Weather-God / Thunder / Lightning)" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.7336154164513573" opacity="0.73869216600433"/><circle cx="100" cy="100" r="46" fill="none" stroke="#c94f2e" stroke-width="1.2990009007509797" opacity="0.5329274784773588"/><circle cx="100" cy="100" r="62" fill="none" stroke="#e8a33d" stroke-width="1.650125037273392" opacity="0.6812591985799372"/><line x1="158.47611872282752" y1="104.84252846053906" x2="180.64479810452178" y2="106.67836269822611" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="124.37129975191871" y1="146.19748104880878" x2="139.15750132711534" y2="174.22574683714595" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="68.98021659411184" y1="149.43369215162934" x2="50.3846074713407" y2="179.06799374293598" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="43.37776693732829" y1="99.52751131459456" x2="13.790368888902861" y2="99.28061694020643" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="71.02027365667041" y1="43.280036369478346" x2="56.8313785656099" y2="15.50911803893024" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="130.44130635585017" y1="56.53266947059975" x2="139.7752571656349" y2="43.204663101513546" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 73.7L104.8 90.0L120.6 83.6L110.8 97.5L125.6 105.9L108.7 106.9L111.4 123.7L100.0 111.1L88.6 123.7L91.3 106.9L74.4 105.9L89.2 97.5L79.4 83.6L95.2 90.0Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">I</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -40,6 +40,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="inara.html"><span>divine</span><b>Inara</b><p>Inara is a goddess of the wild steppe and a key protagonist in the Hittite Illuyanka myth cycle, the Anatolian…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q2762648.html"><span>Unclassified — research pending</span><b>Kakka</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="apollo.html"><span>Greek</span><b>Apollo</b><p>Apollo is the radiant god of music, poetry, prophecy, healing, archery, and the sun — perhaps the most multifa…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-2562<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

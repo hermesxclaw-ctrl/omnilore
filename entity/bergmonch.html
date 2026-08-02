@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-upper" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Bergmönch</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:67vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Heimdallr_and_valkyries_by_Fr%C3%B8lich.jpg/1280px-Heimdallr_and_valkyries_by_Fr%C3%B8lich.jpg" loading="lazy" alt="Bergmönch" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><path d="M113.5 45.9 A55.778251816984266 55.778251816984266 0 0 1 154.1 113.6" fill="none" stroke="#6fa8b8" stroke-width="2.8156107832910493" stroke-linecap="round" opacity="0.8"/><path d="M140.4 138.5 A55.778251816984266 55.778251816984266 0 0 1 57.4 136.0" fill="none" stroke="#6fa8b8" stroke-width="3.997074459330179" stroke-linecap="round" opacity="0.8"/><path d="M47.6 119.1 A55.778251816984266 55.778251816984266 0 0 1 82.4 47.1" fill="none" stroke="#6fa8b8" stroke-width="3.111167907482013" stroke-linecap="round" opacity="0.8"/><path d="M85.09129060152918 67.74803896434605 q27.412525724619627 -8.188292413484305 68.53131431154907 0" fill="none" stroke="#a3d8e8" stroke-width="1.5705279015004634" stroke-linecap="round" opacity="0.5540677823126317"/><path d="M79.36704587144777 110.00554069690406 q23.738177802972498 -13.61913833906874 59.34544450743124 0" fill="none" stroke="#b89a6f" stroke-width="1.152019714564085" stroke-linecap="round" opacity="0.6714777756482363"/><path d="M79.56108505092561 94.32470469176769 q18.199667702428997 -7.7251299624331295 45.49916925607249 0" fill="none" stroke="#a3d8e8" stroke-width="2.0991395492106677" stroke-linecap="round" opacity="0.7162304895929993"/><path d="M64.69683018932119 77.71237092278898 q18.248148305900397 -15.63695413665846 45.62037076475099 0" fill="none" stroke="#b89a6f" stroke-width="1.4973383329808712" stroke-linecap="round" opacity="0.41733673000708227"/><circle cx="104.68577391002327" cy="101.91989256162196" r="5.0272324020043015" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="rubezahl.html"><span>German (Silesian / Bohemian border)</span><b>Rübezahl</b><p>Rübezahl is the capricious spirit-lord of the Riesengebirge (Giant Mountains) between Silesia and Bohemia. His…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="sif-the-great-grey-wolf.html"><span>Dark Souls (FromSoftware)</span><b>Sif, the Great Grey Wolf</b><p>Sif, the Great Grey Wolf, is the most heartbreaking boss fight in the Dark Souls series — a giant wolf who gua…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="fenken.html"><span>Austrian (Vorarlberg / Alpine)</span><b>Fenken</b><p>Der Fenken is a restless night spirit from the folklore of Vorarlberg, Austria&#39;s westernmost state. Described …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3118<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

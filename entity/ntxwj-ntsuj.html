@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-upper" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Ntxwj / Ntsuj</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:72vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Yoshitoshi_The_Ghost_of_Taira_no_Tomomori.jpg" loading="lazy" alt="Ntxwj / Ntsuj" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#sg)"/><path d="M48.3 124.2 A57.07704953663051 57.07704953663051 0 0 1 122.0 47.3" fill="none" stroke="#6fa8b8" stroke-width="3.560554904397577" stroke-linecap="round" opacity="0.8"/><path d="M134.9 54.8 A57.07704953663051 57.07704953663051 0 0 1 89.8 156.2" fill="none" stroke="#6fa8b8" stroke-width="3.750078251468949" stroke-linecap="round" opacity="0.8"/><path d="M80.860724395141 94.8215457573533 q12.993534699641168 -12.216636644676328 32.48383674910292 0" fill="none" stroke="#a3d8e8" stroke-width="2.143351792916656" stroke-linecap="round" opacity="0.5452053531073034"/><path d="M84.91487730015069 120.43542979285121 q11.268412277661264 -15.511915701441467 28.17103069415316 0" fill="none" stroke="#b89a6f" stroke-width="1.820703700184822" stroke-linecap="round" opacity="0.7776962220668793"/><path d="M74.24974077800289 68.07181161642075 q27.57764977719635 -11.186545324977487 68.94412444299087 0" fill="none" stroke="#a3d8e8" stroke-width="2.4065788675099613" stroke-linecap="round" opacity="0.6220646572299302"/><path d="M82.5849205669947 128.2899029813707 q26.44079398903996 -10.869866317603737 66.1019849725999 0" fill="none" stroke="#b89a6f" stroke-width="1.1161975391209125" stroke-linecap="round" opacity="0.550091262254864"/><circle cx="98.34786863345653" cy="100.91217834409326" r="4.768372630700469" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">N</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -42,6 +42,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="xwm-kab.html"><span>Hmong</span><b>Xwm Kab</b><p>Xwm Kab are protective guardian spirits in Hmong religion that watch over villages, sacred sites, and natural …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="pantanera.html"><span>Italian (Lombardy / Piedmont)</span><b>Pantanera</b><p>La Pantanera (also Pantànera or Pantanèra in local dialects) is a terrifying swamp spirit from the folklore of…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="sennentuntschi.html"><span>Alpine (Swiss Alps, especially Appenzell, Graubünden)</span><b>Sennentuntschi</b><p>Sennentuntschi is a chilling figure from Swiss Alpine folklore — an artificial woman created by lonely herdsme…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3346<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

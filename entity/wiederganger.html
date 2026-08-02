@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-undead head-smallcaps" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Wiedergänger</span></span><span class="rec-right">MORTUARY ARCHIVE</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img glitch" style="min-height:67vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Loki%27s_children_by_Fr%C3%B8lich.jpg/1280px-Loki%27s_children_by_Fr%C3%B8lich.jpg" loading="lazy" alt="Wiedergänger" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#c9a8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#9b7bb8" stop-opacity="0.28"/><stop offset="100%" stop-color="#9b7bb8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M95.5 145.1L49.8 120.0L50.6 68.7L110.8 43.2L148.0 75.2L142.7 129.7Z" fill="none" stroke="#9b7bb8" stroke-width="1.6" opacity="0.85"/><line x1="102.1" y1="140.6" x2="82.1" y2="91.0" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="90.6" y1="110.7" x2="124.3" y2="100.3" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="82.5" y1="125.0" x2="120.8" y2="96.5" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="95.4" y1="66.6" x2="60.3" y2="106.4" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="76.7" y1="109.2" x2="139.7" y2="84.0" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="134.9" y1="75.2" x2="123.6" y2="68.4" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="8.569269651779905" fill="#9b7bb8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#c9a8e8" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">W</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="draugr.html"><span>Norse</span><b>Draugr</b><p>In Nordic folklore and the Icelandic sagas, the draugr (Old Norse: draugr; plural: draugar) is a malevolent un…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="aswang.html"><span>Filipino</span><b>Aswang</b><p>The aswang is the most feared and versatile monster in Philippine folklore, a shape-shifting ghoul that combin…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="penanggalan.html"><span>Malay / Southeast Asian</span><b>Penanggalan</b><p>A vampiric entity from Malay ghost myths, depicted as a floating disembodied woman&#39;s head with entrails and in…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MORTUARY ARCHIVE · AAT-2589<br>The Cold Crypt · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">El Sombrerón</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:63vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Skulptur_Buschallee_88_%28Wei%C3%9Fs%29_Till_Eulenspiegel%26Stephan_Horota%2619783.jpg/1280px-Skulptur_Buschallee_88_%28Wei%C3%9Fs%29_Till_Eulenspiegel%26Stephan_Horota%2619783.jpg" loading="lazy" alt="El Sombrerón" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><path d="M100 100 L98.9 106.0 L94.3 105.4 L90.4 101.3 L89.8 94.0 L94.7 87.3 L103.9 85.3 L113.0 88.8 L119.2 98.4 L117.4 111.1 L109.5 120.1 L95.2 123.5 L80.4 116.9 L72.7 102.2 L74.7 85.5 L88.4 71.2 L108.3 68.4 L126.0 77.2 L135.9 97.2 L132.3 120.0 L117.3 135.8 L93.9 141.5 L68.3 130.8 L55.2 109.1 L57.1 79.8 L76.5 56.5 L105.8 48.6 L133.0 57.9 L152.9 84.4 L154.0 118.0 L134.4 147.1 L103.8 159.7 L65.7 151.4 L41.9 126.2 L34.9 89.4 L50.6 53.8 L87.9 31.5 L129.9 35.0 L165.4 66.0 L175.5 107.8 L160.3 149.6 L126.0 175.7 L80.0 179.2 L33.8 150.8 L15.1 106.3" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="79.99472692608833" cy="79.47838543727994" r="6.755340808071196" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="120.5832476504147" y="123.08236348628998" width="13.0460208915174" height="13.419990416616201" fill="#b8477a" opacity="0.7" transform="rotate(18 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">E</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -43,6 +43,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="cadejo.html"><span>Central American</span><b>Cadejo</b><p>The cadejo is Central America&#39;s great two-in-one: not a monster but a matched pair, a white dog and a black do…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="kamapuaa.html"><span>Hawaiian</span><b>Kamapua&#39;a</b><p>Kamapua&#39;a is the pig demigod of Hawaiian mythology — a shape-shifting, lustful, violent, and ultimately sympat…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="kaggen.html"><span>San / Xam</span><b>Kaggen</b><p>Kaggen (also Cagn or |Kaggen) is the supreme trickster-creator deity of the San people, one of the world&#39;s old…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-3050<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

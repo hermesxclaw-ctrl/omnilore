@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Hyōrinmaru</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:66vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Ghost_of_Seigen_Haunting_Sakurahime_LACMA_M.86.138.2.jpg/1280px-The_Ghost_of_Seigen_Haunting_Sakurahime_LACMA_M.86.138.2.jpg" loading="lazy" alt="Hyōrinmaru" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M52.6 138.4 A60.95031877793372 60.95031877793372 0 0 1 75.5 44.2" fill="none" stroke="#6fa8b8" stroke-width="4.16587881220039" stroke-linecap="round" opacity="0.8"/><path d="M105.1 39.3 A60.95031877793372 60.95031877793372 0 0 1 158.8 116.1" fill="none" stroke="#6fa8b8" stroke-width="4.586394751095213" stroke-linecap="round" opacity="0.8"/><path d="M149.4 135.7 A60.95031877793372 60.95031877793372 0 0 1 62.8 148.3" fill="none" stroke="#6fa8b8" stroke-width="4.530138912377879" stroke-linecap="round" opacity="0.8"/><path d="M75.30830376967788 69.58505372703075 q27.132386933080852 -6.660456216428429 67.83096733270213 0" fill="none" stroke="#a3d8e8" stroke-width="1.7059433843940497" stroke-linecap="round" opacity="0.7048610106110573"/><path d="M68.93967997003347 107.70698708109558 q24.89540366008878 -10.761216468177736 62.238509150221944 0" fill="none" stroke="#b89a6f" stroke-width="1.4511483654379844" stroke-linecap="round" opacity="0.6142296429723502"/><path d="M67.14277045987546 86.43687189742923 q21.402669131197037 -15.96916868723929 53.50667282799259 0" fill="none" stroke="#a3d8e8" stroke-width="1.607311023771763" stroke-linecap="round" opacity="0.7943465958349407"/><circle cx="106.51801912207156" cy="106.5311693456024" r="5.819233521819115" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">H</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="madam-koi-koi.html"><span>Nigerian / Ghanaian / West African (boarding schools and urban areas)</span><b>Madam Koi Koi</b><p>Madam Koi Koi is one of West Africa&#39;s most famous school-based urban legends -- a terrifying ghost story told …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="trasgu.html"><span>Spanish</span><b>Trasgu</b><p>The Trasgu (also Trasgo, Trasno) is a mischievous goblin-like creature from the folklore of northern Spain, pa…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="longobard-worms.html"><span>Italian (Lombard / Northern Italy)</span><b>Longobard Worms</b><p>The Lombards (Longobardi, &#39;long-beards&#39;) were a Germanic people who ruled northern Italy from 568 to 774 CE. A…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2751<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

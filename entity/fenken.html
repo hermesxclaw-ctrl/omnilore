@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-smallcaps" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Fenken</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:63vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Yoshitoshi_The_Ghost_of_Seigen.jpg" loading="lazy" alt="Fenken" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="88" fill="url(#sg)"/><path d="M111.6 41.0 A60.139449688605964 60.139449688605964 0 0 1 136.1 148.1" fill="none" stroke="#6fa8b8" stroke-width="2.703235332737677" stroke-linecap="round" opacity="0.8"/><path d="M114.0 158.5 A60.139449688605964 60.139449688605964 0 0 1 55.6 59.4" fill="none" stroke="#6fa8b8" stroke-width="3.1409335136413574" stroke-linecap="round" opacity="0.8"/><path d="M73.31853823456913 127.63113881833851 q14.405752080306412 -14.309596630278975 36.01438020076603 0" fill="none" stroke="#a3d8e8" stroke-width="1.6762676123529672" stroke-linecap="round" opacity="0.48862103279680014"/><path d="M73.33163554500788 96.94869228638709 q22.785380655527117 -11.58539962163195 56.96345163881779 0" fill="none" stroke="#b89a6f" stroke-width="1.3507255017757416" stroke-linecap="round" opacity="0.525866345409304"/><path d="M70.00702911708504 80.8007472846657 q11.150822795741261 -9.229925178457052 27.87705698935315 0" fill="none" stroke="#a3d8e8" stroke-width="1.798495051637292" stroke-linecap="round" opacity="0.6515702440403401"/><circle cx="106.40052097011358" cy="113.08183442149311" r="5.080699374899268" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">F</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="kludde.html"><span>Belgian (Flemish)</span><b>Kludde</b><p>De Kludde is a terrifying water-and-night spirit from Flemish folklore (Dutch-speaking Belgium), particularly …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="isobu.html"><span>spirit</span><b>Isobu</b><p>The Three-Tails, a giant turtle-like creature with three tails and a single eye. Isobu dwells in water and con…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="fossegrim.html"><span>Norse</span><b>Fossegrim</b><p>The Fossegrim (also Forsgrím, Strömkarl, &#39;waterfall grim&#39;) is a water spirit who inhabits waterfalls and casca…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3121<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

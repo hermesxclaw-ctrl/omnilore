@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-cryptid head-upper" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Tatzelwurm</span></span><span class="rec-right">FIELD INVESTIGATION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:68vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Tatzelwurm_Illustration.jpg" loading="lazy" alt="Tatzelwurm" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#aed47f" stop-opacity="0.7"/><stop offset="55%" stop-color="#7da44c" stop-opacity="0.28"/><stop offset="100%" stop-color="#7da44c" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><path d="M124.6 100.0L122.8 116.6L109.2 128.3L92.0 124.6L77.1 116.6L70.1 100.0L76.3 82.8L91.9 75.1L108.7 73.2L118.8 86.3L129.9 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.6867917985888198"/><path d="M138.7 100.0L131.9 123.2L112.0 136.9L86.5 141.6L69.8 122.0L55.6 100.0L64.6 74.3L86.9 59.8L112.9 60.4L130.9 77.5L139.4 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.6023655954166316"/><path d="M162.5 100.0L147.0 134.2L117.7 154.4L82.3 154.6L53.4 133.8L40.0 100.0L49.8 63.5L81.9 44.4L118.4 43.4L150.6 63.2L159.8 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.6872524418635293"/><ellipse cx="88.2" cy="104.2" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(305 88.2 104.2)"/><ellipse cx="70.0" cy="80.3" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(171 70.0 80.3)"/><ellipse cx="65.0" cy="136.3" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(167 65.0 136.3)"/><ellipse cx="109.1" cy="74.5" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(231 109.1 74.5)"/><ellipse cx="136.1" cy="85.3" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(50 136.1 85.3)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#7da44c" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#7da44c" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#aed47f" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="lindwurm.html"><span>Norse</span><b>Lindwurm</b><p>The Lindwurm (also Lindworm) is a dragon-like creature from Germanic and Scandinavian folklore, distinguished …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="thunderbird.html"><span>Indigenous North American (multiple tribes) and modern cryptozoology</span><b>Thunderbird</b><p>The Thunderbird holds a dual identity as both a sacred supernatural being in numerous Indigenous North America…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="emela-ntouka.html"><span>Central African (Congo Basin: Republic of Congo, Cameroon)</span><b>Emela-Ntouka</b><p>Emela-Ntouka (&#39;killer of elephants&#39; in Lingala) is a cryptid reported from the swamps of the Congo Basin, desc…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · FIELD INVESTIGATION · AAT-2590<br>The Evidence Room · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

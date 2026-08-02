@@ -18,7 +18,7 @@
 </head>
 <body class="tex-stars arch-cosmic " style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Eson the Searcher</span></span><span class="rec-right">CELESTIAL SURVEY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low" style="min-height:63vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#93b2ff" stop-opacity="0.7"/><stop offset="55%" stop-color="#5f7fd9" stop-opacity="0.28"/><stop offset="100%" stop-color="#5f7fd9" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="81" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#5f7fd9" stroke-width="1.1773064856417477" opacity="0.7943294707685709"/><circle cx="100" cy="100" r="44" fill="none" stroke="#c4a44c" stroke-width="1.134378186124377" opacity="0.7391173362731933"/><circle cx="100" cy="100" r="60" fill="none" stroke="#5f7fd9" stroke-width="1.182162263384089" opacity="0.7621632476337254"/><line x1="160.297293085008" y1="104.96663412352774" x2="189.14635918202407" y2="107.34290590586706" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="138.89991241410428" y1="143.33739052112816" x2="152.57899092742178" y2="158.5768995768316" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="96.35294814529883" y1="154.2626381829763" x2="95.18293966230272" y2="171.6706020708471" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="55.251994203454345" y1="140.4181319968693" x2="35.263111160926385" y2="158.47286536211004" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="46.303786668782045" y1="95.01741173242513" x2="11.256867123717413" y2="91.76533194306025" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="61.525484542192714" y1="57.52775682011209" x2="38.817563014323646" y2="32.4603491148967" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="102.23282618590795" y1="44.870331046280846" x2="103.0836210592039" y2="23.863752026224176" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="142.34600933092227" y1="57.7123584806604" x2="157.25050278634833" y2="42.828408700529536" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><path d="M100.0 73.9L105.1 91.2L122.6 86.9L110.2 100.0L122.6 113.1L105.1 108.8L100.0 126.1L94.9 108.8L77.4 113.1L89.8 100.0L77.4 86.9L94.9 91.2Z" fill="#5f7fd9" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#93b2ff" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">E</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="arishem-the-judge.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Arishem the Judge</b><p>Arishem the Judge is one of the most powerful and feared Celestials — the enigmatic cosmic giants who have sec…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="silver-surfer.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Silver Surfer</b><p>The Silver Surfer is Norrin Radd, a young astronomer from the idyllic planet Zenn-La who sacrificed his own fr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q19014.html"><span>Unclassified — research pending</span><b>Garden of Eden</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · CELESTIAL SURVEY · AAT-2961<br>The Observatory · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

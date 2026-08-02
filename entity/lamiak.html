@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-upper" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Lamiak</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:79vh">
   <img class="hero-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lamina1.jpg?width=900" loading="lazy" alt="Lamiak" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M155.6 80.6 A58.86824104748666 58.86824104748666 0 0 1 55.6 138.7" fill="none" stroke="#7fb8a4" stroke-width="4.578303372836672" stroke-linecap="round" opacity="0.8"/><path d="M42.0 109.8 A58.86824104748666 58.86824104748666 0 0 1 136.4 53.7" fill="none" stroke="#7fb8a4" stroke-width="4.8819996224483475" stroke-linecap="round" opacity="0.8"/><path d="M60.97205911017954 101.00752591714263 q20.850749654322865 -15.80251720873639 52.12687413580716 0" fill="none" stroke="#b2e6cf" stroke-width="1.8465391211211681" stroke-linecap="round" opacity="0.7355488947592677"/><path d="M60.15384185547009 88.34299563616514 q27.18222501706332 -13.378408177755773 67.9555625426583 0" fill="none" stroke="#c78bb0" stroke-width="2.298690603300929" stroke-linecap="round" opacity="0.41695880601182583"/><path d="M70.23016993608326 72.70977509394288 q11.767236447334291 -13.226074885111302 29.418091118335724 0" fill="none" stroke="#b2e6cf" stroke-width="1.059132782742381" stroke-linecap="round" opacity="0.6836985485628247"/><path d="M74.12360099330544 103.5237253215164 q14.686646974086763 -6.411702445708215 36.716617435216904 0" fill="none" stroke="#c78bb0" stroke-width="1.9488383479416371" stroke-linecap="round" opacity="0.7194987126626075"/><circle cx="106.49894672632217" cy="94.63779559638351" r="3.9903741469606757" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">L</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="mari.html"><span>Basque</span><b>Mari</b><p>Mari is the supreme goddess of the Basque pantheon, a chthonic and atmospheric deity who dwells in caves atop …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="eguzki-amandre.html"><span>Basque</span><b>Eguzki Amandre</b><p>Eguzki Amandre (&#39;Grandmother Sun&#39; in Basque) is the warm, maternal personification of the sun in Basque folklo…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="patupaiarehe.html"><span>Māori</span><b>Patupaiarehe</b><p>The patupaiarehe are the fairy people of Aotearoa: pale-skinned, red- or fair-haired beings who live on the cl…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-2881<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

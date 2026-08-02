@@ -18,8 +18,7 @@
 </head>
 <body class="tex-grain arch-undead " style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Vetala</span></span><span class="rec-right">MORTUARY ARCHIVE</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img glitch" style="min-height:58vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Raja_Ravi_Varma_-_Portrait_of_a_Lady_-_Google_Art_Project.jpg/1280px-Raja_Ravi_Varma_-_Portrait_of_a_Lady_-_Google_Art_Project.jpg" loading="lazy" alt="Vetala" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#c9a8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#9b7bb8" stop-opacity="0.28"/><stop offset="100%" stop-color="#9b7bb8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="86" fill="url(#sg)"/><path d="M92.5 149.1L47.1 130.6L50.1 76.8L82.6 53.1L138.1 47.0L164.9 97.1L131.0 134.4Z" fill="none" stroke="#9b7bb8" stroke-width="1.6" opacity="0.85"/><line x1="121.3" y1="108.0" x2="83.3" y2="112.6" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="67.4" y1="108.5" x2="103.0" y2="69.6" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="108.2" y1="87.7" x2="119.5" y2="137.5" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><line x1="136.1" y1="96.9" x2="111.4" y2="89.3" stroke="#7a9b6d" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="5.319466738728806" fill="#9b7bb8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#c9a8e8" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">V</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -50,7 +49,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="pishacha.html"><span>Hindu</span><b>Pishacha</b><p>Pishachas are the lowest and hungriest order of Indian demonology: flesh-eating fiends of darkness that haunt …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="ganesha.html"><span>Hindu</span><b>Ganesha</b><p>Ganesha (Gaṇeśa), the elephant-headed god, is one of the most universally beloved and widely recognized deitie…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="lich.html"><span>Dungeons &amp; Dragons (Wizards of the Coast / Hasbro)</span><b>Lich</b><p>The Lich represents the ultimate expression of arcane ambition corrupted — a spellcaster who has willingly emb…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MORTUARY ARCHIVE · AAT-3022<br>The Cold Crypt · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
-<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};</script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

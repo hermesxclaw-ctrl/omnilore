@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Ludwag</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:59vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Hokusai_The_Ghost_Kohada_Koheiji.jpg" loading="lazy" alt="Ludwag" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M127.3 47.5 A59.14054903015494 59.14054903015494 0 0 1 114.5 157.3" fill="none" stroke="#6fa8b8" stroke-width="3.315374114899896" stroke-linecap="round" opacity="0.8"/><path d="M90.8 158.4 A59.14054903015494 59.14054903015494 0 0 1 64.0 53.1" fill="none" stroke="#6fa8b8" stroke-width="2.6470374857308343" stroke-linecap="round" opacity="0.8"/><path d="M77.11197234876454 66.73496055603027 q25.701682436838748 -12.534145129844546 64.25420609209687 0" fill="none" stroke="#a3d8e8" stroke-width="1.3732479248195886" stroke-linecap="round" opacity="0.6931473932228982"/><path d="M67.621885381639 96.60965273529291 q12.670492513477804 -9.464358050841838 31.676231283694506 0" fill="none" stroke="#b89a6f" stroke-width="1.5963746339082718" stroke-linecap="round" opacity="0.7110369631089271"/><path d="M64.24218397773802 64.92348397709429 q11.66585080139339 -9.668571815360337 29.164627003483474 0" fill="none" stroke="#a3d8e8" stroke-width="2.220748732239008" stroke-linecap="round" opacity="0.7660807684995234"/><path d="M72.82102963840589 84.20896248705685 q22.41884424816817 -9.168151183053851 56.047110620420426 0" fill="none" stroke="#b89a6f" stroke-width="1.034539506956935" stroke-linecap="round" opacity="0.626849629636854"/><circle cx="99.34020697232336" cy="97.1492102118209" r="3.99617035780102" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">L</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="alp.html"><span>German folklore (folk horror tradition)</span><b>Alp</b><p>A vampiric nightmare spirit from German folklore similar to the mare. The alp is typically male and wears a ma…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="saiken.html"><span>spirit</span><b>Saiken</b><p>The Six-Tails, a giant slug-like creature with six tails and a viscous body that secretes corrosive alkali. Sa…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="mimi.html"><span>Aboriginal Australian (particularly Arnhem Land, Northern Territory)</span><b>Mimi</b><p>The Mimi (or Mimih) are ancestral spirit beings of Arnhem Land in Australia&#39;s Northern Territory — ethereal, s…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3120<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

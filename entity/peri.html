@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-tight" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Peri</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:79vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/6/69/An_angel%2C_flying%2C_with_cup_and_wine_flask_%28FGA_F1937.7%29.jpg" loading="lazy" alt="Peri" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><path d="M57.3 65.0 A55.26677690958604 55.26677690958604 0 0 1 153.5 113.8" fill="none" stroke="#7fb8a4" stroke-width="2.529448661953211" stroke-linecap="round" opacity="0.8"/><path d="M147.8 127.8 A55.26677690958604 55.26677690958604 0 0 1 44.8 98.0" fill="none" stroke="#7fb8a4" stroke-width="4.712009831564501" stroke-linecap="round" opacity="0.8"/><path d="M61.205191765446216 100.46054261364043 q13.03878074269742 -15.901211089454591 32.596951856743544 0" fill="none" stroke="#b2e6cf" stroke-width="1.0924470964819193" stroke-linecap="round" opacity="0.4181474198587239"/><path d="M70.35987797379494 120.06237793713808 q11.285977891087533 -9.29838237958029 28.21494472771883 0" fill="none" stroke="#c78bb0" stroke-width="2.2992899954319004" stroke-linecap="round" opacity="0.7040338590741158"/><path d="M64.08906235778704 112.45212958566844 q27.777096470072866 -15.368176616262645 69.44274117518216 0" fill="none" stroke="#b2e6cf" stroke-width="1.5856947831809522" stroke-linecap="round" opacity="0.42673100782558326"/><path d="M59.71334106242284 77.48858098126948 q16.60007601864636 -6.176702348981053 41.5001900466159 0" fill="none" stroke="#c78bb0" stroke-width="1.7001032289117575" stroke-linecap="round" opacity="0.4476415793411434"/><path d="M60.53130591008812 64.13780115358531 q17.851966925151647 -12.625691277440637 44.629917312879115 0" fill="none" stroke="#b2e6cf" stroke-width="2.369019236043096" stroke-linecap="round" opacity="0.7094764845445752"/><circle cx="102.004525099881" cy="93.06516465824097" r="4.314557899720967" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">P</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="simurgh.html"><span>Persian (Zoroastrian)</span><b>Simurgh</b><p>The Simurgh (also Simorgh, Simurg) is a magnificent mythical bird in Persian mythology, a wise and benevolent …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="zahhak.html"><span>Persian (Zoroastrian)</span><b>Zahhak</b><p>Zahhak (Avestan: Aži Dahāka) is the most fearsome dragon-tyrant of Persian mythology — a three-headed, six-eye…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="anguane.html"><span>Italian (Veneto / Friuli / Lombardy)</span><b>Anguane</b><p>Le Anguane are freshwater spirits from the folklore of northeastern Italy, particularly the Veneto, Friuli, an…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-3138<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

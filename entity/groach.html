@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Groac&#39;h</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:71vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/The_Mythology_of_all_races_%281918%29_%2814765441245%29.jpg/1280px-The_Mythology_of_all_races_%281918%29_%2814765441245%29.jpg" loading="lazy" alt="Groac&#39;h" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#sg)"/><path d="M88.0 156.8 A58.01698146900162 58.01698146900162 0 0 1 69.6 50.6" fill="none" stroke="#6fa8b8" stroke-width="3.0392857355764136" stroke-linecap="round" opacity="0.8"/><path d="M91.1 42.7 A58.01698146900162 58.01698146900162 0 0 1 143.7 138.2" fill="none" stroke="#6fa8b8" stroke-width="3.6779222794575617" stroke-linecap="round" opacity="0.8"/><path d="M63.71418363135308 91.01483003422618 q14.098205275461078 -15.920759610831738 35.245513188652694 0" fill="none" stroke="#a3d8e8" stroke-width="1.9388288166373968" stroke-linecap="round" opacity="0.4684977686032653"/><path d="M72.06219322932884 79.18792658858001 q13.28988008182496 -7.02732895873487 33.224700204562396 0" fill="none" stroke="#b89a6f" stroke-width="1.0647897023707629" stroke-linecap="round" opacity="0.7466014652512968"/><path d="M85.60594388470054 117.47590023092926 q22.36752844657749 -13.291569663211703 55.91882111644372 0" fill="none" stroke="#a3d8e8" stroke-width="2.104117026552558" stroke-linecap="round" opacity="0.4897345171310008"/><path d="M80.89322391850874 117.48218025453389 q23.646257913112642 -9.774454002268612 59.1156447827816 0" fill="none" stroke="#b89a6f" stroke-width="1.7048548825085164" stroke-linecap="round" opacity="0.7499698775820435"/><circle cx="86.08753626141697" cy="87.64995416905731" r="3.0115529568865895" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">G</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="baba-yaga.html"><span>Slavic</span><b>Baba Yaga</b><p>You&#39;ve been lost in the forest for three days. Just when you&#39;ve given up hope, you find a hut. But it&#39;s not a …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="korrigan.html"><span>Breton</span><b>Korrigan</b><p>The Korrigan (plural: Korriganed) is the most famous fairy/dwarf of Breton folklore — a small, supernatural be…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="barong.html"><span>Balinese</span><b>Barong</b><p>Barong is the protective spirit of Bali — a lion-like mythical creature who is the eternal enemy of Rangda, th…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2655<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

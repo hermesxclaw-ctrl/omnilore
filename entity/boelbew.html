@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Boelbew</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:71vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg/1280px-Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg" loading="lazy" alt="Boelbew" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><path d="M158.9 84.5 A60.91890609636903 60.91890609636903 0 0 1 55.7 141.8" fill="none" stroke="#6fa8b8" stroke-width="3.4021359944017604" stroke-linecap="round" opacity="0.8"/><path d="M39.2 97.0 A60.91890609636903 60.91890609636903 0 0 1 158.1 81.7" fill="none" stroke="#6fa8b8" stroke-width="4.186010096454993" stroke-linecap="round" opacity="0.8"/><path d="M78.10376087389886 135.58733491785824 q12.423753090761602 -6.089607399422675 31.059382726904005 0" fill="none" stroke="#a3d8e8" stroke-width="1.2139032259583473" stroke-linecap="round" opacity="0.671448222361505"/><path d="M61.9049832476303 70.21625490672886 q11.518937172554434 -6.909342155791819 28.797342931386083 0" fill="none" stroke="#b89a6f" stroke-width="2.266041275113821" stroke-linecap="round" opacity="0.6171422795392574"/><path d="M61.81868440890685 107.39771418273449 q25.65238429736346 -10.000175497494638 64.13096074340865 0" fill="none" stroke="#a3d8e8" stroke-width="1.652292075753212" stroke-linecap="round" opacity="0.5359957847744227"/><circle cx="105.82198015414178" cy="93.06215051840991" r="5.542660070583224" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="kludde.html"><span>Belgian (Flemish)</span><b>Kludde</b><p>De Kludde is a terrifying water-and-night spirit from Flemish folklore (Dutch-speaking Belgium), particularly …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="hr-svelgr.html"><span>Norse</span><b>Hræsvelgr</b><p>Hræsvelgr (&#39;Corpse-Swallower&#39;) is a colossal jötunn who sits at the northern edge of the sky in the form of an…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="chomei.html"><span>spirit</span><b>Chōmei</b><p>The Seven-Tails, a massive insect resembling a stag beetle with seven tails, each tipped with a wing-like memb…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3129<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

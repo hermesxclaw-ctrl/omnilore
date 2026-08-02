@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-smallcaps" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Isobu</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:59vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Ghost_of_Seigen_Haunting_Sakurahime_LACMA_M.86.138.2.jpg/1280px-The_Ghost_of_Seigen_Haunting_Sakurahime_LACMA_M.86.138.2.jpg" loading="lazy" alt="Isobu" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M80.0 50.0 A53.8391746096313 53.8391746096313 0 0 1 153.7 96.0" fill="none" stroke="#6fa8b8" stroke-width="4.959083648282103" stroke-linecap="round" opacity="0.8"/><path d="M153.5 106.1 A53.8391746096313 53.8391746096313 0 0 1 97.2 153.8" fill="none" stroke="#6fa8b8" stroke-width="4.628292690613307" stroke-linecap="round" opacity="0.8"/><path d="M81.6 150.6 A53.8391746096313 53.8391746096313 0 0 1 54.4 71.3" fill="none" stroke="#6fa8b8" stroke-width="4.222481343895197" stroke-linecap="round" opacity="0.8"/><path d="M79.6360480710864 114.93589739501476 q11.153528965823353 -6.039153923280537 27.88382241455838 0" fill="none" stroke="#a3d8e8" stroke-width="1.5482146218419075" stroke-linecap="round" opacity="0.40221559405326845"/><path d="M86.96868687588722 86.24209314770997 q15.295835612528027 -6.967891784384847 38.239589031320065 0" fill="none" stroke="#b89a6f" stroke-width="1.5399316161870957" stroke-linecap="round" opacity="0.6192990418523551"/><path d="M77.25228678388521 129.27149185352027 q10.285483947582543 -6.297333556227386 25.713709868956357 0" fill="none" stroke="#a3d8e8" stroke-width="1.080542116612196" stroke-linecap="round" opacity="0.7837162564508617"/><circle cx="101.362269195728" cy="99.26823601964861" r="5.948478393256664" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">I</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="busgosu.html"><span>Spanish</span><b>Busgosu</b><p>El Busgosu is a forest spirit from the mythology of Asturias and Cantabria in northern Spain, considered a pro…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="santa-compana.html"><span>Spanish</span><b>Santa Compaña</b><p>The Santa Compaña (Holy Company) is a spectral procession of the dead that wanders the rural roads and forest …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="kweo.html"><span>Papua New Guinean (Highlands region, particularly Enga and Huli peoples)</span><b>Kweo</b><p>Kweo is a powerful forest spirit in the mythology of the Papua New Guinea Highlands, particularly among the En…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2733<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

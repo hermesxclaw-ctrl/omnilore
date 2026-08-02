@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Nommo</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:68vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Dogon_nommo_figure.jpg" loading="lazy" alt="Nommo" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="84" fill="url(#sg)"/><path d="M118.1 159.0 A61.704443116206676 61.704443116206676 0 0 1 47.8 67.1" fill="none" stroke="#6fa8b8" stroke-width="3.4989942429820076" stroke-linecap="round" opacity="0.8"/><path d="M90.1 39.1 A61.704443116206676 61.704443116206676 0 0 1 152.5 132.5" fill="none" stroke="#6fa8b8" stroke-width="2.562901499331929" stroke-linecap="round" opacity="0.8"/><path d="M75.6529991789721 117.84768068604171 q17.829156916216018 -11.582292997278273 44.57289229054004 0" fill="none" stroke="#a3d8e8" stroke-width="1.2404907129704952" stroke-linecap="round" opacity="0.5395992164500059"/><path d="M63.669227649923414 77.57542408630252 q15.95017798487097 -14.258596474770457 39.875444962177426 0" fill="none" stroke="#b89a6f" stroke-width="2.4617900367826224" stroke-linecap="round" opacity="0.45805335277691483"/><path d="M62.78702706750482 115.57675308547914 q22.307838726229967 -10.360639215447009 55.769596815574914 0" fill="none" stroke="#a3d8e8" stroke-width="1.285251523181796" stroke-linecap="round" opacity="0.5893942805007101"/><path d="M78.69201680831611 134.59605949930847 q17.94242651220411 -15.675421372521669 44.85606628051028 0" fill="none" stroke="#b89a6f" stroke-width="1.4436822544783354" stroke-linecap="round" opacity="0.7389404690824449"/><circle cx="93.4107782067731" cy="107.85465595778078" r="5.891653667204082" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">N</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="amma.html"><span>Dogon</span><b>Amma</b><p>Amma is the supreme creator god of the Dogon people of Mali, one of the most cosmologically elaborate religiou…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="ogo.html"><span>Dogon</span><b>Ogo</b><p>Ogo (also called Yurugu) is the first-born Nommo and the primordial trickster-rebel of Dogon cosmology. Before…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="hiho-zabimaru.html"><span>spirit</span><b>Hihō Zabimaru</b><p>The Zanpakutō spirit of Renji Abarai. Zabimaru manifests as a baboon-like creature with a snakeskin tail — in …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-1745<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

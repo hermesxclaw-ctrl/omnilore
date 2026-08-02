@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Kokuō</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:74vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/4/49/A_couple_with_a_young_female_spirit.jpg" loading="lazy" alt="Kokuō" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M130.5 52.9 A56.129026990849525 56.129026990849525 0 0 1 146.6 131.3" fill="none" stroke="#6fa8b8" stroke-width="4.853056370047852" stroke-linecap="round" opacity="0.8"/><path d="M127.4 149.0 A56.129026990849525 56.129026990849525 0 0 1 48.7 122.8" fill="none" stroke="#6fa8b8" stroke-width="3.9185690926387906" stroke-linecap="round" opacity="0.8"/><path d="M44.2 94.2 A56.129026990849525 56.129026990849525 0 0 1 111.7 45.1" fill="none" stroke="#6fa8b8" stroke-width="2.794057752471417" stroke-linecap="round" opacity="0.8"/><path d="M71.7294274684973 111.30935513973236 q15.20334617085755 -15.038021098822355 38.00836542714387 0" fill="none" stroke="#a3d8e8" stroke-width="2.113566316664219" stroke-linecap="round" opacity="0.48500105170533064"/><path d="M77.00483412202448 91.81581895053387 q22.808040498755872 -9.605815020855516 57.02010124688968 0" fill="none" stroke="#b89a6f" stroke-width="1.7089232336729765" stroke-linecap="round" opacity="0.41347214831039314"/><path d="M58.851013532374054 129.47690993733704 q23.975909416750074 -9.557275766506791 59.939773541875184 0" fill="none" stroke="#a3d8e8" stroke-width="2.5896184720098976" stroke-linecap="round" opacity="0.7923660543747246"/><circle cx="91.78655560128391" cy="91.2500410778448" r="4.271942991763353" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">K</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="isobu.html"><span>spirit</span><b>Isobu</b><p>The Three-Tails, a giant turtle-like creature with three tails and a single eye. Isobu dwells in water and con…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="sky-woman.html"><span>Iroquois Confederacy (Haudenosaunee: Mohawk, Seneca, Onondaga, Oneida, Cayuga, Tuscarora)</span><b>Sky Woman</b><p>Sky Woman (Atahensic in some traditions, also called Mature Flower or Grandmother Moon) is the central ancestr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="kodama.html"><span>spirit</span><b>Kodama</b><p>Small, round, white tree spirits that appear in Princess Mononoke. They are the souls of trees, and their pres…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2735<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

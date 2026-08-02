@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-smallcaps" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Dragon</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:62vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Saint_George_and_the_Dragon_by_Paolo_Uccello_%28Paris%29_01.jpg" loading="lazy" alt="Dragon" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M62.4 52.2 A60.82104118587449 60.82104118587449 0 0 1 160.7 104.1" fill="none" stroke="#7fb8a4" stroke-width="4.139820742420852" stroke-linecap="round" opacity="0.8"/><path d="M152.7 130.3 A60.82104118587449 60.82104118587449 0 0 1 40.0 110.2" fill="none" stroke="#7fb8a4" stroke-width="2.721125526004471" stroke-linecap="round" opacity="0.8"/><path d="M62.042909601703286 89.19010020792484 q26.69851766135544 -6.377714014612138 66.74629415338859 0" fill="none" stroke="#b2e6cf" stroke-width="2.370497278869152" stroke-linecap="round" opacity="0.4120522460900247"/><path d="M72.84387657605112 111.89316396601498 q13.05232501514256 -7.490160331595689 32.6308125378564 0" fill="none" stroke="#c78bb0" stroke-width="2.546117042377591" stroke-linecap="round" opacity="0.7328321708366275"/><path d="M69.61760855698958 133.3178424667567 q15.39435015115887 -7.531955800019205 38.48587537789717 0" fill="none" stroke="#b2e6cf" stroke-width="1.7434267967939379" stroke-linecap="round" opacity="0.7923301799222827"/><path d="M83.46341066248715 132.71271686814725 q17.104748596809806 -11.331352630164474 42.76187149202451 0" fill="none" stroke="#c78bb0" stroke-width="2.221658538654447" stroke-linecap="round" opacity="0.7017739539034665"/><circle cx="90.13391181454062" cy="92.04329662304372" r="6.34375043399632" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">D</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="patupaiarehe.html"><span>Māori</span><b>Patupaiarehe</b><p>The patupaiarehe are the fairy people of Aotearoa: pale-skinned, red- or fair-haired beings who live on the cl…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="morgens.html"><span>Breton</span><b>Morgens</b><p>The Morgens (or Mari-Morgans, &#39;Sea-Born&#39; or &#39;Daughters of the Sea&#39;) are the mermaid-fairies of Breton folklore…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="golem.html"><span>Jewish folklore, particularly the mystical traditions of medieval Prague and the Kabbalistic concept of creating life through sacred language</span><b>Golem</b><p>The golem is an artificial being created from inanimate matter — traditionally clay or mud — and animated thro…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-1568<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

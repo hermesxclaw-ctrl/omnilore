@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster " style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Saci</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:58vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Till-eulenspiegel-1.JPG/1280px-Till-eulenspiegel-1.JPG" loading="lazy" alt="Saci" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M100 100 L103.7 104.9 L100.1 108.4 L93.6 108.3 L88.8 104.2 L86.9 97.2 L90.3 88.7 L99.3 83.1 L110.0 84.3 L118.6 91.6 L121.8 103.7 L116.7 117.8 L102.9 126.2 L86.6 124.5 L73.3 114.1 L68.1 97.7 L73.6 79.6 L90.9 65.9 L114.2 66.0 L132.3 78.2 L140.5 102.7 L133.2 126.3 L113.8 141.5 L86.5 143.1 L64.4 130.0 L51.6 105.8 L56.1 75.2 L76.1 53.3 L104.9 45.7 L138.4 59.0 L156.1 84.7 L155.8 121.1 L133.7 151.6 L97.6 163.6 L63.6 154.0 L38.1 126.7 L32.0 88.9 L48.9 51.6 L85.7 28.8 L126.1 30.3 L165.3 59.7 L178.6 104.1 L165.2 147.4 L122.7 179.1 L69.6 178.9" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="86.49065158795565" cy="74.44419034942985" r="6.83995611872524" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="122.63526509329677" y="118.06222220137715" width="9.699516834691167" height="11.517065647989511" fill="#b8477a" opacity="0.7" transform="rotate(18 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">S</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -43,6 +43,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="curupira.html"><span>Brazilian (Tupi-Guarani)</span><b>Curupira</b><p>The curupira is the oldest documented supernatural being in Brazil — the Jesuit José de Anchieta was already c…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="kokopelli.html"><span>Hopi</span><b>Kokopelli</b><p>Kokopelli is one of the most recognizable figures in Southwestern Native American art and mythology — a humpba…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="raven.html"><span>Pacific Northwest Coast (Tlingit, Haida, Tsimshian, Kwakwaka&#39;wakw)</span><b>Raven</b><p>Raven is the central figure in the mythology of the Pacific Northwest Coast peoples — simultaneously a trickst…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-3049<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

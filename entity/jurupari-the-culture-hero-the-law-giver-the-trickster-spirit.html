@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-smallcaps" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Jurupari (the Culture Hero / the Law-Giver / the Trickster-Spirit)</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:60vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Satanoperca_jurupari_A.jpg/1280px-Satanoperca_jurupari_A.jpg" loading="lazy" alt="Jurupari (the Culture Hero / the Law-Giver / the Trickster-Spirit)" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="81" fill="url(#sg)"/><path d="M100 100 L103.0 94.9 L106.9 96.9 L109.2 101.4 L108.2 107.8 L102.2 112.5 L94.5 113.7 L86.3 109.0 L82.0 99.7 L83.7 88.4 L93.4 78.7 L107.9 76.8 L121.7 84.4 L129.0 98.8 L126.6 115.0 L114.2 129.5 L95.2 134.1 L75.0 126.7 L62.2 106.1 L63.1 84.6 L77.8 64.4 L103.2 56.7 L128.6 64.5 L146.1 89.6 L144.9 120.2 L127.9 143.1 L95.6 152.8 L67.6 143.9 L46.3 117.8 L44.8 80.5 L63.8 51.7 L97.8 38.0 L135.1 46.7 L160.3 73.7 L166.5 110.9 L147.3 150.3 L112.4 169.6 L73.0 167.4 L36.6 138.5 L23.7 97.6 L39.3 50.5 L82.0 21.5 L128.6 22.6 L170.2 53.3 L186.2 100.0" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="70.32943903002888" cy="75.44218951836228" r="5.603190463967621" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="113.06091488152742" y="113.53122091293335" width="10.429683340713382" height="14.804513655602932" fill="#b8477a" opacity="0.7" transform="rotate(32 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">J</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -40,6 +40,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="duende.html"><span>Spanish</span><b>Duende</b><p>The Duende is one of the richest and most ambiguous figures in Spanish folklore — simultaneously a household g…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="mazzamurello.html"><span>Italian (Marche / Central Italy)</span><b>Mazzamurello</b><p>The Mazzamurello (or Mazzamurello delle Marche) is a small, mischievous spirit of the central Italian mountain…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="rubezahl.html"><span>German (Silesian / Bohemian border)</span><b>Rübezahl</b><p>Rübezahl is the capricious spirit-lord of the Riesengebirge (Giant Mountains) between Silesia and Bohemia. His…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2573<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

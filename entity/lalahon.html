@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine head-smallcaps" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Lalahon</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:60vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/16/AberdeenBestiaryFolio008vLeopard.jpg" loading="lazy" alt="Lalahon" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="86" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.4023858580738306" opacity="0.7619337509386241"/><circle cx="100" cy="100" r="47" fill="none" stroke="#c94f2e" stroke-width="1.261940931319259" opacity="0.8365231649950147"/><line x1="162.50855849559034" y1="104.37849717269576" x2="181.43677117489102" y2="105.70434962706565" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="133.22703116512028" y1="143.41022489780144" x2="147.7456121452108" y2="162.3783614854685" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="81.07433053631587" y1="158.5999291132453" x2="70.93665267153045" y2="189.9894239678013" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="50.210840368522" y1="122.43623129932045" x2="28.04756078765878" y2="132.42355526116881" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="50.61688362511272" y1="71.24177426099557" x2="24.90045758815036" y2="56.26583026513505" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="92.58429880865584" y1="46.16513997712462" x2="87.86520777318715" y2="11.906531279918767" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="138.6052993876084" y1="60.35324358366062" x2="149.62255981532542" y2="49.038769988533524" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 75.0L104.8 91.7L121.6 87.5L109.6 100.0L121.6 112.5L104.8 108.3L100.0 125.0L95.2 108.3L78.4 112.5L90.4 100.0L78.4 87.5L95.2 91.7Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">L</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="magwayen.html"><span>Filipino</span><b>Magwayen</b><p>Magwayen is the Visayan deity of the underworld and psychopomp who ferries souls to the afterlife. She was ori…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="sidapa.html"><span>Filipino</span><b>Sidapa</b><p>Sidapa is the Visayan god of death who determines the moment of every person&#39;s death by measuring their life w…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q105023136.html"><span>Unclassified — research pending</span><b>Oxóssi Mutalombó Brunugunzu de Mutaleci</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-3155<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

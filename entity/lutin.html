@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-upper" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Lutin</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:58vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Lutin_by_godo.jpg" loading="lazy" alt="Lutin" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><path d="M100 100 L96.2 95.5 L99.2 92.2 L104.6 91.3 L110.3 94.6 L113.5 102.3 L110.8 111.0 L102.2 117.5 L91.7 117.4 L81.8 110.4 L77.6 97.8 L81.7 83.7 L94.5 74.2 L110.3 73.4 L125.9 83.7 L132.7 99.7 L129.1 117.9 L114.2 132.9 L91.2 136.4 L69.5 124.5 L59.1 100.6 L65.7 74.7 L84.6 58.0 L112.1 54.7 L138.9 70.3 L150.3 95.0 L144.8 127.3 L124.0 149.0 L92.6 156.2 L61.3 143.9 L41.6 114.7 L42.9 75.6 L65.9 45.5 L105.6 34.3 L142.6 47.5 L167.9 83.3 L168.3 121.9 L145.4 158.3 L102.8 175.4 L60.9 166.7 L28.3 134.4 L19.3 89.0 L35.9 46.6 L80.8 17.0 L128.6 17.9" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="82.07727447617799" cy="73.17403927445412" r="6.591477060690522" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="120.79543267935514" y="110.46866605430841" width="12.111737001687288" height="15.974827595055103" fill="#b8477a" opacity="0.7" transform="rotate(11 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">L</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="cheval-mallet.html"><span>French (Vendée / Poitou)</span><b>Cheval Mallet</b><p>The Cheval Mallet (also called the Cheval Gauvin) is a demonic horse from French folklore that appears at lone…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="huli-jing.html"><span>Chinese</span><b>Huli Jing</b><p>The huli jing is the Chinese fox spirit — a fox that, through centuries of absorbing moonlight and cultivating…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="tikbalang.html"><span>Filipino</span><b>Tikbalang</b><p>The tikbalang is a horse-headed, human-bodied creature with disproportionately long legs that can fold up to p…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-3096<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

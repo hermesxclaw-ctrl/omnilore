@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-construct head-upper" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Assaultron</span></span><span class="rec-right">ARTIFICE REGISTRY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:63vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Golem_a_Rabi_L%C3%B6w_%E2%80%93_Mikol%C3%A1%C5%A1_Ale%C5%A1%2C_1899_%28V%C4%9Bnec_pra%C5%BEsk%C3%BDch_pov%C4%9Bst%C3%AD%2C_1908%29.jpg/1280px-Golem_a_Rabi_L%C3%B6w_%E2%80%93_Mikol%C3%A1%C5%A1_Ale%C5%A1%2C_1899_%28V%C4%9Bnec_pra%C5%BEsk%C3%BDch_pov%C4%9Bst%C3%AD%2C_1908%29.jpg" loading="lazy" alt="Assaultron" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#e0b872" stop-opacity="0.7"/><stop offset="55%" stop-color="#b0873f" stop-opacity="0.28"/><stop offset="100%" stop-color="#b0873f" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="87" fill="url(#sg)"/><path d="M155.8 100.0L144.5 114.5L145.1 132.8L127.5 137.8L117.2 153.0L100.0 146.8L82.8 153.0L72.5 137.8L54.9 132.8L55.5 114.5L44.2 100.0L55.5 85.5L54.9 67.2L72.5 62.2L82.8 47.0L100.0 53.2L117.2 47.0L127.5 62.2L145.1 67.2L144.5 85.5Z" fill="none" stroke="#b0873f" stroke-width="1.6" opacity="0.85"/><circle cx="100" cy="100" r="23.669218383729458" fill="none" stroke="#6e8296" stroke-width="1.4" opacity="0.8"/><circle cx="129.8" cy="103.1" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="114.2" cy="126.4" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="87.5" cy="127.3" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="72.4" cy="111.6" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="76.5" cy="81.3" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="100.6" cy="70.0" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="121.0" cy="78.5" r="2.4" fill="#b0873f" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#e0b872" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="wikidata-q10572967.html"><span>Unclassified — research pending</span><b>Lövjeri</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q11284880.html"><span>Unclassified — research pending</span><b>ukehi between Amaterasu and Susanoo</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q4272382.html"><span>Unclassified — research pending</span><b>Event of Mubahala</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · ARTIFICE REGISTRY · AAT-2776<br>The Workshop Vault · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Iara (the Water-Woman / the Lady of the Rivers)</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:75vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/4/40/01_-_Divulga%C3%A7%C3%A3o_de_Lendas_Brasileiras_-_Iara.jpg" loading="lazy" alt="Iara (the Water-Woman / the Lady of the Rivers)" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="90" fill="url(#sg)"/><path d="M65.2 59.3 A53.560113618616015 53.560113618616015 0 0 1 148.1 76.3" fill="none" stroke="#6fa8b8" stroke-width="3.064732098719105" stroke-linecap="round" opacity="0.8"/><path d="M151.6 85.8 A53.560113618616015 53.560113618616015 0 0 1 113.9 151.7" fill="none" stroke="#6fa8b8" stroke-width="3.183121593319811" stroke-linecap="round" opacity="0.8"/><path d="M104.2 153.4 A53.560113618616015 53.560113618616015 0 0 1 47.0 92.6" fill="none" stroke="#6fa8b8" stroke-width="3.677331294748001" stroke-linecap="round" opacity="0.8"/><path d="M86.19926531752571 82.50904846936464 q15.628288045898081 -6.6161453342065215 39.0707201147452 0" fill="none" stroke="#a3d8e8" stroke-width="2.0571142259985207" stroke-linecap="round" opacity="0.5902692974545062"/><path d="M82.53054505866021 70.01396025530994 q22.118392130360007 -15.438543177675456 55.29598032590002 0" fill="none" stroke="#b89a6f" stroke-width="1.7458568628877402" stroke-linecap="round" opacity="0.5565040562301875"/><path d="M77.04714100295678 112.78337299451232 q21.47047246936709 -15.215281091164798 53.67618117341772 0" fill="none" stroke="#a3d8e8" stroke-width="2.092333145812154" stroke-linecap="round" opacity="0.43169392682611946"/><path d="M70.3720483854413 92.33098282292485 q21.45296418555081 -13.140943508129567 53.63241046387702 0" fill="none" stroke="#b89a6f" stroke-width="1.3991571180522442" stroke-linecap="round" opacity="0.6214159171096981"/><circle cx="100.06408291775733" cy="110.05855303257704" r="4.772436770610511" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">I</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -40,6 +40,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="phoenix.html"><span>Greek</span><b>Phoenix</b><p>You watch the old bird — ancient, feathers faded to grey, movements slow with centuries — climb onto a pyre of…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="firebird.html"><span>Slavic</span><b>Firebird</b><p>The Firebird (Zhar-ptitsa) is a magnificent magical bird from Slavic folklore, whose feathers glow with such b…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="phi-tai-hong.html"><span>Thai</span><b>Phi Tai Hong</b><p>The &#39;ghost of violent death&#39; in Thai folklore: a spirit of someone who died suddenly and violently — in an acc…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2577<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

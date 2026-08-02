@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine head-smallcaps" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Amanikable</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:64vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/A-03_woodcut_initial_DSC0341.jpg/1280px-A-03_woodcut_initial_DSC0341.jpg" loading="lazy" alt="Amanikable" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.427108139824122" opacity="0.7374714551493526"/><circle cx="100" cy="100" r="45" fill="none" stroke="#c94f2e" stroke-width="1.6954379245406017" opacity="0.6532672739587724"/><line x1="154.28548379863406" y1="103.9886451830658" x2="184.31378189035217" y2="106.19498503965576" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="126.2276157417947" y1="148.76139819655495" x2="141.698529255048" y2="177.5243395828766" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="67.53358173163222" y1="145.22056964390038" x2="57.08530759646922" y2="159.7733578289783" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="47.69883522075697" y1="95.34749686119382" x2="24.55900323284571" y2="93.28906964624332" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="73.79704769617192" y1="43.239231068172295" x2="64.87983449104287" y2="23.922786402575298" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="127.56077582620661" y1="53.14680636121726" x2="135.9364878714827" y2="38.908133952479815" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 73.3L105.8 90.0L123.1 86.6L111.5 100.0L123.1 113.4L105.8 110.0L100.0 126.7L94.2 110.0L76.9 113.4L88.5 100.0L76.9 86.6L94.2 90.0Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="bathala.html"><span>Filipino</span><b>Bathala</b><p>Bathala is the supreme creator god of the Tagalog pantheon. He created the universe and the first man and woma…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="bulan.html"><span>Filipino</span><b>Bulan</b><p>Bulan is the moon deity in Bicolano mythology, distinct from the Tagalog Mayari. Bulan is described as a beaut…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q137638715.html"><span>Unclassified — research pending</span><b>Adoro</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-2479<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Badalisc</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:63vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg/1280px-Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg" loading="lazy" alt="Badalisc" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M155.7 105.3 A55.903887041378766 55.903887041378766 0 0 1 93.6 155.5" fill="none" stroke="#6fa8b8" stroke-width="3.7955074664205313" stroke-linecap="round" opacity="0.8"/><path d="M79.1 151.8 A55.903887041378766 55.903887041378766 0 0 1 50.3 74.4" fill="none" stroke="#6fa8b8" stroke-width="2.8455941507127136" stroke-linecap="round" opacity="0.8"/><path d="M71.3 52.0 A55.903887041378766 55.903887041378766 0 0 1 151.1 77.4" fill="none" stroke="#6fa8b8" stroke-width="3.6831503052962944" stroke-linecap="round" opacity="0.8"/><path d="M72.86557749798521 118.30804660916328 q19.611282265372576 -12.152468521613628 49.028205663431436 0" fill="none" stroke="#a3d8e8" stroke-width="1.7182711124420167" stroke-linecap="round" opacity="0.46445098202675583"/><path d="M83.87641935795546 91.6999186873436 q12.161430141702295 -12.486834050156176 30.403575354255736 0" fill="none" stroke="#b89a6f" stroke-width="1.1110082786530255" stroke-linecap="round" opacity="0.771799985319376"/><path d="M68.56660366011783 132.5129112061113 q11.337800109945238 -15.5176937058568 28.344500274863094 0" fill="none" stroke="#a3d8e8" stroke-width="2.218976189941168" stroke-linecap="round" opacity="0.6082960544154048"/><circle cx="90.96367962472141" cy="109.76681272871792" r="3.957257591187954" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="befana.html"><span>Italian (Pan-Italian)</span><b>Befana</b><p>La Befana is the beloved Italian Christmas witch who flies on her broomstick on the night of January 5 (Epipha…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="leshen.html"><span>Video Game — The Witcher series (CD Projekt Red, based on Andrzej Sapkowski).</span><b>Leshen</b><p>The Leshen is one of the most iconic and terrifying monsters in The Witcher 3 — a towering, skeletal forest sp…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="bergmonch.html"><span>Swiss / German Alpine</span><b>Bergmönch</b><p>Der Bergmönch (the Mountain Monk) is a dangerous mountain spirit from Swiss and German Alpine folklore, partic…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3103<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

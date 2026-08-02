@@ -18,7 +18,7 @@
 </head>
 <body class="tex-stars arch-cosmic head-tight" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Exitar the Exterminator</span></span><span class="rec-right">CELESTIAL SURVEY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left" style="min-height:68vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#93b2ff" stop-opacity="0.7"/><stop offset="55%" stop-color="#5f7fd9" stop-opacity="0.28"/><stop offset="100%" stop-color="#5f7fd9" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="88" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#5f7fd9" stroke-width="1.4810745747527108" opacity="0.6175238702446222"/><circle cx="100" cy="100" r="46" fill="none" stroke="#c4a44c" stroke-width="1.001155068166554" opacity="0.8398369224742055"/><circle cx="100" cy="100" r="62" fill="none" stroke="#5f7fd9" stroke-width="1.7678225751733407" opacity="0.8407865948043765"/><line x1="160.29556190480062" y1="104.84474391348093" x2="189.4380115784873" y2="107.1863375767664" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="122.29292458491287" y1="148.65185532614217" x2="133.20570948604086" y2="172.46780779091216" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="67.60275481899563" y1="147.50234864266815" x2="54.82192202930107" y2="166.2422004951242" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="36.40902420865205" y1="97.59336936580057" x2="21.02155555675219" y2="97.0110233178023" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="74.83331049779613" y1="51.50971730253156" x2="66.65010802600872" y2="35.742613679592" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="128.33798935456818" y1="53.929725055589245" x2="144.33438222956542" y2="27.923708586000302" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><path d="M100.0 77.4L105.6 92.3L121.5 93.0L109.0 102.9L113.3 118.3L100.0 109.5L86.7 118.3L91.0 102.9L78.5 93.0L94.4 92.3Z" fill="#5f7fd9" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#93b2ff" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">E</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="arishem-the-judge.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Arishem the Judge</b><p>Arishem the Judge is one of the most powerful and feared Celestials — the enigmatic cosmic giants who have sec…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="jean-grey-as-phoenix.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Jean Grey (as Phoenix)</b><p>Jean Grey is one of the most iconic characters in comic book history — a mutant telepath and telekinetic who b…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q107542568.html"><span>Unclassified — research pending</span><b>Santa Claus Land</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · CELESTIAL SURVEY · AAT-2962<br>The Observatory · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

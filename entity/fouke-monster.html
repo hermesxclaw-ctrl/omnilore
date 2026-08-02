@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-cryptid head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Fouke Monster</span></span><span class="rec-right">FIELD INVESTIGATION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:76vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Boggy_Creek.jpg/640px-Boggy_Creek.jpg" loading="lazy" alt="Fouke Monster" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#aed47f" stop-opacity="0.7"/><stop offset="55%" stop-color="#7da44c" stop-opacity="0.28"/><stop offset="100%" stop-color="#7da44c" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="85" fill="url(#sg)"/><path d="M129.5 100.0L123.8 117.3L108.1 124.8L92.4 123.2L77.0 116.7L70.2 100.0L81.6 86.6L91.3 73.3L108.7 73.2L122.3 83.8L129.6 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.39708396558417003"/><path d="M136.3 100.0L129.0 121.1L111.9 136.8L87.4 138.7L66.5 124.4L62.3 100.0L70.3 78.4L88.8 65.5L113.4 58.9L132.7 76.2L139.2 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.4300119385123253"/><path d="M152.3 100.0L141.1 129.8L115.0 146.3L84.4 148.0L59.3 129.6L50.6 100.0L61.4 72.0L85.4 55.0L115.4 52.7L139.8 71.1L148.5 100.0Z" fill="none" stroke="#7da44c" stroke-width="1" opacity="0.6516506619169377"/><ellipse cx="109.0" cy="80.0" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(64 109.0 80.0)"/><ellipse cx="68.3" cy="60.1" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(116 68.3 60.1)"/><ellipse cx="104.1" cy="99.8" rx="3.4" ry="4.8" fill="#b3833c" opacity="0.8" transform="rotate(210 104.1 99.8)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#7da44c" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#7da44c" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#aed47f" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">F</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="bigfoot.html"><span>North American</span><b>Bigfoot (Sasquatch)</b><p>You&#39;re hiking alone in the Pacific Northwest. The trail is empty. The forest is cathedral-quiet. Then you smel…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="chupacabra.html"><span>Latin American</span><b>Chupacabra</b><p>You wake up to silence — no birds, no dogs, nothing. You walk outside and find your goats dead in their pen. N…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="pope-lick-monster.html"><span>American (Louisville, Kentucky: Pope Lick Creek area)</span><b>Pope Lick Monster</b><p>The Pope Lick Monster is one of the most dangerous cryptid legends in America -- not because the creature itse…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · FIELD INVESTIGATION · AAT-1886<br>The Evidence Room · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

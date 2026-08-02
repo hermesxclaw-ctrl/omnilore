@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine head-upper" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mama Quilla (Mama Killa)</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:72vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Aberdeen_bestiary_Folio_68_recto.jpg" loading="lazy" alt="Mama Quilla (Mama Killa)" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="89" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.323245290806517" opacity="0.6100917100906372"/><circle cx="100" cy="100" r="47" fill="none" stroke="#c94f2e" stroke-width="1.2668684801552446" opacity="0.5413832051679492"/><line x1="160.3173532830511" y1="101.04250659779107" x2="185.5397492533856" y2="101.47844273855277" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="128.18277136182812" y1="148.88639962721396" x2="137.93007279549454" y2="165.7942639055488" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="67.71999211923529" y1="150.04644191074124" x2="56.043672083753975" y2="168.14923403351366" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="45.65587096644089" y1="99.68368429845407" x2="10.853418671342482" y2="99.48111297549764" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="73.06135486856806" y1="47.39327418852931" x2="60.365446925900386" y2="22.60026233477805" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="134.9098207974186" y1="51.19395395771581" x2="146.27841387318506" y2="35.299971564862076" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 70.5L107.6 86.8L125.5 85.3L115.3 100.0L125.5 114.7L107.6 113.2L100.0 129.5L92.4 113.2L74.5 114.7L84.7 100.0L74.5 85.3L92.4 86.8Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -42,6 +42,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="supay-apu-supay.html"><span>Inca</span><b>Supay (Apu Supay)</b><p>Supay is the Inca god of death and the ruler of the underworld (Uku Pacha). He presides over the realm of the …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q659594.html"><span>Unclassified — research pending</span><b>Tages</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q5261718.html"><span>Unclassified — research pending</span><b>Dercetis</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-3367<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

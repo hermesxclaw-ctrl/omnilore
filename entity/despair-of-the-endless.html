@@ -18,7 +18,7 @@
 </head>
 <body class="tex-none arch-fine-art head-upper" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Despair of the Endless</span></span><span class="rec-right">GALLERY OF THE UNREAL</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:75vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Riviergezicht_bij_winter_Rijksmuseum_SK-A-290.jpeg/1280px-Riviergezicht_bij_winter_Rijksmuseum_SK-A-290.jpeg" loading="lazy" alt="Despair of the Endless" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ecd08e" stop-opacity="0.7"/><stop offset="55%" stop-color="#c4a35a" stop-opacity="0.28"/><stop offset="100%" stop-color="#c4a35a" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="87" fill="url(#sg)"/><rect x="42" y="34" width="116" height="132" fill="none" stroke="#c4a35a" stroke-width="2" opacity="0.8"/><rect x="50" y="42" width="100" height="116" fill="none" stroke="#8a4a4a" stroke-width="0.8" opacity="0.6"/><path d="M67.48472098726779 126.20315073989332 Q100 75.36919658537954 131.31063653621823 113.80092165898532" fill="none" stroke="#c4a35a" stroke-width="3.1194608798250556" stroke-linecap="round" opacity="0.75"/><text x="100" y="107" text-anchor="middle" fill="#ecd08e" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">D</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="swamp-thing-alec-holland.html"><span>Fine Art</span><b>Swamp Thing / Alec Holland</b><p>Originally scientist Alec Holland transformed by chemicals into a plant-monster. Alan Moore&#39;s seminal run reve…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="destruction-of-the-endless.html"><span>Fine Art</span><b>Destruction of the Endless</b><p>The prodigal Endless — a huge, red-bearded man who abandoned his realm and responsibilities three hundred year…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="paganinis-devils-pact.html"><span>Fine Art</span><b>Paganini&#39;s Devil&#39;s Pact</b><p>The 19th-century violin virtuoso whose superhuman technical abilities — playing entire pieces on a single stri…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · GALLERY OF THE UNREAL · AAT-2392<br>The Painted Wing · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

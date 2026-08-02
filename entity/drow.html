@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-upper" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Drow</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right" style="min-height:61vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="81" fill="url(#sg)"/><path d="M91.5 159.4 A59.96390377683565 59.96390377683565 0 0 1 45.6 74.7" fill="none" stroke="#7fb8a4" stroke-width="2.6921018795110285" stroke-linecap="round" opacity="0.8"/><path d="M62.6 53.1 A59.96390377683565 59.96390377683565 0 0 1 151.0 68.4" fill="none" stroke="#7fb8a4" stroke-width="2.521041135187261" stroke-linecap="round" opacity="0.8"/><path d="M156.4 79.7 A59.96390377683565 59.96390377683565 0 0 1 122.2 155.7" fill="none" stroke="#7fb8a4" stroke-width="3.8173275609733537" stroke-linecap="round" opacity="0.8"/><path d="M62.01522513944656 72.92351468093693 q20.248724355362356 -6.240414645522833 50.62181088840589 0" fill="none" stroke="#b2e6cf" stroke-width="1.6195616029202937" stroke-linecap="round" opacity="0.7403463946655393"/><path d="M87.029242368415 118.30564623326063 q19.496854595839977 -15.420708518009633 48.74213648959994 0" fill="none" stroke="#c78bb0" stroke-width="1.9827001437544824" stroke-linecap="round" opacity="0.7024612095206977"/><path d="M69.9886849517934 95.04006009548903 q21.127809247747066 -15.995899586938322 52.81952311936766 0" fill="none" stroke="#b2e6cf" stroke-width="1.236142598837614" stroke-linecap="round" opacity="0.41629601595923305"/><path d="M69.6034861956723 79.77912238612771 q14.975340284220875 -7.223417967557907 37.438350710552186 0" fill="none" stroke="#c78bb0" stroke-width="2.4449921861290935" stroke-linecap="round" opacity="0.7380715825594962"/><circle cx="112.35542417969555" cy="91.78295931126922" r="6.830446802079678" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">D</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -44,6 +44,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="drizzt-dourden.html"><span>Dungeons &amp; Dragons — Forgotten Realms (Wizards of the Coast / Hasbro)</span><b>Drizzt Do&#39;Urden</b><p>Drizzt Do&#39;Urden is the most famous original character in Dungeons &amp; Dragons history — a drow (dark elf) who re…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="heinzelmannchen.html"><span>German (Cologne / Rhineland)</span><b>Heinzelmännchen</b><p>The Heinzelmännchen are benevolent house gnomes of Cologne legend who performed all the city&#39;s nightly labor w…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="bugul-noz.html"><span>Breton</span><b>Bugul Noz</b><p>Bugul Noz (literally &#39;Night Shepherd&#39; or &#39;Night Child&#39; in Breton) is one of the most unusual fairy figures in …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-1996<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

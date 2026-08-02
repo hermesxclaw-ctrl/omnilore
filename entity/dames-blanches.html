@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-smallcaps" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Dames Blanches</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:75vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ukiyo-e_woodblock_print_by_Katsushika_Hokusai%2C_digitally_enhanced_by_rawpixel-com_5.jpg/1280px-Ukiyo-e_woodblock_print_by_Katsushika_Hokusai%2C_digitally_enhanced_by_rawpixel-com_5.jpg" loading="lazy" alt="Dames Blanches" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="88" fill="url(#sg)"/><path d="M73.4 46.8 A59.486242779996246 59.486242779996246 0 0 1 157.5 84.9" fill="none" stroke="#6fa8b8" stroke-width="2.6694162347121164" stroke-linecap="round" opacity="0.8"/><path d="M159.2 106.1 A59.486242779996246 59.486242779996246 0 0 1 87.9 158.3" fill="none" stroke="#6fa8b8" stroke-width="3.5515870951348916" stroke-linecap="round" opacity="0.8"/><path d="M61.1 145.0 A59.486242779996246 59.486242779996246 0 0 1 68.1 49.8" fill="none" stroke="#6fa8b8" stroke-width="3.8186044624308124" stroke-linecap="round" opacity="0.8"/><path d="M63.144285049755126 135.2943508401513 q20.964643574133518 -10.538988219574094 52.41160893533379 0" fill="none" stroke="#a3d8e8" stroke-width="1.7930873289704323" stroke-linecap="round" opacity="0.5321113020181656"/><path d="M61.79944929620251 68.52376537770033 q22.614776625670494 -11.163989218417555 56.53694156417623 0" fill="none" stroke="#b89a6f" stroke-width="2.1274607047438625" stroke-linecap="round" opacity="0.6137010018341243"/><path d="M63.03726887051016 72.51234414242208 q21.410411820188166 -10.431152583565563 53.52602955047041 0" fill="none" stroke="#a3d8e8" stroke-width="1.5931583378463983" stroke-linecap="round" opacity="0.5836831589229405"/><circle cx="100.95980972517282" cy="93.35775704216212" r="6.7026021014899015" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">D</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="melusine.html"><span>French (Poitevin / Medieval)</span><b>Mélusine</b><p>Mélusine is a fairy woman cursed to transform into a serpent (or fish-tailed mermaid) from the waist down ever…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="neikban.html"><span>Burmese</span><b>Neikban</b><p>Neikban is a legendary warrior-monk figure in Burmese folklore, a solitary swordsman who wanders the ancient t…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="shukaku.html"><span>spirit</span><b>Shukaku</b><p>The One-Tail, a tanuki (raccoon dog) made of sand with a single tail formed of multiple sand tendrils. Shukaku…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3095<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

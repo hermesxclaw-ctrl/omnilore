@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Tobiume</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:71vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Suma_Urabe_Suetake_Meeting_a_Ghost_with_a_Child_LACMA_M.84.31.54.jpg/1280px-Suma_Urabe_Suetake_Meeting_a_Ghost_with_a_Child_LACMA_M.84.31.54.jpg" loading="lazy" alt="Tobiume" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M122.2 156.5 A60.7548116245307 60.7548116245307 0 0 1 40.3 111.4" fill="none" stroke="#6fa8b8" stroke-width="3.0073084513423964" stroke-linecap="round" opacity="0.8"/><path d="M42.3 81.0 A60.7548116245307 60.7548116245307 0 0 1 133.1 49.1" fill="none" stroke="#6fa8b8" stroke-width="3.9302477100864053" stroke-linecap="round" opacity="0.8"/><path d="M154.0 72.2 A60.7548116245307 60.7548116245307 0 0 1 111.3 159.7" fill="none" stroke="#6fa8b8" stroke-width="4.188242748496123" stroke-linecap="round" opacity="0.8"/><path d="M63.93100981088355 96.75152933783829 q11.533520995080472 -9.527421175967902 28.833802487701178 0" fill="none" stroke="#a3d8e8" stroke-width="1.8059014074504376" stroke-linecap="round" opacity="0.5173968059010804"/><path d="M85.38300628494471 85.79969698563218 q25.84607429970056 -13.142881078179926 64.6151857492514 0" fill="none" stroke="#b89a6f" stroke-width="1.4524148996919393" stroke-linecap="round" opacity="0.6769718972966074"/><path d="M58.42403766652569 115.25769035890698 q27.285015821084382 -8.357712869998068 68.21253955271095 0" fill="none" stroke="#a3d8e8" stroke-width="2.2010429613292217" stroke-linecap="round" opacity="0.578975073248148"/><circle cx="94.923988298513" cy="97.54398142360151" r="3.5933368001133204" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="bergbui.html"><span>Icelandic</span><b>Bergbúi</b><p>The Bergbúi (literally &#39;mountain-dweller&#39;) is a mountain spirit or troll of Icelandic folklore, distinct from …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="vodnik.html"><span>Slavic</span><b>Vodnik</b><p>The vodnik is the water-man of Slavic ponds: a green-haired, froggy-faced fellow in a soaked coat whose left c…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wildfrau.html"><span>Alpine (Austrian, Bavarian, Swiss, South Tyrolean)</span><b>Wildfrau</b><p>The Wildfrau (Wild Woman) is a solitary nature spirit of the Alpine forests, a female counterpart to the Wilde…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2758<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

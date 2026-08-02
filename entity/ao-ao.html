@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Ao Ao</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:63vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Suma_Urabe_Suetake_Meeting_a_Ghost_with_a_Child_LACMA_M.84.31.54.jpg/1280px-Suma_Urabe_Suetake_Meeting_a_Ghost_with_a_Child_LACMA_M.84.31.54.jpg" loading="lazy" alt="Ao Ao" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="89" fill="url(#sg)"/><path d="M74.7 154.4 A59.95383943710476 59.95383943710476 0 0 1 57.6 57.6" fill="none" stroke="#6fa8b8" stroke-width="3.118656674050726" stroke-linecap="round" opacity="0.8"/><path d="M82.8 42.6 A59.95383943710476 59.95383943710476 0 0 1 159.7 94.3" fill="none" stroke="#6fa8b8" stroke-width="3.8585442188195884" stroke-linecap="round" opacity="0.8"/><path d="M159.6 106.4 A59.95383943710476 59.95383943710476 0 0 1 77.1 155.4" fill="none" stroke="#6fa8b8" stroke-width="4.7039795777527615" stroke-linecap="round" opacity="0.8"/><path d="M58.705625768750906 129.61893386021256 q22.41634981893003 -6.509097799658775 56.040874547325075 0" fill="none" stroke="#a3d8e8" stroke-width="1.1002418883144855" stroke-linecap="round" opacity="0.6214012831449509"/><path d="M78.87764094816521 134.9258159082383 q20.38186188712716 -12.417123272549361 50.9546547178179 0" fill="none" stroke="#b89a6f" stroke-width="2.2854872662574053" stroke-linecap="round" opacity="0.7782289814203978"/><path d="M66.04337005363777 114.66562715172768 q23.01730226762593 -13.89757602615282 57.54325566906482 0" fill="none" stroke="#a3d8e8" stroke-width="1.0604451458901167" stroke-linecap="round" opacity="0.4301946053281427"/><circle cx="94.49696701485664" cy="86.92451598774642" r="6.743506222963333" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="kurupi.html"><span>Guarani</span><b>Kurupi</b><p>Kurupi (or Kurupí) is the Guarani spirit of fertility, sexuality, and the untamed wilderness — a figure of gen…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="jakaira-jakaira.html"><span>Guarani</span><b>Jakaira (Jakaíra)</b><p>Jakaira is a major Guarani deity, the god of mist, fog, good winds, spring, and the life-giving moisture that …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="hahai.html"><span>Papua New Guinean (Ramu River region, Madang Province)</span><b>Hahai</b><p>Hahai is a powerful water spirit in the mythology of the Ramu River region of Papua New Guinea, described as a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2720<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

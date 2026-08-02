@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-beast head-smallcaps" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Tornado Man</span></span><span class="rec-right">BESTIARY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:66vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/AberdeenBestiaryFolio009rPanther.jpg" loading="lazy" alt="Tornado Man" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#e8c470" stop-opacity="0.7"/><stop offset="55%" stop-color="#b8923d" stop-opacity="0.28"/><stop offset="100%" stop-color="#b8923d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="81" fill="url(#sg)"/><path d="M124.1 100.0L119.6 114.3L107.5 123.1L92.3 123.8L77.0 116.7L76.3 100.0L77.2 83.4L92.8 77.9L107.7 76.3L123.1 83.3L123.1 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.6744599812780506"/><path d="M141.2 100.0L130.6 122.2L111.2 134.6L87.8 137.5L70.4 121.5L63.5 100.0L64.8 74.4L86.4 58.3L112.3 62.1L132.2 76.6L138.5 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.5660231395857408"/><path d="M158.2 100.0L147.9 134.8L116.9 151.9L82.1 155.2L53.9 133.5L41.2 100.0L55.8 67.9L82.9 47.2L118.6 42.8L144.0 68.0L159.4 100.0Z" fill="none" stroke="#b8923d" stroke-width="1" opacity="0.36283012592466546"/><ellipse cx="107.3" cy="76.7" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(278 107.3 76.7)"/><ellipse cx="72.6" cy="75.8" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(187 72.6 75.8)"/><ellipse cx="109.2" cy="92.6" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(105 109.2 92.6)"/><ellipse cx="94.7" cy="124.4" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(276 94.7 124.4)"/><ellipse cx="74.2" cy="117.0" rx="3.4" ry="4.8" fill="#6d8a4a" opacity="0.8" transform="rotate(261 74.2 117.0)"/><line x1="100" y1="30" x2="100" y2="44" stroke="#b8923d" stroke-width="1.2"/><text x="100" y="26" text-anchor="middle" fill="#b8923d" font-size="8" font-family="monospace" opacity="0.8">N</text><text x="100" y="107" text-anchor="middle" fill="#e8c470" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -40,6 +40,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="wikidata-q15007922.html"><span>Unclassified — research pending</span><b>Huān Dōu</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q55603047.html"><span>Unclassified — research pending</span><b>Aana Marutha</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q108171636.html"><span>Unclassified — research pending</span><b>Monda</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · BESTIARY · AAT-2848<br>The Great Menagerie · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

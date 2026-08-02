@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-demonic head-smallcaps" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Bathin</span></span><span class="rec-right">INFERNAL REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img glitch" style="min-height:76vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Maori_Carving_Paihia_New_Zealand.jpg/1280px-Maori_Carving_Paihia_New_Zealand.jpg" loading="lazy" alt="Bathin" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6a54" stop-opacity="0.7"/><stop offset="55%" stop-color="#c8322b" stop-opacity="0.28"/><stop offset="100%" stop-color="#c8322b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M99.4 164.7L50.5 121.3L60.2 64.0L107.4 56.3L146.1 79.2L145.5 132.9Z" fill="none" stroke="#c8322b" stroke-width="1.6" opacity="0.85"/><line x1="113.7" y1="89.6" x2="139.1" y2="95.5" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="112.3" y1="119.9" x2="93.0" y2="114.8" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="85.2" y1="88.9" x2="119.5" y2="61.6" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="8.708510753931478" fill="#c8322b" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff6a54" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="buer.html"><span>Ars Goetia / Solomonic Demonology</span><b>Buer</b><p>Tenth spirit, a President commanding 50 legions. Buer appears when the sun is in Sagittarius, manifesting as a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="marbas.html"><span>Ars Goetia / Solomonic Demonology</span><b>Marbas</b><p>Fifth spirit of the Ars Goetia, a President commanding 36 legions. Marbas (also Barbas) first appears as a gre…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="gaibon.html"><span>Video Game — Castlevania series (Konami).</span><b>Gaibon</b><p>Gaibon is the winged, fire-breathing partner to Slogra — a red-skinned demon who attacks from the air while Sl…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · INFERNAL REGISTER · AAT-2299<br>The Locked Wing · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

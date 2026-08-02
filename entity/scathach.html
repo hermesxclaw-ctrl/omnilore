@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-heroic-legend head-upper" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Scáthach</span></span><span class="rec-right">HALL OF HEROES</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:74vh">
   <img class="hero-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Heroes%20of%20the%20dawn%20-%20illustration%20to%20face%20page%20066.png?width=900" loading="lazy" alt="Scáthach" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#f2c479" stop-opacity="0.7"/><stop offset="55%" stop-color="#c98f3d" stop-opacity="0.28"/><stop offset="100%" stop-color="#c98f3d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#c98f3d" stroke-width="1.588419161993079" opacity="0.5007665275596083"/><circle cx="100" cy="100" r="48" fill="none" stroke="#8a4a3a" stroke-width="1.5016031470615419" opacity="0.6228415356948972"/><line x1="162.98377306901656" y1="104.16130561297022" x2="182.92226423929185" y2="105.47863150784963" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="127.82020115762288" y1="152.7389599968032" x2="137.4523702254305" y2="170.99873375873233" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="69.17461404550302" y1="143.860007926199" x2="59.14522984995297" y2="158.1303522119466" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="38.77801297959455" y1="95.56485763010433" x2="4.595861849821176" y2="93.08857885922247" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="71.64710270700809" y1="45.58472069261251" x2="59.28044540502623" y2="21.850458044526178" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><line x1="131.60766191086603" y1="48.14108252839976" x2="145.84313127506016" y2="24.784845897893163" stroke="#c98f3d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 75.9L105.1 89.5L118.8 85.0L111.4 97.4L123.5 105.4L109.1 107.3L110.4 121.7L100.0 111.7L89.6 121.7L90.9 107.3L76.5 105.4L88.6 97.4L81.2 85.0L94.9 89.5Z" fill="#c98f3d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#f2c479" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">S</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="cu-chulainn.html"><span>Celtic</span><b>Cú Chulainn</b><p>Cú Chulainn (born Sétanta) is the greatest hero of Irish mythology, the central figure of the Ulster Cycle and…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="lugh.html"><span>Irish</span><b>Lugh</b><p>Lugh (Lugus in Gaulish) is the god of all skills, crafts, war, and the harvest — known as &#39;Samildánach&#39; (&#39;Many…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q108649229.html"><span>Unclassified — research pending</span><b>Marpsius</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · HALL OF HEROES · AAT-2442<br>The Bronze Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

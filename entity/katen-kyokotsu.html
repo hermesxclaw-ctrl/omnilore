@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Katen Kyōkotsu</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:69vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Hokusai_The_Ghost_Kohada_Koheiji.jpg" loading="lazy" alt="Katen Kyōkotsu" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><path d="M112.6 156.6 A58.03023980045691 58.03023980045691 0 0 1 49.2 72.0" fill="none" stroke="#6fa8b8" stroke-width="3.2755224354332313" stroke-linecap="round" opacity="0.8"/><path d="M59.0 58.9 A58.03023980045691 58.03023980045691 0 0 1 157.9 103.5" fill="none" stroke="#6fa8b8" stroke-width="3.135540686780587" stroke-linecap="round" opacity="0.8"/><path d="M78.8598256809637 73.09651203267276 q11.737355108186604 -15.471967173740268 29.343387770466506 0" fill="none" stroke="#a3d8e8" stroke-width="1.3863304670900107" stroke-linecap="round" opacity="0.7609198107384145"/><path d="M66.11757759889588 132.10618327744305 q13.593949547223747 -8.835834848228842 33.98487386805937 0" fill="none" stroke="#b89a6f" stroke-width="2.522853909060359" stroke-linecap="round" opacity="0.7622747426852584"/><path d="M78.21438653813675 72.90424317680299 q23.59261235818267 -10.594982070848346 58.98153089545667 0" fill="none" stroke="#a3d8e8" stroke-width="1.4419336758553982" stroke-linecap="round" opacity="0.5165966491214932"/><path d="M79.71536984853446 79.9993251748383 q25.880638163909317 -9.357821996323764 64.70159540977329 0" fill="none" stroke="#b89a6f" stroke-width="1.1560258638113736" stroke-linecap="round" opacity="0.6423142466694117"/><path d="M80.05902319867164 95.9493082985282 q9.69422135539353 -11.170119686517864 24.235553388483822 0" fill="none" stroke="#a3d8e8" stroke-width="2.2390756022185085" stroke-linecap="round" opacity="0.49216824667528275"/><circle cx="103.46890624240041" cy="97.623733417131" r="4.275501636788249" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">K</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="phi-krasue.html"><span>Thai</span><b>Phi Krasue</b><p>Phi Krasue is one of the most feared spirits in Thai folklore — a floating female ghost that appears as a beau…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="mori.html"><span>Icelandic</span><b>Móri</b><p>The Móri (from &#39;mór&#39; = moor/heath) is the Icelandic phantom black dog — a spectral hound that appears on moors…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="quinkan.html"><span>Aboriginal Australian (Cape York)</span><b>Quinkan</b><p>The Quinkan are the spirit-people of Cape York, and they are unique in this archive for one staggering reason:…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2753<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

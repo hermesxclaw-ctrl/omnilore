@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-upper" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Rübezahl</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:62vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/R%C3%BCbezahl_%281861%29.jpg" loading="lazy" alt="Rübezahl" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#sg)"/><path d="M100 100 L98.8 94.3 L102.7 92.8 L108.1 94.6 L112.0 100.4 L110.6 108.8 L103.7 115.5 L94.1 116.5 L84.6 111.4 L78.8 99.7 L81.0 86.7 L90.7 77.2 L106.1 73.8 L121.9 81.1 L131.0 96.8 L129.8 115.0 L115.8 131.1 L94.2 136.4 L72.1 127.4 L59.2 104.9 L62.7 79.3 L80.6 59.5 L105.9 53.6 L133.3 64.1 L148.7 86.5 L148.5 118.9 L132.4 142.9 L101.4 155.6 L66.0 145.9 L43.2 116.7 L41.6 81.2 L61.6 49.7 L98.0 34.5 L138.2 44.1 L164.4 73.4 L170.5 114.4 L148.2 156.3 L107.3 176.0 L61.6 167.7 L29.0 136.8 L18.5 90.5 L34.1 47.5 L73.7 18.0 L124.5 15.1 L172.9 46.2" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="70.19416715484113" cy="71.42410538345575" r="6.02069600392133" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="117.80009606853127" y="120.34031876549125" width="15.917075302451849" height="15.834271799772978" fill="#b8477a" opacity="0.7" transform="rotate(37 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">R</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="djinn.html"><span>Arabian</span><b>Djinn (Jinn)</b><p>You find a brass lamp in a market stall in Marrakech. The seller warns you not to rub it. You laugh — you&#39;ve h…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="coyote.html"><span>Various Native American (particularly Plains, Southwest, Great Basin tribes)</span><b>Coyote</b><p>Coyote is one of the most widespread and iconic figures in Native American mythology, appearing in the oral tr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="eshu.html"><span>Yoruba</span><b>Eshu</b><p>Eshu (Elegba, Esu, Exu) is the Yoruba orisha of crossroads, communication, chance, and divine messenger betwee…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2583<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

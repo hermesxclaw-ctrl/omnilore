@@ -18,8 +18,7 @@
 </head>
 <body class="tex-ink arch-yokai head-upper" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Onryō</span></span><span class="rec-right">YOKAI SCROLLS</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:63vh">
   <img class="hero-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hokusai%20Onryo.jpg?width=900" loading="lazy" alt="Onryō" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff8a5c" stop-opacity="0.7"/><stop offset="55%" stop-color="#d4502e" stop-opacity="0.28"/><stop offset="100%" stop-color="#d4502e" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="90" fill="url(#sg)"/><path d="M113.7 152.1 A53.92992543336004 53.92992543336004 0 0 1 48.4 115.7" fill="none" stroke="#d4502e" stroke-width="3.806372341932729" stroke-linecap="round" opacity="0.8"/><path d="M46.1 97.5 A53.92992543336004 53.92992543336004 0 0 1 105.8 46.4" fill="none" stroke="#d4502e" stroke-width="3.4826794773107395" stroke-linecap="round" opacity="0.8"/><path d="M123.7 51.5 A53.92992543336004 53.92992543336004 0 0 1 147.2 126.1" fill="none" stroke="#d4502e" stroke-width="3.998009489150718" stroke-linecap="round" opacity="0.8"/><path d="M70.3547271755524 135.71030695922673 q22.111270543560387 -14.401633552275598 55.278176358900964 0" fill="none" stroke="#ff8a5c" stroke-width="1.6223816979676484" stroke-linecap="round" opacity="0.6208283429965378"/><path d="M79.05078316293657 111.07102336734533 q10.705010222271085 -6.808455105870962 26.762525555677712 0" fill="none" stroke="#3d5a80" stroke-width="2.4112771421670915" stroke-linecap="round" opacity="0.701514532417059"/><path d="M67.74343474023044 85.11518415249884 q23.568402246385816 -8.865626306738704 58.92100561596453 0" fill="none" stroke="#ff8a5c" stroke-width="1.4698496203869582" stroke-linecap="round" opacity="0.660387859493494"/><circle cx="86.65250760689378" cy="104.68832408078015" r="3.873164958320558" fill="#d4502e" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff8a5c" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">O</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -54,7 +53,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="wikidata-q10940542.html"><span>Japanese</span><b>Ama-no-Iwato-wake no Kami</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="nurarihyon.html"><span>Japanese</span><b>Nurarihyon</b><p>Nurarihyon is the gentleman burglar of the yokai world: an old man with an enormously elongated, gourd-shaped …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="umibozu.html"><span>Japanese</span><b>Umibozu</b><p>The umibozu is the dread of becalmed Japanese sailors: an immense, ink-black, smooth-headed figure — like the …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · YOKAI SCROLLS · AAT-2143<br>The Night Parade · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
-<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};</script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

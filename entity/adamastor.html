@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit " style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Adamastor</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:79vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Adamastor_Os_Lusiadas.jpg" loading="lazy" alt="Adamastor" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M144.0 70.9 A52.68899646168575 52.68899646168575 0 0 1 84.5 150.4" fill="none" stroke="#6fa8b8" stroke-width="4.49610922660213" stroke-linecap="round" opacity="0.8"/><path d="M62.8 137.3 A52.68899646168575 52.68899646168575 0 0 1 101.4 47.3" fill="none" stroke="#6fa8b8" stroke-width="4.306916275527328" stroke-linecap="round" opacity="0.8"/><path d="M77.4979410734959 78.25961850769818 q24.358589224517345 -9.550457230303437 60.896473061293364 0" fill="none" stroke="#a3d8e8" stroke-width="1.9350819792598486" stroke-linecap="round" opacity="0.5694825628772379"/><path d="M60.27936662500724 132.742564573884 q18.6958415793255 -6.015426923055202 46.73960394831374 0" fill="none" stroke="#b89a6f" stroke-width="2.2490870736539366" stroke-linecap="round" opacity="0.40459105959162117"/><path d="M60.575826067477465 104.87548203766346 q11.651314210891725 -8.115519095677882 29.12828552722931 0" fill="none" stroke="#a3d8e8" stroke-width="2.474745488166809" stroke-linecap="round" opacity="0.5658832145854831"/><path d="M58.226827836595476 90.87740103714168 q23.48613414466381 -11.939974524080753 58.71533536165953 0" fill="none" stroke="#b89a6f" stroke-width="1.4167332414537668" stroke-linecap="round" opacity="0.4633989508263767"/><circle cx="98.36152349319309" cy="111.82947373576462" r="4.845980818383396" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="lobisomem.html"><span>Portuguese</span><b>Lobisomem</b><p>The Lobisomem is the Portuguese werewolf — a human, almost always male, doomed to transform into a wolf or wol…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="badalisc.html"><span>Italian (Val Camonica, Lombardy)</span><b>Badalisc</b><p>The Badalisc (also Badalisk) is a mythical creature from the folklore of Val Camonica, a valley in the Lombard…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="walpurgisnacht-hexen.html"><span>German (Harz Mountains / Brocken)</span><b>Walpurgisnacht Hexen</b><p>Walpurgisnacht (the night of April 30 to May 1) is the legendary gathering of witches on the Brocken — the hig…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2603<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

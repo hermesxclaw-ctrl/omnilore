@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-upper" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Saiken</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:70vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg/1280px-Kusunoki_Tamonmaru_Masatsura_Surprising_a_Fox_Ghost_LACMA_M.84.31.34.jpg" loading="lazy" alt="Saiken" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="86" fill="url(#sg)"/><path d="M153.5 95.6 A53.68478480074555 53.68478480074555 0 0 1 64.3 140.1" fill="none" stroke="#6fa8b8" stroke-width="4.782956588896923" stroke-linecap="round" opacity="0.8"/><path d="M46.8 106.8 A53.68478480074555 53.68478480074555 0 0 1 141.1 65.5" fill="none" stroke="#6fa8b8" stroke-width="4.9347861495334655" stroke-linecap="round" opacity="0.8"/><path d="M67.96523875044659 66.20757154375315 q15.148849706910552 -12.365697842556983 37.87212426727638 0" fill="none" stroke="#a3d8e8" stroke-width="2.254574603587389" stroke-linecap="round" opacity="0.4798049908131361"/><path d="M86.30782167147845 120.5973352547735 q21.774912482313812 -11.484341166447848 54.43728120578453 0" fill="none" stroke="#b89a6f" stroke-width="1.7226379431784153" stroke-linecap="round" opacity="0.763036856520921"/><path d="M76.3169271866791 120.6901272982359 q17.322598544321956 -13.496363462414593 43.306496360804886 0" fill="none" stroke="#a3d8e8" stroke-width="2.4759369004517797" stroke-linecap="round" opacity="0.4572254641912878"/><path d="M65.85741192987189 67.06907149776816 q21.57008700221777 -10.476253727916628 53.925217505544424 0" fill="none" stroke="#b89a6f" stroke-width="1.9772353660315276" stroke-linecap="round" opacity="0.5388226410374046"/><circle cx="103.04916964937001" cy="108.41220642533153" r="3.0156044717878103" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="20" font-family="serif" opacity="0.9" font-weight="bold">S</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="la-patasola.html"><span>Colombian</span><b>La Patasola</b><p>La Patasola is the guardian-horror of the Colombian wilderness: a woman with a single leg ending in a cloven h…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="zaraki-kenpachis-nozarashi.html"><span>spirit</span><b>Zaraki Kenpachi&#39;s Nozarashi</b><p>The Zanpakutō spirit of Kenpachi Zaraki. Nozarashi is a massive, scarred, brutish warrior with wild hair and a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="loira-do-banheiro.html"><span>Brazilian (schools nationwide, particularly urban schools)</span><b>Loira do Banheiro</b><p>Loira do Banheiro (&#39;The Bathroom Blonde&#39;) is Brazil&#39;s version of the bathroom ghost legend, comparable to Bloo…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2736<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

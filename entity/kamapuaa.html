@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster head-tight" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Kamapua&#39;a</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:69vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Maori_Division_of_Time_p05.jpg/1280px-Maori_Division_of_Time_p05.jpg" loading="lazy" alt="Kamapua&#39;a" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#sg)"/><path d="M100 100 L105.4 98.1 L107.3 102.4 L105.6 108.1 L100.1 111.9 L92.6 111.2 L86.3 106.1 L83.7 97.7 L85.9 88.3 L94.9 80.7 L106.6 79.3 L118.0 84.9 L125.5 98.4 L123.6 113.9 L112.2 126.7 L93.6 130.5 L75.1 122.4 L65.1 105.3 L65.9 84.8 L80.6 66.2 L103.5 59.4 L129.1 69.1 L143.5 92.7 L142.0 118.7 L125.3 140.3 L99.4 149.5 L69.4 141.6 L49.3 116.1 L47.4 83.7 L65.4 55.2 L95.5 42.1 L129.3 47.7 L154.6 70.0 L163.6 104.2 L150.7 141.4 L116.2 164.9 L75.2 163.9 L41.9 139.1 L28.6 96.6 L44.3 52.8 L82.6 27.4 L128.7 29.4 L163.2 54.7 L179.9 98.5 L165.5 149.0" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="77.47547369915992" cy="81.5660004131496" r="6.6840700982138515" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="125.8294650875032" y="112.93461584672332" width="14.35752772912383" height="14.285373078659177" fill="#b8477a" opacity="0.7" transform="rotate(50 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">K</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="pele.html"><span>Hawaiian</span><b>Pele</b><p>Pele is the Hawaiian goddess of volcanoes, fire, lightning, and lava — one of the most powerful, feared, and b…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="ku.html"><span>Hawaiian</span><b>Ku</b><p>Kū (or Kū-ka-ili-moku, &#39;Kū the Land-Snatcher&#39;) is the Hawaiian god of war, politics, and governance — the fier…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="raven.html"><span>Pacific Northwest Coast (Tlingit, Haida, Tsimshian, Kwakwaka&#39;wakw)</span><b>Raven</b><p>Raven is the central figure in the mythology of the Pacific Northwest Coast peoples — simultaneously a trickst…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2693<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

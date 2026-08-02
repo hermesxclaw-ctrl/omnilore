@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae " style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Redcap</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:76vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Arthur_Rackham_Little_Red_Riding_Hood.jpg" loading="lazy" alt="Redcap" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M65.9 58.4 A53.827109856531024 53.827109856531024 0 0 1 153.7 103.1" fill="none" stroke="#7fb8a4" stroke-width="3.246803601505235" stroke-linecap="round" opacity="0.8"/><path d="M150.4 118.9 A53.827109856531024 53.827109856531024 0 0 1 50.8 121.9" fill="none" stroke="#7fb8a4" stroke-width="2.863019084907137" stroke-linecap="round" opacity="0.8"/><path d="M66.35461302194744 109.486039172858 q15.002220095694065 -8.125525649171323 37.50555023923516 0" fill="none" stroke="#b2e6cf" stroke-width="2.009164581820369" stroke-linecap="round" opacity="0.7589889549650253"/><path d="M87.57679904298857 83.59989248216152 q9.850714195705951 -7.004375342745334 24.626785489264876 0" fill="none" stroke="#c78bb0" stroke-width="2.5961272407323124" stroke-linecap="round" opacity="0.5063856258057058"/><path d="M85.2192524233833 128.11260839551687 q14.178983651287854 -15.726808236446232 35.447459128219634 0" fill="none" stroke="#b2e6cf" stroke-width="1.9729058634489776" stroke-linecap="round" opacity="0.5191456586122514"/><circle cx="102.04906967096031" cy="93.41563331335783" r="6.613409863784909" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">R</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -43,6 +43,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="black-shuck.html"><span>English (East Anglian)</span><b>Black Shuck</b><p>Black Shuck is the great phantom dog of the English east: a hound the size of a calf, shaggy and black as a co…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="garou.html"><span>One Punch Man (ONE / Yusuke Murata / Shueisha / Tonari no Young Jump)</span><b>Garou</b><p>Garou is the &#39;Hero Hunter&#39; — a martial arts prodigy who embarked on a campaign to hunt and defeat every hero i…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="mermaid.html"><span>Ancient Mesopotamian and Near Eastern mythology, independently developed in cultures worldwide with marine traditions</span><b>Mermaid</b><p>Mermaids are legendary aquatic creatures with the upper body of a human and the tail of a fish, appearing in t…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-3034<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster " style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Yasy Yatere</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:68vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Till_Eulenspiegel-Gedenkstein_%28Eulenspiegel-Grab%29_in_M%C3%B6lln.JPG/1280px-Till_Eulenspiegel-Gedenkstein_%28Eulenspiegel-Grab%29_in_M%C3%B6lln.JPG" loading="lazy" alt="Yasy Yatere" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M100 100 L105.8 102.5 L104.5 106.6 L100.0 109.6 L93.4 109.1 L87.8 103.9 L86.0 95.8 L90.3 86.7 L98.8 81.6 L109.7 81.8 L119.8 90.1 L123.8 104.0 L117.9 119.3 L103.5 128.2 L86.0 126.6 L71.8 115.6 L65.9 96.7 L73.6 76.0 L90.6 63.8 L111.7 62.5 L131.3 73.5 L142.5 93.5 L141.1 117.5 L125.5 139.0 L97.6 148.6 L71.3 141.8 L51.5 119.1 L47.2 89.6 L60.9 60.0 L91.5 43.2 L128.6 48.4 L154.7 74.2 L161.1 113.4 L143.5 147.6 L109.1 165.5 L68.6 160.3 L38.5 133.0 L29.0 88.6 L45.1 51.1 L83.0 27.0 L126.4 28.3 L165.0 56.1 L180.2 105.4 L165.0 149.7 L128.7 178.3" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="82.02014435548335" cy="79.90603063255548" r="8.832922959700227" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="127.96585176885128" y="111.38090935721993" width="8.069164400920272" height="15.716375045478344" fill="#b8477a" opacity="0.7" transform="rotate(39 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">Y</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="jasy.html"><span>Guarani</span><b>Jasy</b><p>Jasy (also Jasy Jatere in some contexts) is the Guarani moon goddess, the consort of Tupã, and the mother of t…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="arasy.html"><span>Guarani</span><b>Arasy</b><p>Arasy (also spelled Araci) is the Guarani moon goddess and the consort of Tupã, the supreme creator. She is th…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="jurupari-the-culture-hero-the-law-giver-the-trickster-spirit.html"><span>trickster</span><b>Jurupari (the Culture Hero / the Law-Giver / the Trickster-Spirit)</b><p>Jurupari (or Yurupary) is a complex and widespread figure of Amazonian mythology — a culture hero, trickster, …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2708<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

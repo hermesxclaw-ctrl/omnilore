@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-smallcaps" style="--name-scale:1.02">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Barbegazi</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:70vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Fitzgerald%2C_John_Anster_-_The_Marriage_of_Oberon_and_Titania.jpg" loading="lazy" alt="Barbegazi" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="87" fill="url(#sg)"/><path d="M138.6 62.4 A53.89908867701888 53.89908867701888 0 0 1 122.3 149.1" fill="none" stroke="#7fb8a4" stroke-width="4.451668291003443" stroke-linecap="round" opacity="0.8"/><path d="M97.5 153.8 A53.89908867701888 53.89908867701888 0 0 1 46.1 98.3" fill="none" stroke="#7fb8a4" stroke-width="4.195762503659353" stroke-linecap="round" opacity="0.8"/><path d="M54.3 71.4 A53.89908867701888 53.89908867701888 0 0 1 133.1 57.5" fill="none" stroke="#7fb8a4" stroke-width="3.3935726975323632" stroke-linecap="round" opacity="0.8"/><path d="M83.58736023493111 130.1537667233497 q16.26324904728681 -9.397701806388795 40.65812261821702 0" fill="none" stroke="#b2e6cf" stroke-width="1.5684438765048982" stroke-linecap="round" opacity="0.6783015497028828"/><path d="M59.408490245230496 124.75288427993655 q19.039208680205046 -10.069917525630444 47.59802170051262 0" fill="none" stroke="#c78bb0" stroke-width="1.0975076895207168" stroke-linecap="round" opacity="0.5641416985541583"/><path d="M74.16230871994048 77.77065498940647 q23.353465188853445 -6.994152894709259 58.38366297213361 0" fill="none" stroke="#b2e6cf" stroke-width="1.4047300860285759" stroke-linecap="round" opacity="0.6329141024500132"/><circle cx="105.87070817872882" cy="104.22349806968123" r="4.024346634745598" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">B</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="tatzelwurm.html"><span>German (Bavarian / Alpine)</span><b>Tatzelwurm</b><p>The Tatzelwurm (literally &#39;clawed worm&#39;) is a cryptid of the Alpine regions — a dragon-like creature said to i…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="tinkaton.html"><span>fae</span><b>Tinkaton</b><p>A pink, impish Pokemon that wields a massive hammer made of scrap metal — specifically, metal stolen from defe…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="basilisk.html"><span>Classical Greek and Roman natural histories, extensively elaborated in medieval European bestiaries</span><b>Basilisk</b><p>The basilisk is a legendary reptile known as the &#39;king of serpents&#39; (from Greek basiliskos, &#39;little king&#39;), in…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-3116<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

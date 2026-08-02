@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-tight" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Pantanera</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:61vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Spider_ghost_in_art_detail%2C_from-_Yoshitoshi_The_Ground_Spider_%28cropped%29.jpg" loading="lazy" alt="Pantanera" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="84" fill="url(#sg)"/><path d="M44.4 100.8 A55.565879790112376 55.565879790112376 0 0 1 143.2 65.1" fill="none" stroke="#6fa8b8" stroke-width="3.1946282082935795" stroke-linecap="round" opacity="0.8"/><path d="M155.2 93.6 A55.565879790112376 55.565879790112376 0 0 1 49.4 123.0" fill="none" stroke="#6fa8b8" stroke-width="4.8552915890468284" stroke-linecap="round" opacity="0.8"/><path d="M75.85779198398814 95.70640962943435 q10.635297446511686 -15.775406771805137 26.588243616279215 0" fill="none" stroke="#a3d8e8" stroke-width="2.3840445779263977" stroke-linecap="round" opacity="0.7512035350315274"/><path d="M60.1857503708452 127.6215669196099 q27.831438111513854 -8.375442127231508 69.57859527878463 0" fill="none" stroke="#b89a6f" stroke-width="1.9571056600660086" stroke-linecap="round" opacity="0.7690833521075547"/><path d="M84.51927083963528 122.05547981336713 q23.40122654605657 -7.962421368807554 58.50306636514142 0" fill="none" stroke="#a3d8e8" stroke-width="1.5678915787488221" stroke-linecap="round" opacity="0.7010242267511786"/><path d="M78.7367299310863 68.78592908009887 q16.762897346168756 -9.825766020454466 41.90724336542189 0" fill="none" stroke="#b89a6f" stroke-width="1.6470627628266812" stroke-linecap="round" opacity="0.653480412811041"/><circle cx="94.57931385561824" cy="98.61107655707747" r="3.978263072669506" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">P</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="dames-blanches.html"><span>French (Normandy, Brittany, Lorraine)</span><b>Dames Blanches</b><p>The Dames Blanches (White Ladies) are spectral female figures found throughout French folklore, especially in …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="bunyip.html"><span>Aboriginal Australian (widespread: Wemba-Wemba, Wiradjuri, and many others)</span><b>Bunyip</b><p>The Bunyip is one of Australia&#39;s most significant mythological-cryptozoological figures, a creature sitting at…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="adaro.html"><span>Solomon Islands (Makira/San Cristobal)</span><b>Adaro</b><p>The adaro is the malignant half of a Solomon Islands theory of the soul made into a sea monster. In the belief…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-3109<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

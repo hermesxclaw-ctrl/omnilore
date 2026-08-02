@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-smallcaps" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">White Lady</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:69vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Ebenezer_Sibly_-_Edw%E1%B8%8D_Kelly%2C_a_Magician._in_the_Act_of_invoking_the_Spirit_of_a_Deceased_Person.jpg" loading="lazy" alt="White Lady" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><path d="M134.9 49.8 A61.107743026688695 61.107743026688695 0 0 1 138.2 147.7" fill="none" stroke="#6fa8b8" stroke-width="4.870390036376193" stroke-linecap="round" opacity="0.8"/><path d="M118.7 158.2 A61.107743026688695 61.107743026688695 0 0 1 40.2 112.5" fill="none" stroke="#6fa8b8" stroke-width="3.5649540304439142" stroke-linecap="round" opacity="0.8"/><path d="M38.9 100.6 A61.107743026688695 61.107743026688695 0 0 1 97.1 39.0" fill="none" stroke="#6fa8b8" stroke-width="4.00382901658304" stroke-linecap="round" opacity="0.8"/><path d="M76.01066843327135 114.66849441640079 q12.76875965911895 -8.890623521525413 31.921899147797376 0" fill="none" stroke="#a3d8e8" stroke-width="1.7980425722897053" stroke-linecap="round" opacity="0.49302872372791173"/><path d="M74.09672883525491 81.20981921255589 q19.09913641996682 -15.055331386625767 47.74784104991704 0" fill="none" stroke="#b89a6f" stroke-width="1.2570239577442408" stroke-linecap="round" opacity="0.47920827846974134"/><path d="M72.67215463984758 110.15146255679429 q20.87558717019856 -14.525538940448314 52.1889679254964 0" fill="none" stroke="#a3d8e8" stroke-width="1.6882192105054856" stroke-linecap="round" opacity="0.7358440638519824"/><circle cx="109.93213033583015" cy="90.56315127573907" r="5.315147142857313" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="18" font-family="serif" opacity="0.9" font-weight="bold">W</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -45,6 +45,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="la-llorona.html"><span>Mexican</span><b>La Llorona</b><p>You&#39;re walking home along the river at twilight. Your grandmother always told you to be home before dark. You …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="gyuki.html"><span>spirit</span><b>Gyūki</b><p>The Eight-Tails, a massive bull-octopus chimera with eight tentacle-like tails. Gyūki is the most cooperative …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="disir.html"><span>Norse</span><b>Dísir</b><p>The Dísir (singular: Dís) are a complex class of female supernatural beings in Norse belief — simultaneously g…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-2310<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

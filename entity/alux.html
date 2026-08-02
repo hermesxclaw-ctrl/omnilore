@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-fae head-upper" style="--name-scale:1.12">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Alux</span></span><span class="rec-right">THE COURTS UNSEEN</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low has-img" style="min-height:75vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Classic_Maya_Clay_Figurine%2C_Jaina_Island%2C_Campeche_-_9757546556.jpg" loading="lazy" alt="Alux" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#b2e6cf" stop-opacity="0.7"/><stop offset="55%" stop-color="#7fb8a4" stop-opacity="0.28"/><stop offset="100%" stop-color="#7fb8a4" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><path d="M86.7 153.9 A55.51381953805685 55.51381953805685 0 0 1 80.3 48.1" fill="none" stroke="#7fb8a4" stroke-width="2.961091765318997" stroke-linecap="round" opacity="0.8"/><path d="M99.3 44.5 A55.51381953805685 55.51381953805685 0 0 1 141.4 137.0" fill="none" stroke="#7fb8a4" stroke-width="3.1409400276606902" stroke-linecap="round" opacity="0.8"/><path d="M75.76069978252053 92.19810498133302 q25.72463689222932 -6.727506147231907 64.3115922305733 0" fill="none" stroke="#b2e6cf" stroke-width="1.971410895884037" stroke-linecap="round" opacity="0.6489472070708872"/><path d="M79.55879989964887 68.44733444042504 q11.851179634407163 -13.652372368611395 29.627949086017907 0" fill="none" stroke="#c78bb0" stroke-width="1.3269532319158315" stroke-linecap="round" opacity="0.6907020544633269"/><path d="M70.9770355974324 70.74248495325446 q13.094559908472002 -7.334949892479926 32.736399771180004 0" fill="none" stroke="#b2e6cf" stroke-width="1.162020691856742" stroke-linecap="round" opacity="0.737402892112732"/><path d="M69.1767331068404 97.50368537008762 q18.966797557100655 -14.175183546263725 47.416993892751634 0" fill="none" stroke="#c78bb0" stroke-width="1.6753101948648692" stroke-linecap="round" opacity="0.6648793292231858"/><path d="M66.52657370269299 96.20726490579545 q15.683979203738273 -9.692891499958932 39.20994800934568 0" fill="none" stroke="#b2e6cf" stroke-width="1.5475260552018881" stroke-linecap="round" opacity="0.5416640860959888"/><circle cx="105.42513666581362" cy="87.99253855086863" r="3.3503947565332055" fill="#7fb8a4" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#b2e6cf" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">A</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -43,6 +43,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="camazotz.html"><span>Maya</span><b>Camazotz</b><p>Camazotz is the death bat of Maya myth — and the monster responsible for one of the most shocking scenes in an…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="ah-puch-cizin-kisin.html"><span>Maya</span><b>Ah Puch (Cizin, Kisin)</b><p>Ah Puch (also called Cizin or Kisin) is the Maya god of death, decay, and the underworld. He is a horrifying f…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="drow.html"><span>Dungeons &amp; Dragons — Multiple Settings (Wizards of the Coast / Hasbro)</span><b>Drow</b><p>The Drow are one of D&amp;D&#39;s most infamous and complex creations — a subterranean race of dark-skinned elves whos…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · THE COURTS UNSEEN · AAT-3044<br>The Twilight Garden · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

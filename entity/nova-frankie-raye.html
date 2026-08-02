@@ -18,7 +18,7 @@
 </head>
 <body class="tex-stars arch-cosmic " style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Nova (Frankie Raye)</span></span><span class="rec-right">CELESTIAL SURVEY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-low" style="min-height:76vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#93b2ff" stop-opacity="0.7"/><stop offset="55%" stop-color="#5f7fd9" stop-opacity="0.28"/><stop offset="100%" stop-color="#5f7fd9" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="88" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#5f7fd9" stroke-width="1.8210006353212522" opacity="0.8299212434329093"/><circle cx="100" cy="100" r="45" fill="none" stroke="#c4a44c" stroke-width="1.3210863547865301" opacity="0.6582437164150179"/><line x1="161.69524071313492" y1="105.506999822791" x2="176.6751446076484" y2="106.84412610901602" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="136.91966919084572" y1="139.64830632123002" x2="159.45212398517248" y2="163.84607649183187" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="95.65553113159632" y1="155.3142094393972" x2="93.49265087052422" y2="182.85221589707504" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="56.46981509661771" y1="138.8109581892234" x2="41.591266539048654" y2="152.07648249760456" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="44.22256446572843" y1="98.65255273406356" x2="23.42690829738332" y2="98.15018022842598" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="66.00864166961745" y1="60.4270357379914" x2="43.2072012385422" y2="33.8814479291413" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="105.50845546567191" y1="43.254056135763854" x2="107.65518055140716" y2="21.13933777846104" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="141.59648309430855" y1="61.12976299814739" x2="167.89410574946305" y2="36.555694491596036" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><path d="M100.0 77.4L105.2 89.3L117.7 85.9L111.6 97.3L122.0 105.0L109.3 107.4L109.8 120.4L100.0 111.9L90.2 120.4L90.7 107.4L78.0 105.0L88.4 97.3L82.3 85.9L94.8 89.3Z" fill="#5f7fd9" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#93b2ff" font-size="25" font-family="serif" opacity="0.9" font-weight="bold">N</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="silver-surfer.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Silver Surfer</b><p>The Silver Surfer is Norrin Radd, a young astronomer from the idyllic planet Zenn-La who sacrificed his own fr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="terrax-the-tamer.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Terrax the Tamer</b><p>Terrax the Tamer, originally the tyrant Tyros of the planet Aegis, was chosen by Galactus to become a herald a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q22084535.html"><span>Unclassified — research pending</span><b>Yomotsuhirasaka</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · CELESTIAL SURVEY · AAT-2958<br>The Observatory · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

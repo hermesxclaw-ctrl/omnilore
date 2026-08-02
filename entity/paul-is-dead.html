@@ -18,7 +18,7 @@
 </head>
 <body class="tex-none arch-fine-art head-upper" style="--name-scale:0.97">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Paul Is Dead</span></span><span class="rec-right">GALLERY OF THE UNREAL</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-left has-img" style="min-height:70vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/P1070028_Louvre_Oenocho%C3%A9_ionienne_E658_rwk.JPG/1280px-P1070028_Louvre_Oenocho%C3%A9_ionienne_E658_rwk.JPG" loading="lazy" alt="Paul Is Dead" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ecd08e" stop-opacity="0.7"/><stop offset="55%" stop-color="#c4a35a" stop-opacity="0.28"/><stop offset="100%" stop-color="#c4a35a" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><rect x="42" y="34" width="116" height="132" fill="none" stroke="#c4a35a" stroke-width="2" opacity="0.8"/><rect x="50" y="42" width="100" height="116" fill="none" stroke="#8a4a4a" stroke-width="0.8" opacity="0.6"/><path d="M69.74150525871664 127.4808447342366 Q100 72.78310988098383 139.34996636817232 124.38281735405326" fill="none" stroke="#c4a35a" stroke-width="3.9855755837634206" stroke-linecap="round" opacity="0.75"/><text x="100" y="107" text-anchor="middle" fill="#ecd08e" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">P</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -40,6 +40,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="the-men-in-black.html"><span>Fine Art</span><b>The Men in Black</b><p>Mysterious figures — typically dressed in black suits, driving black cars, speaking in stilted, bureaucratic l…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="the-joker-as-trickster-god.html"><span>Fine Art</span><b>The Joker as Trickster God</b><p>Batman&#39;s arch-nemesis, a clown-faced agent of chaos with no consistent origin (&#39;If I&#39;m going to have a past, I…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="the-illuminati.html"><span>Fine Art</span><b>The Illuminati</b><p>The belief in a secret society of global elites — bankers, politicians, celebrities, tech billionaires — who m…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · GALLERY OF THE UNREAL · AAT-2411<br>The Painted Wing · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

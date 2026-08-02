@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-trickster " style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Tikoloshe</span></span><span class="rec-right">MISCHIEF LEDGER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt has-img" style="min-height:71vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Benin_bronze_Louvre_A97-14-1.jpg/1280px-Benin_bronze_Louvre_A97-14-1.jpg" loading="lazy" alt="Tikoloshe" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffc95e" stop-opacity="0.7"/><stop offset="55%" stop-color="#d99a2b" stop-opacity="0.28"/><stop offset="100%" stop-color="#d99a2b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M100 100 L99.7 93.7 L104.5 92.8 L109.7 96.2 L112.4 103.0 L109.4 110.9 L101.8 116.0 L90.3 115.6 L81.9 108.6 L78.2 96.2 L83.6 82.9 L94.9 75.0 L112.1 75.0 L126.3 86.4 L130.8 103.6 L125.2 120.6 L108.7 133.7 L88.5 134.7 L70.5 123.9 L60.6 102.0 L65.5 78.0 L81.9 61.2 L106.0 55.6 L131.7 66.3 L146.9 89.6 L146.3 119.8 L129.3 142.8 L98.1 153.5 L68.0 144.8 L45.5 117.4 L42.9 84.5 L63.2 51.0 L98.0 37.0 L138.2 48.0 L162.3 77.5 L165.5 117.7 L148.1 151.0 L110.4 171.4 L64.2 164.3 L31.4 131.0 L23.5 87.3 L42.0 45.3 L85.5 19.6 L139.2 25.9 L174.2 57.8" fill="none" stroke="#d99a2b" stroke-width="1.5" opacity="0.8"/><circle cx="75.8659568335861" cy="81.96669891104102" r="7.620270349085331" fill="none" stroke="#b8477a" stroke-width="1.4" opacity="0.8"/><rect x="112.50019403919578" y="113.79159140586853" width="12.425585286691785" height="11.213359516113997" fill="#b8477a" opacity="0.7" transform="rotate(40 124 122)"/><text x="100" y="107" text-anchor="middle" fill="#ffc95e" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="mamlambo.html"><span>Zulu</span><b>Mamlambo</b><p>Mamlambo is the mysterious serpentine river goddess of Zulu and Xhosa mythology, particularly associated with …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="inkanyamba.html"><span>Zulu</span><b>Inkanyamba</b><p>The inkanyamba is the storm made animal: a colossal eel-like serpent with a horse-like head that dwells in the…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="iktomi.html"><span>Lakota (Sioux) and other Plains tribes</span><b>Iktomi</b><p>Iktomi is the spider trickster of Lakota and other Plains tribes&#39; mythology — a figure of profound cultural im…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2670<br>The Crooked Hall · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

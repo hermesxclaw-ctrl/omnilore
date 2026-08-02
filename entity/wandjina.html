@@ -18,7 +18,7 @@
 </head>
 <body class="tex-fog arch-spirit head-upper" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Wandjina</span></span><span class="rec-right">SPIRIT REGISTER</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:73vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Wandjina_rock_art.jpg" loading="lazy" alt="Wandjina" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#a3d8e8" stop-opacity="0.7"/><stop offset="55%" stop-color="#6fa8b8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6fa8b8" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="91" fill="url(#sg)"/><path d="M156.6 105.6 A56.90784873254597 56.90784873254597 0 0 1 53.5 132.7" fill="none" stroke="#6fa8b8" stroke-width="3.065261705778539" stroke-linecap="round" opacity="0.8"/><path d="M44.5 112.4 A56.90784873254597 56.90784873254597 0 0 1 136.8 56.6" fill="none" stroke="#6fa8b8" stroke-width="3.119006795459427" stroke-linecap="round" opacity="0.8"/><path d="M58.566634493879974 65.43364625051618 q18.158652766235175 -7.391338158864528 45.39663191558793 0" fill="none" stroke="#a3d8e8" stroke-width="1.8050511222332717" stroke-linecap="round" opacity="0.7357480243779719"/><path d="M58.30830682255328 120.01783408969641 q16.50646206922829 -11.737768148537725 41.26615517307073 0" fill="none" stroke="#b89a6f" stroke-width="1.859389939159155" stroke-linecap="round" opacity="0.7384163897484541"/><path d="M64.26747956965119 108.55058416165411 q27.489201391860846 -14.661251463927329 68.7230034796521 0" fill="none" stroke="#a3d8e8" stroke-width="2.026621233299375" stroke-linecap="round" opacity="0.7993149668909609"/><path d="M79.8487406661734 133.8993276283145 q26.308082775026563 -6.326528935693204 65.7702069375664 0" fill="none" stroke="#b89a6f" stroke-width="2.198009837046266" stroke-linecap="round" opacity="0.5681036543101072"/><circle cx="105.59437747765332" cy="92.96079675480723" r="5.926200591959059" fill="#6fa8b8" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#a3d8e8" font-size="21" font-family="serif" opacity="0.9" font-weight="bold">W</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="rainbow-serpent.html"><span>Various Aboriginal Australian (widespread across the continent, with different names in different language groups)</span><b>Rainbow Serpent</b><p>The Rainbow Serpent is one of the most important, widespread, and ancient spiritual beings in Aboriginal Austr…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="charun-charu.html"><span>Etruscan</span><b>Charun (Charu)</b><p>Charun is the terrifying Etruscan demon of death, a psychopomp who guides souls to the underworld. With his bl…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="agta.html"><span>Filipino</span><b>Agta</b><p>Agta (not to be confused with the Aeta indigenous people) are dark-skinned, hairy forest spirits in Bicolano a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · SPIRIT REGISTER · AAT-1782<br>The Veiled Gallery · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

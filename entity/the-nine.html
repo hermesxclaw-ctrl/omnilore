@@ -18,7 +18,7 @@
 </head>
 <body class="tex-stars arch-cosmic head-tight" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">The Nine</span></span><span class="rec-right">CELESTIAL SURVEY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-tilt" style="min-height:79vh">
   <svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#93b2ff" stop-opacity="0.7"/><stop offset="55%" stop-color="#5f7fd9" stop-opacity="0.28"/><stop offset="100%" stop-color="#5f7fd9" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#5f7fd9" stroke-width="1.3677252486580982" opacity="0.7930255295708776"/><circle cx="100" cy="100" r="47" fill="none" stroke="#c4a44c" stroke-width="1.416553048044443" opacity="0.8149015281349421"/><circle cx="100" cy="100" r="56" fill="none" stroke="#5f7fd9" stroke-width="1.480333027150482" opacity="0.7122255538590252"/><line x1="161.72744270044907" y1="104.67741631875415" x2="194.46431589546202" y2="107.15806314629923" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="128.96426605757378" y1="153.62042878769728" x2="136.14671972430676" y2="166.91702828006683" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="72.1689487867631" y1="144.4988631432118" x2="57.79716704564197" y2="167.47779929342408" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="37.27911994092263" y1="95.87497810220974" x2="20.62612576144747" y2="94.77974529314511" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="71.91550548043102" y1="45.36630474952037" x2="64.33402817929614" y2="30.617806423156736" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><line x1="132.37382172019224" y1="49.230928125177726" x2="148.8153819997261" y2="23.447047470604176" stroke="#5f7fd9" stroke-width="1.3" opacity="0.75"/><path d="M100.0 70.1L106.8 85.8L123.4 81.3L115.3 96.5L129.2 106.7L112.3 109.8L113.0 127.0L100.0 115.7L87.0 127.0L87.7 109.8L70.8 106.7L84.7 96.5L76.6 81.3L93.2 85.8Z" fill="#5f7fd9" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#93b2ff" font-size="24" font-family="serif" opacity="0.9" font-weight="bold">T</text></svg><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="the-traveler.html"><span>Destiny (Bungie, Inc.)</span><b>The Traveler</b><p>The Traveler is a mysterious, massive, white celestial sphere that serves as the source of the Light — the par…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="guardians.html"><span>Destiny (Bungie, Inc.)</span><b>Guardians</b><p>Guardians are the player characters and central heroes of the Destiny universe — dead humans (or Awoken or Exo…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="eson-the-searcher.html"><span>Marvel Comics (Marvel Entertainment / Disney)</span><b>Eson the Searcher</b><p>Eson the Searcher is a Celestial whose function within the Celestial hierarchy is to locate and investigate co…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · CELESTIAL SURVEY · AAT-3021<br>The Observatory · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

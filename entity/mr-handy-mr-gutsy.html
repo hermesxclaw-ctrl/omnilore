@@ -18,7 +18,7 @@
 </head>
 <body class="tex-grain arch-construct head-upper" style="--name-scale:1.07">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Mr. Handy / Mr. Gutsy</span></span><span class="rec-right">ARTIFICE REGISTRY</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-center has-img" style="min-height:69vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Golem_and_Loew.jpg" loading="lazy" alt="Mr. Handy / Mr. Gutsy" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#e0b872" stop-opacity="0.7"/><stop offset="55%" stop-color="#b0873f" stop-opacity="0.28"/><stop offset="100%" stop-color="#b0873f" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="93" fill="url(#sg)"/><path d="M155.1 100.0L143.3 115.8L142.2 135.4L123.0 139.9L109.6 154.2L92.0 145.4L72.5 147.7L64.7 129.6L48.2 118.8L53.9 100.0L48.2 81.2L64.7 70.4L72.5 52.3L92.0 54.6L109.6 45.8L123.0 60.1L142.2 64.6L143.3 84.2Z" fill="none" stroke="#b0873f" stroke-width="1.6" opacity="0.85"/><circle cx="100" cy="100" r="18.61887665465474" fill="none" stroke="#6e8296" stroke-width="1.4" opacity="0.8"/><circle cx="129.6" cy="104.6" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="113.6" cy="126.7" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="92.6" cy="129.1" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="71.1" cy="108.2" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="74.2" cy="84.8" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="99.0" cy="70.0" r="2.4" fill="#b0873f" opacity="0.85"/><circle cx="119.0" cy="76.8" r="2.4" fill="#b0873f" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#e0b872" font-size="19" font-family="serif" opacity="0.9" font-weight="bold">M</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -46,6 +46,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="wikidata-q65932846.html"><span>Unclassified — research pending</span><b>Sectumsempra</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q3919126.html"><span>Unclassified — research pending</span><b>Alohomora</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q65660689.html"><span>Unclassified — research pending</span><b>invoking spirits</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · ARTIFICE REGISTRY · AAT-2778<br>The Workshop Vault · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>

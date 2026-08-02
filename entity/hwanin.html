@@ -18,7 +18,7 @@
 </head>
 <body class="tex-motes arch-divine head-tight" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
-<div class="rec-bar"><span class="rec-left"><a href="javascript:history.back()" class="rec-back">&larr; Back</a><span class="rec-div">|</span><a href="../index.html" class="rec-home"><strong>OMNILORE</strong></a><span class="rec-div">·</span><span class="rec-name">Hwanin</span></span><span class="rec-right">DIVINE COLLECTION</span></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
 <div class="hero sigil-right has-img" style="min-height:66vh">
   <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A_serpent%2C_a_winged_serpent_and_a_dragon._Woodcut_after_C._G_Wellcome_V0021191.jpg/1280px-A_serpent%2C_a_winged_serpent_and_a_dragon._Woodcut_after_C._G_Wellcome_V0021191.jpg" loading="lazy" alt="Hwanin" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffcf78" stop-opacity="0.7"/><stop offset="55%" stop-color="#e8a33d" stop-opacity="0.28"/><stop offset="100%" stop-color="#e8a33d" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="82" fill="url(#sg)"/><circle cx="100" cy="100" r="30" fill="none" stroke="#e8a33d" stroke-width="1.7663218197179957" opacity="0.7342018967494368"/><circle cx="100" cy="100" r="49" fill="none" stroke="#c94f2e" stroke-width="1.2618931672535836" opacity="0.504728040471673"/><line x1="163.00120535841495" y1="101.7111749500264" x2="177.55417120382117" y2="102.10644787316458" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="125.23589823352195" y1="152.99038561419957" x2="135.4925129904975" y2="174.52724418127315" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="68.88406452738354" y1="145.78943187763218" x2="53.17074398477681" y2="168.91276111805593" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="42.167747128026804" y1="95.00813832752988" x2="6.98738360779285" y2="91.97150220220043" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="76.38667518118821" y1="51.66358074506325" x2="61.472732283674155" y2="21.13477541290925" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><line x1="133.9146818324516" y1="47.41964317473913" x2="143.79363580431257" y2="32.103594288685684" stroke="#e8a33d" stroke-width="1.3" opacity="0.75"/><path d="M100.0 73.5L104.6 90.4L120.7 83.5L110.4 97.6L125.8 105.9L108.3 106.6L111.5 123.8L100.0 110.7L88.5 123.8L91.7 106.6L74.2 105.9L89.6 97.6L79.3 83.5L95.4 90.4Z" fill="#e8a33d" opacity="0.85"/><text x="100" y="107" text-anchor="middle" fill="#ffcf78" font-size="22" font-family="serif" opacity="0.9" font-weight="bold">H</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
@@ -41,6 +41,25 @@
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="hwanung.html"><span>Korean</span><b>Hwanung</b><p>Hwanung is the celestial prince of Korean mythology, the son of Hwanin (the Lord of Heaven) and the father of …</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="haetae.html"><span>Korean</span><b>Haetae</b><p>The haetae is the lion-shaped guardian beast that sits in carved stone pairs before Gyeongbokgung Palace and a…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q11347744.html"><span>Unclassified — research pending</span><b>Rātoshikamuy</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
 <footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · DIVINE COLLECTION · AAT-1683<br>The Pantheon Halls · never finished, always evolving</footer>
+<script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
+<script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
+(function(){
+var IDX=window.OMNILORE_INDEX||[];
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
+})();
+</script>
 </body>
 </html>
