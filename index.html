@@ -5,16 +5,7 @@
 <meta name="description" content="A digital museum of 25,506 gods, demons, cryptids, yokai, and internet-born horrors — each with its own custom-built page. Enter the Archive.">
 <meta property="og:title" content="Omnilore — The Archive of All Things Unreal">
 <meta property="og:description" content="Every forgotten god, every viral nightmare, every whispered folktale — catalogued, connected, and given an altar.">
-<meta name="theme-color" content="#090a0d">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Omnilore">
-<link rel="apple-touch-icon" href="assets/logo.svg">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Omnilore","alternateName":"The Archive of All Things Unreal","url":"https://omnilorearchive.com/","description":"A digital museum of gods, demons, cryptids, yokai, and internet-born horrors.","inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://omnilorearchive.com/browse.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
-</script>
+<meta name="theme-color" content="#141210">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <style>
@@ -205,83 +196,6 @@ footer .legal-links{margin-top:10px!important;gap:9px!important;}
 footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
 @media(max-width:560px){footer{padding:25px 16px 28px!important;}footer .legal-links{gap:7px!important;}}
 
-/* ============================================================
-   OVERNIGHT PASS — 2026-08-02 (Milo)
-   Bug fixes, pathways, visitor rails, mobile app tab bar.
-   ============================================================ */
-
-/* FIX: stat strip held 5 stats in a 4-column grid. */
-.stat-strip{grid-template-columns:repeat(5,1fr)}
-@media(max-width:860px){.stat-strip{grid-template-columns:repeat(2,1fr)}.stat:nth-child(5){grid-column:1/-1;border-bottom:0!important}}
-@media(max-width:420px){.stat:nth-child(5){grid-column:1/-1}}
-.stat b{display:inline-block;min-height:1em}
-
-/* Search dropdown: keyboard highlight + empty state. */
-#dd a.hl,#dd a:focus-visible{background:var(--s2);outline:none;box-shadow:inset 2px 0 0 var(--p)}
-#dd .dd-empty{display:block;padding:12px 14px;color:var(--t3);font-size:.85rem;font-style:italic}
-
-/* Visitor rails — "Your passage" (recent) and reliquary (saved). */
-.rail-section{padding-top:34px!important;padding-bottom:10px!important}
-.rail-block{margin-bottom:22px}
-.rail-block .rail-label{font-family:var(--meta);font-size:.52rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--signal);margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
-.rail-block .rail-label small{color:var(--t3);letter-spacing:1px;font-size:.46rem}
-.rail{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;scrollbar-color:var(--b2) transparent;-webkit-overflow-scrolling:touch}
-.rail::-webkit-scrollbar{height:4px}
-.rail::-webkit-scrollbar-thumb{background:var(--b2)}
-.rail-chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--hair);background:linear-gradient(135deg,rgba(238,230,211,.03),transparent);color:var(--bone);font-family:var(--body);font-size:.92rem;transition:border-color .2s,transform .2s}
-.rail-chip:hover{border-color:var(--brass);transform:translateY(-2px)}
-.rail-chip small{font-family:var(--meta);font-size:.48rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--t3)}
-.rail-chip .glyph-dot{width:6px;height:6px;border-radius:50%;background:var(--brass);flex:0 0 auto}
-.rail-empty{color:var(--t3);font-size:.9rem;font-style:italic}
-
-/* Pathways — curated journeys. */
-.pathways-section{padding-bottom:52px!important}
-.pathways-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,360px);gap:14px;overflow-x:auto;padding:4px 4px 14px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--b2) transparent;-webkit-overflow-scrolling:touch}
-.pathways-row::-webkit-scrollbar{height:5px}
-.pathways-row::-webkit-scrollbar-thumb{background:var(--b2)}
-.pathway-card{scroll-snap-align:start;position:relative;display:flex;flex-direction:column;padding:24px 22px 18px;border:1px solid var(--hair);background:linear-gradient(155deg,color-mix(in srgb,var(--pc,#c9a84c) 7%,transparent),transparent 55%);overflow:hidden;min-height:250px}
-.pathway-card::before{content:attr(data-glyph);position:absolute;right:8px;top:-18px;font:italic 7.5rem/.9 var(--display);color:var(--pc,#c9a84c);opacity:.08;pointer-events:none}
-.pathway-card::after{content:'';position:absolute;left:0;top:0;right:0;height:2px;background:var(--pc,#c9a84c);opacity:.75}
-.pathway-kicker{font:500 .5rem var(--meta);letter-spacing:2.5px;text-transform:uppercase;color:var(--pc,#c9a84c);margin-bottom:8px}
-.pathway-title{font:700 1.9rem/1 var(--display);color:var(--bone);letter-spacing:-.5px;margin-bottom:10px}
-.pathway-desc{color:rgba(238,230,211,.62);font-size:.95rem;line-height:1.55;margin-bottom:16px;flex:1 1 auto}
-.pathway-stops{display:flex;flex-wrap:wrap;gap:6px}
-.pathway-stop{font:500 .5rem var(--meta);letter-spacing:1px;text-transform:uppercase;color:rgba(238,230,211,.72);padding:6px 10px;border:1px solid var(--hair);background:rgba(9,10,13,.35);transition:all .2s}
-.pathway-stop:hover{color:var(--brass-hi);border-color:var(--pc,#c9a84c);transform:translateY(-1px)}
-.pathway-stop.first{color:var(--pc,#c9a84c);border-color:color-mix(in srgb,var(--pc,#c9a84c) 45%,transparent)}
-.pathway-more{font:500 .5rem var(--meta);letter-spacing:1px;color:var(--t3);padding:6px 2px;align-self:center}
-@media(max-width:560px){.pathways-row{grid-auto-columns:minmax(262px,82vw)}.pathway-card{min-height:230px}}
-
-/* EOTD action row: keep + share beside the main CTA. */
-.eotd-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.btn-quiet{background:none;color:var(--t2);border:1px solid var(--hair);padding:14px 18px}
-.btn-quiet:hover{color:var(--brass-hi);border-color:var(--brass)}
-.btn-quiet.kept{color:var(--brass-hi);border-color:var(--brass);background:var(--pg)}
-@media(max-width:380px){.eotd-actions{flex-direction:column;align-items:stretch}.eotd-actions .btn{justify-content:center}}
-
-/* Mobile app tab bar — fixed bottom navigation on phones. */
-.tabbar{display:none}
-@media(max-width:560px){
-  .tabbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(9,10,13,.92);backdrop-filter:blur(16px);border-top:1px solid var(--hair);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -12px 40px rgba(0,0,0,.45)}
-  .tabbar button,.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px 4px;min-height:48px;background:none;border:0;color:rgba(238,230,211,.62);font:500 .5rem var(--meta);letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;text-decoration:none}
-  .tabbar button:active,.tabbar a:active,.tabbar button.on,.tabbar a.on{color:var(--brass-hi)}
-  .tabbar .tb-glyph{font-size:1.15rem;line-height:1;font-family:var(--display)}
-  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
-  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))!important}
-}
-/* While the mobile menu is open, never show tab bar above it. */
-.tabbar{z-index:90}
-.nav-links.open~.tabbar,.tabbar.menu-open{display:none}
-
-/* Toast for share/save feedback. */
-#omni-toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);z-index:300;background:rgba(18,15,21,.95);border:1px solid var(--brass);color:var(--bone);font:500 .6rem var(--meta);letter-spacing:1.5px;text-transform:uppercase;padding:12px 20px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
-#omni-toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:560px){#omni-toast{bottom:calc(84px + env(safe-area-inset-bottom))}}
-
-/* Count-up: subtle fade as numbers settle. */
-.stat b.counting{opacity:.35}
-.stat b{transition:opacity .3s}
-
 </style>
 </head>
 <body>
@@ -296,7 +210,7 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
   <div id="heroBg"></div><div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
-    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span id="sr-entities">25,506 Entities Catalogued</span><span id="sr-traditions">455 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
+    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span>25,506 Entities Catalogued</span><span>455 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
     <p class="hero-label">The Digital Museum of the Unreal</p>
     <h1>A cathedral for<br><em>everything</em> imagined</h1>
     <p class="hero-desc">Every forgotten god, every viral nightmare, every whispered folktale and cosmic horror — catalogued, connected, and given an altar. No two rooms alike.</p>
@@ -307,367 +221,97 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
   <div class="hero-caption"><span>Now on display</span><b id="featName"></b></div>
 </section>
 <script>
-// Mobile hamburger menu toggle (guarded; enhanced in main script below)
-(function(){var t=document.getElementById('menuToggle'),l=document.getElementById('navLinks');if(!t||!l)return;t.setAttribute('aria-expanded','false');t.onclick=function(){var open=l.classList.toggle('open');t.textContent=open?'✕':'☰';t.setAttribute('aria-expanded',open?'true':'false');};})();
+// Mobile hamburger menu toggle
+document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰';};
 </script>
-<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-stat"><span>Completed</span><b id="archive-completed">1,203</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
+<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-stat"><span>Completed</span><b id="archive-completed">1,173</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
-<div class="stat-strip" id="stat-strip">
-  <div class="stat"><b data-stat="total">25,512</b><span>Entities Enshrined</span></div>
-  <div class="stat"><b data-stat="finished">1,173</b><span>Completed Dossiers</span></div>
-  <div class="stat"><b data-stat="cultures">455</b><span>Cultures &amp; Traditions</span></div>
-  <div class="stat"><b data-stat="wings">17</b><span>Wings of the Museum</span></div>
-  <div class="stat"><b data-stat="unfinished">24,436</b><span>Unfinished</span></div>
+<div class="stat-strip">
+  <div class="stat"><b>25,512</b><span>Entities Enshrined</span></div>
+  <div class="stat"><b>1,173</b><span>Completed Dossiers</span></div>
+  <div class="stat"><b>455</b><span>Cultures &amp; Traditions</span></div>
+  <div class="stat"><b>17</b><span>Wings of the Museum</span></div>
+  <div class="stat"><b>24,436</b><span>Unfinished</span></div>
 </div>
-<section class="section rail-section" id="passage-section" hidden>
-  <div class="rail-block" id="passage-block" hidden>
-    <p class="rail-label">Your passage through the Archive <small>recently opened dossiers</small></p>
-    <div class="rail" id="passage-rail"></div>
-  </div>
-  <div class="rail-block" id="reliquary-block" hidden>
-    <p class="rail-label">Your reliquary <small>entities you chose to keep</small></p>
-    <div class="rail" id="reliquary-rail"></div>
-  </div>
-</section>
 <section class="section">
   <p class="sec-label">01 / Now on Display</p><h2 class="sec-title">Tonight&rsquo;s Entity</h2>
-  <div id="eotd"><div class="img-plate" id="e-plate"><span class="glyph" id="e-glyph">✦</span></div><div><p class="meta" id="e-meta"></p><h3 id="e-name"></h3><p class="ep" id="e-ep"></p><p class="sum" id="e-sum"></p><div class="eotd-actions"><a class="btn btn-p" id="e-link" href="#">Read the Full Entry →</a><button class="btn btn-quiet" id="e-save" type="button">☆ Keep</button><button class="btn btn-quiet" id="e-share" type="button">↗ Share</button></div></div></div>
+  <div id="eotd"><div class="img-plate" id="e-plate"><span class="glyph" id="e-glyph">✦</span></div><div><p class="meta" id="e-meta"></p><h3 id="e-name"></h3><p class="ep" id="e-ep"></p><p class="sum" id="e-sum"></p><a class="btn btn-p" id="e-link" href="#">Read the Full Entry →</a></div></div>
 </section>
 <section class="wings-threshold" id="collections"><div class="threshold-copy"><span class="threshold-glyph" aria-hidden="true">◇</span><p class="sec-label">The architectural index</p><h2>The <em>Seventeen</em> Doors</h2><p>The Archive is too large for a hallway. Enter the wings, where every collection keeps its own atmosphere, rules, and impossible history.</p><a class="btn btn-p" href="wings.html">Enter the Wings →</a></div></section>
-<section class="section pathways-section" id="pathways-section">
-  <p class="sec-label">02 / Curated Journeys</p><h2 class="sec-title">Pathways</h2>
-  <div class="pathways-row" id="pathways-row"></div>
-</section>
 
 <footer><img src="assets/logo.svg" alt="">OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL<br>never finished, always evolving · every page someone&rsquo;s favorite page<div class="legal-links"><a href="legal.html#content-advisory">Content advisory</a><a href="legal.html#terms">Terms of use</a><a href="legal.html#privacy">Privacy</a><a href="legal.html#copyright">Copyright</a><a href="legal.html#accessibility">Accessibility</a></div></footer>
-<nav class="tabbar" id="tabbar" aria-label="Archive quick navigation">
-  <a href="browse.html"><span class="tb-glyph">⌘</span>Browse</a>
-  <button type="button" id="tb-search"><span class="tb-glyph">⌕</span>Search</button>
-  <button type="button" id="tb-random"><span class="tb-glyph">🎲</span>Random</button>
-  <a href="wings.html"><span class="tb-glyph">◇</span>Wings</a>
-</nav>
-<div id="omni-toast" role="status" aria-live="polite"></div>
-<script src="assets/omnilore-core.js"></script>
-<script src="assets/pathways.js"></script>
 <script src="assets/search-index.js"></script>
 <script>
 (function(){
-'use strict';
-var Core=window.Omnilore||{};
-var bus=Core.bus||{emit:function(){},on:function(){}};
-var store=Core.store||{getRecent:function(){return[]},getReliquary:function(){return[]},pushRecent:function(){},inReliquary:function(){return false},toggleReliquary:function(){return false}};
-var data=Core.data;
-if(!data)return; /* core layer missing — degrade to a static page rather than crash */
-
+var IDX=window.OMNILORE_INDEX||[];
+(function(){
+  var archiveIndex=window.OMNILORE_INDEX||[];
+  var archiveTotal=document.getElementById('archive-total'),archiveWings=document.getElementById('archive-wings'),archiveOpen=document.getElementById('archive-open'),archiveMessage=document.getElementById('archive-pulse-message'),archiveCompleted=document.getElementById('archive-completed');
+  function archiveHash(value){var hash=2166136261;for(var index=0;index<value.length;index++){hash^=value.charCodeAt(index);hash=Math.imul(hash,16777619);}return hash>>>0;}
+  if(archiveTotal)archiveTotal.textContent=archiveIndex.length.toLocaleString();
+  if(archiveWings)archiveWings.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
+  if(archiveOpen)archiveOpen.textContent=archiveIndex.length.toLocaleString();if(archiveCompleted){var comp=archiveIndex.filter(function(e){return e._finished}).length;archiveCompleted.textContent=comp.toLocaleString();}
+  if(archiveMessage&&archiveIndex.length){var archivePick=archiveIndex[archiveHash('archive-pulse-'+new Date().toDateString())%archiveIndex.length];archiveMessage.textContent='Today the Archive draws your eye to '+archivePick.n+' — '+(archivePick.e||archivePick.t||'an unopened thread')+'.';}
+})();
+var IDX=window.OMNILORE_INDEX||[];
 function hashStr(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
-function $(id){return document.getElementById(id);}
-function el(tag,cls,text){var n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
-
-/* ---------- toast ---------- */
-var toastEl=$('omni-toast'),toastTimer=null;
-function toast(msg){if(!toastEl)return;toastEl.textContent=msg;toastEl.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(function(){toastEl.classList.remove('on');},1800);}
-
-/* ---------- ticker (data-independent) ---------- */
+// ticker
 var emotions=['Wonder','Dread','Curiosity','Awe','Existential Vertigo','Reverence','The Itch for One More Link'];
 var tk='';for(var t=0;t<4;t++)for(var e2=0;e2<emotions.length;e2++)tk+='<span>'+emotions[e2]+'</span><span class="s">✦</span>';
-var tickerEl=$('ticker');if(tickerEl)tickerEl.innerHTML=tk;
-
-/* ---------- mobile menu extras ---------- */
-var navLinks=$('navLinks'),menuToggle=$('menuToggle');
-if(navLinks&&menuToggle){
-  navLinks.addEventListener('click',function(ev){
-    if(ev.target&&ev.target.tagName==='A'){navLinks.classList.remove('open');menuToggle.textContent='☰';menuToggle.setAttribute('aria-expanded','false');}
+document.getElementById('ticker').innerHTML=tk;
+// featured hero bg: random entity WITH image
+var withImg=IDX.filter(function(e){return e.i;});
+if(withImg.length){var f=withImg[Math.floor(Math.random()*withImg.length)];
+  const hb=document.getElementById('heroBg');if(hb){hb.style.backgroundImage='url("'+f.i+'")';
+  document.getElementById('featName').textContent=f.n;hb.loading='lazy';}}
+// rotating showcase: 8 random imaged entities, 4.5s cycle
+(function(){
+  var sc=document.getElementById('showcase');if(!sc||!withImg.length)return;
+  var picks=[];var used={};
+  while(picks.length<Math.min(4,withImg.length)){var c=withImg[Math.floor(Math.random()*withImg.length)];if(used[c.s])continue;used[c.s]=1;picks.push(c);}
+  var dots=document.getElementById('scDots');
+  picks.forEach(function(p,i){
+    var im=document.createElement('img');im.src=p.i;im.alt=p.n;im.loading='lazy';sc.insertBefore(im,sc.querySelector('.sc-fade'));
+    var d=document.createElement('i');dots.appendChild(d);
   });
-  window.addEventListener('resize',function(){
-    if(window.innerWidth>560&&navLinks.classList.contains('open')){navLinks.classList.remove('open');menuToggle.textContent='☰';menuToggle.setAttribute('aria-expanded','false');}
-  });
-}
-
-/* ---------- search (wired immediately; resolves data lazily) ---------- */
-var q=$('q'),dd=$('dd');
-var hlIndex=-1;
-function closeDD(){if(dd)dd.className='';hlIndex=-1;if(q)q.setAttribute('aria-expanded','false');}
-function highlight(i){
-  var links=dd?dd.querySelectorAll('a[data-idx]'):[];
-  for(var j=0;j<links.length;j++)links[j].classList.toggle('hl',j===i);
-  hlIndex=i;
-}
-if(q&&dd){
-  q.setAttribute('role','combobox');q.setAttribute('aria-expanded','false');q.setAttribute('aria-controls','dd');
-  dd.setAttribute('role','listbox');
-  q.oninput=function(){
-    var v=q.value.trim();
-    if(v.length<2){closeDD();return;}
-    var results=data.search(v,9);
-    bus.emit('search',{query:v,results:results.length});
-    dd.replaceChildren();hlIndex=-1;
-    if(!results.length){dd.appendChild(el('span','dd-empty','No matches in the Archive…'));dd.className='on';q.setAttribute('aria-expanded','true');return;}
-    results.forEach(function(r,i){
-      var a=el('a');a.href='entity/'+r.e.s+'.html';a.setAttribute('data-idx',String(i));a.setAttribute('role','option');
-      a.appendChild(document.createTextNode(r.e.n));
-      if(r.via){a.appendChild(document.createTextNode(' '));a.appendChild(el('span','via','← '+r.via));}
-      a.appendChild(el('small','',(r.e.c||r.e.k||'')));
-      a.addEventListener('click',function(){store.pushRecent(r.e);bus.emit('navigate',{slug:r.e.s,via:'search',query:v});});
-      dd.appendChild(a);
-    });
-    dd.className='on';q.setAttribute('aria-expanded','true');
-  };
-  q.onkeydown=function(ev){
-    var links=dd.querySelectorAll('a[data-idx]');
-    if(ev.key==='ArrowDown'&&links.length){ev.preventDefault();highlight(Math.min(hlIndex+1,links.length-1));}
-    else if(ev.key==='ArrowUp'&&links.length){ev.preventDefault();highlight(Math.max(hlIndex-1,0));}
-    else if(ev.key==='Enter'&&hlIndex>=0&&links[hlIndex]){ev.preventDefault();links[hlIndex].click();}
-    else if(ev.key==='Escape'){closeDD();q.blur();}
-  };
-  /* "/" focuses search from anywhere, like every good archive. */
-  document.addEventListener('keydown',function(ev){
-    if(ev.key==='/'&&!(ev.ctrlKey||ev.metaKey||ev.altKey)){
-      var tag=(ev.target&&ev.target.tagName)||'';
-      if(!/^(INPUT|TEXTAREA|SELECT)$/.test(tag)){ev.preventDefault();q.focus();}
-    }
-  });
-  document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)closeDD();});
-}
-
-/* ---------- service worker (app mode) ---------- */
-if(Core.config&&Core.config.features&&Core.config.features.pwa&&'serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){
-  window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
-}
-
-/* ============================================================
-   DATA-DEPENDENT FEATURES
-   ============================================================ */
-data.init().then(function(IDX){
-  if(!IDX||!IDX.length){
-    /* No index available: hide data-driven blocks, keep the page readable. */
-    var ps=$('pathways-section');if(ps)ps.hidden=true;
-    return;
+  var imgs=sc.querySelectorAll('img'),ds=dots.querySelectorAll('i'),cur=0;
+  function show(i){
+    for(var j=0;j<imgs.length;j++){imgs[j].className=j===i?'on':'';ds[j].className=j===i?'on':'';}
+    document.getElementById('scMeta').textContent=(picks[i].c||picks[i].k)+' · '+picks[i].k.toUpperCase();
+    document.getElementById('scName').textContent=picks[i].n;
+    sc.href='entity/'+picks[i].s+'.html';
   }
-  var withImg=IDX.filter(function(e){return e.i;});
-
-  /* ---------- archive pulse ---------- */
-  var archiveTotal=$('archive-total'),archiveWings=$('archive-wings'),archiveOpen=$('archive-open'),
-      archiveMessage=$('archive-pulse-message'),archiveCompleted=$('archive-completed');
-  var finishedCount=0;for(var fi=0;fi<IDX.length;fi++)if(IDX[fi]._finished)finishedCount++;
-  if(archiveTotal)archiveTotal.textContent=IDX.length.toLocaleString();
-  if(archiveWings)archiveWings.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
-  if(archiveOpen)archiveOpen.textContent=IDX.length.toLocaleString();
-  if(archiveCompleted)archiveCompleted.textContent=finishedCount.toLocaleString();
-  if(archiveMessage){
-    var archivePick=IDX[hashStr('archive-pulse-'+new Date().toDateString())%IDX.length];
-    archiveMessage.textContent='Today the Archive draws your eye to '+archivePick.n+' — '+(archivePick.e||archivePick.t||'an unopened thread')+'.';
-  }
-
-  /* hero status row + search placeholder: same live numbers, no contradictions */
-  var srE=$('sr-entities'),srT=$('sr-traditions');
-  if(srE)srE.textContent=IDX.length.toLocaleString()+' Entities Catalogued';
-  if(srT)srT.textContent=data.cultures().length.toLocaleString()+' Traditions';
-  if(q)q.setAttribute('placeholder','Search '+IDX.length.toLocaleString()+' entities & aliases…');
-
-  /* ---------- live stats with count-up ---------- */
-  var statTargets={
-    total:IDX.length,
-    finished:finishedCount,
-    cultures:data.cultures().length,
-    wings:document.querySelectorAll('.arch-card').length||17,
-    unfinished:IDX.length-finishedCount
-  };
-  var statStrip=$('stat-strip');
-  function setStat(key,val){var n=statStrip?statStrip.querySelector('[data-stat="'+key+'"]'):null;if(n)n.textContent=val.toLocaleString();}
-  function countUp(){
-    if(!statStrip)return;
-    if(!(Core.config&&Core.config.features&&Core.config.features.countUp)||!window.requestAnimationFrame){
-      for(var k in statTargets)setStat(k,statTargets[k]);return;
-    }
-    var nodes=statStrip.querySelectorAll('[data-stat]');
-    var start=null,DUR=1100;
-    for(var ni=0;ni<nodes.length;ni++)nodes[ni].classList.add('counting');
-    function frame(ts){
-      if(start===null)start=ts;
-      var p=Math.min((ts-start)/DUR,1);
-      var eased=1-Math.pow(1-p,3);
-      for(var i=0;i<nodes.length;i++){
-        var key=nodes[i].getAttribute('data-stat');
-        var target=statTargets[key]||0;
-        nodes[i].textContent=Math.round(target*eased).toLocaleString();
-        if(p>=1)nodes[i].classList.remove('counting');
-      }
-      if(p<1)requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  }
-  if('IntersectionObserver' in window&&statStrip){
-    var fired=false;
-    var io=new IntersectionObserver(function(entries){
-      if(!fired&&entries[0].isIntersecting){fired=true;countUp();io.disconnect();}
-    },{threshold:0.25});
-    io.observe(statStrip);
-    /* fallback: if never intersecting within 4s (odd layouts), just set values */
-    setTimeout(function(){if(!fired){fired=true;io.disconnect();for(var k2 in statTargets)setStat(k2,statTargets[k2]);}},4000);
-  }else{
-    for(var k3 in statTargets)setStat(k3,statTargets[k3]);
-  }
-
-  /* ---------- hero background: random entity WITH image ---------- */
-  if(withImg.length){
-    var f=withImg[Math.floor(Math.random()*withImg.length)];
-    var hb=$('heroBg');
-    if(hb){hb.style.backgroundImage='url("'+f.i+'")';}
-    var fn=$('featName');if(fn)fn.textContent=f.n;
-  }
-
-  /* ---------- rotating showcase ---------- */
-  (function(){
-    var sc=$('showcase');if(!sc||!withImg.length)return;
-    var picks=[],used={};
-    while(picks.length<Math.min(4,withImg.length)){
-      var c=withImg[Math.floor(Math.random()*withImg.length)];
-      if(used[c.s])continue;used[c.s]=1;picks.push(c);
-    }
-    var dots=$('scDots');
-    picks.forEach(function(p){
-      var im=el('img');im.src=p.i;im.alt=p.n;im.loading='lazy';im.decoding='async';
-      im.onerror=function(){this.remove();};
-      var fade=sc.querySelector('.sc-fade');if(fade)sc.insertBefore(im,fade);else sc.appendChild(im);
-      if(dots)dots.appendChild(el('i'));
-    });
-    var imgs=sc.querySelectorAll('img'),ds=dots?dots.querySelectorAll('i'):[],cur=0;
-    function show(i){
-      for(var j=0;j<imgs.length;j++){imgs[j].className=j===i?'on':'';if(ds[j])ds[j].className=j===i?'on':'';}
-      var meta=$('scMeta'),name=$('scName');
-      if(meta)meta.textContent=(picks[i].c||picks[i].k||'')+' · '+String(picks[i].k||'').toUpperCase();
-      if(name)name.textContent=picks[i].n;
-      sc.href='entity/'+picks[i].s+'.html';
-    }
-    sc.addEventListener('click',function(){store.pushRecent(picks[cur]);bus.emit('showcase',{slug:picks[cur].s});});
-    show(0);
-    setInterval(function(){cur=(cur+1)%picks.length;show(cur);},6000);
-  })();
-
-  /* ---------- entity of the night (deterministic per date) ---------- */
-  var d=new Date(),key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
-  var finishedPool=IDX.filter(function(e){return e.i&&e._finished;});
-  var pool=finishedPool.length>50?finishedPool:(withImg.length>200?withImg:IDX);
-  var e=pool[hashStr(key)%pool.length];
-  var eMeta=$('e-meta'),eName=$('e-name'),eEp=$('e-ep'),eSum=$('e-sum'),eLink=$('e-link'),ePlate=$('e-plate');
-  if(eMeta)eMeta.textContent=(e.d?e.d+' · ':'')+(e.c||'')+' · '+String(e.k||'').toUpperCase();
-  if(eName)eName.textContent=e.n;
-  if(eEp)eEp.textContent=e.e||'';
-  if(ePlate){
-    if(e.i){
-      var entityImage=el('img');entityImage.src=e.i;entityImage.alt=e.n;entityImage.decoding='async';
-      entityImage.onerror=function(){this.replaceWith(el('span','glyph',e.n.charAt(0)));};
-      ePlate.replaceChildren(entityImage);
-    }else{
-      var g=$('e-glyph');if(g)g.textContent=e.n.charAt(0);
-    }
-  }
-  if(eSum)eSum.textContent=(e.e||'The Archive has prepared this file for tonight.')+(e.d?' — '+e.d:'');
-  if(eLink){
-    eLink.href='entity/'+e.s+'.html';
-    eLink.addEventListener('click',function(){store.pushRecent(e);bus.emit('navigate',{slug:e.s,via:'eotd'});});
-  }
-  bus.emit('eotd',{slug:e.s,name:e.n});
-
-  /* keep (reliquary) + share for tonight's entity */
-  var eSave=$('e-save'),eShare=$('e-share');
-  function paintSave(){
-    if(!eSave)return;
-    var kept=store.inReliquary(e.s);
-    eSave.textContent=kept?'★ Kept':'☆ Keep';
-    eSave.classList.toggle('kept',kept);
-  }
-  if(eSave){
-    paintSave();
-    eSave.onclick=function(){
-      var kept=store.toggleReliquary(e);
-      paintSave();renderRails();
-      toast(kept?'Kept in your reliquary':'Removed from your reliquary');
-    };
-  }
-  if(eShare){
-    eShare.onclick=function(){
-      var url;
-      try{url=new URL('entity/'+e.s+'.html',location.href).href;}catch(err){url='entity/'+e.s+'.html';}
-      bus.emit('share',{slug:e.s});
-      if(navigator.share){
-        navigator.share({title:'Omnilore — '+e.n,text:(e.e||e.n)+' — The Archive of All Things Unreal',url:url}).catch(function(){});
-      }else if(navigator.clipboard&&navigator.clipboard.writeText){
-        navigator.clipboard.writeText(url).then(function(){toast('Link copied');},function(){toast(url);});
-      }else{toast(url);}
-    };
-  }
-
-  /* ---------- visitor rails (passage + reliquary) ---------- */
-  function chip(item){
-    var a=el('a','rail-chip');a.href='entity/'+item.s+'.html';
-    a.appendChild(el('span','glyph-dot'));
-    a.appendChild(document.createTextNode(item.n));
-    a.appendChild(el('small','',String(item.c||item.k||'').toUpperCase()));
-    a.addEventListener('click',function(){bus.emit('navigate',{slug:item.s,via:'rail'});});
-    return a;
-  }
-  function renderRails(){
-    var sec=$('passage-section');if(!sec)return;
-    var pb=$('passage-block'),pr=$('passage-rail'),rb=$('reliquary-block'),rr=$('reliquary-rail');
-    var recent=store.getRecent(),saved=store.getReliquary();
-    var any=false;
-    if(pb&&pr&&recent.length){pr.replaceChildren();recent.forEach(function(it){pr.appendChild(chip(it));});pb.hidden=false;any=true;}
-    if(rb&&rr&&saved.length){rr.replaceChildren();saved.forEach(function(it){rr.appendChild(chip(it));});rb.hidden=false;any=true;}
-    sec.hidden=!any;
-  }
-  window.renderRails=renderRails;
-  renderRails();
-
-  /* ---------- pathways (curated journeys) ---------- */
-  (function(){
-    if(!(Core.config&&Core.config.features&&Core.config.features.pathways))return;
-    var row=$('pathways-row');if(!row)return;
-    var paths=window.OMNILORE_PATHWAYS||[];
-    row.replaceChildren();
-    var rendered=0;
-    paths.forEach(function(p){
-      var valid=[];
-      (p.stops||[]).forEach(function(slug){var ent=data.bySlug(slug);if(ent)valid.push(ent);});
-      if(!valid.length)return;
-      var card=el('article','pathway-card');
-      card.style.setProperty('--pc',p.color||'#c9a84c');
-      card.setAttribute('data-glyph',p.glyph||'✦');
-      card.appendChild(el('p','pathway-kicker',p.kicker||''));
-      card.appendChild(el('h3','pathway-title',p.title||'Untitled Pathway'));
-      card.appendChild(el('p','pathway-desc',p.desc||''));
-      var stops=el('div','pathway-stops');
-      valid.slice(0,5).forEach(function(ent,i){
-        var a=el('a','pathway-stop'+(i===0?' first':''),ent.n);
-        a.href='entity/'+ent.s+'.html';
-        a.addEventListener('click',function(){store.pushRecent(ent);bus.emit('pathway',{id:p.id,stop:ent.s,position:i});});
-        stops.appendChild(a);
-      });
-      if(valid.length>5)stops.appendChild(el('span','pathway-more','+'+(valid.length-5)+' more'));
-      card.appendChild(stops);
-      row.appendChild(card);rendered++;
-    });
-    var sec=$('pathways-section');if(sec&&!rendered)sec.hidden=true;
-  })();
-
-  /* ---------- random (all doors lead somewhere) ---------- */
-  function goRandom(){
-    var x=data.random();if(!x)return false;
-    store.pushRecent(x);bus.emit('random',{slug:x.s});
-    location.href='entity/'+x.s+'.html';return false;
-  }
-  var r1=$('rand'),r2=$('rand2'),r3=$('tb-random');
-  if(r1)r1.onclick=goRandom;
-  if(r2)r2.onclick=goRandom;
-  if(r3)r3.onclick=goRandom;
-
-  /* ---------- tab bar search ---------- */
-  var tbS=$('tb-search');
-  if(tbS&&q)tbS.onclick=function(){
-    window.scrollTo({top:0,behavior:'smooth'});
-    setTimeout(function(){q.focus();},350);
-  };
-});
+  show(0);
+  setInterval(function(){cur=(cur+1)%picks.length;show(cur);},6000);
+})();
+// entity of the night (deterministic per date), prefer finished with image
+var d=new Date(),key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+var finishedPool=IDX.filter(function(e){return e.i&&e._finished;});
+var pool=finishedPool.length>50?finishedPool:withImg.length>200?withImg:IDX;
+var e=pool[hashStr(key)%pool.length];
+document.getElementById('e-meta').textContent=(e.d?e.d+' · ':'')+(e.c||'')+' · '+e.k.toUpperCase();
+document.getElementById('e-name').textContent=e.n;
+document.getElementById('e-ep').textContent=e.e||'';
+if(e.i){var entityImage=document.createElement('img');entityImage.src=e.i;entityImage.alt=e.n;entityImage.onerror=function(){this.replaceWith(Object.assign(document.createElement('span'),{className:'glyph',textContent:e.n.charAt(0)}));};document.getElementById('e-plate').replaceChildren(entityImage);}
+else{document.getElementById('e-glyph').textContent=e.n.charAt(0);}
+document.getElementById('e-sum').textContent=(e.e||'The Archive has prepared this file for tonight.')+(e.d?' — '+e.d:'');
+document.getElementById('e-link').href='entity/'+e.s+'.html';
+function rand(){var x=IDX[Math.floor(Math.random()*IDX.length)];location.href='entity/'+x.s+'.html';return false;}
+document.getElementById('rand').onclick=rand;document.getElementById('rand2').onclick=rand;
+// search with aliases
+var q=document.getElementById('q'),dd=document.getElementById('dd');
+function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
+q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
+var out=[];var vs=skel(v);
+for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
+  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
+  var hitA=false;
+  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
+  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
+out.sort(function(x,y){return x.score-y.score;});
+dd.innerHTML=out.map(function(o){return '<a href="entity/'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
+dd.className='on';};
+document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
 })();
 </script>
 <aside id="content-advisory" role="dialog" aria-modal="true" aria-labelledby="advisory-title" hidden><div class="advisory-panel"><p class="advisory-kicker">Before you enter Omnilore</p><h1 id="advisory-title">Content advisory</h1><p>Omnilore is an archive of mythology, folklore, horror, religion, art, and internet-born fiction. Some entries or source images may include artistic or historical nudity, fictional gore, demons, violence, death, disturbing themes, or material some visitors may find offensive.</p><ul><li>Content is presented for research, context, cataloguing, and cultural reference.</li><li>Viewer discretion is advised; this archive is not intended for children.</li><li>By entering, you choose to encounter the material made available in the archive.</li></ul><div class="advisory-actions"><button class="advisory-enter" type="button">Enter the archive</button><button class="advisory-leave" type="button">Leave</button></div><a class="advisory-legal" href="legal.html#content-advisory">Read the full content advisory and terms →</a></div></aside><script>(function(){var key='omnilore-content-advisory-v1',gate=document.getElementById('content-advisory');if(!gate)return;try{if(localStorage.getItem(key)==='accepted')return;}catch(e){}gate.hidden=false;var enter=gate.querySelector('.advisory-enter'),leave=gate.querySelector('.advisory-leave');enter.onclick=function(){try{localStorage.setItem(key,'accepted')}catch(e){}gate.hidden=true};leave.onclick=function(){location.href='about:blank'};})();</script></body>
