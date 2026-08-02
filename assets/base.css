@@ -1,7 +1,7 @@
 /* OMNILORE — base structural stylesheet. Theme vars injected per-page. */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;color-scheme:dark}
-body{font-family:var(--font-body);font-size:17.5px;line-height:1.8;color:var(--t);background:var(--bg);min-height:100vh;overflow-x:hidden;background-image:radial-gradient(ellipse at 50% -10%,var(--a-glow),transparent 55%)}
+body{overscroll-behavior-y:contain;font-family:var(--font-body);font-size:17.5px;line-height:1.8;color:var(--t);background:var(--bg);min-height:100vh;overflow-x:hidden;background-image:radial-gradient(ellipse at 50% -10%,var(--a-glow),transparent 55%)}
 a{color:var(--a);text-decoration:none;border-bottom:1px solid transparent}
 a:hover{border-bottom-color:var(--a)}
 
