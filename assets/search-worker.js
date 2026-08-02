@@ -1,10 +1,10 @@
 /* Omnilore search worker: keeps 25k-record filtering away from the UI thread. */
 self.window=self;
 importScripts('search-index.js');
-var IDX=(self.OMNILORE_INDEX||[]).slice().sort(function(a,b){return a.n.localeCompare(b.n);});
+var IDX=(self.OMNILORE_INDEX||[]).slice().sort(function(a,b){if(a._finished&&!b._finished)return -1;if(!a._finished&&b._finished)return 1;return a.n.localeCompare(b.n);});
 function skel(value){return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,index,array){return ch!==array[index-1]}).join('');}
 function scpNum(name){var match=/SCP-(\d+)/i.exec(name);return match?parseInt(match[1],10):999999;}
-function compact(entity){return {s:entity.s,n:entity.n,d:entity.d,c:entity.c,k:entity.k,e:entity.e};}
+function compact(entity){return {s:entity.s,n:entity.n,d:entity.d,c:entity.c,k:entity.k,e:entity.e,_finished:entity._finished};}
 function matches(entity,query,querySkeleton,wing,culture){if(wing!=='all'&&entity.k!==wing)return false;if(culture!=='all'&&entity.c!==culture)return false;if(!query)return true;if(entity.n.toLowerCase().indexOf(query)>=0)return true;if((entity.c||'').toLowerCase().indexOf(query)>=0)return true;var aliases=entity.a||[];for(var index=0;index<aliases.length;index++){if(aliases[index].toLowerCase().indexOf(query)>=0)return true;}return querySkeleton.length>2&&skel(entity.n).indexOf(querySkeleton)>=0;}
 self.postMessage({type:'ready',count:IDX.length});
 self.onmessage=function(event){var request=event.data;if(!request||request.type!=='search')return;var query=(request.query||'').toLowerCase(),querySkeleton=skel(query),wing=request.wing||'all',culture=request.culture||'all',offset=request.offset||0,limit=request.limit||60,matched=[],index;for(index=0;index<IDX.length;index++){if(matches(IDX[index],query,querySkeleton,wing,culture))matched.push(IDX[index]);}if(culture==='SCP Foundation')matched.sort(function(a,b){var diff=scpNum(a.n)-scpNum(b.n);return diff!==0?diff:a.n.localeCompare(b.n);});var items=[];for(index=offset;index<Math.min(offset+limit,matched.length);index++)items.push(compact(matched[index]));self.postMessage({type:'results',id:request.id,count:matched.length,items:items,offset:offset,hasMore:offset+items.length<matched.length});};
