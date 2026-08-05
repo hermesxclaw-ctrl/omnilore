@@ -2,7 +2,7 @@
 <html lang="en">
 <head><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Omnilore — The Archive of All Things Unreal</title>
-<meta name="description" content="A digital museum of 25,506 gods, demons, cryptids, yokai, and internet-born horrors — each with its own custom-built page. Enter the Archive.">
+<meta name="description" content="A digital museum of 25,512 gods, demons, cryptids, yokai, and internet-born horrors — each with its own custom-built page. Enter the Archive.">
 <meta property="og:title" content="Omnilore — The Archive of All Things Unreal">
 <meta property="og:description" content="Every forgotten god, every viral nightmare, every whispered folktale — catalogued, connected, and given an altar.">
 <meta name="theme-color" content="#141210">
@@ -202,7 +202,7 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
 <nav class="nav">
   <img src="assets/logo.svg" alt="Omnilore seal">
   <a href="index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE OF ALL THINGS UNREAL</a>
-  <div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div>
+  <div class="nav-search"><input type="search" id="q" placeholder="Search 25,512 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div>
   <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
   <div class="nav-links" id="navLinks"><a href="browse.html">Browse</a><a href="rabbit-hole.html">Rabbit Hole</a><a href="#" id="rand">Random</a><a href="wings.html">Wings</a></div>
 </nav>
@@ -210,7 +210,7 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
   <div id="heroBg"></div><div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
-    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span>25,506 Entities Catalogued</span><span>455 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
+    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span>25,512 Entities Catalogued</span><span>537 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
     <p class="hero-label">The Digital Museum of the Unreal</p>
     <h1>A cathedral for<br><em>everything</em> imagined</h1>
     <p class="hero-desc">Every forgotten god, every viral nightmare, every whispered folktale and cosmic horror — catalogued, connected, and given an altar. No two rooms alike.</p>
@@ -224,14 +224,14 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
 // Mobile hamburger menu toggle
 document.getElementById('menuToggle').onclick=function(){document.getElementById('navLinks').classList.toggle('open');this.textContent=this.textContent==='☰'?'✕':'☰';};
 </script>
-<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-stat"><span>Completed</span><b id="archive-completed">1,173</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
+<section class="archive-pulse" id="archive-pulse" aria-label="Archive pulse"><div class="archive-pulse-inner"><div class="pulse-stat"><span>Entities indexed</span><b id="archive-total">—</b></div><div class="pulse-stat"><span>Archive wings</span><b id="archive-wings">—</b></div><div class="pulse-stat"><span>Open dossiers</span><b id="archive-open">—</b></div><div class="pulse-stat"><span>Completed</span><b id="archive-completed">1,341</b></div><div class="pulse-message"><span><i class="pulse-signal">●</i> Archive pulse</span><b id="archive-pulse-message">The vault is listening.</b><div class="pulse-links"><a href="browse.html">Browse the Archive →</a><a href="rabbit-hole.html">Take the Rabbit Hole →</a></div></div></div></section>
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 <div class="stat-strip">
-  <div class="stat"><b>25,512</b><span>Entities Enshrined</span></div>
-  <div class="stat"><b>1,173</b><span>Completed Dossiers</span></div>
-  <div class="stat"><b>455</b><span>Cultures &amp; Traditions</span></div>
-  <div class="stat"><b>17</b><span>Wings of the Museum</span></div>
-  <div class="stat"><b>24,436</b><span>Unfinished</span></div>
+  <div class="stat"><b id="stat-total">25,512</b><span>Entities Enshrined</span></div>
+  <div class="stat"><b id="stat-completed">1,341</b><span>Completed Dossiers</span></div>
+  <div class="stat"><b id="stat-cultures">537</b><span>Cultures &amp; Traditions</span></div>
+  <div class="stat"><b id="stat-wings">17</b><span>Wings of the Museum</span></div>
+  <div class="stat"><b id="stat-unfinished">24,171</b><span>Unfinished</span></div>
 </div>
 <section class="section">
   <p class="sec-label">01 / Now on Display</p><h2 class="sec-title">Tonight&rsquo;s Entity</h2>
@@ -250,7 +250,14 @@ var IDX=window.OMNILORE_INDEX||[];
   function archiveHash(value){var hash=2166136261;for(var index=0;index<value.length;index++){hash^=value.charCodeAt(index);hash=Math.imul(hash,16777619);}return hash>>>0;}
   if(archiveTotal)archiveTotal.textContent=archiveIndex.length.toLocaleString();
   if(archiveWings)archiveWings.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
-  if(archiveOpen)archiveOpen.textContent=archiveIndex.length.toLocaleString();if(archiveCompleted){var comp=archiveIndex.filter(function(e){return e._finished}).length;archiveCompleted.textContent=comp.toLocaleString();}
+  var comp=archiveIndex.filter(function(e){return e._finished}).length;
+  if(archiveOpen)archiveOpen.textContent=(archiveIndex.length-comp).toLocaleString();
+  if(archiveCompleted)archiveCompleted.textContent=comp.toLocaleString();
+  var st=document.getElementById('stat-total');if(st)st.textContent=archiveIndex.length.toLocaleString();
+  var stc=document.getElementById('stat-completed');if(stc)stc.textContent=comp.toLocaleString();
+  var stcu=document.getElementById('stat-cultures');if(stcu){var cults={};archiveIndex.forEach(function(e3){if(e3.c)cults[e3.c]=1;});stcu.textContent=Object.keys(cults).length.toLocaleString();}
+  var stw=document.getElementById('stat-wings');if(stw)stw.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
+  var stu=document.getElementById('stat-unfinished');if(stu)stu.textContent=(archiveIndex.length-comp).toLocaleString();
   if(archiveMessage&&archiveIndex.length){var archivePick=archiveIndex[archiveHash('archive-pulse-'+new Date().toDateString())%archiveIndex.length];archiveMessage.textContent='Today the Archive draws your eye to '+archivePick.n+' — '+(archivePick.e||archivePick.t||'an unopened thread')+'.';}
 })();
 var IDX=window.OMNILORE_INDEX||[];
