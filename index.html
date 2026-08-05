@@ -229,6 +229,7 @@ document.getElementById('menuToggle').onclick=function(){document.getElementById
 <div class="stat-strip">
   <div class="stat"><b id="stat-total">25,512</b><span>Entities Enshrined</span></div>
   <div class="stat"><b id="stat-completed">1,289</b><span>Completed Dossiers</span></div>
+  <div class="stat"><b id="stat-deep">—</b><span>Deep-Grade Dossiers</span></div>
   <div class="stat"><b id="stat-cultures">537</b><span>Cultures &amp; Traditions</span></div>
   <div class="stat"><b id="stat-wings">17</b><span>Wings of the Museum</span></div>
   <div class="stat"><b id="stat-unfinished">24,223</b><span>Unfinished</span></div>
@@ -255,6 +256,7 @@ var IDX=window.OMNILORE_INDEX||[];
   if(archiveCompleted)archiveCompleted.textContent=comp.toLocaleString();
   var st=document.getElementById('stat-total');if(st)st.textContent=archiveIndex.length.toLocaleString();
   var stc=document.getElementById('stat-completed');if(stc)stc.textContent=comp.toLocaleString();
+  var std=document.getElementById('stat-deep');if(std)std.textContent=(archiveIndex.filter(function(x){return x.dp==='exhaustive'||x.dp==='deep';}).length).toLocaleString();
   var stcu=document.getElementById('stat-cultures');if(stcu){var cults={};archiveIndex.forEach(function(e3){if(e3.c)cults[e3.c]=1;});stcu.textContent=Object.keys(cults).length.toLocaleString();}
   var stw=document.getElementById('stat-wings');if(stw)stw.textContent=(document.querySelectorAll('.arch-card').length||17).toLocaleString();
   var stu=document.getElementById('stat-unfinished');if(stu)stu.textContent=(archiveIndex.length-comp).toLocaleString();
