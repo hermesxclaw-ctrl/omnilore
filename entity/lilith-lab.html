@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lilith — Pattern Lab · 7 Methods for Dense Lore</title>
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#0b0b0c;--bg2:#151416;--s:#1a1920;--s2:#201e26;--t:#f4f3f6;--t2:#9ea0a8;--t3:#7a7d85;--t4:#555860;--b:rgba(255,255,255,.08);--b2:rgba(255,255,255,.13);--a:#c94f2e;--a-glow:rgba(201,79,46,.18);--a-light:#e8a08c;--sec:#8a8af0;--hue:0deg;--font-body:'EB Garamond',serif;--font-display:'Cormorant Garamond',serif}
+body{background:var(--bg);color:var(--t);font-family:var(--font-body)}
+.lab-hero{max-width:1100px;margin:0 auto;padding:40px 24px 28px}
+.lab-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:600;letter-spacing:-.02em}
+.lab-hero .sub{color:var(--t2);font-size:.92rem;margin-top:8px;max-width:68ch;line-height:1.6}
+.lab-hero .meta{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-top:12px}
+.lab-hero .opts{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.lab-hero .opts a{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--b2);padding:7px 12px;color:var(--t2)}
+.lab-hero .opts a:hover{border-color:var(--a);color:var(--a-light)}
+
+/* Pattern shell */
+.pat{max-width:1100px;margin:0 auto;padding:18px 24px 36px;border-top:1px solid var(--b)}
+.pat-h{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.pat-n{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:2px;text-transform:uppercase;color:var(--a);border:1px solid var(--a);padding:4px 9px}
+.pat-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600}
+.pat-when{font-family:'JetBrains Mono',monospace;font-size:.56rem;color:var(--t3);margin:2px 0 14px}
+.pat-demo{background:var(--s);border:1px solid var(--b);padding:16px}
+.pat-demo p{color:var(--t2);font-size:.92rem}
+.pat-demo table{width:100%;border-collapse:collapse;font-size:.78rem}
+.pat-demo th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);border-bottom:1px solid var(--b2);padding:8px 10px}
+.pat-demo td{padding:8px 10px;border-bottom:1px solid var(--b);color:var(--t2);vertical-align:top}
+.pat-demo td b{color:var(--t)}
+.pat-demo .note{font-size:.72rem;color:var(--t3);font-style:italic;margin-top:8px}
+
+/* — PATTERN 1: dense table as scroll strip (overflow handled) — */
+.p1 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--b)}
+.p1 .tbl-wrap table{min-width:720px}
+.p1 .tbl-wrap::-webkit-scrollbar{height:6px}
+.p1 .tbl-wrap::-webkit-scrollbar-thumb{background:var(--b2)}
+
+/* — PATTERN 2: key/val mini-cards (grid, no nesting) — */
+.kvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.kvgrid .kv{border:1px solid var(--b);background:var(--s2);padding:10px 12px}
+.kvgrid .kv b{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light);display:block;margin-bottom:6px}
+.kvgrid .kv div{font-size:.84rem;color:var(--t2);line-height:1.6}
+.kvgrid .kv small{display:block;margin-top:6px;font-size:.68rem;color:var(--t4)}
+
+/* — PATTERN 3: hairline editorial (no cards, just type + rule) — */
+.ed-sec{padding:12px 0;border-top:1px solid var(--b)}
+.ed-sec:first-child{border-top:none}
+.ed-sec .k{font-family:'JetBrains Mono',monospace;font-size:.50rem;letter-spacing:1.8px;text-transform:uppercase;color:#c9a86a;margin:0 0 6px}
+.ed-sec p{font-size:.88rem;color:var(--t2);line-height:1.7;margin:0}
+.ed-sec table{margin-top:8px}
+
+/* — PATTERN 4: folder accordions (grouped, not stacked forever) — */
+.folder{border:1px solid var(--b);background:var(--s)}
+.folder + .folder{margin-top:-1px}
+.folder summary{list-style:none;display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--t3)}
+.folder summary::-webkit-details-marker{display:none}
+.folder summary::before{content:'+';width:18px;height:18px;display:grid;place-items:center;border:1px solid var(--b2);font-size:.72rem;color:var(--t3)}
+.folder[open] summary::before{content:'—'}
+.folder[open] summary{color:var(--a-light);border-bottom:1px solid var(--b)}
+.folder .fbody{padding:12px 14px}
+.folder .count{margin-left:auto;font-size:.48rem;color:var(--t4)}
+
+/* — PATTERN 5: paginated sub-tabs inside a tab — */
+.subtabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.subtabs button{font-family:'JetBrains Mono',monospace;font-size:.50rem;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--b2);background:transparent;color:var(--t3);padding:7px 10px;cursor:pointer}
+.subtabs button.on{border-color:var(--a);color:var(--a-light);background:var(--a-glow)}
+.subpan{display:none}
+.subpan.on{display:block}
+
+/* — PATTERN 6: timeline rail — */
+.rail{position:relative;margin:8px 0 0 14px;padding-left:18px;border-left:1px solid var(--b2)}
+.rail .node{position:relative;padding:10px 0 10px 0}
+.rail .node::before{content:'';position:absolute;left:-23px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
+.rail .when{font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light)}
+.rail .what{font-size:.88rem;color:var(--t2);margin-top:4px;line-height:1.6}
+.rail .src{font-size:.68rem;color:var(--t4);margin-top:4px}
+
+/* — PATTERN 7: chips + drawer — */
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:.56rem;letter-spacing:.8px;color:var(--t3);border:1px dashed var(--b2);padding:5px 10px;cursor:pointer}
+.chip.on{border-style:solid;border-color:var(--a);color:var(--a-light);background:var(--a-glow)}
+.drawer{margin-top:10px;border:1px solid var(--b);background:var(--s2);padding:12px 14px;display:none}
+.drawer.on{display:block}
+.drawer b{color:var(--t)}
+</style>
+</head>
+<body>
+
+<div class="lab-hero">
+  <p class="meta">OMNILORE · PATTERN LAB · not live — pick a method, then we wire it into lilith f90e5963</p>
+  <h1>Organized, not boxed — 7 ways to hold the same Lilith info</h1>
+  <p class="sub">Same data, seven rhythms. All use real Lilith stash (42 stories / 80 media / 15 witnesses etc.) so you judge with your data, not lorem. Cards are gone — every method uses <b>type + hairline + air</b>, never card-on-card. Tell me by number which feel right and I'll wire them into your 19,707 without touching the journal.</p>
+  <div class="opts">
+    <a href="#p1">1 Table · scroll</a><a href="#p2">2 KV grid</a><a href="#p3">3 Editorial</a><a href="#p4">4 Folders</a><a href="#p5">5 Subtabs</a><a href="#p6">6 Rail</a><a href="#p7">7 Chips</a>
+  </div>
+</div>
+
+<!-- PATTERN 1: TABLE SCROLL STRIP -->
+<section id="p1" class="pat p1">
+  <div class="pat-h"><span class="pat-n">Pattern 1</span><span class="pat-title">Table as scroll strip</span></div>
+  <p class="pat-when">When: the 80-row Media DB / 28 witnesses really is a table — let it be a table, but make it breathe inside a scroll strip so it never bleeds the page.</p>
+  <div class="pat-demo">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--t3);margin:0 0 8px">Media · Television · 10 rows · real stash slice</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Work</th><th>Date</th><th>Relation</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td><b>Supernatural</b></td><td>2008–09 arcs</td><td>Direct reinterpretation</td><td>White-eyed demon; breaks the first-wife origin — show-invented mythology.</td></tr>
+          <tr><td><b>True Blood</b></td><td>2012–14</td><td>Transformative</td><td>Vampire-progenitor figure of a Lilith religion.</td></tr>
+          <tr><td><b>Chilling Adventures of Sabrina</b></td><td>2018–20</td><td>Direct</td><td>Madam Satan as Lilith; feminism-tinged infernal cosmology.</td></tr>
+          <tr><td><b>Neon Genesis Evangelion</b></td><td>1995–</td><td>Loose namesake</td><td>Second Angel Lilith — name only, no myth transfer.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Strip scrolls horizontally inside the demo card only — page never bleeds. Drag or shift+scroll on desktop.</p>
+  </div>
+</section>
+
+<!-- PATTERN 2: KV GRID -->
+<section id="p2" class="pat p2">
+  <div class="pat-h"><span class="pat-n">Pattern 2</span><span class="pat-title">Key / value mini readouts</span></div>
+  <p class="pat-when">When: pronunciation / epithets / name-forms — short facts that choke in a table but sing as a grid. No rows, no bleed.</p>
+  <div class="pat-demo">
+    <div class="kvgrid">
+      <div class="kv"><b>Akkadian lilītu — /ˈlɪliːtuː/</b><div>Feminine of the lilû class · Sumerian LÍL wind/spirit.</div><small>Layer: scholarly</small></div>
+      <div class="kv"><b>Hebrew לִילִית — lîlît</b><div>/liˈliθ/ · single biblical hit Isaiah 34:14.</div><small>Layer: primary</small></div>
+      <div class="kv"><b>English Lilith — /ˈlɪlɪθ/</b><div>Canonical display form.</div><small>Layer: display</small></div>
+      <div class="kv"><b>Aramaic bowl lilithāʾ</b><div>Plural, individually named — Lilith Hablas, Lilith Zarnai.</div><small>Layer: bowl</small></div>
+      <div class="kv"><b>Not “lily”</b><div>Flower folk etymology is unsupported — homophone trap.</div><small>Layer: caution</small></div>
+      <div class="kv"><b>Transliteration aliases</b><div>Lilit / Lilīt / Lilitu / Lillu — not separate entities.</div><small>Layer: search alias</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATTERN 3: EDITORIAL -->
+<section id="p3" class="pat p3">
+  <div class="pat-h"><span class="pat-n">Pattern 3</span><span class="pat-title">Editorial sections — hairline only</span></div>
+  <p class="pat-when">When: the story-led tabs where lore matters more than rows — whitespace groups, 8px grid, one hairline, no box.</p>
+  <div class="pat-demo">
+    <div class="ed-sec"><p class="k">What the name is · pronunciation</p><p>Akkadian <b>lilītu</b> → Hebrew <b>lîlît</b> → English <b>Lilith</b>. Bowl Aramaic <b>lilithāʾ</b> appears plural and named — not one queen but a class that later collapsed into one figure.</p></div>
+    <div class="ed-sec"><p class="k">Epithet register · 30 forms, layer-tagged</p><p>Mother of Demons / Queen of Demons / First Wife — each chip carries its layer so Marvel's “Mother of Demons” never reads as Mesopotamian.</p></div>
+    <div class="ed-sec"><p class="k">Which Lilith? · 15 nodes</p><p>Wind-demon · seducer · storm · child-killer · amulet-warded · first wife · Queen of Sheba gloss · Lamashtu-adjacent · folk · literary · Kabbalistic · feminist reclamation · screen demon · metal muse · game boss.</p></div>
+  </div>
+</section>
+
+<!-- PATTERN 4: FOLDERS -->
+<section id="p4" class="pat p4">
+  <div class="pat-h"><span class="pat-n">Pattern 4</span><span class="pat-title">Grouped folder accordions</span></div>
+  <p class="pat-when">When: you must keep 42 stories / 80 receptions but hide them by default — folders collapse the long tail, search stays cmd+K.</p>
+  <div class="pat-demo">
+    <details class="folder"><summary>Story register · Mesopotamian strata — 8 accounts <span class="count">8 rows</span></summary><div class="fbody"><p style="font-size:.84rem;color:var(--t2)">Gilgamesh huluppu-tree, Burney Relief identification, bowl genealogies… each row carries provenance so disputed reads don't look settled.</p></div></details>
+    <details class="folder"><summary>Story register · Ben Sira rupture — 14 accounts <span class="count">14 rows</span></summary><div class="fbody"><p style="font-size:.84rem;color:var(--t2)">First attested first-wife flight, angels Senoy/Sansenoy/Semangelof at the Red Sea — the cut from lilītu class to Lilith-person.</p></div></details>
+    <details class="folder"><summary>Media DB · television — 10 rows <span class="count">10 rows</span></summary><div class="fbody"><table><thead><tr><th>Work</th><th>Date</th><th>Relation</th></tr></thead><tbody><tr><td>Supernatural</td><td>2008</td><td>Direct</td></tr><tr><td>True Blood</td><td>2012</td><td>Transformative</td></tr></tbody></table></div></details>
+  </div>
+</section>
+
+<!-- PATTERN 5: PAGINATED SUBTABS -->
+<section id="p5" class="pat p5">
+  <div class="pat-h"><span class="pat-n">Pattern 5</span><span class="pat-title">Paginated sub-tabs inside a tab</span></div>
+  <p class="pat-when">When: one tab is itself an archive — Accounts has 62 stories, too many to scroll, so tab it again <i>inside</i>.</p>
+  <div class="pat-demo">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3)">Accounts — 62 accounts paginated</p>
+    <div class="subtabs"><button class="on" data-s="s1">Strata · 8</button><button data-s="s2">Ben Sira · 14</button><button data-s="s3">Folk & Kabbalistic · 18</button><button data-s="s4">Modern · 22</button></div>
+    <div class="subpan on" id="s1"><p>Mesopotamian lilītu / Burney / bowls — 8 accounts live here.</p></div>
+    <div class="subpan" id="s2"><p>Ben Sira flight, Red Sea, demon children — 14 accounts here.</p></div>
+    <div class="subpan" id="s3"><p>Amulets, Zohar, Faustian echoes — 18 accounts here.</p></div>
+    <div class="subpan" id="s4"><p>Screen, music, games — 22 accounts here.</p></div>
+  </div>
+</section>
+
+<!-- PATTERN 6: TIMELINE RAIL -->
+<section id="p6" class="pat p6">
+  <div class="pat-h"><span class="pat-n">Pattern 6</span><span class="pat-title">Timeline rail</span></div>
+  <p class="pat-when">When: chronology wants to be seen at a glance — 21 witnesses as a vertical rail, not a table you squint at.</p>
+  <div class="pat-demo">
+    <div class="rail">
+      <div class="node"><div class="when">c. 2100 BCE · Sumerian</div><div class="what">ki-sikil-lil₂-la₂-ke₄ in Huluppu-tree episode — disputed Lilith read.</div><div class="src">Gilgamesh, Enkidu and the Nether World</div></div>
+      <div class="node"><div class="when">c. 700 BCE · Hebrew Bible</div><div class="what">lîlît in Isaiah 34:14 — “night creature,” desert catalogue.</div><div class="src">Isaiah 34:14 — solitary attestation</div></div>
+      <div class="node"><div class="when">c. 8th–9th c. CE · Alphabet of Ben Sira</div><div class="what">Cut to person — first wife from equal earth, pronounces the Name, flies to the Red Sea.</div><div class="src">Ben Sira — first “First Wife” story, late</div></div>
+      <div class="node"><div class="when">1926 / 1995 · Screen</div><div class="what">Name travels to film and anime as a demon/Angel — no myth transfer, just a tag.</div><div class="src">Supernatural · Evangelion</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATTERN 7: CHIPS + DRAWER -->
+<section id="p7" class="pat p7">
+  <div class="pat-h"><span class="pat-n">Pattern 7</span><span class="pat-title">Chips + drawer (one-open filter)</span></div>
+  <p class="pat-when">When: epithets / powers want to be browsed not scanned — 30 chips, tap one, drawer opens, rest stays quiet.</p>
+  <div class="pat-demo">
+    <div class="chip-row">
+      <span class="chip on" data-c="c1">Mother of Demons</span><span class="chip" data-c="c2">Queen of Demons</span><span class="chip" data-c="c3">First Wife</span><span class="chip" data-c="c4">lailah</span><span class="chip" data-c="c5">Night Hag</span><span class="chip" data-c="c6">Screech Owl</span>
+    </div>
+    <div class="drawer on" id="c1"><b>Mother of Demons</b> — medieval / modern prose. Context-tagged: not a fixed Mesopotamian title; Marvel uses it as a proprietary character title.</div>
+    <div class="drawer" id="c2"><b>Queen of Demons</b> — Zohar-era. Never one ancient crown — a folk escalation.</div>
+    <div class="drawer" id="c3"><b>First Wife</b> — Ben Sira and after. Equality claim: “made of the same dust, why lie beneath you?”</div>
+    <div class="drawer" id="c4"><b>lailah</b> — Hebrew “night,” folk-adjacent, not a distinct Lilith form.</div>
+    <div class="drawer" id="c5"><b>Night Hag</b> — English folk dread, later mapped onto Lilith.</div>
+    <div class="drawer" id="c6"><b>Screech Owl</b> — Isaiah translation gloss, not a name.</div>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:0 auto;padding:24px">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--t3)">Pick by number in chat (e.g. “2+3+6” or “all but 1”) and I'll wire those patterns into <b>site/entity/lilith.html</b> without touching your journal. Lab lives at <b>site/entity/lilith-lab.html</b> — not indexed, not linked from lilith.</p>
+</div>
+
+<script>
+document.querySelectorAll('.subtabs button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const id=b.dataset.s;
+    b.closest('.pat-demo').querySelectorAll('.subtabs button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    b.closest('.pat-demo').querySelectorAll('.subpan').forEach(p=>p.classList.toggle('on', p.id===id));
+  });
+});
+document.querySelectorAll('.chip').forEach(c=>{
+  c.addEventListener('click',()=>{
+    const id=c.dataset.c;
+    const demo=c.closest('.pat-demo');
+    demo.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on', x===c));
+    demo.querySelectorAll('.drawer').forEach(d=>d.classList.toggle('on', d.id===id));
+  });
+});
+</script>
+</body>
+</html>
