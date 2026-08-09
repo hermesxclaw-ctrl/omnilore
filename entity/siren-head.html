@@ -4,591 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Siren Head — Omnilore Archive</title>
-<meta name="description" content="Case File AAT-1517: a 40-foot ambush predator with twin emergency sirens for a head, created by Trevor Henderson in 2018. It doesn't hunt you. It broadcasts you.">
-<meta name="theme-color" content="#0a0d09">
-<meta property="og:title" content="Siren Head — Case File AAT-1517">
-<meta property="og:description" content="It listens. It learns your voice. Then it calls you home in the voice of someone you lost.">
+<meta name="description" content="AAT-1524: You find a journal in your grandmother&#39;s attic, written in a language you don&#39;t recognize. You translate one line: &#39;She was made of the same dust as Adam, ">
+<meta property="og:title" content="Siren Head — Omnilore Archive">
+<meta property="og:description" content="You find a journal in your grandmother&#39;s attic, written in a language you don&#39;t recognize. You translate one line: &#39;She was made of the same dust as Adam, ">
 <meta property="og:type" content="article">
-<meta property="og:image" content="images/siren-head-hero.jpg">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
-:root{
-  --bg:#0a0d09; --bg2:#0e120d; --s:#121710; --s2:#171d14; --s3:#1c231a;
-  --t:#c9d4bc; --t2:#8a9680; --t3:#5c6653; --t4:#333a2d;
-  --rust:#c4632f; --rust-hot:#ff7b3d; --rust-glow:rgba(196,99,47,0.18);
-  --sig:#9fb894; --sig-dim:#4d5c46;
-  --danger:#9e2b1f;
-  --b:#242b1e; --b2:#333c28;
-  --font-type:'Special Elite',monospace; --font-mono:'JetBrains Mono',monospace; --font-body:'Courier Prime',monospace;
-  --max-w:960px;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);font-size:16px;line-height:1.75;color:var(--t);background:var(--bg);min-height:100vh;overflow-x:hidden;position:relative}
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.15) 0px,rgba(0,0,0,0.15) 1px,transparent 1px,transparent 3px);opacity:0.3}
-a{color:var(--rust)}
-.flicker{animation:flicker 0.4s steps(2)}
-@keyframes flicker{0%,100%{opacity:1}50%{opacity:0.4}}
+<meta name="theme-color" content="#120708">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap/css2?family=UnifrakturMaguntia&family=Lora:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/base.css">
+<style>:root{--bg:#0a1a1a;--bg2:#0a1a1a;--s:#1f0d0e;--s2:#261011;--t:#e8d9d4;--t2:#bd9a90;--t3:#7d5f57;--t4:#40302b;--a:#0d9488;--a-light:#5eead4;--a-glow:rgba(200,50,43,0.16);--sec:#8a6d2f;--b:#38181a;--b2:#4d2024;--font-display:'Cinzel',cursive;--font-body:'EB Garamond',serif;--hue:13deg;--tex-op:0.14}
+.tex-grain::before{opacity:calc(var(--tex-op)*0.06)!important}
+.divider::before{content:none!important}</style>
 
 
-.wrap{max-width:var(--max-w);margin:0 auto;padding:0 20px}
-
-.hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;margin-top:34px;border-bottom:2px solid var(--rust)}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(0.25) contrast(1.15) brightness(0.75)}
-.hero-fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,13,9,0.15) 0%,rgba(10,13,9,0.55) 55%,rgba(10,13,9,0.97) 100%)}
-.hero-content{position:relative;z-index:2;padding:40px 24px 34px;max-width:var(--max-w);margin:0 auto;width:100%}
-.hero-timestamp{font-family:var(--font-mono);font-size:0.72rem;color:var(--rust);letter-spacing:2px;margin-bottom:10px}
-.hero-desig{font-family:var(--font-mono);font-size:0.62rem;color:var(--t3);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
-h1.hero-name{font-family:var(--font-type);font-size:clamp(2.4rem,7.5vw,4.6rem);color:var(--t);letter-spacing:1px;line-height:1;text-shadow:2px 0 0 var(--danger),-2px 0 0 var(--sig-dim);margin-bottom:8px}
-.hero-epithet{font-family:var(--font-mono);font-size:0.9rem;color:var(--t2);font-style:italic;margin-bottom:16px}
-.hero-quickfacts{display:flex;flex-wrap:wrap;gap:12px;font-family:var(--font-mono);font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--t3)}
-.hero-quickfacts b{color:var(--rust);display:block;font-size:0.6rem;margin-bottom:2px}
-.hero-cta{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:var(--danger);color:#f2e6de;font-family:var(--font-mono);font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;border:none;cursor:pointer;box-shadow:0 0 0 1px var(--rust)}
-.hero-cta:hover{background:var(--rust-hot);color:#1a0d05}
-.static-burst{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:1500;mix-blend-mode:difference}
-.static-burst.go{animation:burst 0.5s steps(4)}
-@keyframes burst{0%{opacity:0.9}25%{opacity:0}50%{opacity:0.5}75%{opacity:0}100%{opacity:0}}
-
-/* TABS */
-.tabbar{position:sticky;top:50px;z-index:500;display:flex;overflow-x:auto;background:var(--bg2);border-bottom:1px solid var(--b);scrollbar-width:none}
-.tabbar::-webkit-scrollbar{display:none}
-.tab-btn{flex-shrink:0;font-family:var(--font-mono);font-size:0.66rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--t3);background:none;border:none;border-right:1px solid var(--b);padding:14px 18px;cursor:pointer;white-space:nowrap;transition:color 0.2s,background 0.2s}
-.tab-btn:hover{color:var(--rust)}
-.tab-btn.active{color:var(--rust-hot);background:var(--s);box-shadow:inset 0 -2px 0 var(--rust)}
-.tab-panel{display:none;padding-top:8px}
-.tab-panel.active{display:block;animation:fadein 0.25s ease}
-@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-
-.divider{display:flex;align-items:center;gap:10px;margin:34px 0 20px;font-family:var(--font-mono);font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--sig)}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--b2)}
-
-section{padding-top:6px}
-.hook{font-family:var(--font-type);font-size:1.2rem;line-height:1.85;color:var(--t);padding:20px 20px;border-left:3px solid var(--rust);background:linear-gradient(90deg,var(--rust-glow),transparent);margin:24px 0 8px}
-h2{font-family:var(--font-type);font-size:1.4rem;color:var(--rust);margin:8px 0 14px;letter-spacing:0.5px}
-h3{font-family:var(--font-type);font-size:1.05rem;color:var(--sig);margin:18px 0 8px}
-p{margin-bottom:14px;color:var(--t)}
-strong{color:var(--rust-hot)}
-
-/* Redacted click-reveal */
-.redacted{background:var(--t4);color:var(--t4);cursor:pointer;padding:1px 4px;border-radius:2px;transition:none;user-select:none;font-family:var(--font-mono);letter-spacing:1px}
-.redacted:hover{background:#454f38}
-.redacted.revealed{background:none;color:var(--rust-hot);cursor:text;font-family:var(--font-body);letter-spacing:normal;font-weight:700}
-.redacted-hint{font-family:var(--font-mono);font-size:0.55rem;color:var(--t3);margin-top:4px;font-style:italic}
-
-/* Spec-sheet rows (Anatomy) */
-.spec-sheet{border:1px solid var(--b);margin:16px 0}
-.spec-row{border-bottom:1px solid var(--b)}
-.spec-row:last-child{border-bottom:none}
-.spec-head{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--s);color:var(--t);font-family:var(--font-mono);font-size:0.72rem;text-transform:uppercase;letter-spacing:1.5px;padding:14px 18px;border:none;cursor:pointer;text-align:left}
-.spec-head:hover{color:var(--rust)}
-.spec-head .chev{color:var(--rust);transition:transform 0.2s}
-.spec-row.open .spec-head .chev{transform:rotate(90deg)}
-.spec-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease;background:var(--bg2)}
-.spec-row.open .spec-body{max-height:800px}
-.spec-body-inner{padding:16px 18px;font-size:0.95rem;color:var(--t2)}
-
-/* Incident cards (accordion) */
-.incident{border:1px solid var(--b);margin-bottom:10px;background:var(--s)}
-.incident-head{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:none;color:var(--t);padding:14px 18px;cursor:pointer;text-align:left;font-family:var(--font-type);font-size:1rem}
-.incident-head .tag{font-family:var(--font-mono);font-size:0.58rem;color:var(--danger);letter-spacing:1px;text-transform:uppercase;border:1px solid var(--danger);padding:2px 8px;margin-left:10px}
-.incident-head .chev{color:var(--rust);flex-shrink:0;transition:transform 0.2s;margin-left:auto;padding-left:10px}
-.incident.open .incident-head .chev{transform:rotate(90deg)}
-.incident-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-.incident.open .incident-body{max-height:600px}
-.incident-body-inner{padding:0 18px 16px;font-size:0.94rem;color:var(--t2)}
-
-/* Audio archive / tape log */
-.tape-entry{border:1px solid var(--b);background:var(--s);margin-bottom:12px;padding:14px 16px}
-.tape-top{display:flex;align-items:center;gap:12px}
-.play-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--rust);background:none;color:var(--rust);cursor:pointer;flex-shrink:0;font-size:0.8rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
-.play-btn:hover{background:var(--rust-glow)}
-.play-btn.playing{color:var(--rust-hot);border-color:var(--rust-hot);animation:pulse 0.6s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--rust-glow)}50%{box-shadow:0 0 0 6px var(--rust-glow)}}
-.waveform{display:flex;align-items:center;gap:2px;height:24px;flex:1}
-.waveform span{width:3px;background:var(--sig-dim);border-radius:1px;transition:background 0.3s}
-.tape-entry.playing .waveform span{background:var(--rust);animation:wf 0.5s infinite ease-in-out}
-.waveform span:nth-child(odd){animation-delay:0.1s}
-.waveform span:nth-child(even){animation-delay:0.25s}
-@keyframes wf{0%,100%{transform:scaleY(0.4)}50%{transform:scaleY(1)}}
-.tape-label{font-family:var(--font-mono);font-size:0.6rem;color:var(--t3);letter-spacing:1px;white-space:nowrap}
-.tape-transcript{margin-top:12px;padding-top:12px;border-top:1px dashed var(--b2);font-style:italic;color:var(--t2);font-size:0.92rem;display:none}
-.tape-entry.revealed .tape-transcript{display:block}
-
-.confidence-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--sig);border:1px solid var(--sig-dim);padding:4px 10px;margin-top:6px}
-.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.tag-pill{font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--t3);border:1px solid var(--b2);padding:4px 10px}
-
-.evidence-photo{border:1px solid var(--b2);margin:18px 0;background:var(--s)}
-.evidence-photo img{width:100%;display:block;filter:grayscale(0.15) contrast(1.1)}
-.evidence-caption{padding:10px 14px;font-family:var(--font-mono);font-size:0.62rem;color:var(--t3);letter-spacing:0.5px;border-top:1px dashed var(--b2)}
-.evidence-caption b{color:var(--rust)}
-
-.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:16px 0}
-.rel-card{border:1px solid var(--b2);padding:14px;background:var(--s);transition:border-color 0.2s;cursor:default}
-.rel-card:hover{border-color:var(--rust)}
-.rel-card b{font-family:var(--font-type);color:var(--t);display:block;margin-bottom:4px}
-.rel-card span{font-family:var(--font-mono);font-size:0.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:1px}
-
-.faq-item{border:1px solid var(--b);margin-bottom:8px;background:var(--s)}
-.faq-head{width:100%;text-align:left;background:none;border:none;color:var(--t);font-family:var(--font-type);font-size:0.98rem;padding:14px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-.faq-head::before{content:'Q ';color:var(--rust);font-family:var(--font-mono)}
-.faq-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
-.faq-item.open .faq-body{max-height:300px}
-.faq-body-inner{padding:0 16px 14px;color:var(--t2);font-size:0.92rem}
-.faq-body-inner::before{content:'A ';color:var(--sig);font-family:var(--font-mono)}
-
-.copyright-box{border:1px solid var(--danger);background:rgba(158,43,31,0.06);padding:20px;margin:24px 0;font-family:var(--font-mono);font-size:0.78rem;color:var(--t2);line-height:1.7}
-.copyright-box .label{color:var(--danger);text-transform:uppercase;letter-spacing:2px;font-size:0.65rem;margin-bottom:10px;display:block}
-.copyright-box a{text-decoration:underline}
-
-.sources-list{font-family:var(--font-mono);font-size:0.72rem;color:var(--t3);line-height:2}
-.sources-list .tier{color:var(--sig);margin-right:6px}
-
-footer{margin-top:60px;border-top:1px solid var(--b);padding:30px 0 60px;text-align:center;font-family:var(--font-mono);font-size:0.65rem;color:var(--t4);letter-spacing:1px}
-
-@media(max-width:600px){
-  h1.hero-name{font-size:2.1rem}
-  .hero{min-height:52vh}
-}
-</style>
-<link rel="icon" href="../assets/logo.svg" type="image/svg+xml"></head>
-<body>
-<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
-<style>.nav{position:sticky;top:0;z-index:1001;display:flex;align-items:center;gap:12px;padding:0 clamp(10px,3vw,24px);height:50px;background:rgba(10,13,9,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--b)}
-.nav-logo img{width:28px;height:28px;display:block;filter:drop-shadow(0 0 6px var(--rust))}
-.nav .logo{font-family:var(--font-mono);font-size:.45rem;letter-spacing:2px;color:var(--t3);text-transform:uppercase;line-height:1.15;text-decoration:none;border:none}
-.nav .logo strong{display:block;font-family:var(--font-type);font-size:.95rem;color:var(--rust);font-weight:700;text-transform:none;letter-spacing:.5px}
-.nav-search{position:relative;width:min(240px,30vw)}
-.nav-search #q{width:100%;background:var(--s);border:1px solid var(--b2);color:var(--t);padding:7px 12px 7px 30px;border-radius:20px;font-size:0.72rem;outline:none;font-family:var(--font-mono);transition:border-color .2s}
-.nav-search #q:focus{border-color:var(--rust)}
-.nav-search::before{content:'⌕';position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--rust);font-size:0.95rem;pointer-events:none;z-index:1}
-.nav-search #q::placeholder{color:var(--t3);opacity:.8}
-#dd{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--s);border:1px solid var(--b2);border-radius:8px;max-height:300px;overflow-y:auto;display:none;z-index:101;box-shadow:0 8px 40px rgba(0,0,0,0.6)}
-#dd.on{display:block}
-#dd a{display:block;padding:9px 14px;border-bottom:1px solid var(--b);font-size:0.85rem;color:var(--t)}
-#dd a:hover{background:var(--s2)}
-#dd a small{color:var(--t3);font-family:var(--font-mono);font-size:0.6rem;margin-left:8px}
-#dd a .via{color:var(--rust);font-style:italic;font-size:0.72rem}
-.nav .nav-links{margin-left:auto;display:flex;gap:4px}
-.nav .nav-links a{padding:8px 7px;color:var(--t3);font-family:var(--font-mono);font-size:.5rem;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border:none;transition:color .2s}
-.nav .nav-links a:hover{color:var(--rust-hot)}
-@media(max-width:600px){.nav{height:42px}.nav .logo{display:none}.nav-search{width:min(42vw,200px)}.nav-search #q{padding:6px 10px 6px 26px;font-size:0.62rem}.nav .nav-links a{font-size:.42rem;padding:5px 4px}}</style>
-
-<div class="static-burst" id="burst"></div>
-
-<div class="hero">
-  <img class="hero-img" src="images/siren-head-hero.jpg" alt="A towering emaciated creature with two fused emergency sirens where its head should be, standing in a misty forest at night">
-  <div class="hero-fade"></div>
+<style id="work-inject">.tabbar{overflow-x:auto;scrollbar-width:none}.tabbar::-webkit-scrollbar{display:none}.tbl-wrap{overflow-x:auto;border:1px solid var(--b);margin:8px 0}.tbl-wrap table{min-width:720px;width:100%;border-collapse:collapse;font-size:.78rem}.tbl-wrap th{text-align:left;font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);border-bottom:1px solid var(--b2);padding:8px 10px;white-space:nowrap}.tbl-wrap td{padding:8px 10px;border-bottom:1px solid var(--b);color:var(--t2);word-break:break-word;vertical-align:top}.folder{border:1px solid var(--b);background:var(--s);margin-top:-1px}.folder:first-of-type{margin-top:12px;border-top:1px solid var(--b)}.folder summary{list-style:none;display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--t3)}.folder summary::-webkit-details-marker{display:none}.folder summary::before{content:"+";width:18px;height:18px;display:grid;place-items:center;border:1px solid var(--b2);font-size:.7rem;flex-shrink:0}.folder[open] summary::before{content:"-";}.folder[open] summary{color:var(--a-light);border-bottom:1px solid var(--b)}.folder .fbody{padding:12px 14px;font-size:.88rem;color:var(--t2);line-height:1.65}.epi{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--b);padding:6px 10px;margin:4px 6px 4px 0;background:var(--s2);font-size:.78rem}.epi .lay{font-family:JetBrains Mono,monospace;font-size:.48rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3)}</style>
+</head>
+<body class="tex-grain arch-demonic head-smallcaps" style="--name-scale:0.92">
+<div class="fx-layer" id="fx"></div>
+<nav class="nav"><a href="../index.html" class="nav-logo"><img src="../assets/logo.svg" alt="Omnilore"></a><a href="../index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE</a><div class="nav-search"><input type="search" id="q" placeholder="Search 25,506 entities & aliases…" autocomplete="off"><div id="dd"></div></div><div class="nav-links"><a href="../browse.html">Browse</a><a href="../rabbit-hole.html">Rabbit Hole</a><a href="#" class="js-rand">Random</a><a href="../wings.html">Wings</a></div></nav>
+<div class="hero sigil-center has-img glitch" style="min-height:60vh">
+  <img class="hero-img" src="images/siren-head-hero.jpg" loading="lazy" alt="Siren Head" loading="eager" onerror="this.style.display='none';document.getElementById('sigfall').style.display='block'" style="object-position:center 17%;image-rendering:auto;filter:saturate(1.02) contrast(1.02)"><div id="sigfall" style="display:none"><svg class="hero-sigil" viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="sg" cx="50%" cy="50%"><stop offset="0%" stop-color="#ff6a54" stop-opacity="0.7"/><stop offset="55%" stop-color="#c8322b" stop-opacity="0.28"/><stop offset="100%" stop-color="#c8322b" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="83" fill="url(#sg)"/><path d="M98.1 165.2L42.0 110.2L76.8 56.0L139.1 47.6L141.4 119.0Z" fill="none" stroke="#c8322b" stroke-width="1.6" opacity="0.85"/><line x1="65.8" y1="74.9" x2="131.7" y2="83.5" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="102.4" y1="124.5" x2="71.3" y2="85.3" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="115.1" y1="127.9" x2="64.6" y2="121.1" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="79.2" y1="93.7" x2="117.2" y2="76.5" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><line x1="68.6" y1="128.3" x2="88.2" y2="82.9" stroke="#8a6d2f" stroke-width="1" opacity="0.65"/><circle cx="100" cy="100" r="7.864038571715355" fill="#c8322b" opacity="0.9"/><text x="100" y="107" text-anchor="middle" fill="#ff6a54" font-size="23" font-family="serif" opacity="0.9" font-weight="bold">S</text></svg></div><div class="hero-fade"></div>
   <div class="hero-content">
-    <div class="hero-timestamp">TAPE TIMESTAMP — NOV 12 1996 · CORRUPTED</div>
-    <div class="hero-desig">CASE FILE AAT-1517 · INTERNET-NATIVE · STATUS: ACTIVE SIGHTINGS CONTINUE</div>
-    <h1 class="hero-name">SIREN HEAD</h1>
-    <p class="hero-epithet">"It's not hunting you. It's broadcasting you."</p>
-    <div class="hero-quickfacts">
-      <div><b>Type</b>Monster / Cryptid</div>
-      <div><b>Creator</b>Trevor Henderson, 2018</div>
-      <div><b>Height</b>~40 ft (12 m)</div>
-      <div><b>Habitat</b>Rural woodland</div>
-    </div>
-    <button class="hero-cta" id="staticBtn">▓ Play Corrupted Frequency</button>
-  </div>
-</div>
-
-<div class="tabbar" id="tabbar">
-  <button class="tab-btn active" data-tab="dossier">Dossier</button>
-  <button class="tab-btn" data-tab="anatomy">Anatomy</button>
-  <button class="tab-btn" data-tab="incidents">Incident Log</button>
-  <button class="tab-btn" data-tab="audio">Audio Archive</button>
-  <button class="tab-btn" data-tab="history">Case History</button>
-  <button class="tab-btn" data-tab="universe">Shared Universe</button>
-  <button class="tab-btn" data-tab="records">Records</button>
-</div>
-
+    <div class="hero-stamp">FILE OPENED — AAT-1524 · HANDLE PER PROTOCOL</div>
+    <div class="hero-desig">Research compiled from encyclopedic and <span class="conf-badge" title="Multiple independent primary sources agree on the core narratives.">Well-Attested</span></div>
+    <h1 class="hero-name">Siren Head</h1>
+    <p class="hero-epithet">Sirenhead</p>
+    <div class="alias-strip"><span class="alias-lead">also known as</span><span class="alias-chip">Sirenhead</span><span class="alias-chip">Lamp Head (early name)</span></div>
+    <div class="hero-quickfacts"><div><b>Culture</b>Created by Canadian arti</div><div><b>Stories</b>3</div><div><b>Kin</b>3</div><div><b>Sources</b>5</div></div>
+    <button class="sig-action" data-fx="shake" data-done="The seal is broken — read below">&#9888; Wake the Coils</button>
+    <p class="attr">Via Wikipedia — &quot;Siren Head&quot;; image per Wikimedia Commons</p>
+  </div></div>
+<div class="tabbar"><button class="tab-btn active" data-tab="t0">The Fiend</button><button class="tab-btn" data-tab="t1">Name & Tongue</button><button class="tab-btn" data-tab="t2">Epithets & Forms</button><button class="tab-btn" data-tab="t3">Chronology</button><button class="tab-btn" data-tab="t4">Cultures</button><button class="tab-btn" data-tab="t5">Powers</button><button class="tab-btn" data-tab="t6">Form & Signs</button><button class="tab-btn" data-tab="t7">Accounts I</button><button class="tab-btn" data-tab="t8">Accounts II</button><button class="tab-btn" data-tab="t9">Kinship</button><button class="tab-btn" data-tab="t10">Afterlife</button><button class="tab-btn" data-tab="t11">Archive</button></div>
 <div class="wrap">
-
-<!-- DOSSIER -->
-<div class="tab-panel active" id="tab-dossier">
-  <p class="hook">You're driving through deep country when the radio dissolves into static. Then a voice — your mother's voice — crackles through the speakers. <em>"Pull over, sweetheart. It's not safe."</em> You know your mother has been dead for six years. You look out the window and see it: a forty-foot tower of dried, mummified flesh striding through the treeline, twin sirens where a head should be, screaming her last words on a loop. It isn't hunting you. It's <strong>broadcasting</strong> you. You are the message now.</p>
-
-  <h2>Case Summary</h2>
-  <p>Siren Head is a fictional creature created by Canadian illustrator <strong>Trevor Henderson</strong>, first posted to social media in August 2018. It stands roughly 40 feet tall — a humanoid figure of desiccated flesh with two industrial emergency sirens fused where a head should be. It belongs to a new category of monster: the <strong>internet-native cryptid</strong>, credited to one artist rather than an anonymous forum thread like Slender Man.</p>
-
-  <h3>Redacted Field Note <span class="redacted-hint">(click to declassify)</span></h3>
-  <p><span class="redacted" data-text="Witness statement, Bracebridge ON, 2019: subject did not pursue at speed — it did not need to. It played the voicemail I never deleted." data-revealed="false">████████████████████████████████████████████████████████</span></p>
-
-  <div class="tag-row">
-    <span class="tag-pill">Monster</span><span class="tag-pill">Cryptid</span><span class="tag-pill">Internet-Native</span><span class="tag-pill">Analog Horror</span><span class="tag-pill">Creator-Owned</span>
-  </div>
-  <div class="confidence-tag">● Canon status: creator-verified, actively expanding
-
-  <blockquote style="border-left:3px solid var(--rust);margin:18px 0;padding:8px 0 8px 20px;font-family:var(--font-type);font-size:1.05rem;line-height:1.7;color:var(--sig);font-style:italic">
-    "Think of Siren Head as the ultimate 'fake news' monster. It doesn't just attack you physically; it attacks your trust. It uses the sounds you associate with safety (a siren, a friend's voice) to lure you into danger. It's the embodiment of the fear that the things we rely on for information and connection can be twisted to deceive us."
-  </blockquote></div>
+<div class="tab-panel active" id="tab-t0"><div class="divider">The Fiend</div>
+<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">Sirenhead</p><p class="hook">Imagine a sound that is both a warning and a weapon. A blaring siren that echoes through a silent forest, not to save you, but to find you. That is the terrifying premise of Siren Head, a creature born not from ancient m</p><div class="divider">Who It Is</div><p class="lede"><p>Imagine a sound that is both a warning and a weapon. A blaring siren that echoes through a silent forest, not to save you, but to find you. That is the terrifying premise of Siren Head, a creature born not from ancient myth, but from the dark corners of the internet. It’s a 40-foot-tall skeleton with a rusty emergency siren for a head, a predator that uses your own memories against you by mimicking the voices of those you love. It is the boogeyman of the digital age, a horror that feels both impossibly strange and uncomfortably familiar.</p></p><p><p>Siren Head is a predatory ambush predator. It is known to mimic sounds, particularly emergency sirens, radio static, human voices, and other noises to lure victims. It is often depicted as being able to distort its body, bending and contorting to hide in forests or behind buildings. It is generally portrayed as a solitary, silent stalker that attacks when it has the advantage.</p></p><p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:6px 0 10px">Full dossier — 3 stories · 3 kin · 4 powers</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:14px 0"><div style="border:1px solid var(--b);background:var(--s2);padding:10px 12px"><b style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light)">Stories</b><div style="font-size:.84rem;color:var(--t2)">3</div></div><div style="border:1px solid var(--b);background:var(--s2);padding:10px 12px"><b style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light)">Kin</b><div style="font-size:.84rem;color:var(--t2)">3</div></div><div style="border:1px solid var(--b);background:var(--s2);padding:10px 12px"><b style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light)">Powers</b><div style="font-size:.84rem;color:var(--t2)">4</div></div><div style="border:1px solid var(--b);background:var(--s2);padding:10px 12px"><b style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--a-light)">Sources</b><div style="font-size:.84rem;color:var(--t2)">5</div></div></div>
 </div>
-
-<!-- ANATOMY -->
-<div class="tab-panel" id="tab-anatomy">
-  <h2>Specimen Data</h2>
-  <div class="evidence-photo">
-    <img src="images/siren-head-anatomy.jpg" alt="Extreme close-up of the fused siren head assembly, showing organic tubes and wires connecting rust-colored flesh to metal" loading="lazy">
-    <div class="evidence-caption"><b>EXHIBIT A —</b> macro detail of siren-flesh fusion point, recovered field photograph (AI-reconstructed for archive)</div>
-  </div>
-  <p>Click a row to expand the field description.</p>
-  <div class="spec-sheet" id="specSheet">
-    <div class="spec-row">
-      <button class="spec-head">HEIGHT / BUILD <span class="chev">▸</span></button>
-      <div class="spec-body"><div class="spec-body-inner">A humanoid figure roughly 40 feet tall, built from dried, sinewy flesh stretched over an impossibly thin frame — rust-and-bone in color, ribcage visible beneath the skin. Limbs are elongated and spindly, ending in long claw-like fingers.</div></div>
-    </div>
-    <div class="spec-row">
-      <button class="spec-head">HEAD ASSEMBLY <span class="chev">▸</span></button>
-      <div class="spec-body"><div class="spec-body-inner">Where a head should be, a long flexible stalk of flesh supports two large fused emergency sirens — the kind mounted on police cars or air-raid towers — connected to its body by organic tubes and wires that look grown rather than attached. It has no eyes, no mouth, no face at all.</div></div>
-    </div>
-    <div class="spec-row">
-      <button class="spec-head">ACOUSTIC WEAPONRY <span class="chev">▸</span></button>
-      <div class="spec-body"><div class="spec-body-inner">Perfect sound mimicry of any voice or sound it has ever heard, including full human speech. Volume range from a whisper to a shriek loud enough to cause physical pain and hearing damage. Infrasound emission — frequencies below hearing that cause nausea, anxiety, and unexplained dread.</div></div>
-    </div>
-    <div class="spec-row">
-      <button class="spec-head">CAMOUFLAGE & STEALTH <span class="chev">▸</span></button>
-      <div class="spec-body"><div class="spec-body-inner">Stillness camouflage — it can stand motionless and pass for a derelict utility pole or old siren tower. Surprising stealth for its size; it does not need to be fast when its voice does the hunting.</div></div>
-    </div>
-    <div class="spec-row">
-      <button class="spec-head">POSTURE & GAIT <span class="chev">▸</span></button>
-      <div class="spec-body"><div class="spec-body-inner">Witnesses (per Henderson's lore) describe its posture as hunched, heron-like, disturbingly patient. It does not need speed — only proximity, and the right voice.</div></div>
-    </div>
-  </div>
+<div class="tab-panel" id="tab-t1"><div class="divider">Name & Tongue</div>
+<div class="kv"><p><b>Etymology</b> — The name is a direct compound of &#x27;siren&#x27; (the warning device) and &#x27;head&#x27;, referring to the creature&#x27;s most distinctive anatomical feature. The early name &#x27;Lamp Head&#x27; was used by creator Trevor Henderson before the design was finalized.</p><p><b>Pronunciation</b> — SY-ren HED</p><p><b>Aliases</b> — Sirenhead, Lamp Head (early name)</p><p><b>Ownership</b> — Created by Canadian artist Trevor Henderson. The creature is internet-native, with no single cultural or geographic origin beyond Henderson&#x27;s creative work and the global online co</p></div><p class="wnote">Names are cult layers, not one fixed label.</p>
 </div>
-
-<!-- INCIDENT LOG -->
-
-
-  <div class="spec-row">
-    <div class="spec-head">Known Weaknesses & Wards</div>
-    <div class="spec-body"><div class="spec-body-inner"><p>Siren Head is physical and can theoretically be harmed by heavy weaponry, though its durability is unknown. Its size makes it difficult to hide in open terrain. It can be tracked by its sound — it broadcasts, and that broadcast reveals its position. It may be vulnerable to its own weapon: loud, disorienting noise directed back at it. Destroying its sirens would presumably neutralize its primary threat. It appears to be solitary and does not call for reinforcements. The fact that it hunts through isolation means that staying in populated, well-lit areas may offer protection.</p></div></div>
-  </div>
-<div class="tab-panel" id="tab-incidents">
-  <h2>Field Incident Log</h2>
-  <div class="evidence-photo">
-    <img src="images/siren-head-sighting.jpg" alt="Grainy trail-camera photograph of a tall thin silhouette standing motionless at the edge of a rural road at dusk" loading="lazy">
-    <div class="evidence-caption"><b>EXHIBIT B —</b> unverified trail-cam capture, rural sighting report (AI-reconstructed for archive, not an authenticated photograph)</div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">#001 — Hunting Behavior <span class="tag">CONFIRMED</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Siren Head is an ambush predator that wins psychologically before it ever moves. It listens. It learns a target's voice, or the voice of someone they've lost, and plays it back to lure them closer — a crying child, a friend calling for help, the radio station that was playing when someone died.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">#002 — Territory & Habitat <span class="tag">CONFIRMED</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Prefers isolated terrain — deep woods, abandoned rural roads, dead towns where a scream won't reach anyone who could help. Henderson's lore suggests patience bordering on the ritualistic — it can wait, motionless, for days.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">#003 — Known Weaknesses <span class="tag">UNCONFIRMED</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Nothing in canon confirms it can be killed, but its sheer size makes concealment difficult in open terrain, and its own broadcasts reveal its position the instant it uses them. Henderson has implied that loud, disorienting sound turned back on it might disrupt its hunting pattern, and destroying the sirens themselves would likely neutralize its main weapon.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">#004 — Multiplicity Hypothesis <span class="tag">SPECULATIVE</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Henderson has hinted there may be more than one Siren Head, and that they can communicate across long distances — raising the unconfirmed possibility of a distributed population rather than a single specimen.</div></div>
-  </div>
+<div class="tab-panel" id="tab-t2"><div class="divider">Epithets & Forms</div>
+<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">Names & forms</p><p class="wnote">Epithets are cult titles, not separate beings.</p><div class="tbl-wrap"><table><thead><tr><th>Form</th><th>Context</th><th>Archive treatment</th></tr></thead><tbody><tr><td><b>Siren Head</b></td><td>Canonical</td><td>Headword</td></tr></tbody></table></div>
 </div>
-
-<!-- AUDIO ARCHIVE -->
-<div class="tab-panel" id="tab-audio">
-  <h2>Audio Archive</h2>
-  <p>Corrupted tape fragments recovered from field recorders. Press play to attempt playback.</p>
-
-  <div class="tape-entry" data-transcript="Siren Head is not supernatural. It's an aberrant creature. — Trevor Henderson, on keeping the horror grounded in something almost-biological rather than purely magical.">
-    <div class="tape-top">
-      <button class="play-btn">▶</button>
-      <div class="waveform">
-        <span style="height:8px"></span><span style="height:16px"></span><span style="height:10px"></span><span style="height:20px"></span><span style="height:6px"></span><span style="height:14px"></span><span style="height:18px"></span><span style="height:9px"></span><span style="height:22px"></span><span style="height:11px"></span><span style="height:15px"></span><span style="height:7px"></span>
-      </div>
-      <div class="tape-label">TAPE_004 · 0:07</div>
-    </div>
-    <div class="tape-transcript"></div>
-  </div>
-
-  <div class="tape-entry" data-transcript="The sirens aren't bolted on — Henderson's lore describes them as growing organically from its flesh, wired in by tissue rather than mechanics.">
-    <div class="tape-top">
-      <button class="play-btn">▶</button>
-      <div class="waveform">
-        <span style="height:12px"></span><span style="height:18px"></span><span style="height:6px"></span><span style="height:14px"></span><span style="height:20px"></span><span style="height:9px"></span><span style="height:16px"></span><span style="height:10px"></span><span style="height:22px"></span><span style="height:8px"></span><span style="height:13px"></span><span style="height:17px"></span>
-      </div>
-      <div class="tape-label">TAPE_007 · 0:11</div>
-    </div>
-    <div class="tape-transcript"></div>
-  </div>
-
-  <div class="tape-entry" data-transcript="Henderson has joked about regretting the plainness of the name 'Siren Head' — it stuck before he could think of anything better.">
-    <div class="tape-top">
-      <button class="play-btn">▶</button>
-      <div class="waveform">
-        <span style="height:9px"></span><span style="height:15px"></span><span style="height:11px"></span><span style="height:19px"></span><span style="height:7px"></span><span style="height:13px"></span><span style="height:21px"></span><span style="height:10px"></span><span style="height:16px"></span><span style="height:8px"></span><span style="height:14px"></span><span style="height:12px"></span>
-      </div>
-      <div class="tape-label">TAPE_011 · 0:04</div>
-    </div>
-    <div class="tape-transcript"></div>
-  </div>
-
-  <div class="tape-entry" data-transcript="Its favorite broadcast, per fan-documented lore, is white noise layered under the distorted screams of past victims.">
-    <div class="tape-top">
-      <button class="play-btn">▶</button>
-      <div class="waveform">
-        <span style="height:14px"></span><span style="height:10px"></span><span style="height:18px"></span><span style="height:8px"></span><span style="height:16px"></span><span style="height:11px"></span><span style="height:20px"></span><span style="height:9px"></span><span style="height:13px"></span><span style="height:17px"></span><span style="height:7px"></span><span style="height:15px"></span>
-      </div>
-      <div class="tape-label">TAPE_013 · 0:09</div>
-    </div>
-    <div class="tape-transcript"></div>
-  </div>
+<div class="tab-panel" id="tab-t3"><div class="divider">Chronology</div>
+<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">From first attestation to now</p><div class="tbl-wrap"><table><thead><tr><th>Period</th><th>Source</th><th>What survives</th></tr></thead><tbody><tr><td>Archaic</td><td>Primary evidence</td><td>First attestations</td></tr><tr><td>Classical</td><td>Literary</td><td>Canonical stories</td></tr><tr><td>Reception</td><td>Modern</td><td>Adaptations</td></tr></tbody></table></div><p class="wnote">Chronology is layering, not biography.</p>
 </div>
-
-<!-- CASE HISTORY -->
-
-
-  <div class="tape-entry" data-transcript="Siren Head represents a new generation of internet horror — creator-owned (unlike the anonymous Slender Man), platform-native (designed for Twitter and Instagram's visual format), and participatory (H">
-    <div class="tape-top">
-      <button class="play-btn">▶</button>
-      <div class="waveform"><span style="height:8px"></span><span style="height:9px"></span><span style="height:10px"></span><span style="height:11px"></span><span style="height:12px"></span><span style="height:13px"></span><span style="height:14px"></span><span style="height:15px"></span><span style="height:16px"></span><span style="height:17px"></span><span style="height:18px"></span><span style="height:19px"></span></div>
-      <div class="tape-label">TAPE_015 · CULTURAL ANALYSIS</div>
-    </div>
-    <div class="tape-transcript">Siren Head represents a new generation of internet horror — creator-owned (unlike the anonymous Slender Man), platform-native (designed for Twitter and Instagram's visual format), and participatory (Henderson encourages fan art, games, and interpretations). It demonstrates how individual artists can now launch global horror icons without institutional backing. Siren Head's emphasis on sound horror taps into primal fears about communication, the unreliability of familiar voices, and the violation of the soundscape — in an era of deepfakes and AI voice cloning, a monster that steals voices feels prophetically relevant.</div>
-  </div>
-<div class="tab-panel" id="tab-history">
-  <h2>Origin & Case History</h2>
-  <div class="incident">
-    <button class="incident-head">Origin — August 2018 <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Henderson posted the first image of Siren Head to his Twitter account — a blurry, "found-photograph" style composite of a tall, spindly figure with sirens for a head, captioned with a short piece of unsettling lore. This "unnerving found image" technique — presenting his creatures as though they were genuine trail-cam or archive photos rather than illustrations — is Henderson's signature style. Henderson has said the concept was partly rooted in the emergency sirens he grew up hearing in rural Canada, reworked into something that hunts using the very sound meant to warn and protect.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Cultural Significance <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Siren Head represents a solo, credited artist launching a globally recognized horror icon with zero studio backing, built entirely on a platform-native visual format. It also normalized "analog horror" — creatures presented as documentary evidence rather than fiction — tapping into the same unease as deepfakes and voice-cloning: a monster that steals the sound of people you trust.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Modern Interpretations <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Siren Head has spread through dozens of indie horror games (notably itch.io and Roblox), fan animations, and YouTube "analog horror" series alongside entities like the Backrooms. It shares a loose universe with Henderson's other creatures — Cartoon Cat, Long Horse, and the Man with the Upside-Down Face — and remains his most culturally significant creation.</div></div>
-  </div>
+<div class="tab-panel" id="tab-t4"><div class="divider">Cultures</div>
+<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">Culture → reception</p><div class="tbl-wrap"><table><thead><tr><th>Culture</th><th>Evidence</th><th>Note</th></tr></thead><tbody><tr><td>Created by Canadian artist Trevor Hender</td><td>Primary</td><td>See citations</td></tr></tbody></table></div>
 </div>
-
-<!-- SHARED UNIVERSE -->
-<div class="tab-panel" id="tab-universe">
-  <h2>The Henderson Unnerving-Images Universe</h2>
-  <p>Siren Head does not exist alone. Trevor Henderson has spent years quietly building a shared roster of creatures, all rendered in the same "found photograph" style, that occasionally cross paths in fan animations and games even though Henderson himself rarely confirms a single unified canon.</p>
-
-  <div class="incident">
-    <button class="incident-head">Cartoon Cat <span class="tag">SAME UNIVERSE</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">A grinning, black-and-white, rubber-hose-animation-style cat that stalks victims through suburban streets at night. Widely considered Henderson's second-most-famous creation after Siren Head, and the one most frequently paired with it in fan crossovers.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Long Horse <span class="tag">SAME UNIVERSE</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">An impossibly long, horse-headed creature that stretches across roads and fields. Less predatory than Siren Head in most fan interpretations — often depicted as unsettling but passive, a fixture of the same rural nightmare landscape.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">The Man with the Upside-Down Face <span class="tag">SAME UNIVERSE</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">A humanoid figure whose facial features are inverted — among the earlier and stranger entries in Henderson's catalog, illustrating his consistent technique of taking one ordinary human feature and inverting it into wrongness.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Why This Matters for Classification <span class="tag">CONTEXT</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Unlike the SCP Foundation (an open collaborative-fiction wiki with thousands of contributing authors) or Slender Man (which mutated anonymously across a 2009 forum thread before anyone could claim ownership), every creature in Henderson's universe traces back to one credited artist. That makes attribution simple — everything here is credited to Trevor Henderson — but it also means "canon" is looser and more author-driven than crowd-sourced horror franchises, and Henderson has been comfortable leaving connections between his creatures ambiguous rather than codified.</div></div>
-  </div>
-
-  <h2 style="margin-top:30px">Fan Culture &amp; Spread</h2>
-  <p>Siren Head's jump from a single 2018 tweet to global recognition happened almost entirely through fan labor rather than any official studio push. Indie developers built dozens of unlicensed horror games around it on itch.io and Roblox before any official game existed. YouTube analog-horror creators folded it into anthology series alongside completely unrelated internet-horror properties like the Backrooms, cementing it as a recognizable face of the entire genre rather than a single creator's isolated work. Henderson has generally tolerated this spread rather than issuing takedowns — a permissiveness that likely accelerated the character's reach considerably, though it also means most "Siren Head content" a newcomer encounters today is fan-made, not canon.</p>
+<div class="tab-panel" id="tab-t5"><div class="divider">Powers</div>
+<details class="folder"><summary>Sound Mimicry</summary><div class="fbody"><p>Siren Head can perfectly mimic a wide range of sounds, including emergency sirens, human speech, music, and radio static. It uses this to lure victims or to disorient them.</p><p style="font-size:.78rem;color:var(--t3);margin-top:8px"><b>Limit:</b> It is unclear if it can mimic sounds it has never heard. The mimicry is often described as slightly &#x27;off&#x27; or distorted, which can be a tell for observant victims.</p></div></details><details class="folder"><summary>Superhuman Strength and Durability</summary><div class="fbody"><p>Its massive size and frame give it immense physical strength, capable of crushing cars or tearing through structures. Its body is highly resilient to damage.</p><p style="font-size:.78rem;color:var(--t3);margin-top:8px"><b>Limit:</b> No specific weaknesses are documented.</p></div></details><details class="folder"><summary>Extreme Height and Reach</summary><div class="fbody"><p>At 12 meters tall, it can see and reach over obstacles, making it a formidable predator in open or forested terrain.</p><p style="font-size:.78rem;color:var(--t3);margin-top:8px"><b>Limit:</b> Its size makes it difficult to hide, but it uses its environment and body contortions to compensate.</p></div></details><details class="folder"><summary>Body Contortion</summary><div class="fbody"><p>Siren Head can bend, twist, and contort its body in unnatural ways, allowing it to hide in tight spaces or appear from unexpected angles.</p><p style="font-size:.78rem;color:var(--t3);margin-top:8px"><b>Limit:</b> Not explicitly stated as a power, but a common physical trait.</p></div></details>
 </div>
-
-<!-- RECORDS -->
-
-  <h2 style="margin-top:30px">Modern Media & Reception</h2>
-  <p>Verified appearances across media. All entries confirmed via direct research.</p>
-  <div class="incident">
-    <button class="incident-head">🌐 Viral Meme and Horror Icon <span class="tag">DIRECT</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Siren Head became a massive viral phenomenon, spawning countless fan arts, animations, and discussions. It is a staple of modern internet horror.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">🎮 Siren Head Games <span class="tag">DIRECT</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">Numerous fan-made games have been created, often as free-to-play horror experiences on platforms like Roblox, Itch.io, and Steam. These games typically feature stealth and sound-based gameplay.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">🎬 YouTube and TikTok Videos <span class="tag">DIRECT</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">The creature is a popular subject for horror story narrations, found-footage style videos, and reaction content. Many videos feature 'sightings' or 'encounters' that are clearly fictional but presented for entertainment.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">🎨 Fan Art and Cosplay <span class="tag">INSPIRED</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">The creature's striking design has made it a popular subject for fan art and, more recently, cosplay, despite its impractical size.</div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">🎵 Soundtracks and Audio <span class="tag">INSPIRED</span><span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">The siren sound itself has become iconic, and many fan projects use distorted sirens and static to create an unsettling atmosphere.</div></div>
-  </div>
-<div class="tab-panel" id="tab-records">
-  <h2>Related Entities</h2>
-  <div class="rel-grid">
-    <div class="rel-card"><b>Slender Man</b><span>Internet-Native · Monster</span></div>
-    <div class="rel-card"><b>Cartoon Cat</b><span>Henderson Universe · Monster</span></div>
-    <div class="rel-card"><b>The Backrooms</b><span>Liminal Space · Internet-Native</span></div>
-    <div class="rel-card"><b>Mothman</b><span>Cryptid · American</span></div>
-  </div>
-
-  
-  <h2 style="margin-top:32px">Counterparts Across Cultures</h2>
-  <p style="font-size:0.85rem;color:var(--t3);margin-bottom:10px">Beings of the same nature — internet-born horror — imagined by other traditions.</p>
-  <div class="rel-grid">
-    <div class="rel-card"><b>SCP-342 — A Ticket to Ride</b><span>SCP Foundation · internet-horror</span></div>
-    <div class="rel-card"><b>Alma Wade</b><span>F.E.A.R. (Monolith Productions / Warner Bros. Interactive) · internet-horror</span></div>
-    <div class="rel-card"><b>The Portraits</b><span>Creepypasta · internet-horror</span></div>
-    <div class="rel-card"><b>SCP-093 — Red Sea Object</b><span>SCP Foundation · internet-horror</span></div>
-  </div>
-
-<h2 style="margin-top:32px">FAQ</h2>
-  <div class="faq-item">
-    <button class="faq-head">Is Siren Head based on a real cryptid sighting?<span class="chev">▸</span></button>
-    <div class="faq-body"><div class="faq-body-inner">No — it is entirely original fiction created by Trevor Henderson in 2018, though it draws on real childhood memories of rural emergency sirens for its central concept.</div></div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-head">Is Siren Head related to Slender Man?<span class="chev">▸</span></button>
-    <div class="faq-body"><div class="faq-body-inner">Not in canon, but culturally yes — both are internet-native horror icons that spread virally through image-based social platforms, and fan works frequently cross them over.</div></div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-head">Can Siren Head be killed?<span class="chev">▸</span></button>
-    <div class="faq-body"><div class="faq-body-inner">Unconfirmed in official canon. Henderson has left this ambiguous, which fan games and stories interpret differently.</div></div>
-  </div>
-
-  
-  <h2 style="margin-top:32px">Scholarly Debates & Contradictions</h2>
-  <div class="incident">
-    <button class="incident-head">Canon vs. Fan Interpretation <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">
-      <p><b style="color:var(--rust)">Position A:</b> Trevor Henderson's sparse lore is the only canon.</p>
-      <p><b style="color:var(--sig)">Position B:</b> The internet community has collectively built a vast, shared mythos that is more influential than the original canon.</p>
-      <p style="color:var(--t3);font-size:0.85rem">Consensus: In internet folklore, the 'fan canon' often becomes more prominent than the original creator's vision. Siren Head is a prime example of this phenomenon.</p>
-    </div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Single Entity vs. Species <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">
-      <p><b style="color:var(--rust)">Position A:</b> Siren Head is a unique, singular creature.</p>
-      <p><b style="color:var(--sig)">Position B:</b> There are multiple Siren Heads, or it is a species of creature.</p>
-      <p style="color:var(--t3);font-size:0.85rem">Consensus: The ambiguity is part of the creature's mystique. No definitive answer exists.</p>
-    </div></div>
-  </div>
-  <div class="incident">
-    <button class="incident-head">Origin <span class="chev">▸</span></button>
-    <div class="incident-body"><div class="incident-body-inner">
-      <p><b style="color:var(--rust)">Position A:</b> Siren Head is a supernatural or alien entity.</p>
-      <p><b style="color:var(--sig)">Position B:</b> Siren Head is a biological creature or a result of some experiment.</p>
-      <p style="color:var(--t3);font-size:0.85rem">Consensus: No canonical origin is given. The mystery is a key part of its appeal.</p>
-    </div></div>
-  </div>
-
-<h2 style="margin-top:32px">Legal & Attribution</h2>
-  <div class="copyright-box">
-    <span class="label">⚠ Copyrighted Character — Not Public Domain</span>
-    Siren Head is the original creation and intellectual property of <strong>Trevor Henderson</strong> (b. 1986, Toronto), first published August 2018. This page is an original educational summary written for the Omnilore Archive; no text or official artwork has been reproduced from Henderson's work. The hero image above is an <strong>AI-generated original illustration</strong> created for this archive entry — not official artwork.<br><br>
-    For the creator's own work, see Trevor Henderson's official <a href="https://www.instagram.com/trevorhenderson.ig/" target="_blank" rel="noopener">Instagram</a> and the <a href="https://trevorhenderson.fandom.com/wiki/Siren_Head" target="_blank" rel="noopener">Trevor Henderson Wiki</a>.
-  </div>
-
-  <h2>Sources</h2>
-  <div class="sources-list">
-    <div><span class="tier">[T4]</span> Wikipedia — "Trevor Henderson" (biographical facts)</div>
-    <div><span class="tier">[T5]</span> Trevor Henderson Fandom Wiki — "Siren Head" (creature lore)</div>
-    <div><span class="tier">[T6]</span> Henderson's official Twitter/Instagram archive (creator statements)</div>
-  </div>
+<div class="tab-panel" id="tab-t6"><div class="divider">Form & Signs</div>
+<div class="kv"><p><b>Appearance</b> — Siren Head is depicted as an incredibly tall, skeletal humanoid, roughly 12 meters (40 feet) high. Its body is composed of desiccated, mummified flesh stretched over a metal-like frame. Its most defining feature is its head, which is a rusty, industrial emergency siren, often with a speaker grill and a horn. The siren head can have multiple speakers or a single large one, and it is often shown with a faint, unsettling glow from within.</p><p><b>Symbols</b> — The siren itself is the primary symbol, representing a warning, a false alarm, and the manipulation of sound. The creature&#x27;s emaciated form evokes themes of starvation, decay, and the uncanny valley of a human-like figure.</p><p><b>Domains</b> — Siren Head is primarily associated with remote, wooded areas, abandoned roads, and rural landscapes. It is a terrestrial creature, but its tall stature allows it to be seen over long distances. Some interpretations place it in abandoned industrial sites or as a guardian of forgotten places.</p></div>
 </div>
-
+<div class="tab-panel" id="tab-t7"><div class="divider">Accounts I</div>
+<details class="folder"><summary>The Original Artwork<span style="margin-left:auto;font-size:.48rem;color:var(--t4)">Trevor Henderson</span></summary><div class="fbody"><p style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:0 0 8px">2018</p><p>The creature is first introduced as a single, terrifying image of a tall, thin figure with a siren head in a forest. Henderson&#x27;s accompanying caption and subsequent posts establish it as a predatory entity. The image goes viral, spawning a massive wave of fan art, stories, and videos.</p></div></details>
 </div>
-
-<footer>OMNILORE ARCHIVE — CASE FILE AAT-1517 — TAPE DEGRADES BEYOND THIS POINT</footer>
-
-<script>
-// Tabs
-document.querySelectorAll('.tab-btn').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
-    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
-    btn.classList.add('active');
-    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
-    document.getElementById('tabbar').scrollIntoView({behavior:'smooth',block:'start'});
-  });
-});
-
-// Redacted reveal
-document.querySelectorAll('.redacted').forEach(function(el){
-  el.addEventListener('click',function(){
-    if(el.classList.contains('revealed'))return;
-    el.textContent = el.dataset.text;
-    el.classList.add('revealed');
-  });
-});
-
-// Spec sheet accordion
-document.querySelectorAll('#specSheet .spec-head').forEach(function(head){
-  head.addEventListener('click',function(){
-    head.parentElement.classList.toggle('open');
-  });
-});
-
-// Incident accordion
-document.querySelectorAll('.incident-head').forEach(function(head){
-  head.addEventListener('click',function(){
-    head.parentElement.classList.toggle('open');
-  });
-});
-
-// FAQ accordion
-document.querySelectorAll('.faq-head').forEach(function(head){
-  head.addEventListener('click',function(){
-    head.parentElement.classList.toggle('open');
-  });
-});
-
-// Tape player
-document.querySelectorAll('.tape-entry').forEach(function(entry){
-  var btn = entry.querySelector('.play-btn');
-  var transcriptEl = entry.querySelector('.tape-transcript');
-  btn.addEventListener('click',function(){
-    if(entry.classList.contains('revealed'))return;
-    entry.classList.add('playing');
-    btn.classList.add('playing');
-    btn.textContent='❙❙';
-    setTimeout(function(){
-      entry.classList.remove('playing');
-      entry.classList.add('revealed');
-      btn.classList.remove('playing');
-      btn.textContent='✓';
-      transcriptEl.textContent = '"' + entry.dataset.transcript + '"';
-    }, 1100);
-  });
-});
-
-// Static burst button
-document.getElementById('staticBtn').addEventListener('click',function(){
-  var burst = document.getElementById('burst');
-  burst.classList.remove('go');
-  void burst.offsetWidth;
-  burst.classList.add('go');
-  document.body.classList.add('flicker');
-  setTimeout(function(){document.body.classList.remove('flicker')},400);
-});
-</script>
-
-<script src="../assets/search-index.js"></script>
-<script>
-(function(){
-var IDX=window.OMNILORE_INDEX||[];
-function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
-var q=document.getElementById('q'),dd=document.getElementById('dd');
-q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
-var out=[];var vs=skel(v);
-for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
-  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
-  var hitA=false;
-  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
-  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
-out.sort(function(x,y){return x.score-y.score;});
-dd.innerHTML=out.map(function(o){return '<a href="'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
-dd.className='on';};
-document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
-document.querySelector('.js-rand').onclick=function(){var x=IDX[Math.floor(Math.random()*IDX.length)];location.href=x.s+'.html';return false;};
-})();
-</script>
-<script>document.querySelectorAll("img").forEach(function(i){i.addEventListener("error",function(){var p=i.closest(".gallery-plate,.evidence-photo");if(p){p.style.display="none"}else{i.style.display="none"}})});</script>
-</body>
-</html>
+<div class="tab-panel" id="tab-t8"><div class="divider">Accounts II</div>
+<details class="folder"><summary>The Radio Broadcast<span style="margin-left:auto;font-size:.48rem;color:var(--t4)">Fan-made audio drama (various)</span></summary><div class="fbody"><p style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:0 0 8px">2019-present</p><p>A common fan narrative involves a person alone in a forest or a small town hearing a distorted emergency broadcast or a familiar voice (a friend or family member) calling for help. They follow the sound, only to realize it&#x27;s coming from Siren Head, which has been mimicking the voice to lure them. The victim is typically killed or disappears, reinforcing the creature&#x27;s predatory nature.</p></div></details><details class="folder"><summary>The Abandoned Town<span style="margin-left:auto;font-size:.48rem;color:var(--t4)">Fan fiction and video games</span></summary><div class="fbody"><p style="font-family:JetBrains Mono,monospace;font-size:.5rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:0 0 8px">2020-present</p><p>Siren Head is depicted as the sole inhabitant or guardian of a deserted town or military base. The narrative often involves a protagonist exploring the area, discovering the creature&#x27;s lair, and trying to escape without being detected. The protagonist either escapes with evidence of the creature&#x27;s existence or becomes another victim.</p></div></details>
+</div>
+<div class="tab-panel" id="tab-t9"><div class="divider">Kinship</div>
+<div class="tbl-wrap"><table><thead><tr><th>Name</th><th>Type</th><th>Relation</th></tr></thead><tbody><tr><td><b></b></td><td>creator</td><td></td></tr><tr><td><b></b></td><td>parallel</td><td></td></tr><tr><td><b></b></td><td>parallel</td><td></td></tr></tbody></table></div>
+</div>
+<div class="tab-panel" id="tab-t10"><div class="divider">Afterlife</div>
+<div class="tbl-wrap"><table><thead><tr><th>Topic</th><th>Position A</th><th>Position B</th></tr></thead><tbody><tr><td><b>Canon vs. Fan Interpretation</b></td><td>Trevor Henderson&#x27;s sparse lore is the only canon.</td><td>The internet community has collectively built a vast, shared mythos that is more influential than the original canon.</td></tr><tr><td><b>Single Entity vs. Species</b></td><td>Siren Head is a unique, singular creature.</td><td>There are multiple Siren Heads, or it is a species of creature.</td></tr><tr><td><b>Origin</b></td><td>Siren Head is a supernatural or alien entity.</td><td>Siren Head is a biological creature or a result of some experiment.</td></tr></tbody></table></div><p class="wnote"><b>Siren Head is a real cryptid with documented sightings.</b> — Siren Head is a fictional creation by artist Trevor Henderson, first posted online in 2018. All &#x27;sightings&#x27; are hoaxes or fan-made content.</p><p class="wnote"><b>Siren Head is a &#x27;Slender Man clone&#x27;.</b> — While both are tall, thin, internet-born horror entities, Siren Head has a distinct design, powers, and narrative identity. It is not a derivative of Slender Man, but rather a separate creation that emerged from a similar cultural moment.</p><p class="wnote"><b>Siren Head&#x27;s only ability is making siren noises.</b> — While its name and head suggest this, its primary ability is sound mimicry, which includes human voices, radio static, and other sounds. The siren is just one of its many vocalizations.</p>
+</div>
+<div class="tab-panel" id="tab-t11"><div class="divider">Archive</div>
+<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">Sources & gaps</p><div class="tbl-wrap"><table><thead><tr><th>Author</th><th>Title</th><th>Year</th></tr></thead><tbody><tr><td>Henderson, Trevor</td><td>Original Siren Head Artwork and Tweets</td><td>2018</td></tr><tr><td>Various</td><td>Siren Head fan wikis and databases</td><td>2019-present</td></tr><tr><td>Various</td><td>Siren Head fan games and videos</td><td>2019-present</td></tr><tr><td>Various</td><td>Siren Head articles on Know Your Meme</td><td>2019</td></tr><tr><td>Wikipedia contributors</td><td>Siren Head — Wikipedia, The Free Encyclopedia</td><td>2026</td></tr></tbody></table></div><p class="wnote">Gaps: The primary gap is the lack of a central, authoritative canon. Trevor Henderson has not released a definitive lore document, leaving most details to fan interpretation. This makes it difficult to separate &#x27;canon&#x27; from &#x27;popular fanon&#x27;. The creature&#x27;s rapid spread and the sheer volume of fan works also make a complete catalog of adaptations and appearance</p><p style="font-size:.78rem;color:var(--t3);margin-top:12px">Via Wikipedia — &quot;Siren Head&quot;; dossier 3 stories, 3 relations. Lilith 118386 is the example.</p>
+</div>
+</div>
+>
