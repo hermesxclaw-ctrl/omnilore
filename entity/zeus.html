@@ -9,6 +9,7 @@
 <meta property="og:description" content="Absolute power, constant paranoia, endless drama — the king who overthrew his own father and never stopped fearing his children would do the same.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/c/c6/Statue_of_Zeus.jpg">
+<link rel="stylesheet" href="../assets/base.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -21,6 +22,8 @@
   --b:#33291a; --b2:#453824;
   --font-display:'Cormorant Garamond',Georgia,serif; --font-body:'EB Garamond',Georgia,serif; --font-mono:'JetBrains Mono',monospace;
   --max-w:960px;
+  --tex-op:0.14;
+  --hue:0deg;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -142,9 +145,11 @@ blockquote cite{display:block;font-family:var(--font-mono);font-size:0.58rem;col
 footer{margin-top:60px;border-top:1px solid var(--b);padding:34px 0 60px;text-align:center;font-family:var(--font-mono);font-size:0.65rem;color:var(--t4);letter-spacing:1.5px}
 
 @media(max-width:600px){h1.hero-name{font-size:2.3rem}.hero{min-height:56vh}body{font-size:16px}}
+.tex-grain::before{opacity:calc(var(--tex-op)*0.06)!important}
+.divider::before{content:none!important}
 </style>
 </head>
-<body>
+<body class="tex-grain arch-divine head-tight">
 
 <div class="motes"><div class="mote"></div><div class="mote"></div><div class="mote"></div><div class="mote"></div><div class="mote"></div><div class="mote"></div></div>
 <div class="lightning-flash" id="flash"></div>
