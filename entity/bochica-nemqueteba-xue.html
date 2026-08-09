@@ -13,8 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Lora:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/base.css">
-<style>:root{--bg:#0f0d0a;--bg2:#14110d;--s:#1a1611;--s2:#211c15;--t:#ece4d4;--t2:#c2b295;--t3:#847660;--t4:#453e33;--a:#c98f3d;--a-light:#f2c479;--a-glow:rgba(201,143,61,0.16);--sec:#8a4a3a;--b:#312a1e;--b2:#423a29;--font-display:'Marcellus SC',serif;--font-body:'Lora',serif;--hue:-21deg;--tex-op:0.38}
-.divider::before{content:'❖ '}</style>
+<style>:root{--bg:#0f0d0a;--bg2:#14110d;--s:#1a1611;--s2:#211c15;--t:#ece4d4;--t2:#c2b295;--t3:#847660;--t4:#453e33;--a:#c98f3d;--a-light:#f2c479;--a-glow:rgba(201,143,61,0.16);--sec:#8a4a3a;--b:#312a1e;--b2:#423a29;--font-display:'Marcellus SC',serif;--font-body:'Lora',serif;--hue:-21deg;--tex-op:0.14}
+.tex-grain::before{opacity:calc(var(--tex-op)*0.06)!important}
+.divider::before{content:none!important}</style>
 </head>
 <body class="tex-grain arch-heroic-legend head-tight" style="--name-scale:0.92">
 <div class="fx-layer" id="fx"></div>
@@ -44,7 +45,7 @@
 <div class="sealed" id="sealed"><span class="sealed-label">From the sealed shelf of The Bronze Gallery</span><p>Some traditions say that before Bochica departed, he sealed the Chía goddess&#39;s flood waters in caves beneath the Sugamuxi (Iraka Valley) — creating the salt deposits that made Muisca salt one of their most valuable trade goods.</p></div>
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="bachue-bachue.html"><span>Chibcha (Muisca)</span><b>Bachué (Bachue)</b><p>Bachué is the mother goddess of the Muisca religion, the primordial woman who emerged from the sacred lagoon o…</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="wikidata-q55571061.html"><span>Unclassified — research pending</span><b>Reflux</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="wikidata-q3314373.html"><span>Unclassified — research pending</span><b>Elf Mills</b><p>This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
-<footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · HALL OF HEROES · AAT-3396<br>The Bronze Gallery · never finished, always evolving</footer>
+<footer>OMNILORE — THE ARCHIVE · HALL OF HEROES · AAT-3396<br>The Bronze Gallery · never finished, always evolving</footer>
 <script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
 <script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};

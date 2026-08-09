@@ -13,7 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Lora:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/base.css">
-<style>:root{--bg:#100f0d;--bg2:#151412;--s:#1b1a17;--s2:#22211d;--t:#ece9e2;--t2:#c2bcae;--t3:#847f72;--t4:#45423a;--a:#c4a35a;--a-light:#ecd08e;--a-glow:rgba(196,163,90,0.15);--sec:#8a4a4a;--b:#2f2d27;--b2:#403d35;--font-display:'Playfair Display',serif;--font-body:'Lora',serif;--hue:2deg;--tex-op:0.38}
+<style>:root{--bg:#100f0d;--bg2:#151412;--s:#1b1a17;--s2:#22211d;--t:#ece9e2;--t2:#c2bcae;--t3:#847f72;--t4:#45423a;--a:#c4a35a;--a-light:#ecd08e;--a-glow:rgba(196,163,90,0.15);--sec:#8a4a4a;--b:#2f2d27;--b2:#403d35;--font-display:'Playfair Display',serif;--font-body:'Lora',serif;--hue:2deg;--tex-op:0.14}
+.tex-grain::before{opacity:calc(var(--tex-op)*0.06)!important}
 .divider::before{content:'· '}</style>
 </head>
 <body class="tex-none arch-fine-art head-upper" style="--name-scale:1.12">
@@ -39,7 +40,7 @@
 
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="cerberus-the-great-worm.html"><span>Fine Art</span><b>Cerberus the Great Worm</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="the-kiss-klimts-lovers.html"><span>Fine Art ? Gustav Klimt</span><b>The Kiss (Klimt&#39;s Lovers)</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a><a class="conn-card" href="area-51-aliens.html"><span>Fine Art</span><b>Area 51 Aliens</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
-<footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · GALLERY OF THE UNREAL · AAT-2359<br>The Painted Wing · never finished, always evolving</footer>
+<footer>OMNILORE — THE ARCHIVE · GALLERY OF THE UNREAL · AAT-2359<br>The Painted Wing · never finished, always evolving</footer>
 <script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
 <script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};

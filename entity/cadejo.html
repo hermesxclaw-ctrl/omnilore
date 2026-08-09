@@ -13,7 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/base.css">
-<style>:root{--bg:#0c100b;--bg2:#101510;--s:#141b13;--s2:#192117;--t:#dde5d2;--t2:#a8b598;--t3:#6d7a5f;--t4:#3a4233;--a:#7da44c;--a-light:#aed47f;--a-glow:rgba(125,164,76,0.15);--sec:#b3833c;--b:#28301f;--b2:#37402b;--font-display:'Cutive Mono',monospace;--font-body:'Inter',sans-serif;--hue:18deg;--tex-op:0.38}
+<style>:root{--bg:#0c100b;--bg2:#101510;--s:#141b13;--s2:#192117;--t:#dde5d2;--t2:#a8b598;--t3:#6d7a5f;--t4:#3a4233;--a:#7da44c;--a-light:#aed47f;--a-glow:rgba(125,164,76,0.15);--sec:#b3833c;--b:#28301f;--b2:#37402b;--font-display:'Cutive Mono',monospace;--font-body:'Inter',sans-serif;--hue:18deg;--tex-op:0.14}
+.tex-grain::before{opacity:calc(var(--tex-op)*0.06)!important}
 .divider::before{content:'☙ '}</style>
 </head>
 <body class="tex-grain arch-cryptid " style="--name-scale:1.02">
@@ -70,7 +71,7 @@
 <!-- OMNILORE:DOSSIER:START -->
 <!-- dossier distributed into tabs: 12 sections -->
 <!-- OMNILORE:DOSSIER:END -->
-<footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · FIELD INVESTIGATION · AAT-3045<br>The Evidence Room · never finished, always evolving</footer>
+<footer>OMNILORE — THE ARCHIVE · FIELD INVESTIGATION · AAT-3045<br>The Evidence Room · never finished, always evolving</footer>
 <script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
 <script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};

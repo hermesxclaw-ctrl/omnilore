@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unica+One&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/base.css">
 <style>:root{--bg:#100d08;--bg2:#15110a;--s:#1b160d;--s2:#221c11;--t:#f0e6d2;--t2:#c9b58a;--t3:#8a7a5c;--t4:#484031;--a:#d99a2b;--a-light:#ffc95e;--a-glow:rgba(217,154,43,0.16);--sec:#b8477a;--b:#332a17;--b2:#463a20;--font-display:'Unica One',cursive;--font-body:'Inter',sans-serif;--hue:0deg;--tex-op:0.78}
-.divider::before{content:'❖ '}
+.divider::before{content:none!important}
 .design-edition{font:500 .48rem var(--font-mono,monospace);letter-spacing:2px;text-transform:uppercase;color:var(--a-light);opacity:.78;margin-bottom:14px}
 .composition-field-notebook .hero-content,.composition-evidence-wall .hero-content{border-left:2px solid var(--a);padding-left:clamp(18px,4vw,48px)}
 .composition-broadcast-terminal .hero-content,.composition-locked-ledger .hero-content{border:1px solid var(--b2);padding:clamp(20px,4vw,54px);background:rgba(0,0,0,.16)}
@@ -50,7 +50,7 @@
 
 <div class="reading-path"><p class="rp-label">Continue the descent</p><div class="rp-grid"><a class="conn-card" href="mephistopheles.html"><span>German / European Christian (developed through Faust legend)</span><b>Mephistopheles</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">follows the thread</span></a><a class="conn-card" href="mulo.html"><span>Romani</span><b>Muló</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same tradition</span></a><a class="conn-card" href="pombero.html"><span>Guarani</span><b>Pombero</b><p></p><span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.52rem;color:var(--t4);letter-spacing:1px;text-transform:uppercase">same wing of the Archive</span></a></div></div>
 </div>
-<footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · MISCHIEF LEDGER · AAT-2624<br>The Crooked Hall · never finished, always evolving</footer>
+<footer>OMNILORE — THE ARCHIVE · MISCHIEF LEDGER · AAT-2624<br>The Crooked Hall · never finished, always evolving</footer>
 <script src="../assets/search-index.js"></script>
 <script src="../assets/widgets.js"></script>
 <script>document.querySelector('.js-rand').onclick=function(){var x=document.querySelectorAll('.conn-card');if(x.length){var r=x[Math.floor(Math.random()*x.length)];location.href=r.href;}return false;};
