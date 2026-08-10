@@ -29,6 +29,12 @@ test('homepage and browse do not bind competing legacy global-search handlers', 
   assert.doesNotMatch(browse, /var sel=-1,lastTop=null/);
 });
 
+test('the shared nav loader can supply the search index to pages that only load a worker', () => {
+  const navSearch = fs.readFileSync(path.join(site, 'assets', 'nav-search.js'), 'utf8');
+  assert.match(navSearch, /search-index\.js/);
+  assert.match(navSearch, /ensureIndex/);
+});
+
 test('only the canonical Lilith page remains', () => {
   const duplicates = [
     'lilith-12TAB-WORKCOPY.html',

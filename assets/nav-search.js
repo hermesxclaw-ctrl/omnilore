@@ -5,10 +5,30 @@
   if (!input || !dropdown || input.dataset.archiveBound) return;
   input.dataset.archiveBound = 'true';
 
-  function engineScriptUrl() {
+  function siblingScriptUrl(filename) {
     var scripts = document.scripts;
-    for (var i = 0; i < scripts.length; i++) if (/nav-search\.js(?:\?|$)/.test(scripts[i].src)) return scripts[i].src.replace(/nav-search\.js(?:\?.*)?$/, 'archive-engine.js');
-    return 'assets/archive-engine.js';
+    for (var i = 0; i < scripts.length; i++) if (/nav-search\.js(?:\?|$)/.test(scripts[i].src)) return scripts[i].src.replace(/nav-search\.js(?:\?.*)?$/, filename);
+    return 'assets/' + filename;
+  }
+
+  function loadScript(url, done) {
+    var existing = document.querySelector('script[src="' + url + '"]');
+    if (existing) { existing.addEventListener('load', done, { once: true }); return; }
+    var script = document.createElement('script');
+    script.src = url;
+    script.onload = done;
+    script.onerror = function () { dropdown.innerHTML = '<span class="search-empty">Search is unavailable on this page.</span>'; };
+    document.head.appendChild(script);
+  }
+
+  function ensureIndex(done) {
+    if (window.OMNILORE_INDEX) { done(); return; }
+    loadScript(siblingScriptUrl('search-index.js'), done);
+  }
+
+  function ensureEngine(done) {
+    if (window.OmniloreArchive) { done(); return; }
+    loadScript(siblingScriptUrl('archive-engine.js'), done);
   }
 
   function bind() {
@@ -39,10 +59,5 @@
     document.addEventListener('click', function (event) { if (!dropdown.contains(event.target) && event.target !== input) close(); });
   }
 
-  if (window.OmniloreArchive) { bind(); return; }
-  var script = document.createElement('script');
-  script.src = engineScriptUrl();
-  script.onload = bind;
-  script.onerror = function () { dropdown.innerHTML = '<span class="search-empty">Search is unavailable on this page.</span>'; };
-  document.head.appendChild(script);
+  ensureIndex(function () { ensureEngine(bind); });
 }());
