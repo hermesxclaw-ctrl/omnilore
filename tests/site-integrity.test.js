@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { scanSite } = require('../scripts/check-site-integrity.js');
 
 const site = path.resolve(__dirname, '..');
 const wings = fs.readdirSync(path.join(site, 'wings')).filter((file) => file.endsWith('.html'));
@@ -45,4 +46,11 @@ test('only the canonical Lilith page remains', () => {
   ].filter((file) => fs.existsSync(path.join(site, 'entity', file)));
   assert.deepEqual(duplicates, []);
   assert.equal(fs.existsSync(path.join(site, 'entity', 'lilith.html')), true);
+});
+
+test('all local page, asset, and sitemap targets resolve to files in the archive', () => {
+  const report = scanSite(site);
+  assert.deepEqual(report.missing, []);
+  assert.deepEqual(report.malformedScripts, []);
+  assert.deepEqual(report.duplicateLilithRoutes, []);
 });
