@@ -306,20 +306,6 @@ document.getElementById('e-sum').textContent=(e.e||'The Archive has prepared thi
 document.getElementById('e-link').href='entity/'+e.s+'.html';
 function rand(){var x=IDX[Math.floor(Math.random()*IDX.length)];location.href='entity/'+x.s+'.html';return false;}
 document.getElementById('rand').onclick=rand;document.getElementById('rand2').onclick=rand;
-// search with aliases
-var q=document.getElementById('q'),dd=document.getElementById('dd');
-function skel(s){return s.toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/[aeiou]/g,'').split('').filter(function(ch,i,a){return ch!==a[i-1]}).join('');}
-q.oninput=function(){var v=q.value.trim().toLowerCase();if(v.length<2){dd.className='';return;}
-var out=[];var vs=skel(v);
-for(var i=0;i<IDX.length&&out.length<9;i++){var e3=IDX[i];var nm=e3.n.toLowerCase();
-  if(nm.indexOf(v)>=0){out.push({e:e3,via:null,score:nm.indexOf(v)===0?0:1});continue;}
-  var hitA=false;
-  for(var a=0;a<e3.a.length;a++){if(e3.a[a].toLowerCase().indexOf(v)>=0){out.push({e:e3,via:e3.a[a],score:2});hitA=true;break;}}
-  if(!hitA&&vs.length>2&&skel(e3.n).indexOf(vs)>=0){out.push({e:e3,via:'close match',score:3});}}
-out.sort(function(x,y){return x.score-y.score;});
-dd.innerHTML=out.map(function(o){return '<a href="entity/'+o.e.s+'.html">'+o.e.n+(o.via?' <span class="via">← '+o.via+'</span>':'')+'<small>'+(o.e.c||o.e.k)+'</small></a>';}).join('')||'<a>No matches in the Archive…</a>';
-dd.className='on';};
-document.addEventListener('click',function(ev){if(!dd.contains(ev.target)&&ev.target!==q)dd.className='';});
 })();
 </script>
 <aside id="content-advisory" role="dialog" aria-modal="true" aria-labelledby="advisory-title" hidden><div class="advisory-panel"><p class="advisory-kicker">Adults only — 18+ required</p><h1 id="advisory-title">This archive is uncensored and 18+.</h1><p>By entering you confirm you are 18 or older and you consent to viewing uncensored material: artistic and historical nudity, fictional gore and body horror, occult and demonic imagery, death and violence, and language that may be dated or offensive.</p><ul><li>Everything is shown without blur or redaction. No sanitized mode.</li><li>Material is presented for research, context, and cultural reference — not endorsement.</li><li>If you are under 18, or you do not want to see this material, leave now.</li></ul><div class="advisory-actions"><button class="advisory-enter" type="button">I am 18+ — Enter uncensored</button><button class="advisory-leave" type="button">Leave</button></div><a class="advisory-legal" href="legal.html#content-advisory">Read the full 18+ advisory and terms →</a></div></aside><script>(function(){var key='omnilore-18plus-v1',gate=document.getElementById('content-advisory');if(!gate)return;try{if(localStorage.getItem(key)==='accepted')return;}catch(e){}gate.hidden=false;var enter=gate.querySelector('.advisory-enter'),leave=gate.querySelector('.advisory-leave');enter.onclick=function(){try{localStorage.setItem(key,'accepted')}catch(e){}gate.hidden=true};leave.onclick=function(){location.href='about:blank'};})();</script></body>

@@ -22,6 +22,13 @@ test('every wing delegates filtering to the shared collection controller', () =>
   assert.deepEqual(missing, []);
 });
 
+test('homepage and browse do not bind competing legacy global-search handlers', () => {
+  const homepage = fs.readFileSync(path.join(site, 'index.html'), 'utf8');
+  const browse = fs.readFileSync(path.join(site, 'browse.html'), 'utf8');
+  assert.doesNotMatch(homepage, /\/\/ search with aliases/);
+  assert.doesNotMatch(browse, /var sel=-1,lastTop=null/);
+});
+
 test('only the canonical Lilith page remains', () => {
   const duplicates = [
     'lilith-12TAB-WORKCOPY.html',
