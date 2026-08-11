@@ -11,6 +11,17 @@ const counts = Object.fromEntries(taxonomy.map((wing) => [wing.key, 0]));
 for (const entity of index) if (Object.hasOwn(counts, entity.k)) counts[entity.k] += 1;
 const wingByFile = Object.fromEntries(taxonomy.map((wing) => [path.basename(wing.route), wing]));
 
+function escapeHtml(value) {
+  return String(value == null ? '' : value).replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[character]);
+}
+
+function renderFallbackCard(entity) {
+  const label = { reviewed: 'Reviewed dossier', researched: 'Research draft', draft: 'Draft', stub: 'Stub' }[entity.status] || 'Draft';
+  return `<a class="card entity-card status-${escapeHtml(entity.status || 'draft')}" href="../entity/${escapeHtml(entity.s)}.html"><small>${label}</small><b>${escapeHtml(entity.n)}</b>${entity.e ? `<i>${escapeHtml(entity.e)}</i>` : ''}</a>`;
+}
+
 for (const file of files) {
   const target = path.join(wingDirectory, file);
   const original = fs.readFileSync(target, 'utf8');
@@ -28,8 +39,11 @@ for (const file of files) {
   const wing = wingByFile[file];
   if (wing) {
     const formatted = counts[wing.key].toLocaleString('en-US');
+    const fallbackCards = index.filter((entity) => entity.k === wing.key && entity.status !== 'quarantined')
+      .slice(0, 60).map(renderFallbackCard).join('\n');
     revised = revised.replace(/(<span id="hero-count">)[^<]*(<\/span>)/, `$1${formatted} entities awake$2`);
     revised = revised.replace(/(<p class="collection-count" id="count">)[^<]*(<\/p>)/, `$1${formatted} records in this wing$2`);
+    revised = revised.replace(/(<section class="wing-grid" id="wing-grid"[^>]*>)[\s\S]*?(<\/section>)/, `$1\n${fallbackCards}\n$2`);
     revised = revised.replace('This is a distinct wing, not a generic archive filter.', 'Search or browse the records assigned to this wing.');
   }
   if (revised !== original) fs.writeFileSync(target, revised, 'utf8');

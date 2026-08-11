@@ -34,6 +34,17 @@ test('wing HTML fallbacks advertise current counts before JavaScript loads', () 
   }
 });
 
+test('wing HTML fallbacks contain only the first real records assigned to that wing', () => {
+  for (const wing of taxonomy) {
+    const source = fs.readFileSync(path.join(site, wing.route), 'utf8');
+    const grid = source.match(/<section class="wing-grid" id="wing-grid"[^>]*>([\s\S]*?)<\/section>/);
+    assert.ok(grid, wing.route);
+    const actual = [...grid[1].matchAll(/href="\.\.\/entity\/([^"/]+)\.html"/g)].map((match) => match[1]);
+    const expected = index.filter((entity) => entity.k === wing.key && entity.status !== 'quarantined').slice(0, 60).map((entity) => entity.s);
+    assert.deepEqual(actual, expected, wing.route);
+  }
+});
+
 test('every wing preserves a visible keyboard focus indicator', () => {
   for (const wing of taxonomy) {
     const source = fs.readFileSync(path.join(site, wing.route), 'utf8');
