@@ -13,7 +13,8 @@ function inspectMarkup(source, entity) {
     genericFiendLabels: entity && entity.wing === 'demonic' ? 0 : occurrences(source, />The Fiend</g),
     genericWakeActions: occurrences(source, /Wake the Coils/g),
     replacementCharacters: occurrences(source, /�/g),
-    duplicateLoadingAttributes: occurrences(source, /<img\b[^>]*\bloading=["'][^"']+["'][^>]*\bloading=["'][^"']+["'][^>]*>/gi)
+    duplicateLoadingAttributes: occurrences(source, /<img\b[^>]*\bloading=["'][^"']+["'][^>]*\bloading=["'][^"']+["'][^>]*>/gi),
+    generatorCommentary: occurrences(source, /<p[^>]*>Twelve tabs, wiki-sorted\. Every dense table lives in a drawer [^<]*<\/p>/gi)
   };
 }
 
@@ -54,6 +55,7 @@ function repairMarkup(source, entity) {
   revised = revised.replace(/Wake the Coils/g, 'Reveal archive effect');
   revised = revised.replace(/>�<\/text>/g, '>◇</text>');
   revised = revised.replace(/<img\b[^>]*>/gi, repairImageLoading);
+  revised = revised.replace(/<p[^>]*>Twelve tabs, wiki-sorted\. Every dense table lives in a drawer [^<]*<\/p>/gi, '');
   return revised;
 }
 

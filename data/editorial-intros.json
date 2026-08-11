@@ -1,0 +1,38 @@
+{
+  "achilles": {
+    "label": "The cost of wrath",
+    "hook": "Achilles enters the Iliad by refusing to fight. The strongest warrior in the Achaean camp turns his strength against his own side, and an army begins to break around the absence of one man.",
+    "lede": "His quarrel with Agamemnon is not a delay before the real story; it is the story’s engine. Achilles knows that glory can purchase a name at the price of a life, but knowledge does not make the bargain clean. He withdraws over wounded honor, loses Patroclus, returns as a force of grief, kills Hector, and abuses the body of the man he has defeated.",
+    "body": "Then Priam enters his shelter. The old king kisses the hands that killed his son, and Achilles sees his own father inside his enemy’s mourning. In Book 24, wrath gives way—not to innocence, but to recognition and burial. That movement from refusal to atrocity to shared grief is why Achilles cannot be reduced to an invulnerable action hero. Even his famous heel belongs to later tradition, not Homer’s Iliad; the epic’s Achilles is terrifying because his body remains mortal and he chooses the path that will kill him."
+  },
+  "anubis": {
+    "label": "Ritual before spectacle",
+    "hook": "Anubis guards a process. He wraps the dead, watches the burial ground, guides the deceased, and stands beside the balance where a heart is measured against the order it kept in life.",
+    "lede": "Ancient Egyptian texts do not give him one long adventure. They give him offices, titles, gestures, and ritual work. As ‘he who is upon his mountain’ and lord of the embalming place, Anubis protects the vulnerable body at the edge of transformation. His black color is the color of preserved flesh and fertile Nile soil, not a simple sign of evil.",
+    "body": "That distinction matters because modern retellings often turn every underworld figure into a monster or executioner. Anubis is neither the Egyptian devil nor, in most sources, the final sovereign of the dead. Osiris holds that kingship in the mature funerary tradition; Anubis performs the exacting work that allows the deceased to reach it. His authority is procedural, protective, and close to the body."
+  },
+  "athena": {
+    "label": "A mind made visible",
+    "hook": "Athena’s first great image is an impossible birth: she comes from Zeus already armed. Greek tradition makes thought itself arrive with a spear, a shield, and a voice loud enough to shake the gods.",
+    "lede": "War is only one field of her intelligence. Athena steadies Achilles before he murders Agamemnon, drives Diomedes through battle, guides Odysseus through disguise and recognition, teaches craft, and guards the civic life of Athens. Her violence is strategic rather than frenzied; her gifts are practical rather than ornamental.",
+    "body": "The same intelligence can protect, manipulate, or punish. Stories about Arachne and Medusa change across authors and periods, so the dossier keeps those versions dated instead of treating one modern summary as timeless Greek belief. Athena remains difficult on purpose: patron of the loom and the war plan, virgin guardian and partisan destroyer, the discipline of a city embodied in a goddess who does not promise to be gentle."
+  },
+  "banshee": {
+    "label": "The cry is not the cause",
+    "hook": "The banshee does not kill the person whose death she foretells. She arrives as news before the news: a woman’s lament heard near a house, a road, a river, or the land of a family about to mourn.",
+    "lede": "That distinction separates the Irish bean sí from the attacking scream-monster of later horror. Traditional accounts describe a herald and keener. Her voice may be piercing, low, sweet, or unbearable, but its work is announcement and lamentation—not murder. In some tellings she belongs to particular Gaelic families and mourns them with the intimacy of an ancestral attendant.",
+    "body": "Her name means ‘woman of the síd,’ the otherworldly mound. Her cry also echoes the human practice of caoineadh, ritual keening for the dead. The supernatural figure therefore stands beside a real culture of mourning: frightening because she knows first, compassionate because she grieves before anyone else can."
+  },
+  "baphomet": {
+    "label": "An accusation acquires a body",
+    "hook": "Baphomet begins as a name in hostile mouths, not as an ancient goat-god waiting to be uncovered. Centuries pass before the name acquires the winged, horned body now recognized around the world.",
+    "lede": "Medieval Christian writers used forms of the word in relation to Islam, and the Templar trials dragged it into accusations of heresy under torture and political pressure. The familiar figure comes later: Éliphas Lévi’s nineteenth-century image joins goat and human, male and female, raised and lowered hands, torch and animal body into a diagram of opposed forces held in balance.",
+    "body": "That drawing is not archaeological proof of a secret continuous cult. It is an authored occult symbol with a documented date and program. Later occultists, Satanists, artists, games, and political movements adopted or altered it for different ends. To understand Baphomet, follow the transfers: insult, trial allegation, occult emblem, modern icon. Calling every stage the same deity erases the history that made the image powerful."
+  },
+  "hades": {
+    "label": "The king is not the devil",
+    "hook": "Hades rules the dead; he does not tempt the living into sin, command a kingdom of fire, or wage war against Olympus. The Greek underworld is not Christian hell, and its king is not Satan in another costume.",
+    "lede": "In epic and cult, Hades is distant, wealthy, and difficult to move. Every mortal eventually enlarges his realm, which helps explain titles that avoid speaking his name directly: the Unseen One, the receiver of many, Plouton the wealthy. The riches are literal as well as grim—grain, roots, ore, and buried treasure all rise from beneath the earth he governs.",
+    "body": "His central myths test the boundary of that rule. Persephone becomes queen beside him through a tradition that must be read with Demeter’s grief and the seasonal settlement in view. Heracles is permitted to bring Cerberus to the surface under conditions; Orpheus is offered an exception and loses it. Hades is formidable because his law is final, not because ancient poets make him gleefully cruel. The familiar hot-tempered villain is largely a modern adaptation."
+  }
+}

@@ -73,8 +73,8 @@ test('visible archive totals and canonical Lilith grammar are current', () => {
     assert.doesNotMatch(source, /25,506|25,512|25,596/, file);
   }
   const lilith = fs.readFileSync(path.join(site, 'entity', 'lilith.html'), 'utf8');
-  assert.doesNotMatch(lilith, /Demon of Mesopotamian/);
-  assert.match(lilith, /Demon of Mesopotamia/);
+  assert.doesNotMatch(lilith, /Demon of Mesopotamian|Demon of Mesopotamia/);
+  assert.match(lilith, /MESOPOTAMIAN AND JEWISH TRADITIONS · LAYERED RECORD/);
 });
 
 test('the shared nav loader can supply the search index to pages that only load a worker', () => {
