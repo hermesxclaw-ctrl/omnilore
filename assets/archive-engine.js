@@ -68,8 +68,17 @@
     return 'entity/';
   }
 
+  function decodeDisplayEntities(value) {
+    return String(value == null ? '' : value)
+      .replace(/&#(\d+);/g, function (_match, decimal) { return String.fromCodePoint(Number(decimal)); })
+      .replace(/&#x([0-9a-f]+);/gi, function (_match, hexadecimal) { return String.fromCodePoint(parseInt(hexadecimal, 16)); })
+      .replace(/&(amp|lt|gt|quot|apos);/gi, function (_match, name) {
+        return { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" }[name.toLowerCase()];
+      });
+  }
+
   function createArchiveEngine(index, locationPath) {
-    var entities = Array.isArray(index) ? index.filter(function (entity) { return entity && entity.s && entity.n; }) : [];
+    var entities = Array.isArray(index) ? index.filter(function (entity) { return entity && entity.s && entity.n && entity.status !== 'quarantined'; }) : [];
     var knownSlugs = {};
     entities.forEach(function (entity) { knownSlugs[entity.s] = true; });
     return {
@@ -85,6 +94,9 @@
         results.sort(function (left, right) {
           return left.score - right.score || (left.entity._finished === right.entity._finished ? left.entity.n.localeCompare(right.entity.n) : (left.entity._finished ? -1 : 1));
         });
+        if (query && results.some(function (result) { return result.score <= 3.5; })) {
+          results = results.filter(function (result) { return result.score < 6; });
+        }
         return typeof options.limit === 'number' ? results.slice(0, options.limit) : results;
       },
       entityUrl: function (slug) {
@@ -93,9 +105,13 @@
       resolveResultUrl: function (results, selectedIndex) {
         var result = results[selectedIndex >= 0 ? selectedIndex : 0];
         return result ? this.entityUrl(result.entity.s) : null;
+      },
+      random: function (options) {
+        var results = this.search('', options || {});
+        return results.length ? results[Math.floor(Math.random() * results.length)].entity : null;
       }
     };
   }
 
-  return { createArchiveEngine: createArchiveEngine, normalize: normalize, escape: function (value) { return String(value == null ? '' : value).replace(/[&<>"']/g, function (character) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]; }); } };
+  return { createArchiveEngine: createArchiveEngine, normalize: normalize, escape: function (value) { return decodeDisplayEntities(value).replace(/[&<>"']/g, function (character) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]; }); } };
 }));

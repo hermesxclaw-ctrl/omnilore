@@ -1,0 +1,1833 @@
+{
+  "generatedFrom": "assets/search-index.json",
+  "policy": "Never merge records by name alone. Canonicalize only after source-backed identity review.",
+  "protectedCanonicalRecords": {
+    "lilith": {
+      "slug": "lilith",
+      "rule": "The illustrated Lilith dossier is the sole exact-name searchable record."
+    }
+  },
+  "duplicateGroupCount": 151,
+  "groups": [
+    {
+      "normalizedName": "aatxe",
+      "displayNames": [
+        "Aatxe"
+      ],
+      "slugs": [
+        "aatxe",
+        "wikidata-q303769"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "abraxas",
+      "displayNames": [
+        "Abraxas"
+      ],
+      "slugs": [
+        "abraxas-abrasax",
+        "wikidata-q125511421"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "acala",
+      "displayNames": [
+        "Acala"
+      ],
+      "slugs": [
+        "acala-fudo-myoo",
+        "wikidata-q337624"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "aeginetes",
+      "displayNames": [
+        "Aeginetes"
+      ],
+      "slugs": [
+        "wikidata-q106922918",
+        "wikidata-q5820385"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "aim",
+      "displayNames": [
+        "Aim"
+      ],
+      "slugs": [
+        "aim-haborym",
+        "wikidata-q2607548"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "aletheia",
+      "displayNames": [
+        "Aletheia"
+      ],
+      "slugs": [
+        "aletheia-truth",
+        "wikidata-q1317994"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "almas",
+      "displayNames": [
+        "Almas"
+      ],
+      "slugs": [
+        "albinos-almas",
+        "almas"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "amanami no mikoto",
+      "displayNames": [
+        "Amanami no Mikoto"
+      ],
+      "slugs": [
+        "amanami-no-mikoto",
+        "wikidata-q106107009"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "anu",
+      "displayNames": [
+        "Anu"
+      ],
+      "slugs": [
+        "anu",
+        "wikidata-q188536"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ao",
+      "displayNames": [
+        "Ao"
+      ],
+      "slugs": [
+        "wikidata-q1061623",
+        "wikidata-q108830462"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "asdzą́ą́ nádleehé",
+      "displayNames": [
+        "Asdzą́ą́ Nádleehé"
+      ],
+      "slugs": [
+        "changing-woman",
+        "wikidata-q765788"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "aspidochelone",
+      "displayNames": [
+        "aspidochelone"
+      ],
+      "slugs": [
+        "aspidochelone",
+        "wikidata-q2293613"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "atar",
+      "displayNames": [
+        "Atar"
+      ],
+      "slugs": [
+        "atar",
+        "atar-fire-the-son-of-ahura-mazda"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "atum",
+      "displayNames": [
+        "Atum"
+      ],
+      "slugs": [
+        "atum",
+        "wikidata-q170569"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "avalokiteshvara",
+      "displayNames": [
+        "Avalokiteshvara"
+      ],
+      "slugs": [
+        "avalokiteshvara",
+        "avalokiteshvara-chenrezig"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "avalokiteśvara",
+      "displayNames": [
+        "Avalokiteśvara"
+      ],
+      "slugs": [
+        "avalokitesvara-guanyin-chenrezig",
+        "wikidata-q193849"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "azazel",
+      "displayNames": [
+        "Azazel"
+      ],
+      "slugs": [
+        "azazel",
+        "azazel-tekken-god-of-fighting"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "bacax",
+      "displayNames": [
+        "Bacax"
+      ],
+      "slugs": [
+        "bacax",
+        "wikidata-q4838603"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "bachué",
+      "displayNames": [
+        "Bachué"
+      ],
+      "slugs": [
+        "bachue-bachue",
+        "wikidata-q4838932"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "baki hanma",
+      "displayNames": [
+        "Baki Hanma"
+      ],
+      "slugs": [
+        "wikidata-q1093551",
+        "wikidata-q11603456"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "benimaru nikaido",
+      "displayNames": [
+        "Benimaru Nikaido"
+      ],
+      "slugs": [
+        "wikidata-q104833623",
+        "wikidata-q3234602"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "boa hancock",
+      "displayNames": [
+        "Boa Hancock"
+      ],
+      "slugs": [
+        "wikidata-q107983400",
+        "wikidata-q2359852"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "bochica",
+      "displayNames": [
+        "Bochica"
+      ],
+      "slugs": [
+        "bochica-nemqueteba-xue",
+        "wikidata-q3772830"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "centeōtl",
+      "displayNames": [
+        "Centeōtl"
+      ],
+      "slugs": [
+        "centeotl-cinteotl",
+        "wikidata-q1092591"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "chaac",
+      "displayNames": [
+        "Chaac"
+      ],
+      "slugs": [
+        "chaac-chac",
+        "wikidata-q1058253"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "charun",
+      "displayNames": [
+        "Charun"
+      ],
+      "slugs": [
+        "charun-charu",
+        "wikidata-q1067918"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "chicomecoatl",
+      "displayNames": [
+        "Chicomecoatl"
+      ],
+      "slugs": [
+        "chicomecoatl-seven-serpent-the-maize-goddess",
+        "wikidata-q872943"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "chiminigagua",
+      "displayNames": [
+        "Chiminigagua"
+      ],
+      "slugs": [
+        "chiminigagua-chimizagua",
+        "wikidata-q10449938"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "cizin",
+      "displayNames": [
+        "Cizin"
+      ],
+      "slugs": [
+        "ah-puch-cizin-kisin",
+        "wikidata-q104861248"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "cocoa hoto",
+      "displayNames": [
+        "Cocoa Hoto"
+      ],
+      "slugs": [
+        "wikidata-q110287188",
+        "wikidata-q72988359"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "count dracula",
+      "displayNames": [
+        "Count Dracula"
+      ],
+      "slugs": [
+        "count-dracula",
+        "dracula"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "damasichthon",
+      "displayNames": [
+        "Damasichthon"
+      ],
+      "slugs": [
+        "wikidata-q107096815",
+        "wikidata-q634361"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "daramulum",
+      "displayNames": [
+        "Daramulum"
+      ],
+      "slugs": [
+        "daramulum",
+        "daramulum-daramulan"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "earl of lemongrab",
+      "displayNames": [
+        "Earl of Lemongrab"
+      ],
+      "slugs": [
+        "wikidata-q106510519",
+        "wikidata-q106510560"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ek chuaj",
+      "displayNames": [
+        "Ek Chuaj"
+      ],
+      "slugs": [
+        "ek-chuaj-ek-chuah",
+        "wikidata-q17010064"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "empusa",
+      "displayNames": [
+        "empusa",
+        "Empusa"
+      ],
+      "slugs": [
+        "empusa",
+        "wikidata-q903786"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "eric",
+      "displayNames": [
+        "Eric"
+      ],
+      "slugs": [
+        "wikidata-q101107979",
+        "wikidata-q20019271"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "fáfnir",
+      "displayNames": [
+        "Fáfnir"
+      ],
+      "slugs": [
+        "fafnir",
+        "wikidata-q745315"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "freddy fazbear",
+      "displayNames": [
+        "Freddy Fazbear"
+      ],
+      "slugs": [
+        "freddy-fazbear-five-nights-at-freddys",
+        "wikidata-q110748756"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "freyja",
+      "displayNames": [
+        "Freyja"
+      ],
+      "slugs": [
+        "freya",
+        "wikidata-q102179398"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "geese howard",
+      "displayNames": [
+        "Geese Howard"
+      ],
+      "slugs": [
+        "geese-howard-reppuken-master",
+        "wikidata-q1044039"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "gill",
+      "displayNames": [
+        "Gill"
+      ],
+      "slugs": [
+        "gill-emperor-of-the-illuminati",
+        "wikidata-q4385636"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "gungnir",
+      "displayNames": [
+        "Gungnir"
+      ],
+      "slugs": [
+        "gungnir",
+        "wikidata-q827918"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "haoma",
+      "displayNames": [
+        "Haoma"
+      ],
+      "slugs": [
+        "haoma-the-sacred-plant-divine-healer",
+        "wikidata-q1340569"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "hel",
+      "displayNames": [
+        "Hel"
+      ],
+      "slugs": [
+        "hel",
+        "hel-norse"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "hippo",
+      "displayNames": [
+        "Hippo"
+      ],
+      "slugs": [
+        "wikidata-q106879762",
+        "wikidata-q118143603"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "höðr",
+      "displayNames": [
+        "Höðr"
+      ],
+      "slugs": [
+        "ho-r-hod",
+        "wikidata-q204900"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "holy grail",
+      "displayNames": [
+        "Holy Grail"
+      ],
+      "slugs": [
+        "holy-grail",
+        "wikidata-q162808"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "holy spirit",
+      "displayNames": [
+        "Holy Spirit"
+      ],
+      "slugs": [
+        "holy-spirit",
+        "wikidata-q58646537"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "horus",
+      "displayNames": [
+        "horus",
+        "Horus"
+      ],
+      "slugs": [
+        "horus",
+        "wikidata-q107240951"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "huginn and muninn",
+      "displayNames": [
+        "Huginn and Muninn"
+      ],
+      "slugs": [
+        "huginn-and-muninn",
+        "huginn-muninn"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "huitzilopochtli",
+      "displayNames": [
+        "Huitzilopochtli"
+      ],
+      "slugs": [
+        "huitzilopochtli-the-left-handed-hummingbird-southern-hummingbird",
+        "wikidata-q10392131"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "iara",
+      "displayNames": [
+        "Iara"
+      ],
+      "slugs": [
+        "iara-yara",
+        "wikidata-q1518398"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ilargi",
+      "displayNames": [
+        "Ilargi"
+      ],
+      "slugs": [
+        "ilargi-ile-kete",
+        "wikidata-q3148627"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "inari ōkami",
+      "displayNames": [
+        "Inari Ōkami"
+      ],
+      "slugs": [
+        "inari-inari-okami",
+        "inari-okami"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "isis",
+      "displayNames": [
+        "isis",
+        "Isis"
+      ],
+      "slugs": [
+        "isis",
+        "wikidata-q79876"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "jasy jatere",
+      "displayNames": [
+        "Jasy Jatere"
+      ],
+      "slugs": [
+        "jasy",
+        "wikidata-q3318479"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "jesus the splendor",
+      "displayNames": [
+        "Jesus the Splendor"
+      ],
+      "slugs": [
+        "jesus-the-splendor-jesus-of-light-jesus-patibilis",
+        "wikidata-q5699846"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "jiangshi",
+      "displayNames": [
+        "Jiangshi"
+      ],
+      "slugs": [
+        "jiangshi",
+        "jiangshi-hopping-vampire"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "jörmungandr",
+      "displayNames": [
+        "Jörmungandr"
+      ],
+      "slugs": [
+        "jormungandr",
+        "jormungandr-2"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "juracán",
+      "displayNames": [
+        "Juracán"
+      ],
+      "slugs": [
+        "juracan-the-storm-spirit-the-great-wind",
+        "wikidata-q4878"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "kamuy-huci",
+      "displayNames": [
+        "Kamuy-huci"
+      ],
+      "slugs": [
+        "kamuy-huci",
+        "kamuy-huci-kamuy-fuchi"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "kikyō",
+      "displayNames": [
+        "Kikyō"
+      ],
+      "slugs": [
+        "wikidata-q108576024",
+        "wikidata-q3196564"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "krasue",
+      "displayNames": [
+        "Krasue"
+      ],
+      "slugs": [
+        "krasue",
+        "phi-krasue"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "krishna",
+      "displayNames": [
+        "krishna",
+        "Krishna"
+      ],
+      "slugs": [
+        "krishna",
+        "wikidata-q42891"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "kṣitigarbha",
+      "displayNames": [
+        "Kṣitigarbha"
+      ],
+      "slugs": [
+        "ksitigarbha-dizang-jizo",
+        "wikidata-q604687"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "kū",
+      "displayNames": [
+        "Kū"
+      ],
+      "slugs": [
+        "ku",
+        "ku-kuka-ilimoku",
+        "wikidata-q2560490"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "kukulkan",
+      "displayNames": [
+        "Kukulkan"
+      ],
+      "slugs": [
+        "kukulkan-gukumatz",
+        "wikidata-q768072"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "loch ness monster",
+      "displayNames": [
+        "Loch Ness Monster"
+      ],
+      "slugs": [
+        "loch-ness-monster",
+        "nessie-loch-ness-monster"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "lucifer morningstar",
+      "displayNames": [
+        "Lucifer Morningstar"
+      ],
+      "slugs": [
+        "lucifer-morningstar-dc-vertigo",
+        "wikidata-q124661406"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "luna",
+      "displayNames": [
+        "Luna"
+      ],
+      "slugs": [
+        "luna",
+        "luna-the-moon-the-crescent-goddess"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "m. bison",
+      "displayNames": [
+        "M. Bison"
+      ],
+      "slugs": [
+        "m-bison-dictator-psycho-power",
+        "wikidata-q31378"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "maat",
+      "displayNames": [
+        "Maat"
+      ],
+      "slugs": [
+        "maat",
+        "wikidata-q170471"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "maitreya",
+      "displayNames": [
+        "Maitreya"
+      ],
+      "slugs": [
+        "maitreya",
+        "maitreya-miroku-milefo"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mama cocha",
+      "displayNames": [
+        "Mama Cocha"
+      ],
+      "slugs": [
+        "mama-cocha",
+        "mama-cocha-mother-sea-the-ocean-goddess"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mama quilla",
+      "displayNames": [
+        "Mama Quilla"
+      ],
+      "slugs": [
+        "mama-quilla",
+        "mama-quilla-mother-moon-the-silver-lady"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "manawydan fab llŷr",
+      "displayNames": [
+        "Manawydan fab Llŷr"
+      ],
+      "slugs": [
+        "manawydan",
+        "wikidata-q1615649"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "manjushri",
+      "displayNames": [
+        "Manjushri"
+      ],
+      "slugs": [
+        "manjushri",
+        "manjushri-jampalyang"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mañjuśrī",
+      "displayNames": [
+        "Mañjuśrī"
+      ],
+      "slugs": [
+        "manjusri-manjushri",
+        "wikidata-q471696"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "māui",
+      "displayNames": [
+        "Māui"
+      ],
+      "slugs": [
+        "maui",
+        "maui-2"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "menrva",
+      "displayNames": [
+        "Menrva"
+      ],
+      "slugs": [
+        "menrva-menerva",
+        "wikidata-q2003921"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mímir",
+      "displayNames": [
+        "Mímir"
+      ],
+      "slugs": [
+        "mimir",
+        "wikidata-q336496"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mjölnir",
+      "displayNames": [
+        "Mjölnir"
+      ],
+      "slugs": [
+        "mjolnir",
+        "mjolnir-spirit-of"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "mommy long legs",
+      "displayNames": [
+        "Mommy Long Legs"
+      ],
+      "slugs": [
+        "mommy-long-legs-poppy-playtime",
+        "wikidata-q114067582"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "neminātha",
+      "displayNames": [
+        "Neminātha"
+      ],
+      "slugs": [
+        "neminatha-arishtanemi",
+        "wikidata-q1746328"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ngenechen",
+      "displayNames": [
+        "Ngenechen"
+      ],
+      "slugs": [
+        "ngenechen",
+        "ngenechen-nguenechen"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "nightmarchers",
+      "displayNames": [
+        "Nightmarchers"
+      ],
+      "slugs": [
+        "nightmarchers",
+        "wikidata-q17054272"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "nixe",
+      "displayNames": [
+        "Nixe"
+      ],
+      "slugs": [
+        "nixe",
+        "nixe-p1"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "nuada airgetlám",
+      "displayNames": [
+        "Nuada Airgetlám"
+      ],
+      "slugs": [
+        "nuada",
+        "wikidata-q1075322"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "nurse",
+      "displayNames": [
+        "Nurse"
+      ],
+      "slugs": [
+        "nurse-silent-hill",
+        "wikidata-q107338056"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ogun",
+      "displayNames": [
+        "Ogun"
+      ],
+      "slugs": [
+        "ogun",
+        "wikidata-q10340395"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "ōkuninushi",
+      "displayNames": [
+        "Ōkuninushi"
+      ],
+      "slugs": [
+        "okuninushi",
+        "wikidata-q276944"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "one piece characters",
+      "displayNames": [
+        "One Piece characters"
+      ],
+      "slugs": [
+        "wikidata-q107980478",
+        "wikidata-q107980496"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "oreius",
+      "displayNames": [
+        "Oreius"
+      ],
+      "slugs": [
+        "wikidata-q106519417",
+        "wikidata-q2029543"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "oro",
+      "displayNames": [
+        "Oro"
+      ],
+      "slugs": [
+        "wikidata-q2031332",
+        "wikidata-q5408919"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "pandora",
+      "displayNames": [
+        "Pandora"
+      ],
+      "slugs": [
+        "pandora",
+        "wikidata-q1083283"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "pelias",
+      "displayNames": [
+        "Pelias"
+      ],
+      "slugs": [
+        "wikidata-q106922722",
+        "wikidata-q182439"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "perdix",
+      "displayNames": [
+        "Perdix"
+      ],
+      "slugs": [
+        "wikidata-q102197464",
+        "wikidata-q608951"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "perkūnas",
+      "displayNames": [
+        "Perkūnas"
+      ],
+      "slugs": [
+        "perkuns",
+        "wikidata-q616848"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "pillan",
+      "displayNames": [
+        "Pillan"
+      ],
+      "slugs": [
+        "pillan",
+        "pillan-pillan"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "poltergeist",
+      "displayNames": [
+        "Poltergeist"
+      ],
+      "slugs": [
+        "poltergeist",
+        "poltergeist-p1"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "pombero",
+      "displayNames": [
+        "Pombero"
+      ],
+      "slugs": [
+        "el-pombero",
+        "pombero"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "rainbow serpent",
+      "displayNames": [
+        "Rainbow Serpent"
+      ],
+      "slugs": [
+        "rainbow-serpent",
+        "rainbow-serpent-aboriginal"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "rán",
+      "displayNames": [
+        "Rán"
+      ],
+      "slugs": [
+        "wikidata-q108592076",
+        "wikidata-q663348"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "rongo",
+      "displayNames": [
+        "Rongo"
+      ],
+      "slugs": [
+        "rongo",
+        "rongo-rongo-ma-tane"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "samantabhadra",
+      "displayNames": [
+        "Samantabhadra"
+      ],
+      "slugs": [
+        "samantabhadra-fugen-bosatsu",
+        "wikidata-q868306"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "śāntinātha",
+      "displayNames": [
+        "Śāntinātha"
+      ],
+      "slugs": [
+        "santinatha-shantinatha",
+        "wikidata-q2790079"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "saraswati",
+      "displayNames": [
+        "Saraswati"
+      ],
+      "slugs": [
+        "saraswati",
+        "saraswati-benzaiten-soten"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "sarutahiko ōkami",
+      "displayNames": [
+        "Sarutahiko Ōkami"
+      ],
+      "slugs": [
+        "sarutahiko",
+        "wikidata-q3090037"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "satan",
+      "displayNames": [
+        "Satan"
+      ],
+      "slugs": [
+        "satan",
+        "wikidata-q35230"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "scp-2521",
+      "displayNames": [
+        "SCP-2521"
+      ],
+      "slugs": [
+        "scp-2521",
+        "scp-2521-2"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "scp-610",
+      "displayNames": [
+        "SCP-610"
+      ],
+      "slugs": [
+        "scp-610",
+        "scp-610-the-flesh-that-hates"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "scp-999",
+      "displayNames": [
+        "SCP-999"
+      ],
+      "slugs": [
+        "scp-999",
+        "scp-999-the-tickle-monster"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "silas",
+      "displayNames": [
+        "Silas"
+      ],
+      "slugs": [
+        "wikidata-q100255081",
+        "wikidata-q384436"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "sol invictus",
+      "displayNames": [
+        "Sol Invictus"
+      ],
+      "slugs": [
+        "sol-invictus-the-unconquered-sun",
+        "wikidata-q214494"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "sophia",
+      "displayNames": [
+        "Sophia"
+      ],
+      "slugs": [
+        "sophia-wisdom",
+        "wikidata-q16932135"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "sthenelus",
+      "displayNames": [
+        "Sthenelus"
+      ],
+      "slugs": [
+        "wikidata-q1060267",
+        "wikidata-q1062299"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "storsjöodjuret",
+      "displayNames": [
+        "Storsjöodjuret"
+      ],
+      "slugs": [
+        "storsjoodjuret",
+        "wikidata-q1076283"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "sugaar",
+      "displayNames": [
+        "Sugaar"
+      ],
+      "slugs": [
+        "sugaar",
+        "sugaar-maju"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "supay",
+      "displayNames": [
+        "Supay"
+      ],
+      "slugs": [
+        "supay",
+        "supay-apu-supay"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "susanoo",
+      "displayNames": [
+        "susanoo",
+        "Susanoo"
+      ],
+      "slugs": [
+        "susanoo",
+        "wikidata-q272993"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "tāne",
+      "displayNames": [
+        "Tāne"
+      ],
+      "slugs": [
+        "tane",
+        "tane-tane-mahuta"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the dagda",
+      "displayNames": [
+        "The Dagda"
+      ],
+      "slugs": [
+        "dagda",
+        "wikidata-q436436"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the fool",
+      "displayNames": [
+        "The Fool"
+      ],
+      "slugs": [
+        "king-lears-fool",
+        "wikidata-q102285470"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the morrígan",
+      "displayNames": [
+        "The Morrígan"
+      ],
+      "slugs": [
+        "morrigan",
+        "morrigan-2",
+        "wikidata-q828550"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the one ring",
+      "displayNames": [
+        "The One Ring"
+      ],
+      "slugs": [
+        "one-ring",
+        "the-one-ring"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the rake",
+      "displayNames": [
+        "The Rake"
+      ],
+      "slugs": [
+        "the-rake",
+        "the-rake-original-testimonies"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "the shadow",
+      "displayNames": [
+        "The Shadow"
+      ],
+      "slugs": [
+        "the-shadow-amnesia-the-dark-descent",
+        "wikidata-q47101321"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "tinia",
+      "displayNames": [
+        "Tinia"
+      ],
+      "slugs": [
+        "tinia-tin",
+        "wikidata-q926518"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "tisiphone",
+      "displayNames": [
+        "Tisiphone"
+      ],
+      "slugs": [
+        "wikidata-q108427966",
+        "wikidata-q2436714"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "tonatiuh",
+      "displayNames": [
+        "Tonatiuh"
+      ],
+      "slugs": [
+        "tonatiuh",
+        "tonatiuh-the-sun-the-fifth-sun"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "tupã",
+      "displayNames": [
+        "Tupã"
+      ],
+      "slugs": [
+        "tupa",
+        "tupa-2"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "twelve heavenly generals",
+      "displayNames": [
+        "Twelve Heavenly Generals"
+      ],
+      "slugs": [
+        "wikidata-q10904413",
+        "wikidata-q842329"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "týr",
+      "displayNames": [
+        "Týr"
+      ],
+      "slugs": [
+        "tyr-tyr",
+        "wikidata-q172713"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "umibōzu",
+      "displayNames": [
+        "Umibōzu"
+      ],
+      "slugs": [
+        "umibozu",
+        "wikidata-q1193330"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "uni",
+      "displayNames": [
+        "Uni"
+      ],
+      "slugs": [
+        "uni-cupra",
+        "wikidata-q650410"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "victor",
+      "displayNames": [
+        "Victor"
+      ],
+      "slugs": [
+        "wikidata-q100255101",
+        "wikidata-q27709362"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "viracocha",
+      "displayNames": [
+        "Viracocha"
+      ],
+      "slugs": [
+        "viracocha",
+        "viracocha-wiracocha"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "virgin mary",
+      "displayNames": [
+        "Virgin Mary"
+      ],
+      "slugs": [
+        "virgin-mary",
+        "wikidata-q108937578"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "vivian",
+      "displayNames": [
+        "Vivian"
+      ],
+      "slugs": [
+        "wikidata-q104532864",
+        "wikidata-q47170010"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "xipe totec",
+      "displayNames": [
+        "Xipe Totec"
+      ],
+      "slugs": [
+        "xipe-totec",
+        "xipe-totec-the-flayed-one-our-lord-the-flayed"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "xochiquetzal",
+      "displayNames": [
+        "Xochiquetzal"
+      ],
+      "slugs": [
+        "xochiquetzal",
+        "xochiquetzal-the-toltec-flower-goddess"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "xolotl",
+      "displayNames": [
+        "Xolotl"
+      ],
+      "slugs": [
+        "xolotl",
+        "xolotl-the-twin-the-monster-the-evening-star"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "yamata no orochi",
+      "displayNames": [
+        "Yamata no Orochi"
+      ],
+      "slugs": [
+        "wikidata-q10341589",
+        "yamata-no-orochi"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "yggdrasil",
+      "displayNames": [
+        "Yggdrasil",
+        "yggdrasil"
+      ],
+      "slugs": [
+        "wikidata-q131135",
+        "yggdrasil"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "yúcahu",
+      "displayNames": [
+        "Yúcahu"
+      ],
+      "slugs": [
+        "wikidata-q9097353",
+        "yucahu-the-spirit-of-cassava-the-lord-of-agriculture"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "yum kaax",
+      "displayNames": [
+        "Yum Kaax"
+      ],
+      "slugs": [
+        "wikidata-q143188",
+        "yum-kaax-yum-kaax"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "zeo zagart",
+      "displayNames": [
+        "Zeo Zagart"
+      ],
+      "slugs": [
+        "wikidata-q110379245",
+        "wikidata-q4024194"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "zeus",
+      "displayNames": [
+        "Zeus"
+      ],
+      "slugs": [
+        "zeus",
+        "zeus.TRUE-ALL"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "živa",
+      "displayNames": [
+        "Živa"
+      ],
+      "slugs": [
+        "wikidata-q10793618",
+        "wikidata-q650625"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    },
+    {
+      "normalizedName": "zoe",
+      "displayNames": [
+        "Zoe"
+      ],
+      "slugs": [
+        "wikidata-q119440698",
+        "zoe-life"
+      ],
+      "decision": "unresolved",
+      "note": "Same visible name detected. Research identity, tradition, and source provenance before merging or suppressing either route."
+    }
+  ]
+}

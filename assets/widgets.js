@@ -13,12 +13,48 @@
   }
 
   function initTabs() {
-    document.querySelectorAll('.tab-btn').forEach(function (button) {
-      button.addEventListener('click', function () {
-        var target = button.getAttribute('data-tab');
-        document.querySelectorAll('.tab-btn').forEach(function (item) { item.classList.toggle('active', item === button); });
-        document.querySelectorAll('.tab-panel').forEach(function (panel) { panel.classList.toggle('active', panel.id === 'tab-' + target); });
+    document.querySelectorAll('.tabbar').forEach(function (tablist, groupIndex) {
+      var tabs = Array.from(tablist.querySelectorAll('.tab-btn'));
+      if (!tabs.length) return;
+      tablist.setAttribute('role', 'tablist');
+      function selectTab(selected, moveFocus) {
+        tabs.forEach(function (tab, tabIndex) {
+          var target = document.getElementById(tab.getAttribute('aria-controls'));
+          var active = tab === selected;
+          tab.classList.toggle('active', active);
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          if (target) {
+            target.classList.toggle('active', active);
+            target.hidden = !active;
+          }
+        });
+        if (moveFocus) selected.focus();
+      }
+      tabs.forEach(function (button, tabIndex) {
+        var targetId = 'tab-' + button.getAttribute('data-tab');
+        var panel = document.getElementById(targetId);
+        var buttonId = button.id || 'archive-tab-' + groupIndex + '-' + tabIndex;
+        button.id = buttonId;
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-controls', targetId);
+        if (panel) {
+          panel.setAttribute('role', 'tabpanel');
+          panel.setAttribute('aria-labelledby', buttonId);
+        }
+        button.addEventListener('click', function () { selectTab(button, false); });
+        button.addEventListener('keydown', function (event) {
+          if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].indexOf(event.key) < 0) return;
+          event.preventDefault();
+          var next = tabIndex;
+          if (event.key === 'ArrowLeft') next = (tabIndex - 1 + tabs.length) % tabs.length;
+          if (event.key === 'ArrowRight') next = (tabIndex + 1) % tabs.length;
+          if (event.key === 'Home') next = 0;
+          if (event.key === 'End') next = tabs.length - 1;
+          selectTab(tabs[next], true);
+        });
       });
+      selectTab(tabs.find(function (tab) { return tab.classList.contains('active'); }) || tabs[0], false);
     });
   }
 

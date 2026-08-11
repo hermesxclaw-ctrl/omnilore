@@ -2,7 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const path = require('node:path');
 
-const { createArchiveEngine } = require('../assets/archive-engine.js');
+const { createArchiveEngine, escape } = require('../assets/archive-engine.js');
 
 const index = [
   { s: 'lilith', n: 'Lilith', a: ['Queen of the Night'], c: 'Jewish folklore', e: 'Night spirit', k: 'divine', _finished: true },
@@ -15,6 +15,13 @@ test('ranks exact names, aliases, and close spellings deterministically', () => 
   assert.equal(engine.search('Lilith', { limit: 3 })[0].entity.s, 'lilith');
   assert.equal(engine.search('Queen of the Night', { limit: 3 })[0].entity.s, 'lilith');
   assert.equal(engine.search('Liltih', { limit: 3 })[0].entity.s, 'lilith');
+});
+
+test('an exact query suppresses low-confidence fuzzy noise', () => {
+  const noisyIndex = index.concat({ s: 'lilica', n: 'Lilica', a: [], c: 'Fiction', e: '', k: 'liminal', _finished: false });
+  const results = createArchiveEngine(noisyIndex, '/browse.html').search('Lilith');
+  assert.equal(results[0].entity.s, 'lilith');
+  assert.equal(results.some((result) => result.entity.s === 'lilica'), false);
 });
 
 test('filters by real wing and culture fields', () => {
@@ -39,4 +46,19 @@ test('resolves keyboard navigation to selection before top result', () => {
 test('rejects unknown entity slugs instead of creating a dead route', () => {
   const engine = createArchiveEngine(index, '/index.html');
   assert.equal(engine.entityUrl('missing-entity'), null);
+});
+
+test('escapes pre-encoded display names exactly once', () => {
+  assert.equal(escape('Abaris&#39;s arrow'), 'Abaris&#39;s arrow');
+  assert.equal(escape('Akira &quot;BlackRose&quot; Hayami'), 'Akira &quot;BlackRose&quot; Hayami');
+  assert.equal(escape('<Night & Day>'), '&lt;Night &amp; Day&gt;');
+});
+
+test('random navigation returns only a valid indexed entity', () => {
+  const engine = createArchiveEngine(index, '/index.html');
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    const entity = engine.random();
+    assert.ok(index.some((candidate) => candidate.s === entity.s));
+    assert.notEqual(engine.entityUrl(entity.s), null);
+  }
 });

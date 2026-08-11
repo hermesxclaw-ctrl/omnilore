@@ -21,11 +21,23 @@ function resolveTarget(site, source, raw) {
   return target.startsWith('/') ? path.resolve(site, '.' + target) : path.resolve(path.dirname(source), target);
 }
 
+function stripDeploymentBase(urlPath, deploymentBase) {
+  let pathname = String(urlPath || '').split('#')[0].split('?')[0].replace(/\\/g, '/');
+  let base = String(deploymentBase || '/').replace(/\\/g, '/');
+  if (!base.startsWith('/')) base = '/' + base;
+  if (!base.endsWith('/')) base += '/';
+  if (base !== '/' && pathname.toLowerCase().startsWith(base.toLowerCase())) pathname = pathname.slice(base.length);
+  else pathname = pathname.replace(/^\/+/, '');
+  return pathname && !pathname.endsWith('/') ? pathname : (pathname + 'index.html');
+}
+
 function inlineScripts(source) {
   return [...source.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)].map((match) => match[1].trim()).filter(Boolean);
 }
 
-function scanSite(site) {
+function scanSite(site, options) {
+  options = options || {};
+  const deploymentBase = options.deploymentBase || '/omnilore/';
   const htmlFiles = walk(site).filter((file) => file.endsWith('.html'));
   const missing = [], malformedScripts = [];
   for (const file of htmlFiles) {
@@ -43,7 +55,8 @@ function scanSite(site) {
   if (fs.existsSync(sitemap)) {
     const xml = fs.readFileSync(sitemap, 'utf8');
     for (const match of xml.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/gi)) {
-      const resolved = resolveTarget(site, sitemap, match[1]);
+      const sitemapTarget = stripDeploymentBase(match[1], deploymentBase);
+      const resolved = path.resolve(site, sitemapTarget);
       if (resolved && !fs.existsSync(resolved)) missing.push({ file: 'sitemap.xml', target: match[1] });
     }
   }
@@ -57,4 +70,4 @@ if (require.main === module) {
   if (report.missing.length || report.malformedScripts.length || report.duplicateLilithRoutes.length) process.exitCode = 1;
 }
 
-module.exports = { scanSite };
+module.exports = { scanSite, stripDeploymentBase };

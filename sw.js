@@ -6,7 +6,7 @@
    Version the cache names to roll updates. */
 'use strict';
 
-var VERSION = 'omnilore-v2.0.0';
+var VERSION = 'omnilore-v3.0.0';
 var SHELL_CACHE = VERSION + '-shell';
 var IMG_CACHE = VERSION + '-images';
 var IMG_LIMIT = 120;
@@ -16,7 +16,15 @@ var SHELL = [
   './index.html',
   './manifest.webmanifest',
   './assets/logo.svg',
-  './assets/omnilore-core.js',
+  './assets/base.css',
+  './assets/archive-engine.js',
+  './assets/nav-search.js',
+  './assets/collection-controller.js',
+  './assets/browse-controller.js',
+  './assets/wing-taxonomy.js',
+  './assets/wings-controller.js',
+  './assets/widgets.js',
+  './assets/entity-card.js',
   './assets/pathways.js'
 ];
 
@@ -42,6 +50,18 @@ function trimImageCache(cache) {
   return cache.keys().then(function (keys) {
     if (keys.length <= IMG_LIMIT) return;
     return cache.delete(keys[0]).then(function () { return trimImageCache(cache); });
+  });
+}
+
+function staleWhileRevalidate(req) {
+  return caches.open(SHELL_CACHE).then(function (cache) {
+    return cache.match(req).then(function (hit) {
+      var network = fetch(req).then(function (res) {
+        if (res && res.ok) cache.put(req, res.clone());
+        return res;
+      }).catch(function () { return hit; });
+      return hit || network;
+    });
   });
 }
 
@@ -82,18 +102,8 @@ self.addEventListener('fetch', function (event) {
     return;
   }
 
-  // Same-origin static assets: cache-first
+  // Same-origin static assets: serve cached content immediately and refresh it.
   if (url.origin === location.origin) {
-    event.respondWith(
-      caches.match(req).then(function (hit) {
-        return hit || fetch(req).then(function (res) {
-          if (res && res.ok && /assets|manifest|\.js$|\.css$/.test(url.pathname)) {
-            var copy = res.clone();
-            caches.open(SHELL_CACHE).then(function (c) { c.put(req, copy); });
-          }
-          return res;
-        });
-      })
-    );
+    event.respondWith(staleWhileRevalidate(req));
   }
 });

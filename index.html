@@ -2,7 +2,7 @@
 <html lang="en">
 <head><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Omnilore — The Archive of All Things Unreal</title>
-<meta name="description" content="A digital museum of 25,512 gods, demons, cryptids, yokai, and internet-born horrors — each with its own custom-built page. Enter the Archive.">
+<meta name="description" content="A digital museum of 25,591 gods, demons, cryptids, yokai, and internet-born horrors — each with its own custom-built page. Enter the Archive.">
 <meta property="og:title" content="Omnilore — The Archive of All Things Unreal">
 <meta property="og:description" content="Every forgotten god, every viral nightmare, every whispered folktale — catalogued, connected, and given an altar.">
 <meta name="theme-color" content="#141210">
@@ -202,7 +202,7 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
 <nav class="nav">
   <img src="assets/logo.svg" alt="Omnilore seal">
   <a href="index.html" class="logo"><strong>Omnilore</strong>THE ARCHIVE OF ALL THINGS UNREAL</a>
-  <div class="nav-search"><input type="search" id="q" placeholder="Search 25,512 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div>
+  <div class="nav-search"><input type="search" id="q" placeholder="Search 25,591 entities &amp; aliases…" autocomplete="off"><div id="dd"></div></div>
   <button class="menu-toggle" aria-label="Menu" id="menuToggle">☰</button>
   <div class="nav-links" id="navLinks"><a href="browse.html">Browse</a><a href="rabbit-hole.html">Rabbit Hole</a><a href="#" id="rand">Random</a><a href="wings.html">Wings</a></div>
 </nav>
@@ -210,7 +210,7 @@ footer .legal-links a{font-size:.48rem!important;letter-spacing:.8px;}
   <div id="heroBg"></div><div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
-    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span>25,512 Entities Catalogued</span><span>537 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
+    <div class="status-row"><span><span class="dot"></span>Archive Online</span><span>25,591 Entities Catalogued</span><span>537 Traditions</span><span>Observation Mode — Passive</span><span>Est. Before Time</span></div>
     <p class="hero-label">The Digital Museum of the Unreal</p>
     <h1>A cathedral for<br><em>everything</em> imagined</h1>
     <p class="hero-desc">Every forgotten god, every viral nightmare, every whispered folktale and cosmic horror — catalogued, connected, and given an altar. No two rooms alike.</p>
@@ -226,8 +226,8 @@ document.getElementById('menuToggle').onclick=function(){document.getElementById
 </script>
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 <div class="stat-strip">
-  <div class="stat"><b id="stat-total">25,596</b><span>Entities Enshrined</span></div>
-  <div class="stat"><b id="stat-completed">25,596</b><span>Completed Dossiers</span></div>
+  <div class="stat"><b id="stat-total">25,591</b><span>Entities Enshrined</span></div>
+  <div class="stat"><b id="stat-completed">25,591</b><span>Completed Dossiers</span></div>
   <div class="stat"><b id="stat-deep">—</b><span>Deep-Grade Dossiers</span></div>
   <div class="stat"><b id="stat-cultures">1,569</b><span>Cultures &amp; Traditions</span></div>
   <div class="stat"><b id="stat-wings">17</b><span>Wings of the Museum</span></div>
@@ -304,8 +304,6 @@ if(e.i){var entityImage=document.createElement('img');entityImage.src=e.i;entity
 else{document.getElementById('e-glyph').textContent=e.n.charAt(0);}
 document.getElementById('e-sum').textContent=(e.e||'The Archive has prepared this file for tonight.')+(e.d?' — '+e.d:'');
 document.getElementById('e-link').href='entity/'+e.s+'.html';
-function rand(){var x=IDX[Math.floor(Math.random()*IDX.length)];location.href='entity/'+x.s+'.html';return false;}
-document.getElementById('rand').onclick=rand;document.getElementById('rand2').onclick=rand;
 })();
 </script>
 <aside id="content-advisory" role="dialog" aria-modal="true" aria-labelledby="advisory-title" hidden><div class="advisory-panel"><p class="advisory-kicker">Adults only — 18+ required</p><h1 id="advisory-title">This archive is uncensored and 18+.</h1><p>By entering you confirm you are 18 or older and you consent to viewing uncensored material: artistic and historical nudity, fictional gore and body horror, occult and demonic imagery, death and violence, and language that may be dated or offensive.</p><ul><li>Everything is shown without blur or redaction. No sanitized mode.</li><li>Material is presented for research, context, and cultural reference — not endorsement.</li><li>If you are under 18, or you do not want to see this material, leave now.</li></ul><div class="advisory-actions"><button class="advisory-enter" type="button">I am 18+ — Enter uncensored</button><button class="advisory-leave" type="button">Leave</button></div><a class="advisory-legal" href="legal.html#content-advisory">Read the full 18+ advisory and terms →</a></div></aside><script>(function(){var key='omnilore-18plus-v1',gate=document.getElementById('content-advisory');if(!gate)return;try{if(localStorage.getItem(key)==='accepted')return;}catch(e){}gate.hidden=false;var enter=gate.querySelector('.advisory-enter'),leave=gate.querySelector('.advisory-leave');enter.onclick=function(){try{localStorage.setItem(key,'accepted')}catch(e){}gate.hidden=true};leave.onclick=function(){location.href='about:blank'};})();</script></body>

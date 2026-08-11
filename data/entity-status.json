@@ -1,0 +1,39 @@
+{
+  "reviewed": [],
+  "researched": [
+    "achilles",
+    "anubis",
+    "athena",
+    "banshee",
+    "baphomet",
+    "hades",
+    "lilith"
+  ],
+  "quarantined": [
+    "batch_h_dossiers",
+    "cryptid_dossiers",
+    "demon_batch_2",
+    "dragon_dossiers",
+    "egyptian_deities",
+    "fae_dossiers",
+    "folklore_dossiers",
+    "folklore_dossiers_raw",
+    "greek_deities_batch2",
+    "hepat_raw",
+    "hybrid_monster_dossiers",
+    "japanese_deities_batch",
+    "japanese_deity_dossiers",
+    "mesoamerican_deities",
+    "mesopotamian_batch2",
+    "norse_deities_batch2",
+    "or_models",
+    "underworld_dossiers",
+    "zeus.TRUE-ALL"
+  ],
+  "rules": {
+    "draft": "A non-quarantined record with a substantive existing synopsis that has not passed individual factual and editorial review.",
+    "stub": "A reserved, empty, or very short catalogue record awaiting research.",
+    "finishedFlag": "True only for reviewed records. No current record has completed the new review gate."
+  }
+}
+
