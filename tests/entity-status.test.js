@@ -6,6 +6,7 @@ const path = require('node:path');
 global.window = global;
 require('../assets/entity-card.js');
 const { createArchiveEngine } = require('../assets/archive-engine.js');
+const { classify, isBlankPage } = require('../scripts/apply-entity-status.js');
 
 const records = [
   { s: 'reviewed', n: 'Reviewed', a: [], c: 'Test', k: 'divine', status: 'reviewed', _finished: true },
@@ -32,6 +33,14 @@ test('draft and stub cards remain navigable and show honest status', () => {
 
 test('quarantined records do not render public cards', () => {
   assert.equal(global.OMNI_CARD.card(records[3], 'entity/'), '');
+});
+
+test('a long imported blank-page notice is classified as a stub', () => {
+  assert.equal(classify({ s: 'blank', e: 'This page is intentionally blank and ready for source-backed lore, versions, images, and connections.' }, new Set(), new Set(), new Set()), 'stub');
+});
+
+test('a generated blank page overrides a stale draft synopsis', () => {
+  assert.equal(isBlankPage('<p class="hook">This page is intentionally blank and ready for source-backed lore, versions, images, and connections.</p>'), true);
 });
 
 test('the real index uses honest statuses and quarantines import artifacts', () => {

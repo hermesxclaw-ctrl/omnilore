@@ -1,7 +1,7 @@
 {
   "generatedFrom": "assets/search-index.json",
   "policy": "Flags identify editorial review work; they do not authorize automatic factual rewriting.",
-  "recordsAudited": 5900,
+  "recordsAudited": 5860,
   "recordsFlagged": 1584,
   "flagCounts": {
     "imagine-hook": 396,
@@ -1694,12 +1694,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q108103604",
-      "name": "Aisa",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q102186480",
       "name": "Aisha Belka",
       "status": "draft",
@@ -1964,12 +1958,6 @@
       "flags": [
         "vast-hook"
       ]
-    },
-    {
-      "slug": "wikidata-q107994183",
-      "name": "Ako Udagawa",
-      "status": "draft",
-      "flags": []
     },
     {
       "slug": "wikidata-q109607333",
@@ -6527,12 +6515,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994175",
-      "name": "Aya Maruyama",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q105359085",
       "name": "Aya Miyakoōji",
       "status": "draft",
@@ -9336,24 +9318,12 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994177",
-      "name": "Chisato Shirasagi",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q106302949",
       "name": "Chise Osen",
       "status": "draft",
       "flags": [
         "stands-as-cliche"
       ]
-    },
-    {
-      "slug": "wikidata-q107994193",
-      "name": "Chiyu Tamade",
-      "status": "draft",
-      "flags": []
     },
     {
       "slug": "wikidata-q1038877",
@@ -9881,12 +9851,6 @@
     {
       "slug": "concrete-man",
       "name": "Concrete Man",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107999914",
-      "name": "Conis",
       "status": "draft",
       "flags": []
     },
@@ -11234,12 +11198,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q1081052",
-      "name": "Dors Venabili",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q106946413",
       "name": "Dorycleus",
       "status": "draft",
@@ -12524,12 +12482,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994179",
-      "name": "Eve Wakamiya",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "eveline-e-series",
       "name": "Eveline (E-Series)",
       "status": "draft",
@@ -12708,12 +12660,6 @@
     {
       "slug": "wikidata-q102400263",
       "name": "Felt",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108109180",
-      "name": "Female armed security guards",
       "status": "draft",
       "flags": []
     },
@@ -14766,12 +14712,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994187",
-      "name": "Hagumi Kitazawa",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "hahai",
       "name": "Hahai",
       "status": "draft",
@@ -15628,12 +15568,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994176",
-      "name": "Hina Hikawa",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q106896601",
       "name": "Hinako Shiizaki",
       "status": "draft",
@@ -16009,12 +15943,6 @@
     {
       "slug": "wikidata-q106571897",
       "name": "Hothead",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108103704",
-      "name": "Hotori",
       "status": "draft",
       "flags": []
     },
@@ -17258,12 +17186,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q108129376",
-      "name": "Jason Longfield",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "jassad",
       "name": "Jassad",
       "status": "draft",
@@ -17933,12 +17855,6 @@
       ]
     },
     {
-      "slug": "wikidata-q108105294",
-      "name": "Kalgara",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "kalibak",
       "name": "Kalibak",
       "status": "draft",
@@ -18106,12 +18022,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994189",
-      "name": "Kanon Matsubara",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q107526181",
       "name": "Kanon Shibuya",
       "status": "draft",
@@ -18138,12 +18048,6 @@
       "flags": [
         "stands-as-cliche"
       ]
-    },
-    {
-      "slug": "wikidata-q107994186",
-      "name": "Kaoru Seta",
-      "status": "draft",
-      "flags": []
     },
     {
       "slug": "wikidata-q107038349",
@@ -18991,12 +18895,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994185",
-      "name": "Kokoro Tsurumaki",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "kokuo",
       "name": "Kokuō",
       "status": "draft",
@@ -19107,12 +19005,6 @@
     {
       "slug": "wikidata-q106405528",
       "name": "Kotoha Isone",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108103705",
-      "name": "Kotori",
       "status": "draft",
       "flags": []
     },
@@ -20439,12 +20331,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994182",
-      "name": "Lisa Imai",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "lisa-trevor",
       "name": "Lisa Trevor",
       "status": "draft",
@@ -21424,12 +21310,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q108109186",
-      "name": "Male armed security guards",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "malenia-blade-of-miquella",
       "name": "Malenia, Blade of Miquella",
       "status": "draft",
@@ -22003,12 +21883,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994263",
-      "name": "Mashiro Kurata",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q107983035",
       "name": "Masirah Island",
       "status": "draft",
@@ -22029,12 +21903,6 @@
     {
       "slug": "wikidata-q105612919",
       "name": "Master Mummy",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107994192",
-      "name": "Masuki Satō",
       "status": "draft",
       "flags": []
     },
@@ -22121,12 +21989,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994178",
-      "name": "Maya Yamato",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "mayahuel-the-maguey-pulque-goddess",
       "name": "Mayahuel (the Maguey / Pulque-Goddess)",
       "status": "draft",
@@ -22204,12 +22066,6 @@
     {
       "slug": "wikidata-q108688620",
       "name": "McGuy",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108000069",
-      "name": "McKinley",
       "status": "draft",
       "flags": []
     },
@@ -23111,12 +22967,6 @@
       ]
     },
     {
-      "slug": "wikidata-q107994190",
-      "name": "Misaki Okusawa",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q105658165",
       "name": "Misango",
       "status": "draft",
@@ -23341,12 +23191,6 @@
     {
       "slug": "the-moche-spider-god",
       "name": "Moche Spider God",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108104755",
-      "name": "Moda",
       "status": "draft",
       "flags": []
     },
@@ -24258,12 +24102,6 @@
     {
       "slug": "wikidata-q107448033",
       "name": "Nanami",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107994265",
-      "name": "Nanami Hiromachi",
       "status": "draft",
       "flags": []
     },
@@ -26092,12 +25930,6 @@
       ]
     },
     {
-      "slug": "wikidata-q107999913",
-      "name": "Pagaya",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q105462022",
       "name": "Page One",
       "status": "draft",
@@ -26970,12 +26802,6 @@
     {
       "slug": "wikidata-q108911722",
       "name": "Pipimi",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108000838",
-      "name": "Pir",
       "status": "draft",
       "flags": []
     },
@@ -28237,12 +28063,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994191",
-      "name": "Rei Wakana",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q110249001",
       "name": "Reiji Oogami",
       "status": "draft",
@@ -28362,12 +28182,6 @@
     {
       "slug": "wikidata-q107564205",
       "name": "Renpetneferet",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107994194",
-      "name": "Reona Nyūbara",
       "status": "draft",
       "flags": []
     },
@@ -28661,12 +28475,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107994184",
-      "name": "Rinko Shirokane",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q107530243",
       "name": "Rinku Aimoto",
       "status": "draft",
@@ -28843,12 +28651,6 @@
       "flags": [
         "tapestry-cliche"
       ]
-    },
-    {
-      "slug": "wikidata-q107994195",
-      "name": "Rokka Asahi",
-      "status": "draft",
-      "flags": []
     },
     {
       "slug": "wikidata-q107659901",
@@ -29833,12 +29635,6 @@
       "flags": [
         "empty-enigmatic"
       ]
-    },
-    {
-      "slug": "wikidata-q107994181",
-      "name": "Sayo Hikawa",
-      "status": "draft",
-      "flags": []
     },
     {
       "slug": "wikidata-q105597951",
@@ -32643,12 +32439,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q107999911",
-      "name": "Su",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q105353935",
       "name": "Subaru Hasegawa",
       "status": "draft",
@@ -32803,12 +32593,6 @@
     {
       "slug": "wikidata-q10746511",
       "name": "Super Sonic",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q108124252",
-      "name": "Super Tama Musume",
       "status": "draft",
       "flags": []
     },
@@ -35770,12 +35554,6 @@
       ]
     },
     {
-      "slug": "wikidata-q107994174",
-      "name": "Tsugumi Hazawa",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wikidata-q106776348",
       "name": "Tsugumi Nazar",
       "status": "draft",
@@ -36072,12 +35850,6 @@
     {
       "slug": "wikidata-q106421847",
       "name": "Tōka Kishi",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107994264",
-      "name": "Tōko Kirigaya",
       "status": "draft",
       "flags": []
     },
@@ -37322,12 +37094,6 @@
       "flags": []
     },
     {
-      "slug": "wikidata-q108109152",
-      "name": "Woman with a case getting pursued",
-      "status": "draft",
-      "flags": []
-    },
-    {
       "slug": "wonder-woman-diana-of-themyscira",
       "name": "Wonder Woman / Diana of Themyscira",
       "status": "draft",
@@ -38066,12 +37832,6 @@
     {
       "slug": "wikidata-q106377206",
       "name": "Yukiko Koshigaya",
-      "status": "draft",
-      "flags": []
-    },
-    {
-      "slug": "wikidata-q107994180",
-      "name": "Yukina Minato",
       "status": "draft",
       "flags": []
     },
