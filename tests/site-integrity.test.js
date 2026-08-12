@@ -77,6 +77,15 @@ test('visible archive totals and canonical Lilith grammar are current', () => {
   assert.match(lilith, /MESOPOTAMIAN AND JEWISH TRADITIONS · LAYERED RECORD/);
 });
 
+test('archive copy names all seventeen wings accurately', () => {
+  const outdated = [];
+  for (const file of fs.readdirSync(path.join(site, 'entity')).filter((entry) => entry.endsWith('.html'))) {
+    const source = fs.readFileSync(path.join(site, 'entity', file), 'utf8');
+    if (/one of the sixteen wings of the archive/i.test(source)) outdated.push(file);
+  }
+  assert.deepEqual(outdated, []);
+});
+
 test('the shared nav loader can supply the search index to pages that only load a worker', () => {
   const navSearch = fs.readFileSync(path.join(site, 'assets', 'nav-search.js'), 'utf8');
   assert.match(navSearch, /search-index\.js/);
