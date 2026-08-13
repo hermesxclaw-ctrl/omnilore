@@ -14,7 +14,8 @@ for (const file of walk(site).filter((target) => target.endsWith('.html'))) {
   const source = fs.readFileSync(file, 'utf8');
   const revised = source
     .replace(/25,506|25,512|25,596/g, '25,591')
-    .replace(/Demon of Mesopotamian/g, 'Demon of Mesopotamia');
+    .replace(/Demon of Mesopotamian/g, 'Demon of Mesopotamia')
+    .replace(/\s*Lilith 118386 is the example\./g, '');
   if (revised !== source) {
     fs.writeFileSync(file, revised, 'utf8');
     changed += 1;
