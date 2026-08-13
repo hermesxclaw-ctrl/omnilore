@@ -18,7 +18,8 @@ for (const file of walk(site).filter((target) => target.endsWith('.html'))) {
     .replace(/\s*Lilith 118386 is the example\./g, '')
     .replace(/Via Wikipedia — &quot;[^&]*?&quot;; dossier /g, 'Dossier summary: ')
     .replace(/\b1 stories\b/g, '1 story')
-    .replace(/\b1 powers\b/g, '1 power');
+    .replace(/\b1 powers\b/g, '1 power')
+    .replace(/\b1 relations\b/g, '1 relation');
   if (revised !== source) {
     fs.writeFileSync(file, revised, 'utf8');
     changed += 1;

@@ -24,7 +24,7 @@ test('entity source footers do not make a blanket Wikipedia dossier provenance c
 test('dossier summaries use singular nouns for a count of one', () => {
   const grammarErrors = fs.readdirSync(entityDirectory)
     .filter((file) => file.endsWith('.html'))
-    .filter((file) => /\b1 (?:stories|powers)\b/.test(fs.readFileSync(path.join(entityDirectory, file), 'utf8')));
+    .filter((file) => /\b1 (?:stories|powers|relations)\b/.test(fs.readFileSync(path.join(entityDirectory, file), 'utf8')));
 
   assert.deepEqual(grammarErrors, []);
 });
