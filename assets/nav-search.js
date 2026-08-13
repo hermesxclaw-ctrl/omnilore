@@ -1,6 +1,11 @@
 /* Shared global search binding. Loads the single archive engine at any site depth. */
 (function () {
   'use strict';
+  if (new URLSearchParams(location.search).has('local-edit') && !/\/entity\/lilith\.html$/i.test(location.pathname)) {
+    var localEditor = document.createElement('script');
+    localEditor.src = (document.currentScript && document.currentScript.src ? document.currentScript.src : 'assets/nav-search.js').replace(/nav-search\.js(?:\?.*)?$/, 'local-page-editor.js');
+    document.head.appendChild(localEditor);
+  }
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator) || !/^https?:$/.test(location.protocol)) return;
     var scripts = document.scripts;

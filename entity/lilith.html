@@ -601,5 +601,75 @@
 
 </div><footer>OMNILORE — THE ARCHIVE OF ALL THINGS UNREAL · INFERNAL REGISTER · OMNI-4056273665<br>The Locked Wing · never finished, always evolving</footer>
 <script src="../assets/search-index.js"></script><script src="../assets/nav-search.js"></script><script src="../assets/widgets.js"></script>
+<script>
+(() => {
+  if (!new URLSearchParams(location.search).has('local-edit')) return;
+  let handle, baseline = '', draftKey = '', timer;
+  const bar = document.createElement('div');
+  bar.id = 'omnilore-local-edit-bar';
+  bar.setAttribute('contenteditable', 'false');
+  bar.innerHTML = '<b>LOCAL EDIT MODE</b><span id="omnilore-edit-status">Attach this Lilith file to unlock saving.</span><button data-action="attach">Attach this file</button><button data-action="save" disabled>Save</button><button data-action="backup" disabled>Download backup</button><button data-action="restore" disabled>Restore draft</button>';
+  const style = document.createElement('style');
+  style.id = 'omnilore-local-edit-style';
+  style.textContent = '#omnilore-local-edit-bar{position:fixed;z-index:99999;left:12px;right:12px;bottom:12px;display:flex;align-items:center;gap:8px;padding:10px 12px;background:#180a0b;color:#e8d9d4;border:1px solid #ff6a54;box-shadow:0 10px 30px rgba(0,0,0,.5);font:12px/1.2 system-ui,sans-serif}#omnilore-local-edit-bar b{color:#ff6a54;letter-spacing:.08em}#omnilore-edit-status{color:#bd9a90;margin-right:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#omnilore-local-edit-bar button{font:inherit;color:#e8d9d4;background:#261011;border:1px solid #4d2024;padding:7px 9px;cursor:pointer}#omnilore-local-edit-bar button:not(:disabled):hover{border-color:#ff6a54}#omnilore-local-edit-bar button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:700px){#omnilore-local-edit-bar{flex-wrap:wrap;left:6px;right:6px;bottom:6px}#omnilore-edit-status{order:2;width:100%}}';
+  document.head.append(style); document.body.append(bar);
+  const status = bar.querySelector('#omnilore-edit-status');
+  const buttons = Object.fromEntries([...bar.querySelectorAll('button')].map(button => [button.dataset.action, button]));
+  const say = message => { status.textContent = message; };
+  const source = () => {
+    const oldMode = document.body.contentEditable;
+    document.body.contentEditable = 'false'; style.remove(); bar.remove();
+    const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    document.head.append(style); document.body.append(bar); document.body.contentEditable = oldMode;
+    return html;
+  };
+  const download = (html, name) => {
+    const url = URL.createObjectURL(new Blob([html], {type:'text/html;charset=utf-8'}));
+    const link = document.createElement('a'); link.href = url; link.download = name; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 500);
+  };
+  const draft = () => {
+    const html = source();
+    if (html !== baseline) { localStorage.setItem(draftKey, html); say('Unsaved draft stored privately in this browser.'); }
+  };
+  const scheduleDraft = () => { clearTimeout(timer); timer = setTimeout(draft, 500); };
+  async function attach() {
+    try {
+      if (!window.showOpenFilePicker) throw new Error('Brave needs File System Access enabled for direct saving.');
+      [handle] = await window.showOpenFilePicker({multiple:false,types:[{description:'Lilith HTML',accept:{'text/html':['.html','.htm']}}]});
+      const file = await handle.getFile();
+      if (file.name !== 'lilith.html') throw new Error('Choose entity/lilith.html, not a different page.');
+      baseline = await file.text(); draftKey = `omnilore-lilith-edit:${file.lastModified}`;
+      document.body.contentEditable = 'true'; bar.contentEditable = 'false';
+      document.addEventListener('input', scheduleDraft, true);
+      buttons.save.disabled = buttons.backup.disabled = false;
+      const savedDraft = localStorage.getItem(draftKey); buttons.restore.disabled = !savedDraft;
+      say('Editing Lilith directly. Click text, type, then press Save or Ctrl+S.');
+    } catch (error) { if (error.name !== 'AbortError') say(`Could not attach: ${error.message}`); }
+  }
+  async function save() {
+    if (!handle) return;
+    const html = source();
+    if (html === baseline) { say('Nothing has changed.'); return; }
+    download(baseline, 'lilith-before-edit.html');
+    const permission = await handle.requestPermission({mode:'readwrite'});
+    if (permission !== 'granted') { say('Save permission was not granted; a backup was downloaded.'); return; }
+    const writer = await handle.createWritable(); await writer.write(html); await writer.close();
+    baseline = html; localStorage.removeItem(draftKey); buttons.restore.disabled = true;
+    say('Saved Lilith. A before-edit backup was downloaded first.');
+  }
+  function restore() {
+    const html = localStorage.getItem(draftKey); if (!html) { say('No saved draft found.'); return; }
+    document.body.contentEditable = 'false';
+    document.open(); document.write(html); document.close();
+  }
+  buttons.attach.addEventListener('click', attach);
+  buttons.save.addEventListener('click', () => save().catch(error => say(`Could not save: ${error.message}`)));
+  buttons.backup.addEventListener('click', () => download(source(), 'lilith-manual-backup.html'));
+  buttons.restore.addEventListener('click', restore);
+  document.addEventListener('keydown', event => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's' && handle) { event.preventDefault(); save().catch(error => say(`Could not save: ${error.message}`)); } });
+  addEventListener('beforeunload', event => { if (handle && source() !== baseline) { event.preventDefault(); event.returnValue = ''; } });
+})();
+</script>
 </body>
 </html>
