@@ -34,5 +34,41 @@
     "hook": "Hades rules the dead; he does not tempt the living into sin, command a kingdom of fire, or wage war against Olympus. The Greek underworld is not Christian hell, and its king is not Satan in another costume.",
     "lede": "In epic and cult, Hades is distant, wealthy, and difficult to move. Every mortal eventually enlarges his realm, which helps explain titles that avoid speaking his name directly: the Unseen One, the receiver of many, Plouton the wealthy. The riches are literal as well as grim—grain, roots, ore, and buried treasure all rise from beneath the earth he governs.",
     "body": "His central myths test the boundary of that rule. Persephone becomes queen beside him through a tradition that must be read with Demeter’s grief and the seasonal settlement in view. Heracles is permitted to bring Cerberus to the surface under conditions; Orpheus is offered an exception and loses it. Hades is formidable because his law is final, not because ancient poets make him gleefully cruel. The familiar hot-tempered villain is largely a modern adaptation."
+  },
+  "anansi": {
+    "label": "Stories have an owner",
+    "hook": "In Akan storytelling, Anansi does not win because he is stronger than the animals around him. He wins by making a boast, setting a trap, or finding the one question no one else thought to ask.",
+    "lede": "Anansi, or Ananse, is the spider trickster of Akan-language storytelling in present-day Ghana and Côte d’Ivoire. Some stories make him bargain with Nyame for the right to tell the world’s stories; others let his greed, hunger, or vanity make him the joke. That swing is the point. He is clever, but the tales keep asking what cleverness costs when it serves only itself.",
+    "body": "The name and stories travelled with enslaved West Africans and developed new lives in Jamaica, the wider Caribbean, the Gullah Geechee region, and elsewhere in the Americas. Those versions are not spare copies of an Akan original. They are living diaspora traditions shaped by new languages, audiences, and histories. A good Anansi dossier has to keep the Akan setting visible while treating every later Anancy, Aunt Nancy, or spider-trickster telling as a tradition with its own voice."
+  },
+  "ares": {
+    "label": "War with no clean side",
+    "hook": "In the Iliad, Ares changes sides, drives men into battle, and ends up wounded by a mortal with Athena’s help. Homer does not give him the dignity of a flawless war hero.",
+    "lede": "Ares is the Greek god most closely tied to battle at its most immediate: the rush, terror, bloodshed, and collapse of restraint. Homer can use his name for war itself, then place the god on the field beside Fear, Terror, and Strife. That makes him more than a soldier’s mascot and less than a simple villain.",
+    "body": "Greek sources do not tell one stable story about him. In the Iliad he backs the Trojans after promising otherwise, is checked by Athena, and is wounded by Diomedes; other traditions make him a father, lover, captive, or civic god. The later Roman Mars is not a direct substitute. Roman cult and political mythology gave Mars a far more central ancestral and agricultural role, so treating every image of Mars as Ares erases the difference between two religious worlds."
+  },
+  "asclepius": {
+    "label": "Healing leaves a record",
+    "hook": "At Epidaurus, visitors did not only pray to Asclepius. They slept in his sanctuary and left inscriptions describing the cures they believed they had received.",
+    "lede": "Asclepius is the Greek healing god, but his cult is best understood as a practice rather than a single myth. Sanctuaries called asklepieia brought together pilgrimage, offerings, ritual preparation, sacred sleep, and public accounts of healing. The Epidaurian iamata preserve claims of cures in a form meant to be read by later visitors.",
+    "body": "That evidence asks for two kinds of care. It shows what worshippers expected from the god and how a sanctuary represented successful healing; it does not let us turn every inscription into a modern medical case file. Myth also gives Asclepius a dangerous boundary: he heals so effectively that Zeus kills him with a thunderbolt after he threatens the division between mortal life and death. The staff with a single serpent belongs to this cultic figure, not to the unrelated two-serpent caduceus of Hermes."
+  },
+  "ame-no-uzume": {
+    "label": "The laughter outside the cave",
+    "hook": "When Amaterasu withdraws into the Heavenly Rock Cave, Ame-no-Uzume answers darkness with a performance that makes the assembled kami laugh.",
+    "lede": "The Kojiki and Nihon shoki place Uzume at the turning point of the cave episode. She performs at the entrance, with plants and an overturned tub among the ritual details preserved in the texts, while the other gods prepare the mirror and plan that will draw the sun goddess outward. Her dance is not a decorative interlude. It changes the conditions of the crisis.",
+    "body": "Later tradition remembers Uzume as a kami of performance and as an ancestral kami of the Sarume lineage. The two early chronicles do not give every detail in the same form, and modern retellings often smooth their differences into one neat scene. The tension is more interesting than the summary: a sacred restoration begins with noise, laughter, bodily performance, and a carefully staged invitation to look outside."
+  },
+  "anahita-ar-dvi-sura-anahita": {
+    "label": "A river made divine",
+    "hook": "The Ābān Yašt addresses Arədvī Sūrā Anāhitā as water with a name, a body, and the power to sustain life.",
+    "lede": "Anahita is not best reduced to a borrowed love goddess or a generic symbol of fertility. In the Avestan hymn conventionally called the Ābān Yašt, she is a river divinity whose waters nourish the world, while later Iranian tradition develops her cult and imagery in new directions. The text itself has layers: scholars see older material alongside later additions inside the hymn that survives.",
+    "body": "That layered history matters. Greek and Roman authors, royal patronage, temple traditions, and later Zoroastrian practice all shape the figure readers now call Anahita, but none cancels the others. Her association with water, abundance, and protection is strong in the evidence; a seamless biography that makes every later image an unchanged ancient original is not. The record is richer when its changes remain visible."
+  },
+  "ark-of-the-covenant": {
+    "label": "A chest at the center of a covenant",
+    "hook": "In Exodus, the ark is a portable acacia-wood chest placed beneath cherubim and described as the place from which Israel receives command.",
+    "lede": "The Ark of the Covenant belongs first to the literary and religious world of the Hebrew Bible. Exodus gives its construction and ritual setting; later biblical narratives place it in conflict, procession, and temple memory. In 2 Samuel, David’s attempt to bring it to Jerusalem is interrupted when Uzzah reaches toward it as the oxen stumble.",
+    "body": "Those texts make the ark a sign of divine presence, covenantal obligation, and dangerous holiness. They do not establish the location of a surviving object, and modern claims that identify a hidden ark generally move beyond what the biblical sources can verify. A responsible account keeps three things separate: the ark as narrated in scripture, the later religious traditions built around it, and modern archaeological or popular speculation."
   }
 }

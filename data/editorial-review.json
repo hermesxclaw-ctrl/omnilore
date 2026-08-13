@@ -1,0 +1,51 @@
+{
+  "anansi": {
+    "scope": "Akan trickster traditions and their African-diaspora continuities; not a single universal spider figure.",
+    "sources": [
+      { "title": "Ashanti Folk Tales from Ghana", "publisher": "Smithsonian Center for Folklife and Cultural Heritage", "url": "https://www.si.edu/object/ashanti-folk-tales-ghana-sound-recording%3Asiris_arc_318317" },
+      { "title": "Storytelling in the African Diaspora", "publisher": "National Museum of African American History and Culture", "url": "https://nmaahc.si.edu/storytelling-african-diaspora" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "ares": {
+    "scope": "Greek Ares in archaic and classical literary sources; Roman Mars treated as a distinct later religious context.",
+    "sources": [
+      { "title": "Iliad, Book 5", "publisher": "Perseus Digital Library", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D5" },
+      { "title": "Ares: God of War and Battlelust", "publisher": "Theoi Classical Texts Library", "url": "https://www.theoi.com/Olympios/AresGod.html" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "asclepius": {
+    "scope": "Greek healing cult, especially Epidaurus; inscriptional testimonies are presented as religious evidence, not clinical proof.",
+    "sources": [
+      { "title": "The Sanctuary of Asclepius at Epidaurus in Roman Times", "publisher": "University of Florida", "url": "https://ufdcimages.uflib.ufl.edu/UF/E0/04/73/41/00001/HOOT_D.pdf" },
+      { "title": "Notes on the Epidaurian Building Inscriptions", "publisher": "Cambridge University Press", "url": "https://www.cambridge.org/core/journals/annual-of-the-british-school-at-athens/article/abs/notes-on-the-epidaurian-building-inscriptions/2B0012E31E8D0D89FEAAC3C24E7A60BB" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "ame-no-uzume": {
+    "scope": "Ame-no-Uzume in the Kojiki and Nihon shoki; later ritual and lineage associations are kept distinct.",
+    "sources": [
+      { "title": "Amenouzume", "publisher": "Encyclopedia of Shinto, Kokugakuin University", "url": "https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9422" },
+      { "title": "The Sun Goddess Amaterasu and the Cave of Heaven", "publisher": "Nippon.com", "url": "https://www.nippon.com/en/japan-topics/b11203/" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "anahita-ar-dvi-sura-anahita": {
+    "scope": "Arədvī Sūrā Anāhitā in Avestan and later Iranian contexts; no assumption of an unchanged continuous identity.",
+    "sources": [
+      { "title": "Ābān Yašt", "publisher": "Encyclopaedia Iranica", "url": "https://www.iranicaonline.org/articles/aban-yast/" },
+      { "title": "Anāhīd I: Ardwīsūr Anāhīd", "publisher": "Encyclopaedia Iranica", "url": "https://www.iranicaonline.org/articles/anahid/anahid-i-ardwisur-anahid/" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "ark-of-the-covenant": {
+    "scope": "Ark as represented in biblical texts and later interpretation; no claim that a physical object survives or has been located.",
+    "sources": [
+      { "title": "Exodus 25:10-22", "publisher": "NRSVUE via Bible Gateway", "url": "https://www.biblegateway.com/passage/?search=Exodus+25%3A10-22&version=NRSVUE" },
+      { "title": "Ark of the Covenant", "publisher": "Oxford Bibliographies", "url": "https://academic.oup.com/reference/62341/reference-article-abstract/554106501" },
+      { "title": "2 Samuel 6", "publisher": "Bible Gateway", "url": "https://www.biblegateway.com/passage/?search=2+Samuel+6&version=NET%3BNKJV%3BESV%3BKJV" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  }
+}

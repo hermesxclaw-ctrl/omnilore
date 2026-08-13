@@ -2,9 +2,9 @@
   "generatedFrom": "assets/search-index.json",
   "policy": "Flags identify editorial review work; they do not authorize automatic factual rewriting.",
   "recordsAudited": 5860,
-  "recordsFlagged": 1584,
+  "recordsFlagged": 1578,
   "flagCounts": {
-    "imagine-hook": 396,
+    "imagine-hook": 390,
     "vast-hook": 268,
     "shadowy-hook": 77,
     "step-into-hook": 2,
@@ -3144,9 +3144,7 @@
       "slug": "ame-no-uzume",
       "name": "Ame-no-Uzume-no-Mikoto",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q3846620",
@@ -3512,9 +3510,7 @@
       "slug": "anahita-ar-dvi-sura-anahita",
       "name": "Anahita (Arədvī Sūrā Anāhitā)",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q4750926",
@@ -3566,9 +3562,7 @@
       "slug": "anansi",
       "name": "Anansi",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q485949",
@@ -4983,9 +4977,7 @@
       "slug": "ares",
       "name": "Ares",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q265823",
@@ -5135,9 +5127,7 @@
       "slug": "ark-of-the-covenant",
       "name": "Ark of the Covenant",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q4069374",
@@ -5507,9 +5497,7 @@
       "slug": "asclepius",
       "name": "Asclepius",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "wikidata-q55777963",

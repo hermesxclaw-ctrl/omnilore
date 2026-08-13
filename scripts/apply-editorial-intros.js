@@ -11,10 +11,10 @@ const region = /(<div class="tab-panel active" id="tab-t0"><div class="divider">
 for (const [slug, intro] of Object.entries(intros)) {
   const target = path.join(root, 'entity', `${slug}.html`);
   const original = fs.readFileSync(target, 'utf8');
+  if (!region.test(original)) throw new Error(`Could not locate introduction region for ${slug}`);
   const replacement = `$1<p style="font-family:JetBrains Mono,monospace;font-size:.52rem;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin:-6px 0 12px">${intro.label}</p><p class="hook">${intro.hook}</p><div class="divider">Who It Is</div><p class="lede">${intro.lede}</p><p>${intro.body}</p>$2`;
   const revised = original.replace(region, replacement);
-  if (revised === original) throw new Error(`Could not replace introduction for ${slug}`);
-  fs.writeFileSync(target, revised, 'utf8');
+  if (revised !== original) fs.writeFileSync(target, revised, 'utf8');
 }
 
 console.log(`Applied ${Object.keys(intros).length} researched dossier introductions.`);

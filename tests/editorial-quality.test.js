@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const childProcess = require('node:child_process');
 
 const root = path.join(__dirname, '..');
 const index = require('../assets/search-index.json');
@@ -50,4 +51,28 @@ test('researched core dossiers have complete evidence-led introductions', () => 
     assert.match(firstPanel[0], /<p class="lede">[^<]{120,}<\/p>/, slug);
     assert.equal(index.find((entity) => entity.s === slug).e, intros[slug].hook, `${slug} search excerpt`);
   }
+});
+
+test('first editorial cohort has evidence-led openings and matching search excerpts', () => {
+  const slugs = ['anansi', 'ares', 'asclepius', 'ame-no-uzume', 'anahita-ar-dvi-sura-anahita', 'ark-of-the-covenant'];
+  const intros = require('../data/editorial-intros.json');
+  const review = require('../data/editorial-review.json');
+  for (const slug of slugs) {
+    const intro = intros[slug];
+    assert.ok(intro, `missing editorial intro for ${slug}`);
+    assert.doesNotMatch(intro.hook, /\b(?:imagine|fascinating|captivating|vast|shadowy)\b/i, slug);
+    assert.match(intro.hook, /[.!?]$/, slug);
+    assert.match(intro.lede, /[.!?]$/, slug);
+    assert.match(intro.body, /[.!?]$/, slug);
+    assert.equal(index.find((entity) => entity.s === slug).e, intro.hook, `${slug} search excerpt`);
+    assert.ok(review[slug]?.sources?.length >= 2, `missing source record for ${slug}`);
+  }
+});
+
+test('editorial intro applier is idempotent when an opening is already current', () => {
+  const result = childProcess.spawnSync(process.execPath, ['scripts/apply-editorial-intros.js'], {
+    cwd: root,
+    encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stderr || result.stdout);
 });
