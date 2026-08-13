@@ -27,16 +27,16 @@ test('Omnilore has a reusable anti-generic voice profile', () => {
 test('canonical Lilith opens with the medieval story and names its source boundary', () => {
   const page = fs.readFileSync(path.join(root, 'entity', 'lilith.html'), 'utf8');
   assert.doesNotMatch(page, /grandmother&#39;s attic|She visits me in my dreams/);
-  assert.match(page, /Adam and Lilith are made from the same red earth/);
+  assert.match(page, /The garden is still new when Adam tells Lilith to lie beneath him/);
   assert.match(page, /the medieval <i>Alphabet of Ben Sira<\/i>/);
   assert.match(page, /It is neither Genesis nor a missing piece of scripture/);
-  assert.match(page, /This is an original retelling of the first-wife episode/);
+  assert.match(page, /That scene belongs to the medieval <i>Alphabet of Ben Sira<\/i>/);
   assert.match(page, /MESOPOTAMIAN AND JEWISH TRADITIONS/);
 });
 
 test('Lilith search excerpt matches the source-bounded narrative opening', () => {
   const lilith = index.find((entity) => entity.s === 'lilith');
-  assert.match(lilith.e, /Adam and Lilith are made from the same red earth/);
+  assert.match(lilith.e, /The garden is still new when Adam tells Lilith to lie beneath him/);
   assert.doesNotMatch(lilith.e, /grandmother|journal/i);
 });
 
