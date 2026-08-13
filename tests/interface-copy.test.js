@@ -12,3 +12,11 @@ test('entity source footers never leak an unrelated Lilith example identifier', 
 
   assert.deepEqual(leakingFiles, []);
 });
+
+test('entity source footers do not make a blanket Wikipedia dossier provenance claim', () => {
+  const misleadingFiles = fs.readdirSync(entityDirectory)
+    .filter((file) => file.endsWith('.html'))
+    .filter((file) => /Via Wikipedia — &quot;[^&]*?&quot;; dossier /.test(fs.readFileSync(path.join(entityDirectory, file), 'utf8')));
+
+  assert.deepEqual(misleadingFiles, []);
+});
