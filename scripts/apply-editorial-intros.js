@@ -6,7 +6,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const intros = JSON.parse(fs.readFileSync(path.join(root, 'data', 'editorial-intros.json'), 'utf8'));
-const region = /(<div class="tab-panel active" id="tab-t0"><div class="divider">The Figure<\/div>\s*)[\s\S]*?(<p style="font-family:JetBrains Mono,monospace;font-size:\.52rem;letter-spacing:1px;text-transform:uppercase;color:var\(--t3\);margin:6px 0 10px">Full dossier)/;
+const region = /(<div class="tab-panel active" id="tab-t0"><div class="divider">The Figure<\/div>\s*)[\s\S]*?(<p style="font-family:JetBrains Mono,monospace;font-size:\.52rem;letter-spacing:1px;text-transform:uppercase;color:var\(--t3\);margin:6px 0 10px">Full dossier|<\/div>\s*<div class="tab-panel" id="tab-t1">)/;
 
 for (const [slug, intro] of Object.entries(intros)) {
   const target = path.join(root, 'entity', `${slug}.html`);

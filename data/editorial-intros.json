@@ -70,5 +70,41 @@
     "hook": "In Exodus, the ark is a portable acacia-wood chest placed beneath cherubim and described as the place from which Israel receives command.",
     "lede": "The Ark of the Covenant belongs first to the literary and religious world of the Hebrew Bible. Exodus gives its construction and ritual setting; later biblical narratives place it in conflict, procession, and temple memory. In 2 Samuel, David’s attempt to bring it to Jerusalem is interrupted when Uzzah reaches toward it as the oxen stumble.",
     "body": "Those texts make the ark a sign of divine presence, covenantal obligation, and dangerous holiness. They do not establish the location of a surviving object, and modern claims that identify a hidden ark generally move beyond what the biblical sources can verify. A responsible account keeps three things separate: the ark as narrated in scripture, the later religious traditions built around it, and modern archaeological or popular speculation."
+  },
+  "baba-yaga": {
+    "label": "A threshold that talks back",
+    "hook": "In East Slavic folktales, the hut turns before Baba Yaga does: a house on chicken legs must be ordered to face the traveller who has reached its clearing.",
+    "lede": "Baba Yaga is not one tidy witch with one settled character. In tales recorded across Russian, Ukrainian, and Belarusian traditions, she can be a devourer, a frightening hostess, a tester of nerve, or the person who gives a hero the knowledge needed to go on. Her mortar, pestle, and broom belong to that unsettling mobility: she travels while wiping away the trace of her passage.",
+    "body": "The famous hut is therefore not a piece of decorative horror. It marks a border between the ordinary road and a place where the visitor must speak, work, and answer carefully. Nineteenth-century collectors preserved many Baba Yaga tales in more than one form, and modern retellings often choose only the cannibal. The older story-world is harsher and stranger: she may eat the lost child, but she may also judge the visitor who arrives prepared to meet her terms."
+  },
+  "medusa": {
+    "label": "A face meant to face back",
+    "hook": "In Greek art, Medusa often looks straight out from the surface. Her face appears on temples, vessels, jewelry, and armor as an image meant to confront danger with danger.",
+    "lede": "Ancient sources do not offer one unchanging Medusa. Hesiod names her the mortal sister among the Gorgons; the Perseus story makes her severed head a weapon; artists turn that head into the gorgoneion, a protective image placed where a hostile gaze might be met and turned away. Her power survives the beheading in the story because it also survives in the image.",
+    "body": "That visual history complicates the familiar snapshot of a beautiful woman with snake hair. Archaic artists could give the Gorgon tusks, a beard, and a lolling tongue; later Greek and Roman makers made her increasingly human and feminine without abandoning the frontal stare. A careful dossier should separate those ancient forms from the much later story in which Athena transforms a violated mortal into Medusa. That version has enormous cultural force, but it is not the only ancient account."
+  },
+  "persephone": {
+    "label": "A daughter heard by no one",
+    "hook": "In the Homeric Hymn to Demeter, Persephone is gathering flowers when the ground opens and Hades carries her away; only Hecate and Helios hear her cry.",
+    "lede": "The hymn makes the loss of Persephone the beginning of a crisis in which Demeter leaves Olympus, withholds fertility, and forces Zeus to negotiate. Persephone is not merely an emblem of spring. She is the daughter whose absence stops grain from growing and the queen who returns to the underworld after eating its pomegranate seed.",
+    "body": "The settlement is not a simple happy ending. The poem divides Persephone's time between her mother and the realm of the dead, while the establishment of Demeter's rites at Eleusis gives the story a ritual future. Later Greek and Roman authors retell the abduction, marriage, descent, and return in different ways. Keeping those variations visible matters more than forcing them into a modern seasonal fable."
+  },
+  "gilgamesh": {
+    "label": "A king meets the limit",
+    "hook": "When Enkidu dies, Gilgamesh does not become wise at once. He keeps vigil over his friend, then sets out in terror because the death he has seen is his own future too.",
+    "lede": "The Epic of Gilgamesh survives in fragments and versions, not as a single book delivered intact from one ancient moment. The Standard Babylonian poem draws Gilgamesh through kingship, friendship, violence, grief, and a journey toward Utnapishtim, who alone has received everlasting life. Clay tablets preserve both the ambition of the poem and the breaks through which modern readers meet it.",
+    "body": "That material history belongs inside the story. A tablet in the Penn Museum preserves part of the epic, while the British Museum's Flood Tablet preserves a section of Utnapishtim's account; other pieces are incomplete, duplicated, or differently dated. Gilgamesh is not powerful because it is advertised as a record-breaking ancient text. It is powerful because a king who once treated people as possessions is made to stand beside a grave and discover that strength cannot cancel mortality."
+  },
+  "mami-wata": {
+    "label": "Water, travel, and an image remade",
+    "hook": "A late nineteenth-century image of a female snake charmer crossed commercial routes and was remade, in many African settings, into recognizably Mami Wata imagery.",
+    "lede": "Mami Wata means 'Mother Water' in pidgin English, but the name does not point to one uniform deity or a single origin story. Across West and Central Africa and the African Atlantic world, artists and worshippers have connected water spirits with beauty, danger, wealth, healing, travel, and change. Imported prints could become part of that work because communities gave them new ritual and visual meaning.",
+    "body": "That is why Mami Wata should not be reduced to an exoticized mermaid or to a European picture with an African label. Smithsonian collections trace particular images to German and Indian commercial prints while showing how Anang and Ibibio figures, masks, and other works joined them to older local water-spirit traditions. The figure's reach into the Caribbean, Brazil, and the United States is likewise a history of adaptation, not evidence that every water being in the diaspora is the same person."
+  },
+  "quetzalcoatl": {
+    "label": "A name with a long history",
+    "hook": "At Teotihuacan, feathered-serpent reliefs move among shells across the temple facade. Centuries later, Mexica traditions use the Nahuatl name Quetzalcoatl for a feathered-serpent deity.",
+    "lede": "That distance in time is part of the evidence, not a problem to be hidden. Feathered-serpent beings appear across Mesoamerica, but names, functions, images, and ritual settings change from one culture and period to another. Quetzalcoatl is especially important in central Mexican sources, where the figure can be connected with wind, the dawn, the calendar, priesthood, and creation narratives.",
+    "body": "The popular claim that the Mexica mistook Hernan Cortes for a returning Quetzalcoatl needs the same care. It comes through colonial accounts and has been repeatedly simplified into a story of inevitable conquest. Architecture, codices, Indigenous-language sources, and later colonial writing do not collapse into one transparent testimony. A responsible account follows the evidence in sequence: the older feathered-serpent imagery, the Mexica Quetzalcoatl traditions, and the contested stories written after invasion."
   }
 }

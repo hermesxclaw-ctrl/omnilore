@@ -54,7 +54,7 @@ test('researched core dossiers have complete evidence-led introductions', () => 
 });
 
 test('first editorial cohort has evidence-led openings and matching search excerpts', () => {
-  const slugs = ['anansi', 'ares', 'asclepius', 'ame-no-uzume', 'anahita-ar-dvi-sura-anahita', 'ark-of-the-covenant'];
+  const slugs = ['anansi', 'ares', 'asclepius', 'ame-no-uzume', 'anahita-ar-dvi-sura-anahita', 'ark-of-the-covenant', 'baba-yaga', 'medusa', 'persephone', 'gilgamesh', 'mami-wata', 'quetzalcoatl'];
   const intros = require('../data/editorial-intros.json');
   const review = require('../data/editorial-review.json');
   for (const slug of slugs) {
@@ -66,6 +66,8 @@ test('first editorial cohort has evidence-led openings and matching search excer
     assert.match(intro.body, /[.!?]$/, slug);
     assert.equal(index.find((entity) => entity.s === slug).e, intro.hook, `${slug} search excerpt`);
     assert.ok(review[slug]?.sources?.length >= 2, `missing source record for ${slug}`);
+    const page = fs.readFileSync(path.join(root, 'entity', `${slug}.html`), 'utf8');
+    assert.match(page, new RegExp(intro.hook.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${slug} rendered opening`);
   }
 });
 

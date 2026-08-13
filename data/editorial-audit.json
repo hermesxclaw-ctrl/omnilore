@@ -2,9 +2,9 @@
   "generatedFrom": "assets/search-index.json",
   "policy": "Flags identify editorial review work; they do not authorize automatic factual rewriting.",
   "recordsAudited": 5860,
-  "recordsFlagged": 1578,
+  "recordsFlagged": 1577,
   "flagCounts": {
-    "imagine-hook": 390,
+    "imagine-hook": 389,
     "vast-hook": 268,
     "shadowy-hook": 77,
     "step-into-hook": 2,
@@ -27583,9 +27583,7 @@
       "slug": "quetzalcoatl",
       "name": "Quetzalcoatl",
       "status": "draft",
-      "flags": [
-        "imagine-hook"
-      ]
+      "flags": []
     },
     {
       "slug": "quetzalcoatl-the-feathered-serpent",

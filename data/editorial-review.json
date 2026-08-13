@@ -47,5 +47,57 @@
       { "title": "2 Samuel 6", "publisher": "Bible Gateway", "url": "https://www.biblegateway.com/passage/?search=2+Samuel+6&version=NET%3BNKJV%3BESV%3BKJV" }
     ],
     "reviewStatus": "source-backed editorial rewrite"
+  },
+  "baba-yaga": {
+    "scope": "East Slavic folktale variants; no claim that one version exhausts Russian, Ukrainian, or Belarusian traditions.",
+    "sources": [
+      { "title": "Baba Yaga", "publisher": "University of Southern California Digital Folklore Archives", "url": "https://folklore.usc.edu/baba-yaga/" },
+      { "title": "Baba Yaga: The Wild Witch of the East in Russian Fairy Tales", "publisher": "University Press of Mississippi via UBC Press", "url": "https://www.ubcpress.ca/baba-yaga" },
+      { "title": "Russian Folk-Tales", "publisher": "Project Gutenberg (A. N. Afanas'ev collection)", "url": "https://www.gutenberg.org/ebooks/62509" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "medusa": {
+    "scope": "Medusa in ancient Greek literary and visual traditions; later retellings are not treated as the only classical account.",
+    "sources": [
+      { "title": "Medusa in Ancient Greek Art", "publisher": "The Metropolitan Museum of Art", "url": "https://www.metmuseum.org/toah/hd/medu/hd_medu.htm" },
+      { "title": "Dangerous Beauty: Medusa in Classical Art", "publisher": "The Metropolitan Museum of Art", "url": "https://www.metmuseum.org/exhibitions/listings/2018/dangerous-beauty" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "persephone": {
+    "scope": "Persephone in the Homeric Hymn to Demeter and later Greek and Roman retellings; the hymn is not treated as a complete universal account.",
+    "sources": [
+      { "title": "Hymn 2 to Demeter", "publisher": "Perseus Digital Library", "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0138%3Ahymn%3D2" },
+      { "title": "Hymn 2 to Demeter, line 1", "publisher": "Perseus Digital Library", "url": "https://www.perseus.tufts.edu/hopper/text?doc=urn%3Acts%3AgreekLit%3Atlg0013.tlg002.perseus-eng1%3A2" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "gilgamesh": {
+    "scope": "The Babylonian Epic of Gilgamesh as a surviving, multi-tablet textual tradition; gaps and variants remain visible.",
+    "sources": [
+      { "title": "The Epic of Gilgamish", "publisher": "Penn Museum", "url": "https://www.penn.museum/sites/journal/550/" },
+      { "title": "Epic of Gilgamesh, tablet 11", "publisher": "British Museum", "url": "https://www.britishmuseum.org/collection/object/W_K-3375" },
+      { "title": "Epic of Gilgamesh, Old Babylonian Version", "publisher": "SOAS University of London", "url": "https://www.soas.ac.uk/baplar/recordings/epic-gilgamesh-old-babylonian-version-part-vabm-tablet-read-martin-west" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "mami-wata": {
+    "scope": "Mami Wata traditions in Africa and the African Atlantic world; no reduction of distinct water-spirit traditions to one origin or figure.",
+    "sources": [
+      { "title": "Mami Wata: Arts for Water Spirits in Africa and Its Diasporas", "publisher": "Smithsonian Institution", "url": "https://www.si.edu/exhibitions/mami-wata-arts-water-spirits-africa-and-its-diasporas-event-event-exhib-2605" },
+      { "title": "Currents: Water in African Art", "publisher": "National Museum of African Art", "url": "https://africa.si.edu/exhibitions/currents-water-african-art" },
+      { "title": "Mami Wata figure", "publisher": "National Museum of African Art", "url": "https://africa.si.edu/collection/object/nmafa_2009-16-1" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
+  },
+  "quetzalcoatl": {
+    "scope": "Feathered-serpent imagery across Mesoamerica and Quetzalcoatl in central Mexican contexts; cultural and chronological differences are retained.",
+    "sources": [
+      { "title": "Mesoamerica, an introduction", "publisher": "Smarthistory", "url": "https://smarthistory.org/mesoamerica-an-introduction/" },
+      { "title": "Serpent mask of Quetzalcoatl or Tlaloc", "publisher": "Smarthistory", "url": "https://smarthistory.org/serpent-mask-of-quetzalcoatl-or-tlaloc/" },
+      { "title": "The Temple of Quetzalcoatl at Teotihuacan", "publisher": "Ancient Mesoamerica", "url": "https://www.mesoweb.com/es/articulos/sub/Temple-of-Quetzalcoatl.pdf" }
+    ],
+    "reviewStatus": "source-backed editorial rewrite"
   }
 }
