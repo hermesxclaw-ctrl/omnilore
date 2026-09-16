@@ -1,9 +1,9 @@
 /* Shared global search binding. Loads the single archive engine at any site depth. */
 (function () {
   'use strict';
-  if (new URLSearchParams(location.search).has('local-edit') && !/\/entity\/lilith\.html$/i.test(location.pathname)) {
+  if (new URLSearchParams(location.search).has('local-edit')) {
     var localEditor = document.createElement('script');
-    localEditor.src = (document.currentScript && document.currentScript.src ? document.currentScript.src : 'assets/nav-search.js').replace(/nav-search\.js(?:\?.*)?$/, 'local-page-editor.js');
+    localEditor.src = (document.currentScript && document.currentScript.src ? document.currentScript.src : 'assets/nav-search.js').replace(/nav-search\.js(?:\?.*)?$/, 'local-page-editor.js?v=local-save-v3');
     document.head.appendChild(localEditor);
   }
   function registerServiceWorker() {
